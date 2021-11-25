@@ -13,11 +13,6 @@ export default {
       title: 'Body',
       type: 'text',
     },
-    {
-      name: 'cta',
-      title: 'CTA',
-      type: 'cta',
-    },
   ],
   options: { collapsible: true, collapsed: true },
 };

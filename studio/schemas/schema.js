@@ -14,7 +14,6 @@ import destinationsPage from './documents/destinationsPage';
 // objects
 import adventureCard from './objects/adventureCard';
 import blockContent from './objects/blockContent';
-import cta from './objects/cta';
 import customImage from './objects/customImage';
 import destinationCard from './objects/destinationCard';
 import form from './objects/form';
@@ -53,7 +52,6 @@ export default createSchema({
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     adventureCard,
-    cta,
     destinationCard,
     form,
     hero,

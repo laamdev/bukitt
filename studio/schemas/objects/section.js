@@ -18,11 +18,6 @@ export default {
       title: 'Image',
       type: 'customImage',
     },
-    {
-      name: 'cta',
-      title: 'CTA',
-      type: 'cta',
-    },
   ],
   options: { collapsible: true, collapsed: true, columns: 1 },
 };

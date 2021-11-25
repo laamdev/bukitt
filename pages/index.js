@@ -31,10 +31,6 @@ export default function Home({ homeData, preview }) {
         <div className="paragraph text-lg">
           <TextBody content={homeData.about.body} />
         </div>
-        <CustomLink
-          label={homeData.about.cta.label}
-          link={homeData.about.cta.link}
-        />
       </section>
 
       <section className="space-y-6">
@@ -42,10 +38,6 @@ export default function Home({ homeData, preview }) {
           {homeData.explore.heading}
         </h2>
         <TextBody content={homeData.explore.body} />
-        <CustomLink
-          label={homeData.explore.cta.label}
-          link={homeData.explore.cta.link}
-        />
       </section>
     </article>
   );
