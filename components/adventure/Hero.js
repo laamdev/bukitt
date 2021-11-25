@@ -10,13 +10,15 @@ export default function Hero({ heading, tagline, body, coverImage }) {
     <div className="relative">
       <div className="max-w-7xl mx-auto relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
         <div className="w-full h-full z-0">
-          <Image
-            src={urlForImage(coverImage).url()}
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-            alt={coverImage.alt}
-          />
+          {coverImage && (
+            <Image
+              src={urlForImage(coverImage).url()}
+              layout="fill"
+              objectFit="cover"
+              quality={100}
+              alt={coverImage.alt}
+            />
+          )}
           <div className="absolute inset-0 bg-gray-400 mix-blend-multiply" />
         </div>
 
