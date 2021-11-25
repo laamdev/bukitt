@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-display: optional;
+    src: url(/fonts/proxima/proxima-regular.woff2) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 700;
+    font-display: optional;
+    src: url(/fonts/proxima/proxima-bold.woff2) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Neue Montreal';
+    font-style: normal;
+    font-weight: 400;
+    font-display: optional;
+    src: url(/fonts/neue/neue-regular.woff2) format('woff2');
+  }
+  @font-face {
+    font-family: 'Neue Montreal';
+    font-style: italic;
+    font-weight: 400;
+    font-display: optional;
+    src: url(/fonts/neue/neue-regular-italic.woff2) format('woff2');
+  }
+  @font-face {
+    font-family: 'Neue Montreal';
+    font-style: normal;
+    font-weight: 700;
+    font-display: optional;
+    src: url(/fonts/neue/neue-bold.woff2) format('woff2');
+  }
+  @font-face {
+    font-family: 'Neue Montreal';
+    font-style: italic;
+    font-weight: 700;
+    font-display: optional;
+    src: url(/fonts/neue/neue-bold-italic.woff2) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Integral CF';
+    font-style: normal;
+    font-weight: 400;
+    font-display: optional;
+    src: url(/fonts/integral/integral-regular.woff2) format('woff2');
+  }
+  @font-face {
+    font-family: 'Integral CF';
+    font-style: italic;
+    font-weight: 400;
+    font-display: optional;
+    src: url(/fonts/integral/integral-regular-oblique.woff2) format('woff2');
+  }
+  @font-face {
+    font-family: 'Integral CF';
+    font-style: normal;
+    font-weight: 700;
+    font-display: optional;
+    src: url(/fonts/integral/integral-bold.woff2) format('woff2');
+  }
+  @font-face {
+    font-family: 'Integral CF';
+    font-style: italic;
+    font-weight: 700;
+    font-display: optional;
+    src: url(/fonts/integral/integral-bold-oblique.woff2) format('woff2');
+  }
+
+  html {
+    @apply h-full bg-white font-body;
+  }
+
+  body {
+    @apply h-full;
+  }
+}
+
+@layer components {
+  .tw-heading {
+    @apply text-4xl sm:text-5xl font-heading uppercase font-bold;
+  }
+
+  .tw-subheading {
+    @apply text-2xl sm:text-3xl font-heading uppercase font-bold;
+  }
+
+  .tw-card-title {
+    @apply text-xl sm:text-2xl font-subheading font-bold;
+  }
+
+  .tw-tagline {
+    @apply font-subheading sm:text-xl lg:text-2xl;
+  }
+
+  .tw-summary {
+    @apply text-lg font-subheading;
+  }
+
+  .tw-transition {
+    @apply transition-colors duration-300 ease-in-out;
+  }
+}
