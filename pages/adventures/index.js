@@ -11,25 +11,25 @@ export default function AdventuresPage({ adventuresPageData }) {
     <>
       <article className="flex flex-col mx-auto space-y-12 sm:space-y-24">
         <section className="space-y-12">
-          <Subheading>{adventuresPageData.adventuresHeading}</Subheading>
+          <Subheading>{adventuresPageData?.adventuresHeading}</Subheading>
           <ListGrid>
-            {adventuresPageData.adventures.map((adventure) => (
+            {adventuresPageData?.adventures.map((adventure) => (
               <Card
-                key={adventure._id}
-                name={adventure.card.name}
-                slug={adventure.slug}
-                thumbnail={adventure.card.thumbnail}
+                key={adventure?._id}
+                name={adventure?.card.name}
+                slug={adventure?.slug}
+                thumbnail={adventure?.card?.thumbnail}
               />
             ))}
           </ListGrid>
         </section>
 
         <section className="space-y-12">
-          <Subheading>{adventuresPageData.destinationsHeading}</Subheading>
+          <Subheading>{adventuresPageData?.destinationsHeading}</Subheading>
           <ListGrid>
-            {adventuresPageData.destinations.map((destination) => (
+            {adventuresPageData?.destinations.map((destination) => (
               <DestinationCard
-                key={destination._id}
+                key={destination?._id}
                 name={destination?.card?.name}
                 location={destination?.card?.location}
                 slug={destination.slug}
