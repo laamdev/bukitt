@@ -29,10 +29,10 @@ export default function DestinationsPage({ data = {}, preview }) {
 
   return (
     <Destination
-      key={destination.title}
-      title={destination.title}
-      hero={destination.hero}
-      highlightsSection={destination.highlightsSection}
+      key={destination?.title}
+      title={destination?.title}
+      hero={destination?.hero}
+      highlightsSection={destination?.highlightsSection}
     />
   );
 }

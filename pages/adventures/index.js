@@ -32,7 +32,7 @@ export default function AdventuresPage({ adventuresPageData }) {
                 key={destination?._id}
                 name={destination?.card?.name}
                 location={destination?.card?.location}
-                slug={destination.slug}
+                slug={destination?.slug}
                 thumbnail={destination?.card?.thumbnail}
               />
             ))}

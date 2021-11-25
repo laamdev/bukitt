@@ -14,7 +14,7 @@ export default function DestinationsPage({ destinationsPageData }) {
           {destinationsPageData.destinations.map((destination) => (
             <DestinationCard
               key={destination?._id}
-              name={destination?.card.name}
+              name={destination?.card?.name}
               location={destination?.card?.location}
               slug={destination?.slug}
               thumbnail={destination?.card?.thumbnail}
