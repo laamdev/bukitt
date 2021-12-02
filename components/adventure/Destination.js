@@ -5,7 +5,6 @@ import MapSection from '@/components/adventure/MapSection';
 import Separator from '@/components/shared/Separator';
 
 export default function Destination({ hero, highlightsSection, mapSection }) {
-  console.log(JSON.stringify(mapSection, null, 2));
   return (
     <section>
       <Hero hero={hero} />
