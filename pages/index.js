@@ -1,46 +1,44 @@
-import FeaturedCard from '@/components/destination/FeaturedCard';
-import CustomLink from '@/components/shared/CustomLink';
-import TextBody from '@/components/shared/TextBody';
-import ListGrid from '@/components/shared/ListGrid';
-import Hero from '@/components/destination/Hero';
-
 import { homePageQuery } from '@/lib/queries';
-import { getClient, overlayDrafts } from '@/lib/sanity.server';
+import { getClient } from '@/lib/sanity.server';
 
-export default function Home({ homeData, preview }) {
+import FeaturedCard from '@/components/destination/FeaturedCard';
+import ListGrid from '@/components/shared/ListGrid';
+import Hero from '@/components/home/Hero';
+import IntroductionSection from '@/components/home/IntroductionSection';
+import AboutSection from '@/components/home/AboutSection';
+
+export default function Home({ homeData }) {
   return (
-    <article className="space-y-12">
-      <Hero hero={homeData?.hero} />
-
-      <section>
-        <ListGrid>
-          {homeData?.featured.map((destination) => (
-            <FeaturedCard
-              key={destination?.card?.name}
-              name={destination?.card?.name}
-              slug={destination?.card?.slug}
-              location={destination?.card?.location}
-              thumbnail={destination?.card?.thumbnail}
+    <article>
+      <Hero coverImage={homeData?.hero?.coverImage} />
+      <div className="relative -mt-32 z-20">
+        <div className="max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:px-8">
+          <div className="bg-gray-100 rounded-lg shadow px-5 py-6 sm:px-6 space-y-12 sm:space-y-24">
+            <IntroductionSection
+              heading={homeData?.introductionSection?.heading}
+              body={homeData?.introductionSection?.body}
             />
-          ))}
-        </ListGrid>
-      </section>
 
-      <section className="space-y-6">
-        <h2 className="tw-subheading text-center">
-          {homeData?.about?.heading}
-        </h2>
-        <div className="paragraph text-lg">
-          <TextBody content={homeData?.about?.body} />
+            <ListGrid>
+              {homeData?.featured.map((destination) => (
+                <FeaturedCard
+                  key={destination?.card?.name}
+                  name={destination?.card?.name}
+                  slug={destination?.card?.slug}
+                  location={destination?.card?.location}
+                  thumbnail={destination?.card?.thumbnail}
+                />
+              ))}
+            </ListGrid>
+
+            <AboutSection
+              heading={homeData?.aboutSection?.heading}
+              body={homeData?.aboutSection?.body}
+              cta={homeData?.aboutSection?.cta}
+            />
+          </div>
         </div>
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="tw-subheading text-center">
-          {homeData?.explore?.heading}
-        </h2>
-        <TextBody content={homeData?.explore?.body} />
-      </section>
+      </div>
     </article>
   );
 }

@@ -6,7 +6,7 @@ import {
   destinationsPathsQuery,
 } from '@/lib/queries';
 import { usePreviewSubscription } from '@/lib/sanity';
-import { sanityClient, getClient, overlayDrafts } from '@/lib/sanity.server';
+import { sanityClient, getClient } from '@/lib/sanity.server';
 
 import Destination from '@/components/adventure/Destination';
 
@@ -16,7 +16,7 @@ export default function DestinationsPage({ data = {}, preview }) {
   const slug = data?.destination?.slug;
 
   const {
-    data: { destination, moreDestinations },
+    data: { destination },
   } = usePreviewSubscription(individualDestinationQuery, {
     params: { slug },
     initialData: data,
@@ -33,6 +33,7 @@ export default function DestinationsPage({ data = {}, preview }) {
       title={destination?.title}
       hero={destination?.hero}
       highlightsSection={destination?.highlightsSection}
+      mapSection={destination?.mapSection}
     />
   );
 }
@@ -47,7 +48,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params, preview = false }) {
-  const { destination, moreDestinations } = await getClient(preview).fetch(
+  const { destination } = await getClient(preview).fetch(
     individualDestinationQuery,
     {
       slug: params.slug,
@@ -59,7 +60,6 @@ export async function getStaticProps({ params, preview = false }) {
       preview,
       data: {
         destination,
-        moreDestinations: overlayDrafts(moreDestinations),
       },
     },
   };

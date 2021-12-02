@@ -27,14 +27,20 @@ export default {
     },
 
     {
-      name: 'about',
-      title: 'About',
-      type: 'section',
+      name: 'introductionSection',
+      title: 'Introduction Section',
+      type: 'sectionSimple',
     },
 
     {
-      name: 'explore',
-      title: 'Explore',
+      name: 'aboutSection',
+      title: 'About Section',
+      type: 'sectionSimpleCTA',
+    },
+
+    {
+      name: 'exploreSection',
+      title: 'Explore Section',
       type: 'section',
     },
   ],

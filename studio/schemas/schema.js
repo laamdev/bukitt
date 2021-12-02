@@ -14,6 +14,7 @@ import destinationsPage from './documents/destinationsPage';
 // objects
 import adventureCard from './objects/adventureCard';
 import blockContent from './objects/blockContent';
+import cta from './objects/cta';
 import customImage from './objects/customImage';
 import destinationCard from './objects/destinationCard';
 import form from './objects/form';
@@ -24,6 +25,8 @@ import homeHero from './objects/homeHero';
 import highlight from './objects/highlight';
 import highlightsSection from './objects/highlightsSection';
 import section from './objects/section';
+import sectionSimple from './objects/sectionSimple';
+import sectionSimpleCTA from './objects/sectionSimpleCTA';
 import siteSettings from './objects/siteSettings';
 import socialMedia from './objects/socialMedia';
 import teamMember from './documents/teamMember';
@@ -52,12 +55,15 @@ export default createSchema({
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     adventureCard,
+    cta,
     destinationCard,
     form,
     hero,
     highlight,
     highlightsSection,
     section,
+    sectionSimple,
+    sectionSimpleCTA,
     siteSettings,
     socialMedia,
     blockContent,

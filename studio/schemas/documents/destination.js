@@ -55,6 +55,12 @@ export default {
     },
 
     {
+      name: 'mapSection',
+      title: 'Map Section',
+      type: 'section',
+    },
+
+    {
       name: 'highlightsSection',
       title: 'Highlights Section',
       type: 'highlightsSection',

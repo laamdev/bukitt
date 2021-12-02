@@ -3,7 +3,7 @@ import ErrorPage from 'next/error';
 
 import { individualAdventureQuery, adventuresPathsQuery } from '@/lib/queries';
 import { usePreviewSubscription } from '@/lib/sanity';
-import { sanityClient, getClient, overlayDrafts } from '@/lib/sanity.server';
+import { sanityClient, getClient } from '@/lib/sanity.server';
 
 import Hero from '@/components/adventure/Hero';
 import Logos from '@/components/adventure/Logos';
@@ -18,7 +18,7 @@ export default function AdventurePage({ data = {}, preview }) {
   const slug = data?.adventure?.slug;
 
   const {
-    data: { adventure, moreAdventures },
+    data: { adventure },
   } = usePreviewSubscription(individualAdventureQuery, {
     params: { slug },
     initialData: data,
@@ -60,6 +60,7 @@ export default function AdventurePage({ data = {}, preview }) {
           title={destination?.title}
           hero={destination?.hero}
           highlightsSection={destination?.highlightsSection}
+          mapSection={destination?.mapSection}
         />
       ))}
 
@@ -78,7 +79,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params, preview = false }) {
-  const { adventure, moreAdventures } = await getClient(preview).fetch(
+  const { adventure } = await getClient(preview).fetch(
     individualAdventureQuery,
     {
       slug: params.slug,
@@ -90,7 +91,6 @@ export async function getStaticProps({ params, preview = false }) {
       preview,
       data: {
         adventure,
-        moreAdventures: overlayDrafts(moreAdventures),
       },
     },
   };

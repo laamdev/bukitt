@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
@@ -15,14 +16,18 @@ export default function Header({ open }) {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
               <span className="sr-only">Workflow</span>
-              <Image
-                // className="h-8 w-auto sm:h-10"
-                alt="Bukitt"
-                src="/logos/wordmark.svg"
-                layout="intrinsic"
-                width={50}
-                height={50}
-              />
+              <Link href="/">
+                <a>
+                  <Image
+                    // className="h-8 w-auto sm:h-10"
+                    alt="Bukitt"
+                    src="/logos/wordmark.svg"
+                    layout="intrinsic"
+                    width={50}
+                    height={50}
+                  />
+                </a>
+              </Link>
             </a>
           </div>
           <div className="-mr-2 -my-2 md:hidden">

@@ -3,8 +3,6 @@ import Link from 'next/link';
 
 import { urlForImage } from '@/lib/sanity';
 
-import CardText from '@/components/shared/CardText';
-
 export default function FeaturedCard({ name, slug, location, thumbnail }) {
   return (
     <li className="col-span-1 text-center">
@@ -22,9 +20,9 @@ export default function FeaturedCard({ name, slug, location, thumbnail }) {
             </div>
           )}
 
-          <CardText>
+          <div className="tw-card-title mt-2">
             {name}, {location}
-          </CardText>
+          </div>
         </a>
       </Link>
     </li>

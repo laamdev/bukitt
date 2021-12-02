@@ -15,6 +15,7 @@ export default function MapSection({ heading, body, image }) {
             layout="responsive"
             width={4}
             height={3}
+            objectFit="cover"
           />
         )}
       </div>
