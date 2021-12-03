@@ -115,7 +115,11 @@
     @apply transition-colors duration-300 ease-in-out;
   }
 
-  .tw-hover {
-    @apply bg-teal-700 hover:bg-teal-600;
+  .tw-bg-hover {
+    @apply bg-teal-600 hover:bg-teal-700;
+  }
+
+  .tw-text-hover {
+    @apply text-teal-600 hover:text-teal-700;
   }
 }

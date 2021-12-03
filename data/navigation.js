@@ -41,3 +41,6 @@ export const socialLinks = [
     icon: <IoLogoTwitter className="w-6 h-6" />,
   },
 ];
+
+export const copyright =
+  '© 2021, Bukkit.com Fla. Seller of Travel Reg. No. ST42985';
