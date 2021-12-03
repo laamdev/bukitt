@@ -1,10 +1,10 @@
 export default function InternalLink({ label, link }) {
   return (
-    <a
-      href={link}
-      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium font-heading rounded-md shadow-sm text-white tw-hover sm:px-8 tw-transition cursor-pointer"
+    <button
+      type="button"
+      className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-base uppercase font-bold rounded shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
     >
-      {label}
-    </a>
+      <a href={link}>{label}</a>
+    </button>
   );
 }

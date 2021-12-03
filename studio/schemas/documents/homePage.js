@@ -29,19 +29,37 @@ export default {
     {
       name: 'introductionSection',
       title: 'Introduction Section',
-      type: 'sectionSimple',
+      type: 'section',
+    },
+
+    {
+      name: 'featuredSection',
+      title: 'Featured Section',
+      type: 'section',
     },
 
     {
       name: 'aboutSection',
       title: 'About Section',
-      type: 'sectionSimpleCTA',
+      type: 'section',
     },
 
     {
       name: 'exploreSection',
       title: 'Explore Section',
       type: 'section',
+    },
+
+    {
+      name: 'stepsSection',
+      title: 'Steps Section',
+      type: 'section',
+    },
+
+    {
+      name: 'offerSection',
+      title: 'Offer Section',
+      type: 'doubleImage',
     },
   ],
 };

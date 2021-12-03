@@ -1,9 +1,9 @@
-import { IoMapSharp } from 'react-icons/io5';
+import { IoMapOutline } from 'react-icons/io5';
 
 export default {
   name: 'destination',
   title: 'Destination',
-  icon: IoMapSharp,
+  icon: IoMapOutline,
   type: 'document',
   initialValue: () => ({
     featured: false,

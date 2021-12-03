@@ -9,7 +9,7 @@ export default function FeaturedCard({ name, slug, location, thumbnail }) {
       <Link href={`/destinations/${slug}`}>
         <a>
           {thumbnail && (
-            <div className="w-64 h-96 relative mx-auto">
+            <div className="w-28 h-44 sm:w-52 sm:h-80 relative mx-auto">
               <Image
                 className="rounded-full "
                 src={urlForImage(thumbnail).url()}

@@ -10,7 +10,7 @@ import { sanityClient, getClient } from '@/lib/sanity.server';
 
 import Destination from '@/components/adventure/Destination';
 
-export default function DestinationsPage({ data = {}, preview }) {
+export default function DestinationPage({ data = {}, preview }) {
   const router = useRouter();
 
   const slug = data?.destination?.slug;

@@ -78,11 +78,15 @@
   }
 
   html {
-    @apply h-full bg-white font-body;
+    @apply h-full bg-white;
   }
 
   body {
-    @apply h-full;
+    @apply h-full font-body text-lg sm:text-xl;
+  }
+
+  ol {
+    @apply pl-4;
   }
 }
 
@@ -92,11 +96,11 @@
   }
 
   .tw-subheading {
-    @apply text-2xl sm:text-3xl font-heading uppercase font-bold;
+    @apply text-3xl sm:text-4xl font-heading uppercase font-bold;
   }
 
   .tw-card-title {
-    @apply text-xl sm:text-2xl font-subheading font-bold;
+    @apply text-lg sm:text-2xl font-subheading font-bold;
   }
 
   .tw-tagline {

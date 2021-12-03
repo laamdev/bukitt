@@ -1,9 +1,9 @@
-import { IoPinSharp } from 'react-icons/io5';
+import { IoPinOutline } from 'react-icons/io5';
 
 export default {
   name: 'adventure',
   title: 'Adventure',
-  icon: IoPinSharp,
+  icon: IoPinOutline,
   type: 'document',
   initialValue: () => ({
     featured: false,

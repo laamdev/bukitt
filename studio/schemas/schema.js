@@ -10,6 +10,8 @@ import adventure from './documents/adventure';
 import homePage from './documents/homePage';
 import adventuresPage from './documents/adventuresPage';
 import destinationsPage from './documents/destinationsPage';
+import teamMember from './documents/teamMember';
+import socials from './documents/socials';
 
 // objects
 import adventureCard from './objects/adventureCard';
@@ -19,17 +21,11 @@ import customImage from './objects/customImage';
 import destinationCard from './objects/destinationCard';
 import form from './objects/form';
 import hero from './objects/hero';
-import homeAboutSection from './objects/homeAboutSection';
-import homeExploreSection from './objects/homeExploreSection';
-import homeHero from './objects/homeHero';
 import highlight from './objects/highlight';
 import highlightsSection from './objects/highlightsSection';
 import section from './objects/section';
-import sectionSimple from './objects/sectionSimple';
-import sectionSimpleCTA from './objects/sectionSimpleCTA';
-import siteSettings from './objects/siteSettings';
 import socialMedia from './objects/socialMedia';
-import teamMember from './documents/teamMember';
+import doubleImage from './objects/doubleImage';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -44,11 +40,8 @@ export default createSchema({
     adventure,
     destination,
     homePage,
-    homeAboutSection,
-    homeExploreSection,
     adventuresPage,
     destinationsPage,
-    homeHero,
     teamMember,
 
     // OBJECTS
@@ -57,18 +50,15 @@ export default createSchema({
     adventureCard,
     cta,
     destinationCard,
+    doubleImage,
     form,
     hero,
     highlight,
     highlightsSection,
     section,
-    sectionSimple,
-    sectionSimpleCTA,
-    siteSettings,
     socialMedia,
     blockContent,
     customImage,
-
-    // BLOCK CONTENT
+    socials,
   ]),
 });

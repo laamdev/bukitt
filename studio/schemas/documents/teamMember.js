@@ -1,9 +1,9 @@
-import { IoPerson } from 'react-icons/io5';
+import { IoPersonOutline } from 'react-icons/io5';
 
 export default {
   name: 'teamMember',
   title: 'Team Member',
-  icon: IoPerson,
+  icon: IoPersonOutline,
   type: 'document',
   fields: [
     {

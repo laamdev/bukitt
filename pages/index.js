@@ -2,12 +2,13 @@ import { homePageQuery } from '@/lib/queries';
 import { getClient } from '@/lib/sanity.server';
 
 import FeaturedCard from '@/components/destination/FeaturedCard';
-import ListGrid from '@/components/shared/ListGrid';
+import FeaturedList from '@/components/home/FeaturedList';
 import Hero from '@/components/home/Hero';
 import IntroductionSection from '@/components/home/IntroductionSection';
 import AboutSection from '@/components/home/AboutSection';
+import OfferSection from '@/components/home/OfferSection';
 
-export default function Home({ homeData }) {
+export default function HomePage({ homeData }) {
   return (
     <article>
       <Hero coverImage={homeData?.hero?.coverImage} />
@@ -19,17 +20,29 @@ export default function Home({ homeData }) {
               body={homeData?.introductionSection?.body}
             />
 
-            <ListGrid>
-              {homeData?.featured.map((destination) => (
-                <FeaturedCard
-                  key={destination?.card?.name}
-                  name={destination?.card?.name}
-                  slug={destination?.card?.slug}
-                  location={destination?.card?.location}
-                  thumbnail={destination?.card?.thumbnail}
-                />
-              ))}
-            </ListGrid>
+            <OfferSection
+              firstImage={homeData?.offerSection?.firstImage}
+              firstLink={homeData?.offerSection?.firstLink}
+              secondImage={homeData?.offerSection?.secondImage}
+              secondLink={homeData?.offerSection?.secondLink}
+            />
+
+            <div className="flex flex-col space-y-6 sm:space-y-12">
+              <h2 className="tw-subheading text-center">
+                {homeData?.featuredSection?.heading}
+              </h2>
+              <FeaturedList>
+                {homeData?.featured.map((destination) => (
+                  <FeaturedCard
+                    key={destination?.card?.name}
+                    name={destination?.card?.name}
+                    slug={destination?.card?.slug}
+                    location={destination?.card?.location}
+                    thumbnail={destination?.card?.thumbnail}
+                  />
+                ))}
+              </FeaturedList>
+            </div>
 
             <AboutSection
               heading={homeData?.aboutSection?.heading}
