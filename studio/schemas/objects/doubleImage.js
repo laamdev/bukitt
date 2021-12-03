@@ -4,6 +4,12 @@ export default {
   type: 'object',
   fields: [
     {
+      name: 'heading',
+      title: 'Heading',
+      type: 'string',
+      description: 'Section heading.',
+    },
+    {
       name: 'firstImage',
       title: 'First Image',
       type: 'customImage',

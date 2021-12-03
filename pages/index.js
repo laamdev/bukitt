@@ -7,6 +7,7 @@ import Hero from '@/components/home/Hero';
 import IntroductionSection from '@/components/home/IntroductionSection';
 import AboutSection from '@/components/home/AboutSection';
 import OfferSection from '@/components/home/OfferSection';
+import PartnersSection from '@/components/home/PartnersSection';
 
 export default function HomePage({ homeData }) {
   return (
@@ -21,6 +22,7 @@ export default function HomePage({ homeData }) {
             />
 
             <OfferSection
+              heading={homeData?.offerSection?.heading}
               firstImage={homeData?.offerSection?.firstImage}
               firstLink={homeData?.offerSection?.firstLink}
               secondImage={homeData?.offerSection?.secondImage}
@@ -48,6 +50,11 @@ export default function HomePage({ homeData }) {
               heading={homeData?.aboutSection?.heading}
               body={homeData?.aboutSection?.body}
               cta={homeData?.aboutSection?.cta}
+            />
+
+            <PartnersSection
+              heading={homeData?.partnersSection?.heading}
+              partners={homeData?.partnersSection?.partners}
             />
           </div>
         </div>

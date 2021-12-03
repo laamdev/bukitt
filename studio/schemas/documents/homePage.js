@@ -61,5 +61,11 @@ export default {
       title: 'Offer Section',
       type: 'doubleImage',
     },
+
+    {
+      name: 'partnersSection',
+      title: 'Partners Section',
+      type: 'partnersSection',
+    },
   ],
 };

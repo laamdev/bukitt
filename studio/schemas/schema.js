@@ -26,6 +26,8 @@ import highlightsSection from './objects/highlightsSection';
 import section from './objects/section';
 import socialMedia from './objects/socialMedia';
 import doubleImage from './objects/doubleImage';
+import partner from './objects/partner';
+import partnersSection from './objects/partnersSection';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -60,5 +62,7 @@ export default createSchema({
     blockContent,
     customImage,
     socials,
+    partner,
+    partnersSection,
   ]),
 });

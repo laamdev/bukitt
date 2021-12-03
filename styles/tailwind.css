@@ -112,7 +112,7 @@
   }
 
   .tw-transition {
-    @apply transition-colors duration-300 ease-in-out;
+    @apply transition duration-300 ease-in-out;
   }
 
   .tw-bg-hover {
