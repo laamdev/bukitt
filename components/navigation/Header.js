@@ -8,7 +8,7 @@ import { navLinks } from '@/data/navigation';
 
 import MobileMenu from '@/components/navigation/MobileMenu';
 
-export default function Header({ open }) {
+export default function Header() {
   return (
     <header>
       <Popover className="relative bg-white">
@@ -19,9 +19,8 @@ export default function Header({ open }) {
               <Link href="/">
                 <a>
                   <Image
-                    // className="h-8 w-auto sm:h-10"
                     alt="Bukitt"
-                    src="/logos/wordmark.svg"
+                    src="/logos/wordmark-dark.svg"
                     layout="intrinsic"
                     width={50}
                     height={50}
@@ -31,7 +30,7 @@ export default function Header({ open }) {
             </a>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
-            <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+            <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500">
               <span className="sr-only">Open menu</span>
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
@@ -62,20 +61,20 @@ export default function Header({ open }) {
             focus
             className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
           >
-            <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+            <div className="rounded-lg shadow-lg ring-1 ring-dark bg-dark">
               <div className="pt-5 pb-6 px-5">
                 <div className="flex items-center justify-between">
                   <div>
                     <Image
                       alt="Bukitt"
-                      src="/logos/wordmark.svg"
+                      src="/logos/wordmark-white.svg"
                       layout="intrinsic"
                       width={50}
                       height={50}
                     />
                   </div>
                   <div className="-mr-2">
-                    <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <Popover.Button className="bg-transaprent rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500">
                       <span className="sr-only">Close menu</span>
                       <XIcon className="h-6 w-6" aria-hidden="true" />
                     </Popover.Button>

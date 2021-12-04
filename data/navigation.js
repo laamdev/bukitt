@@ -28,19 +28,20 @@ export const socialLinks = [
   {
     name: 'Instagram',
     href: 'https://www.instagram.com/bukitttravel/?hl=en',
-    icon: <IoLogoInstagram className="w-6 h-6" />,
+    icon: <IoLogoInstagram className="w-6 h-6 " aria-hidden="true" />,
   },
   {
     name: 'Facebook',
     href: 'https://www.facebook.com/bukitttravel/',
-    icon: <IoLogoFacebook className="w-6 h-6" />,
+    icon: <IoLogoFacebook className="w-6 h-6" aria-hidden="true" />,
   },
   {
     name: 'Twitter',
     href: 'https://twitter.com/bukitttravel',
-    icon: <IoLogoTwitter className="w-6 h-6" />,
+    icon: <IoLogoTwitter className="w-6 h-6" aria-hidden="true" />,
   },
 ];
 
-export const copyright =
-  '© 2021, Bukkit.com Fla. Seller of Travel Reg. No. ST42985';
+export const currentYear = new Date().getFullYear();
+
+export const copyright = 'Bukkit LLC. All Rights Reserved.';

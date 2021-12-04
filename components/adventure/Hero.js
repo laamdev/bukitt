@@ -31,11 +31,11 @@ export default function Hero({ heading, tagline, body, coverImage }) {
             {heading}
           </h1>
 
-          <div className="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl text-white">
+          <div className="mt-6 max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl">
             <TextBody content={body} />
           </div>
 
-          <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
+          <div className="mt-10 flex justify-center">
             <InternalLink label="Bukitt Now" link="#" />
           </div>
         </div>

@@ -8,16 +8,16 @@ export default function MobileMenu() {
           <a
             key={item.name}
             href={item.href}
-            className="text-base font-medium text-gray-900 hover:text-gray-700"
+            className="text-base font-medium text-gray-300 hover:text-white"
           >
             {item.name}
           </a>
         ))}
       </div>
-      <div className="mt-6">
+      {/* <div className="mt-6">
         <a
           href="#"
-          className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+          className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-teal-600 hover:bg-teal-700"
         >
           Sign up
         </a>
@@ -27,7 +27,7 @@ export default function MobileMenu() {
             Sign in
           </a>
         </p>
-      </div>
+      </div> */}
     </div>
   );
 }
