@@ -4,15 +4,15 @@ import { getClient } from '@/lib/sanity.server';
 import Card from '@/components/adventure/Card';
 import DestinationCard from '@/components/destination/DestinationCard';
 import Subheading from '@/components/shared/Subheading';
-import ListGrid from '@/components/shared/ListGrid';
+import DestinationsList from '@/components/destination/DestinationsList';
 
 export default function AdventuresPage({ adventuresPageData }) {
   return (
     <>
       <article className="flex flex-col mx-auto space-y-12 sm:space-y-24">
-        <section className="space-y-12">
+        <section className="space-y-6 sm:space-y-12">
           <Subheading>{adventuresPageData?.adventuresHeading}</Subheading>
-          <ListGrid>
+          <DestinationsList>
             {adventuresPageData?.adventures.map((adventure) => (
               <Card
                 key={adventure?._id}
@@ -21,12 +21,12 @@ export default function AdventuresPage({ adventuresPageData }) {
                 thumbnail={adventure?.card?.thumbnail}
               />
             ))}
-          </ListGrid>
+          </DestinationsList>
         </section>
 
         <section className="space-y-12">
           <Subheading>{adventuresPageData?.destinationsHeading}</Subheading>
-          <ListGrid>
+          <DestinationsList>
             {adventuresPageData?.destinations.map((destination) => (
               <DestinationCard
                 key={destination?._id}
@@ -36,7 +36,7 @@ export default function AdventuresPage({ adventuresPageData }) {
                 thumbnail={destination?.card?.thumbnail}
               />
             ))}
-          </ListGrid>
+          </DestinationsList>
         </section>
       </article>
     </>

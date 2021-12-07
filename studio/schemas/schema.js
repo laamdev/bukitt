@@ -8,10 +8,12 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 import destination from './documents/destination';
 import adventure from './documents/adventure';
 import homePage from './documents/homePage';
+import aboutPage from './documents/aboutPage';
 import adventuresPage from './documents/adventuresPage';
 import destinationsPage from './documents/destinationsPage';
 import teamMember from './documents/teamMember';
 import socials from './documents/socials';
+import partner from './documents/partner';
 
 // objects
 import adventureCard from './objects/adventureCard';
@@ -26,8 +28,8 @@ import highlightsSection from './objects/highlightsSection';
 import section from './objects/section';
 import socialMedia from './objects/socialMedia';
 import doubleImage from './objects/doubleImage';
-import partner from './objects/partner';
 import partnersSection from './objects/partnersSection';
+import quote from './objects/quote';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -42,9 +44,11 @@ export default createSchema({
     adventure,
     destination,
     homePage,
+    aboutPage,
     adventuresPage,
     destinationsPage,
     teamMember,
+    partner,
 
     // OBJECTS
     // When added to this list, object types can be used as
@@ -62,7 +66,7 @@ export default createSchema({
     blockContent,
     customImage,
     socials,
-    partner,
     partnersSection,
+    quote,
   ]),
 });

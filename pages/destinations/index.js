@@ -3,7 +3,7 @@ import { getClient } from '@/lib/sanity.server';
 
 import DestinationCard from '@/components/destination/DestinationCard';
 import Subheading from '@/components/shared/Subheading';
-import ListGrid from '@/components/shared/ListGrid';
+import ListGrid from '@/components/destination/HighlightsList';
 
 export default function DestinationsPage({ destinationsPageData }) {
   return (

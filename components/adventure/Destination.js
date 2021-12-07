@@ -1,8 +1,7 @@
 import HighlightCard from '@/components/destination/HighlightCard';
-import ListGrid from '@/components/shared/ListGrid';
+import HighlightsList from '@/components/destination/HighlightsList';
 import Hero from '@/components/destination/Hero';
 import MapSection from '@/components/adventure/MapSection';
-import Separator from '@/components/shared/Separator';
 
 export default function Destination({ hero, highlightsSection, mapSection }) {
   return (
@@ -28,7 +27,7 @@ export default function Destination({ hero, highlightsSection, mapSection }) {
               <div className="tw-subheading text-center mb-6">
                 <h3>{highlightsSection?.heading}</h3>
               </div>
-              <ListGrid>
+              <HighlightsList>
                 {highlightsSection?.highlights?.map((highlight) => (
                   <HighlightCard
                     key={highlight?.name}
@@ -37,7 +36,7 @@ export default function Destination({ hero, highlightsSection, mapSection }) {
                     body={highlight?.body}
                   />
                 ))}
-              </ListGrid>
+              </HighlightsList>
             </div>
           </div>
         </div>

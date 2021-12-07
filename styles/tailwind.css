@@ -96,7 +96,7 @@
   }
 
   .tw-subheading {
-    @apply text-3xl sm:text-4xl font-heading uppercase font-bold;
+    @apply text-2xl sm:text-3xl font-heading uppercase font-bold;
   }
 
   .tw-card-title {
@@ -107,8 +107,8 @@
     @apply font-subheading sm:text-xl lg:text-2xl;
   }
 
-  .tw-summary {
-    @apply text-lg font-subheading;
+  .tw-body {
+    @apply text-base sm:text-lg;
   }
 
   .tw-transition {

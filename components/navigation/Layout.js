@@ -3,7 +3,7 @@ import Footer from '@/components/navigation/Footer';
 
 export default function Layout({ children }) {
   return (
-    <div className="overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden">
       <Header />
 
       <main>

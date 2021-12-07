@@ -8,12 +8,5 @@ export default {
       title: 'Heading',
       type: 'string',
     },
-
-    {
-      name: 'partners',
-      title: 'Partners',
-      type: 'array',
-      of: [{ type: 'partner' }],
-    },
   ],
 };

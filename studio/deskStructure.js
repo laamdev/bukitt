@@ -6,6 +6,7 @@ import {
   IoAirplaneSharp,
   IoShareSocialOutline,
   IoSettingsOutline,
+  IoPeopleOutline,
 } from 'react-icons/io5';
 
 export default () =>
@@ -27,6 +28,15 @@ export default () =>
                     .schemaType('homePage')
                     .documentId('homePage')
                     .title('Home')
+                ),
+              S.listItem()
+                .title('About')
+                .icon(IoPeopleOutline)
+                .child(
+                  S.document()
+                    .schemaType('aboutPage')
+                    .documentId('aboutPage')
+                    .title('About')
                 ),
               S.listItem()
                 .title('Adventures')
@@ -74,6 +84,7 @@ export default () =>
         (item) =>
           ![
             'homePage',
+            'aboutPage',
             'adventuresPage',
             'destinationsPage',
             'socials',

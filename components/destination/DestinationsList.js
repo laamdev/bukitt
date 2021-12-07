@@ -1,4 +1,4 @@
-export default function ListGrid({ children }) {
+export default function DestinationsList({ children }) {
   return (
     <ul
       role="list"

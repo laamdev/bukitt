@@ -27,9 +27,21 @@ export default {
     },
 
     {
-      name: 'introductionSection',
-      title: 'Introduction Section',
+      name: 'aboutUsSection',
+      title: 'About Us Section',
       type: 'section',
+    },
+
+    {
+      name: 'teamSection',
+      title: 'Team Section',
+      type: 'section',
+    },
+
+    {
+      name: 'quoteSection',
+      title: 'Quote Section',
+      type: 'quote',
     },
   ],
 };

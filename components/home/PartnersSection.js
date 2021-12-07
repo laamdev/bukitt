@@ -1,7 +1,4 @@
-import Image from 'next/image';
-
-import { urlForImage } from '@/lib/sanity';
-
+import PartnerCard from '@/components/home/PartnerCard';
 import PartnersList from '@/components/home/PartnersList';
 
 export default function PartnersSection({ heading, partners }) {
@@ -10,16 +7,7 @@ export default function PartnersSection({ heading, partners }) {
       <h2 className="tw-subheading text-center">{heading}</h2>
       <PartnersList>
         {partners.map((partner) => (
-          <li key={partner.name}>
-            <Image
-              className="grayscale"
-              src={urlForImage(partner.logo).url()}
-              alt={partner.logo.alt}
-              layout="responsive"
-              width={1}
-              height={1}
-            />
-          </li>
+          <PartnerCard key={partner.name} partner={partner} />
         ))}
       </PartnersList>
     </div>

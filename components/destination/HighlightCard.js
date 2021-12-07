@@ -23,7 +23,7 @@ export default function HighlightCard({ name, body, thumbnail }) {
 
       <div className="tw-card-title">{name}</div>
 
-      <div className="paragraph">
+      <div className="tw-body">
         <TextBody content={body} />
       </div>
     </li>

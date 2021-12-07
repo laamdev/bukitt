@@ -1,9 +1,9 @@
 import { homePageQuery } from '@/lib/queries';
 import { getClient } from '@/lib/sanity.server';
 
-import FeaturedCard from '@/components/destination/FeaturedCard';
+import FeaturedCard from '@/components/home/FeaturedCard';
 import FeaturedList from '@/components/home/FeaturedList';
-import Hero from '@/components/home/Hero';
+import Hero from '@/components/shared/Hero';
 import IntroductionSection from '@/components/home/IntroductionSection';
 import AboutSection from '@/components/home/AboutSection';
 import OfferSection from '@/components/home/OfferSection';
@@ -12,7 +12,7 @@ import PartnersSection from '@/components/home/PartnersSection';
 export default function HomePage({ homeData }) {
   return (
     <article>
-      <Hero coverImage={homeData?.hero?.coverImage} />
+      <Hero hero={homeData?.hero} />
       <div className="relative -mt-32 z-20">
         <div className="max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:px-8">
           <div className="bg-gray-100 rounded-lg shadow px-5 py-6 sm:px-6 space-y-12 sm:space-y-24">

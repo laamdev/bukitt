@@ -31,6 +31,9 @@ module.exports = {
       zIndex: {
         '-10': '-10',
       },
+      width: {
+        'fit-content': 'fit-content',
+      },
     },
   },
   variants: {

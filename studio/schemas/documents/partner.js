@@ -1,7 +1,10 @@
+import { FaRegHandshake } from 'react-icons/fa';
+
 export default {
   name: 'partner',
   title: 'Partner',
-  type: 'object',
+  type: 'document',
+  icon: FaRegHandshake,
   fields: [
     {
       name: 'name',
@@ -14,5 +17,4 @@ export default {
       type: 'customImage',
     },
   ],
-  options: { collapsible: true, collapsed: true, columns: 1 },
 };

@@ -26,7 +26,7 @@ export default function Hero({ hero }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="w-full max-w-3xl mx-auto text-center text-white space-y-3">
             <h1 className="tw-heading z-10">{hero?.heading}</h1>
-            <div className="text-lg z-10">
+            <div className="tw-body z-10">
               <TextBody content={hero?.body} />
             </div>
           </div>

@@ -6,7 +6,6 @@ import { usePreviewSubscription } from '@/lib/sanity';
 import { sanityClient, getClient } from '@/lib/sanity.server';
 
 import Hero from '@/components/adventure/Hero';
-import Logos from '@/components/adventure/Logos';
 import MapSection from '@/components/adventure/MapSection';
 import AccommodationSection from '@/components/adventure/AccommodationSection';
 import Destination from '@/components/adventure/Destination';
@@ -63,8 +62,6 @@ export default function AdventurePage({ data = {}, preview }) {
           mapSection={destination?.mapSection}
         />
       ))}
-
-      <Logos />
     </div>
   );
 }
