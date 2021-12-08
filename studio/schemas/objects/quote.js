@@ -29,7 +29,7 @@ export default {
       title: 'Author Image',
       type: 'customImage',
       description:
-        'Image should be in JPG format and have a 16:9 aspect ratio (1920x1080 preferred).',
+        'Image should be in JPG format and have a 1:1 aspect ratio (1080x1080 preferred).',
     },
   ],
   options: { collapsible: true, collapsed: true, columns: 1 },
