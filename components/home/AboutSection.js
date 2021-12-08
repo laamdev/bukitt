@@ -1,5 +1,5 @@
 import TextBody from '@/components/shared/TextBody';
-import InternalLink from '@/components/shared/InternalLink';
+import ButtonLink from '@/components/shared/ButtonLink';
 
 export default function AboutSection({ heading, body, cta }) {
   return (
@@ -13,7 +13,7 @@ export default function AboutSection({ heading, body, cta }) {
       </div>
 
       <div>
-        <InternalLink label={cta?.label} link={cta?.link} />
+        <ButtonLink label={cta?.label} link={cta?.link ? cta?.link : '#'} />
       </div>
     </section>
   );

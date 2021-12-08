@@ -84,10 +84,6 @@
   body {
     @apply h-full font-body text-lg sm:text-xl;
   }
-
-  ol {
-    @apply pl-4;
-  }
 }
 
 @layer components {
@@ -100,7 +96,7 @@
   }
 
   .tw-card-title {
-    @apply text-lg sm:text-2xl font-subheading font-bold;
+    @apply text-xl sm:text-2xl font-subheading font-bold;
   }
 
   .tw-tagline {
@@ -109,6 +105,10 @@
 
   .tw-body {
     @apply text-base sm:text-lg;
+  }
+
+  .tw-body-hero {
+    @apply text-lg sm:text-xl;
   }
 
   .tw-transition {

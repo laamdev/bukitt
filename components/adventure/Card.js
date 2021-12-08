@@ -9,7 +9,7 @@ export default function Card({ name, slug, thumbnail }) {
       <Link href={`/adventures/${slug}`}>
         <a>
           {thumbnail && (
-            <div className="w-28 h-44 sm:w-52 sm:h-80 relative mx-auto">
+            <div className="w-48 h-72 sm:w-64 sm:h-96 relative mx-auto">
               <Image
                 className="rounded-full "
                 src={urlForImage(thumbnail).url()}
@@ -20,7 +20,7 @@ export default function Card({ name, slug, thumbnail }) {
             </div>
           )}
 
-          <div className="tw-card-title mt-2">{name}</div>
+          <div className="tw-card-title mt-1 sm:mt-2">{name}</div>
         </a>
       </Link>
     </li>

@@ -23,7 +23,6 @@ export default async function handler(req, res) {
       },
     });
 
-    console.log(JSON.stringify(email, null, 2));
     // 3. We check in the response if the status is 400
     // If so, consider it as error and return. Otherwise a 201
     // for create

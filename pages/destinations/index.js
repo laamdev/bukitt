@@ -1,15 +1,17 @@
 import { destinationsPageQuery } from '@/lib/queries';
 import { getClient } from '@/lib/sanity.server';
 
+import Hero from '@/components/shared/Hero';
 import DestinationCard from '@/components/destination/DestinationCard';
-import Subheading from '@/components/shared/Subheading';
 import ListGrid from '@/components/destination/HighlightsList';
+import ContentWrapper from '@/components/shared/ContentWrapper';
 
 export default function DestinationsPage({ destinationsPageData }) {
   return (
-    <article className="flex flex-col mx-auto max-w-5xl">
-      <section className="space-y-12">
-        <Subheading>{destinationsPageData?.highlights?.heading}</Subheading>
+    <article>
+      <Hero hero={destinationsPageData?.hero} />
+
+      <ContentWrapper>
         <ListGrid>
           {destinationsPageData.destinations.map((destination) => (
             <DestinationCard
@@ -21,7 +23,7 @@ export default function DestinationsPage({ destinationsPageData }) {
             />
           ))}
         </ListGrid>
-      </section>
+      </ContentWrapper>
     </article>
   );
 }

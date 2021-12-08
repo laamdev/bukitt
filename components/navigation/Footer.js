@@ -39,7 +39,7 @@ export default function Footer() {
       </h2>
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="grid grid-cols-2 gap-8 xl:col-span-2">
+          {/* <div className="grid grid-cols-2 gap-8 xl:col-span-2">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
@@ -112,7 +112,7 @@ export default function Footer() {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <Newsletter />
         </div>
@@ -153,3 +153,12 @@ export default function Footer() {
     // </footer>
   );
 }
+
+//  <footer>
+//    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
+//      <div className="border-t border-gray-200 py-8 text-sm text-gray-500 text-center sm:text-left">
+//        <span className="block sm:inline">&copy; 2021 Tailwind Labs Inc.</span>{' '}
+//        <span className="block sm:inline">All rights reserved.</span>
+//      </div>
+//    </div>
+//  </footer>;

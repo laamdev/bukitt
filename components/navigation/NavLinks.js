@@ -1,28 +1,24 @@
+import Link from 'next/link';
+
 import { navLinks } from '@/data/navigation';
 import { classNames } from '@/utils/helpers';
 
 export default function NavLinks() {
   return (
-    <div className="px-2 flex items-center bg-dark lg:px-0">
-      <div className="hidden lg:block">
-        <div className="flex space-x-4">
-          {navLinks.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className={classNames(
-                item.current
-                  ? 'bg-red-700 text-white'
-                  : 'text-white hover:bg-red-500 hover:bg-opacity-75',
-                'rounded-md py-2 px-3 text-sm font-medium'
-              )}
-              aria-current={item.current ? 'page' : undefined}
-            >
-              {item.name}
-            </a>
-          ))}
-        </div>
-      </div>
-    </div>
+    <nav className="flex space-x-4">
+      {navLinks.map((link) => (
+        <Link key={link.name} href={link.href}>
+          <a
+            className={classNames(
+              link.current ? 'text-dark' : 'text-teal-700',
+              'text-sm font-medium rounded-md bg-white bg-opacity-0 px-3 py-2 hover:bg-opacity-10'
+            )}
+            aria-current={link.current ? 'page' : undefined}
+          >
+            {link.name}
+          </a>
+        </Link>
+      ))}
+    </nav>
   );
 }

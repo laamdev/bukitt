@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { urlForImage } from '@/lib/sanity';
 
 import TextBody from '@/components/shared/TextBody';
-import InternalLink from '@/components/shared/InternalLink';
+import ButtonLink from '@/components/shared/ButtonLink';
 
 export default function Hero({ heading, tagline, body, coverImage }) {
   return (
@@ -13,10 +13,11 @@ export default function Hero({ heading, tagline, body, coverImage }) {
           {coverImage && (
             <Image
               src={urlForImage(coverImage).url()}
+              alt={coverImage?.alt}
               layout="fill"
               objectFit="cover"
               quality={100}
-              alt={coverImage.alt}
+              priority
             />
           )}
           <div className="absolute inset-0 bg-gray-400 mix-blend-multiply" />
@@ -36,7 +37,7 @@ export default function Hero({ heading, tagline, body, coverImage }) {
           </div>
 
           <div className="mt-10 flex justify-center">
-            <InternalLink label="Bukitt Now" link="#" />
+            {/* <ButtonLink label="Bukitt Now" link="#" /> */}
           </div>
         </div>
       </div>

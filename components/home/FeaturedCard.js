@@ -17,11 +17,7 @@ export default function FeaturedCard({ name, slug, location, thumbnail }) {
                 objectFit="cover"
                 alt={name}
               />
-              <div
-                className="
-              absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
-              tw-card-title z-10 bg-gray-100 w-full items-center justify-center"
-              >
+              <div className="relative top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 tw-card-title z-10 bg-gray-100 w-full items-center justify-center">
                 <div>{name}</div>
               </div>
             </div>

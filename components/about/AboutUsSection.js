@@ -14,7 +14,7 @@ export default function AboutUsSection({ aboutUsSection }) {
         </div>
       </div>
 
-      <div className="w-full sm:w-1/2 bg-gray-100">
+      <div className="relative w-full sm:w-1/2 bg-gray-100">
         {image && (
           <Image
             src={urlForImage(image).url()}
@@ -24,8 +24,6 @@ export default function AboutUsSection({ aboutUsSection }) {
             height={3}
           />
         )}
-        import Image from 'next/image'; import {urlForImage} from
-        '@/lib/sanity'; import TextBody from '@/components/shared/TextBody';{' '}
       </div>
     </section>
   );

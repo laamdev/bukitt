@@ -13,6 +13,8 @@ export default function TeamMemberCard({ teamMember }) {
           layout="responsive"
           width={1}
           height={1}
+          objectFit="cover"
+          objectPosition="center"
         />
       </div>
 
