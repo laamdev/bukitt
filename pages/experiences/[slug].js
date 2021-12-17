@@ -43,7 +43,7 @@ export default function ExperiencePage({ data = {}, preview }) {
         coverImage={experience?.hero?.coverImage}
       />
 
-      {experience.details && (
+      {experience?.details && (
         <Details
           price={experience?.details?.price}
           dateFrom={experience?.details?.dateFrom}
@@ -52,14 +52,14 @@ export default function ExperiencePage({ data = {}, preview }) {
         />
       )}
 
-      {experience.featuresSection && (
+      {experience?.featuresSection && (
         <FeaturesSection
           heading={experience?.featuresSection?.heading}
           features={experience?.featuresSection?.features}
         />
       )}
 
-      {experience.itinerarySection && (
+      {experience?.itinerarySection && (
         <ItinerarySection
           heading={experience?.itinerarySection?.heading}
           itinerary={experience?.itinerarySection?.itinerary}
