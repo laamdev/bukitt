@@ -39,13 +39,13 @@ export default () =>
                     .title('About')
                 ),
               S.listItem()
-                .title('Adventures')
+                .title('Experiences')
                 .icon(IoAirplaneOutline)
                 .child(
                   S.document()
-                    .schemaType('adventuresPage')
-                    .documentId('adventuresPage')
-                    .title('Adventures')
+                    .schemaType('experiencesPage')
+                    .documentId('experiencesPage')
+                    .title('Experiences')
                 ),
               S.listItem()
                 .title('Destinations')
@@ -75,6 +75,15 @@ export default () =>
                     .documentId('socials')
                     .title('Socials')
                 ),
+              S.listItem()
+                .title('Contact')
+                .icon(IoShareSocialOutline)
+                .child(
+                  S.document()
+                    .schemaType('contact')
+                    .documentId('contact')
+                    .title('Contact')
+                ),
             ])
         ),
 
@@ -85,9 +94,10 @@ export default () =>
           ![
             'homePage',
             'aboutPage',
-            'adventuresPage',
+            'experiencesPage',
             'destinationsPage',
             'socials',
+            'contact',
           ].includes(item.getId())
       ),
     ]);

@@ -35,7 +35,16 @@ export default {
     {
       name: 'profilePicture',
       title: 'Profile Picture',
-      type: 'customImage',
+      type: 'imageCustom',
+    },
+    {
+      name: 'priority',
+      type: 'number',
+      title: 'Priority',
+      validation: (Rule) => [
+        Rule.precision(0).error('Priority must be a integer number.'),
+        Rule.positive('Priority must be a positive number'),
+      ],
     },
   ],
   preview: {

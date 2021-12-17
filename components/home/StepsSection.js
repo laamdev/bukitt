@@ -1,7 +1,7 @@
 import TextBody from '@/components/shared/TextBody';
 import ButtonLink from '@/components/shared/ButtonLink';
 
-export default function StepsSection({ heading, body, cta }) {
+export default function StepsSection({ heading, body, callToAction }) {
   return (
     <section className="max-w-2xl flex-col space-y-6 mx-auto text-center">
       <div>
@@ -13,7 +13,7 @@ export default function StepsSection({ heading, body, cta }) {
       </div>
 
       <div>
-        <ButtonLink label={cta?.label} link={cta?.link} />
+        <ButtonLink label={callToAction?.label} link={callToAction?.link} />
       </div>
     </section>
   );

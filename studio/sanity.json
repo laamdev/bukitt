@@ -5,9 +5,7 @@
   },
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [
@@ -22,6 +20,14 @@
     {
       "implements": "part:@sanity/dashboard/config",
       "path": "dashboardConfig.js"
+    },
+    {
+      "implements": "part:@sanity/form-builder/input/image/asset-sources",
+      "path": "./parts/assetSources.js"
+    },
+    {
+      "implements": "part:@sanity/form-builder/input/file/asset-sources",
+      "path": "./parts/assetSources.js"
     }
   ],
   "plugins": [
@@ -32,7 +38,7 @@
     "@sanity/desk-tool",
     "dashboard-widget-vercel",
     "@sanity/dashboard",
-    "vercel-deploy"
+    "media"
   ],
   "project": {
     "name": "bukitt",

@@ -6,8 +6,8 @@ export default function PartnersSection({ heading, partners }) {
     <div>
       <h2 className="tw-subheading text-center">{heading}</h2>
       <PartnersList>
-        {partners.map((partner) => (
-          <PartnerCard key={partner.name} partner={partner} />
+        {partners?.map((partner) => (
+          <PartnerCard key={partner?.name} partner={partner} />
         ))}
       </PartnersList>
     </div>

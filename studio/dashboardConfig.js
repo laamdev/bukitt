@@ -6,5 +6,14 @@ export default {
         width: 'full', // full width is recommended!
       },
     },
+    {
+      name: 'project-info',
+    },
+    {
+      name: 'project-users',
+    },
+    {
+      name: 'sanity-tutorials',
+    },
   ],
 };

@@ -29,25 +29,13 @@ export default {
     },
 
     {
-      name: 'email',
-      title: 'Email',
+      name: 'twitter',
+      title: 'Twitter',
       type: 'url',
-      description:
-        'Email address must follow the format mailto:name@domain.com',
+      description: 'Enter full URL of Twitter profile.',
       validation: (Rule) =>
         Rule.uri({
-          scheme: ['mailto'],
-        }),
-    },
-
-    {
-      name: 'mobile',
-      title: 'Mobile',
-      type: 'url',
-      description: 'Phone number must follow the format tel:1231231231',
-      validation: (Rule) =>
-        Rule.uri({
-          scheme: ['tel'],
+          scheme: ['http', 'https'],
         }),
     },
   ],

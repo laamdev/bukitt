@@ -12,7 +12,7 @@ export default function Hero({ hero }) {
       <div className="relative w-full h-full pb-32 z-0">
         {hero?.coverImage && (
           <Image
-            src={urlForImage(hero?.coverImage).url()}
+            src={urlForImage(hero?.coverImage).width(1920).height(1080).url()}
             alt={hero?.coverImage?.alt}
             layout="fill"
             objectFit="cover"

@@ -14,7 +14,7 @@ export default {
     {
       name: 'logo',
       title: 'Logo',
-      type: 'customImage',
+      type: 'imageCustom',
     },
   ],
 };

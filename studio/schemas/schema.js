@@ -4,69 +4,89 @@ import createSchema from 'part:@sanity/base/schema-creator';
 // Then import schema types from any plugins that might expose them
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 
-// documents
+// DOCUMENTS
+// --- products
 import destination from './documents/destination';
-import adventure from './documents/adventure';
-import homePage from './documents/homePage';
-import aboutPage from './documents/aboutPage';
-import adventuresPage from './documents/adventuresPage';
-import destinationsPage from './documents/destinationsPage';
+import experience from './documents/experience';
+// --- pages
+import homePage from './documents/pages/homePage';
+import aboutPage from './documents/pages/aboutPage';
+import experiencesPage from './documents/pages/experiencesPage';
+import destinationsPage from './documents/pages/destinationsPage';
+// --- misc
 import teamMember from './documents/teamMember';
 import socials from './documents/socials';
+import contact from './documents/contact';
 import partner from './documents/partner';
 
 // objects
-import adventureCard from './objects/adventureCard';
-import blockContent from './objects/blockContent';
-import cta from './objects/cta';
-import customImage from './objects/customImage';
-import destinationCard from './objects/destinationCard';
-import form from './objects/form';
-import hero from './objects/hero';
-import highlight from './objects/highlight';
-import highlightsSection from './objects/highlightsSection';
-import section from './objects/section';
-import socialMedia from './objects/socialMedia';
-import doubleImage from './objects/doubleImage';
-import partnersSection from './objects/partnersSection';
-import quote from './objects/quote';
+import hero from './objects/shared/hero';
+import card from './objects/shared/card';
+import cardSimple from './objects/shared/cardSimple';
+import form from './objects/shared/form';
+import section from './objects/shared/section';
+import sectionSimple from './objects/shared/sectionSimple';
+import callToAction from './objects/shared/callToAction';
+import imageCustom from './objects/shared/imageCustom';
+import imageGallery from './objects/shared/imageGallery';
+import video from './objects/shared/video';
+import textWithImage from './objects/shared/textWithImage';
+import quote from './objects/shared/quote';
 
-// Then we give our schema to the builder and provide the result to Sanity
+import highlightsSection from './objects/destination/highlightsSection';
+import highlight from './objects/destination/highlight';
+import teamSection from './objects/pages/about/teamSection';
+import experienceDetails from './objects/experience/experienceDetails';
+import experienceFeature from './objects/experience/experienceFeature';
+import servicesSection from './objects/pages/home/servicesSection';
+import experienceFeaturesSection from './objects/experience/experienceFeaturesSection';
+import experienceItinerarySection from './objects/experience/experienceItinerarySection';
+import experienceItineraryItem from './objects/experience/experienceItineraryItem';
+
+// abstracts
+import blockContent from './objects/shared/blockContent';
+
 export default createSchema({
-  // We name our schema
-  name: 'default',
-  // Then proceed to concatenate our document type
-  // to the ones provided by any plugins that are installed
+  name: 'content',
   types: schemaTypes.concat([
-    // DOOCUMENTS
-    // The following are document types which will appear
-    // in the studio.
-    adventure,
+    // DOCUMENTS
+    // --- products
     destination,
+    experience,
+    // --- pages
     homePage,
     aboutPage,
-    adventuresPage,
+    experiencesPage,
     destinationsPage,
+    // --- misc
     teamMember,
+    socials,
+    contact,
     partner,
 
     // OBJECTS
-    // When added to this list, object types can be used as
-    // { type: 'typename' } in other document schemas
-    adventureCard,
-    cta,
-    destinationCard,
-    doubleImage,
-    form,
     hero,
+    card,
+    cardSimple,
+    form,
+    section,
+    sectionSimple,
+    imageCustom,
+    imageGallery,
+    callToAction,
+    video,
+    textWithImage,
+    quote,
     highlight,
     highlightsSection,
-    section,
-    socialMedia,
+    servicesSection,
+    teamSection,
+    experienceDetails,
+    experienceFeature,
+    experienceFeaturesSection,
+    experienceItinerarySection,
+    experienceItineraryItem,
+    // abstracts
     blockContent,
-    customImage,
-    socials,
-    partnersSection,
-    quote,
   ]),
 });

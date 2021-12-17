@@ -7,7 +7,6 @@ export default function TeamMemberCard({ teamMember }) {
     <li className="col-span-1 md:col-span-2 lg:col-span-1 flex flex-col">
       <div>
         <Image
-          className="rounded-full"
           src={urlForImage(teamMember.profilePicture).url()}
           alt={teamMember.profilePicture.alt}
           layout="responsive"
@@ -15,6 +14,7 @@ export default function TeamMemberCard({ teamMember }) {
           height={1}
           objectFit="cover"
           objectPosition="center"
+          className="rounded-full"
         />
       </div>
 

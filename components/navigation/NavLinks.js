@@ -10,7 +10,7 @@ export default function NavLinks() {
         <Link key={link.name} href={link.href}>
           <a
             className={classNames(
-              link.current ? 'text-dark' : 'text-teal-700',
+              link.current ? 'text-dark' : 'text-primary',
               'text-sm font-medium rounded-md bg-white bg-opacity-0 px-3 py-2 hover:bg-opacity-10'
             )}
             aria-current={link.current ? 'page' : undefined}

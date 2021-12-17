@@ -8,7 +8,7 @@ import {
 import { usePreviewSubscription } from '@/lib/sanity';
 import { sanityClient, getClient } from '@/lib/sanity.server';
 
-import Destination from '@/components/adventure/Destination';
+import Destination from '@/components/experience/Destination';
 
 export default function DestinationPage({ data = {}, preview }) {
   const router = useRouter();

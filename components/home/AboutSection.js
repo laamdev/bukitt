@@ -1,7 +1,7 @@
 import TextBody from '@/components/shared/TextBody';
 import ButtonLink from '@/components/shared/ButtonLink';
 
-export default function AboutSection({ heading, body, cta }) {
+export default function AboutSection({ heading, body, callToAction }) {
   return (
     <section className="max-w-xl flex-col space-y-6 mx-auto text-center">
       <div>
@@ -13,7 +13,10 @@ export default function AboutSection({ heading, body, cta }) {
       </div>
 
       <div>
-        <ButtonLink label={cta?.label} link={cta?.link ? cta?.link : '#'} />
+        <ButtonLink
+          linkText={callToAction?.linkText}
+          url={callToAction?.url ? callToAction?.url : '#'}
+        />
       </div>
     </section>
   );

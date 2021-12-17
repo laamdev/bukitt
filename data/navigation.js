@@ -6,8 +6,9 @@ import {
 
 export const navLinks = [
   { name: 'Home', href: '/', current: true },
-  { name: 'Adventures', href: '/adventures', current: false },
+  { name: 'Experiences', href: '/experiences', current: false },
   { name: 'Destinations', href: '/destinations', current: false },
+  { name: 'Tailor Made', href: '/tailor-made', current: false },
   { name: 'About', href: '/about', current: false },
   { name: 'Blog', href: '/blog', current: false },
 ];
@@ -32,4 +33,4 @@ export const socialLinks = [
 
 export const currentYear = new Date().getFullYear();
 
-export const copyright = 'Bukkit LLC. All Rights Reserved.';
+export const copyright = 'Bukitt LLC. All Rights Reserved.';

@@ -116,10 +116,10 @@
   }
 
   .tw-bg-hover {
-    @apply bg-teal-600 hover:bg-teal-700;
+    @apply bg-primary hover:bg-teal-600;
   }
 
   .tw-text-hover {
-    @apply text-teal-600 hover:text-teal-700;
+    @apply text-primary hover:text-teal-600;
   }
 }
