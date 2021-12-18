@@ -7,8 +7,8 @@ export default function Newsletter() {
   const [submitting, setSubmitting] = useState(false);
 
   const {
-    register,
     handleSubmit,
+    register,
     formState: { errors },
     reset,
   } = useForm();

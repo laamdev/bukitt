@@ -7,6 +7,7 @@ import {
   IoShareSocialOutline,
   IoSettingsOutline,
   IoPeopleOutline,
+  IoPencilOutline,
 } from 'react-icons/io5';
 
 export default () =>
@@ -56,6 +57,15 @@ export default () =>
                     .documentId('destinationsPage')
                     .title('Destinations')
                 ),
+              S.listItem()
+                .title('Tailored Trip')
+                .icon(IoPencilOutline)
+                .child(
+                  S.document()
+                    .schemaType('tailoredTripPage')
+                    .documentId('tailoredTripPage')
+                    .title('Tailored Trip')
+                ),
             ])
         ),
 
@@ -96,6 +106,7 @@ export default () =>
             'aboutPage',
             'experiencesPage',
             'destinationsPage',
+            'tailoredTripPage',
             'socials',
             'contact',
           ].includes(item.getId())

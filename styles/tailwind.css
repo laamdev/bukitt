@@ -122,4 +122,8 @@
   .tw-text-hover {
     @apply text-primary hover:text-teal-600;
   }
+
+  .tw-form-label {
+    @apply font-subheading font-medium text-sm sm:text-lg;
+  }
 }
