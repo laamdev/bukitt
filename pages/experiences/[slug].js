@@ -52,6 +52,14 @@ export default function ExperiencePage({ data = {}, preview }) {
         />
       )}
 
+      {experience?.mapSection && (
+        <MapSection
+          heading={experience?.mapSection?.heading}
+          body={experience?.mapSection?.body}
+          image={experience?.mapSection?.image}
+        />
+      )}
+
       {experience?.featuresSection && (
         <FeaturesSection
           heading={experience?.featuresSection?.heading}
@@ -63,14 +71,6 @@ export default function ExperiencePage({ data = {}, preview }) {
         <ItinerarySection
           heading={experience?.itinerarySection?.heading}
           itinerary={experience?.itinerarySection?.itinerary}
-        />
-      )}
-
-      {experience?.mapSection && (
-        <MapSection
-          heading={experience?.mapSection?.heading}
-          body={experience?.mapSection?.body}
-          image={experience?.mapSection?.image}
         />
       )}
 

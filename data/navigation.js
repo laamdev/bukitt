@@ -33,4 +33,5 @@ export const socialLinks = [
 
 export const currentYear = new Date().getFullYear();
 
-export const copyright = 'Bukitt LLC. All Rights Reserved.';
+export const copyright =
+  'Bukitt LLC. All Rights Reserved. Seller of Travel Reg. No. ST42985';

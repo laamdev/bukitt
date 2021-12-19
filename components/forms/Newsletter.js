@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
+import FooterHeading from '@/components/footer/Heading';
+
 export default function Newsletter() {
   const [serverError, setServerError] = useState('');
   const [success, setSuccess] = useState('');
@@ -43,10 +45,8 @@ export default function Newsletter() {
   };
 
   return (
-    <div className="mt-8 xl:mt-0">
-      <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-        Subscribe to our newsletter
-      </h3>
+    <div>
+      <FooterHeading>Newsletter</FooterHeading>
       <p className="mt-4 text-base text-gray-300">
         The latest news, articles, and resources, sent to your inbox monthly.
       </p>
@@ -77,7 +77,7 @@ export default function Newsletter() {
           <button
             type="submit"
             disabled={submitting}
-            className="w-full bg-primary border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-primary"
+            className="w-full bg-primary border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-primary tw-transition"
           >
             Subscribe
           </button>

@@ -1,123 +1,87 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
-import { socialLinks, copyright, currentYear } from '@/data/navigation';
+import {
+  socialLinks,
+  navLinks,
+  copyright,
+  currentYear,
+} from '@/data/navigation';
 
+import FooterHeading from '@/components/footer/Heading';
 import Newsletter from '@/components/forms/Newsletter';
-
-const navigation = {
-  solutions: [
-    { name: 'Marketing', href: '#' },
-    { name: 'Analytics', href: '#' },
-    { name: 'Commerce', href: '#' },
-    { name: 'Insights', href: '#' },
-  ],
-  support: [
-    { name: 'Pricing', href: '#' },
-    { name: 'Documentation', href: '#' },
-    { name: 'Guides', href: '#' },
-    { name: 'API Status', href: '#' },
-  ],
-  company: [
-    { name: 'About', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Jobs', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Partners', href: '#' },
-  ],
-  legal: [
-    { name: 'Claim', href: '#' },
-    { name: 'Privacy', href: '#' },
-    { name: 'Terms', href: '#' },
-  ],
-};
 
 export default function Footer() {
   return (
-    <footer className="bg-dark mt-12 sm:mt-24" aria-labelledby="footer-heading">
+    <footer
+      className="bg-dark mt-12 sm:mt-24 py-12"
+      aria-labelledby="footer-heading"
+    >
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          {/* <div className="grid grid-cols-2 gap-8 xl:col-span-2">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                  Solutions
-                </h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  {navigation.solutions.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-base text-gray-300 hover:text-white"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                  Support
-                </h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  {navigation.support.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-base text-gray-300 hover:text-white"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                  Company
-                </h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  {navigation.company.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-base text-gray-300 hover:text-white"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                  Legal
-                </h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  {navigation.legal.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-base text-gray-300 hover:text-white"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div> */}
 
-          <Newsletter />
+      <div className="max-w-7xl mx-auto">
+        <div className="flex">
+          <div className="w-1/4">
+            <Newsletter />
+          </div>
+
+          <div className="w-2/4 flex justify-evenly">
+            {/* <div>
+              <FooterHeading>Solutions</FooterHeading>
+              <ul role="list" className="mt-4 space-y-4">
+                {navigation.solutions.map((item) => (
+                  <li key={item.name}>
+                    <a
+                      href={item.href}
+                      className="text-base text-gray-300 hover:text-white"
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div> */}
+
+            <div>
+              <FooterHeading>Quick Links</FooterHeading>
+              <ul role="list" className="mt-4 space-y-4">
+                {navLinks.map((link) => (
+                  <li key={link.name}>
+                    <a
+                      href={link.href}
+                      className="text-base text-gray-300 hover:text-white"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="w-1/4 flex justify-center items-center">
+            <div className="w-24">
+              <Image
+                src="/images/iata-logo.png"
+                alt="IATA logo"
+                layout="responsive"
+                width={1}
+                height={1}
+              />
+            </div>
+          </div>
         </div>
-        <div className="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
-          <div className="flex space-x-6 md:order-2">
+
+        <div className="flex justify-between mt-12 pt-12 border-t border-gray-700">
+          <div>
+            <p className="mt-8 text-sm text-gray-400 md:mt-0 md:order-1">
+              © {currentYear}, {copyright}
+            </p>
+          </div>
+
+          <div className="flex space-x-6">
             {socialLinks.map((social) => (
               <a
                 key={social.name}
@@ -129,9 +93,6 @@ export default function Footer() {
               </a>
             ))}
           </div>
-          <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-            © {currentYear}, {copyright}
-          </p>
         </div>
       </div>
     </footer>
