@@ -7,7 +7,7 @@ export default function PartnerCard({ partner }) {
     <li className="col-span-1 md:col-span-2 lg:col-span-1">
       <Image
         className="grayscale"
-        src={urlForImage(partner.logo).url()}
+        src={urlForImage(partner.logo).width(1080).height(1080).url()}
         alt={partner.logo.alt}
         layout="responsive"
         width={1}

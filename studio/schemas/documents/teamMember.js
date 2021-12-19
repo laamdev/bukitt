@@ -50,6 +50,7 @@ export default {
   preview: {
     select: {
       title: 'name',
+      subtitle: 'priority',
       media: 'profilePicture',
     },
   },

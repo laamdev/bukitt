@@ -14,8 +14,8 @@ export default function AboutSection({ heading, body, callToAction }) {
 
       <div>
         <ButtonLink
-          linkText={callToAction?.linkText}
-          url={callToAction?.url ? callToAction?.url : '#'}
+          btnLinkText={callToAction?.linkText}
+          btnUrl={callToAction?.url ? callToAction?.url : '#'}
         />
       </div>
     </section>

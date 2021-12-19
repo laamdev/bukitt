@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 import {
   socialLinks,
+  contactLinks,
   navLinks,
   copyright,
   currentYear,
@@ -21,29 +21,13 @@ export default function Footer() {
         Footer
       </h2>
 
-      <div className="max-w-7xl mx-auto">
-        <div className="flex">
-          <div className="w-1/4">
+      <div className="max-w-7xl mx-auto px-6 sm:px-0">
+        <div className="flex flex-col space-y-12 sm:space-y-0 sm:flex-row">
+          <div className="w-full sm:w-1/4">
             <Newsletter />
           </div>
 
-          <div className="w-2/4 flex justify-evenly">
-            {/* <div>
-              <FooterHeading>Solutions</FooterHeading>
-              <ul role="list" className="mt-4 space-y-4">
-                {navigation.solutions.map((item) => (
-                  <li key={item.name}>
-                    <a
-                      href={item.href}
-                      className="text-base text-gray-300 hover:text-white"
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div> */}
-
+          <div className="w-full sm:w-2/4 flex justify-between sm:justify-evenly">
             <div>
               <FooterHeading>Quick Links</FooterHeading>
               <ul role="list" className="mt-4 space-y-4">
@@ -51,7 +35,7 @@ export default function Footer() {
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="text-base text-gray-300 hover:text-white"
+                      className="text-base text-gray-300 hover:text-white tw-transition"
                     >
                       {link.name}
                     </a>
@@ -59,9 +43,45 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
+
+            <div className="space-y-12">
+              <div>
+                <FooterHeading>Socials</FooterHeading>
+                <ul role="list" className="mt-4 space-y-4">
+                  {socialLinks.map((social) => (
+                    <li key={social.name}>
+                      <a
+                        href={social.href}
+                        className="text-gray-400 hover:text-gray-300 tw-transition"
+                      >
+                        <span className="sr-only">{social.name}</span>
+                        {social.icon}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <FooterHeading>Contacts</FooterHeading>
+                <ul role="list" className="mt-4 space-y-4">
+                  {contactLinks.map((contact) => (
+                    <li key={contact.name}>
+                      <a
+                        href={contact.href}
+                        className="text-gray-400 hover:text-gray-300 tw-transition"
+                      >
+                        <span className="sr-only">{contact.name}</span>
+                        {contact.icon}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
 
-          <div className="w-1/4 flex justify-center items-center">
+          <div className="w-full sm:w-1/4 flex justify-center items-center">
             <div className="w-24">
               <Image
                 src="/images/iata-logo.png"
@@ -74,52 +94,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex justify-between mt-12 pt-12 border-t border-gray-700">
+        <div className="flex justify-center mt-12 pt-12 border-t border-gray-700">
           <div>
-            <p className="mt-8 text-sm text-gray-400 md:mt-0 md:order-1">
+            <p className="sm:mt-8 text-xs sm:text-sm text-gray-400 md:mt-0 md:order-1">
               © {currentYear}, {copyright}
             </p>
-          </div>
-
-          <div className="flex space-x-6">
-            {socialLinks.map((social) => (
-              <a
-                key={social.name}
-                href={social.href}
-                className="text-gray-400 hover:text-gray-300"
-              >
-                <span className="sr-only">{social.name}</span>
-                {social.icon}
-              </a>
-            ))}
           </div>
         </div>
       </div>
     </footer>
-
-    // <footer className="max-w-7xl mx-auto py-6">
-    //   <div className="flex flex-col sm:flex-row sm:justify-between items-center space-y-6 sm:space-y-0">
-    //     <ul className="flex space-x-6">
-    //       {socialLinks.map((social) => (
-    //         <li key={social.name}>
-    //           <Link href={social.href}>
-    //             <a className="tw-text-hover tw-transition">{social.icon}</a>
-    //           </Link>
-    //         </li>
-    //       ))}
-    //     </ul>
-
-    //     <div className="text-xs sm:text-sm text-gray-500">{copyright}</div>
-    //   </div>
-    // </footer>
   );
 }
-
-//  <footer>
-//    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
-//      <div className="border-t border-gray-200 py-8 text-sm text-gray-500 text-center sm:text-left">
-//        <span className="block sm:inline">&copy; 2021 Tailwind Labs Inc.</span>{' '}
-//        <span className="block sm:inline">All rights reserved.</span>
-//      </div>
-//    </div>
-//  </footer>;

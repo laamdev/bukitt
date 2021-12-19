@@ -1,6 +1,6 @@
+import { Fragment } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { XIcon } from '@heroicons/react/outline';
 
@@ -8,7 +8,8 @@ import { navLinks } from '@/data/navigation';
 
 import MenuButton from '@/components/navigation/MenuButton';
 import Logo from '@/components/navigation/Logo';
-import NavLinks from '@/components/navigation/NavLinks';
+import NavLinksDesktop from '@/components/navigation/NavLinksDesktop';
+import NavLinksMobile from '@/components/navigation/NavLinksMobile';
 
 export default function Header() {
   return (
@@ -22,7 +23,7 @@ export default function Header() {
 
               {/* Right section on desktop */}
               <div className="hidden lg:ml-4 lg:flex lg:items-center lg:pr-0.5">
-                <NavLinks />
+                <NavLinksDesktop navLinks={navLinks} />
               </div>
 
               {/* Mobule menu button */}
@@ -84,16 +85,7 @@ export default function Header() {
                           </Popover.Button>
                         </div>
                       </div>
-
-                      <div className="mt-3 px-2 space-y-1">
-                        {navLinks.map((link) => (
-                          <Link key={link.name} href={link.href}>
-                            <a className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">
-                              <Popover.Button>{link.name}</Popover.Button>
-                            </a>
-                          </Link>
-                        ))}
-                      </div>
+                      <NavLinksMobile navLinks={navLinks} />
                     </div>
                   </div>
                 </Popover.Panel>

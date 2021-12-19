@@ -2,6 +2,8 @@ import {
   IoLogoFacebook,
   IoLogoInstagram,
   IoLogoTwitter,
+  IoMailOutline,
+  IoCallOutline,
 } from 'react-icons/io5';
 
 export const navLinks = [
@@ -28,6 +30,19 @@ export const socialLinks = [
     name: 'Twitter',
     href: 'https://twitter.com/bukitttravel',
     icon: <IoLogoTwitter className="w-6 h-6" aria-hidden="true" />,
+  },
+];
+
+export const contactLinks = [
+  {
+    name: 'Email',
+    href: 'mailto:hello@bukitt.com',
+    icon: <IoMailOutline className="w-6 h-6 " aria-hidden="true" />,
+  },
+  {
+    name: 'Phone',
+    href: 'tel:3059986034',
+    icon: <IoCallOutline className="w-6 h-6" aria-hidden="true" />,
   },
 ];
 
