@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 import { urlForImage } from '@/lib/sanity';
 
-import ButtonLink from '@/components/shared/ButtonLink';
+import ButtonLink from '@/components/shared/buttons/ButtonLink';
 
-export default function ServicesCard({ title, imageUrl, btnLinkText, btnUrl }) {
+export default function ServicesCard({ title, imageUrl, btnLinkText, btnURL }) {
   return (
     <div className="w-full sm:w-1/2 h-full">
       <div className="relative aspect-w-3 aspect-h-4 group">
@@ -21,7 +21,7 @@ export default function ServicesCard({ title, imageUrl, btnLinkText, btnUrl }) {
             <h3 className="tw-subheading text-white">{title}</h3>
           </div>
           <div>
-            <ButtonLink btnLinkText={btnLinkText} btnUrl={btnUrl} />
+            <ButtonLink btnLinkText={btnLinkText} btnURL={btnURL} />
           </div>
         </div>
       </div>

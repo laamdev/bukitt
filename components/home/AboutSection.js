@@ -1,5 +1,5 @@
 import TextBody from '@/components/shared/TextBody';
-import ButtonLink from '@/components/shared/ButtonLink';
+import ButtonLink from '@/components/shared/buttons/ButtonLink';
 
 export default function AboutSection({ heading, body, callToAction }) {
   return (
@@ -15,7 +15,7 @@ export default function AboutSection({ heading, body, callToAction }) {
       <div>
         <ButtonLink
           btnLinkText={callToAction?.linkText}
-          btnUrl={callToAction?.url ? callToAction?.url : '#'}
+          btnURL={callToAction?.url ? callToAction?.url : '#'}
         />
       </div>
     </section>

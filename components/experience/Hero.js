@@ -3,9 +3,10 @@ import Image from 'next/image';
 import { urlForImage } from '@/lib/sanity';
 
 import TextBody from '@/components/shared/TextBody';
-import ButtonLink from '@/components/shared/ButtonLink';
+import ButtonLink from '@/components/shared/buttons/ButtonLink';
+import ButtonDownload from '@/components/shared/buttons/ButtonDownload';
 
-export default function Hero({ heading, tagline, body, coverImage }) {
+export default function Hero({ heading, tagline, body, coverImage, guideURL }) {
   return (
     <div className="relative">
       <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
@@ -42,8 +43,9 @@ export default function Hero({ heading, tagline, body, coverImage }) {
             </div>
           )}
 
-          <div className="flex justify-center">
-            <ButtonLink btnLinkText="Book Now" btnUrl="#" />
+          <div className="flex justify-center space-x-12">
+            <ButtonLink btnLinkText="Book Now" btnURL="#" />
+            <ButtonDownload btnLinkText="Download Guide" btnURL={guideURL} />
           </div>
         </div>
       </div>

@@ -47,6 +47,13 @@ export default {
     },
 
     {
+      name: 'guide',
+      type: 'file',
+      title: 'Guide',
+      description: 'PDF file of the experience.',
+    },
+
+    {
       name: 'card',
       type: 'cardSimple',
       title: 'Card',

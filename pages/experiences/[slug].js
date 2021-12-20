@@ -41,6 +41,7 @@ export default function ExperiencePage({ data = {}, preview }) {
         tagline={experience?.hero?.tagline}
         body={experience?.hero?.body}
         coverImage={experience?.hero?.coverImage}
+        guideURL={experience?.guideURL}
       />
 
       {experience?.details && (

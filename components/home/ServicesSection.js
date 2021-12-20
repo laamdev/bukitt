@@ -14,13 +14,13 @@ export default function ServicesSection({
           title={experiencesCard?.title}
           imageUrl={experiencesCard?.image}
           btnLinkText={experiencesCard?.callToAction?.linkText}
-          btnUrl={experiencesCard?.callToAction?.url}
+          btnURL={experiencesCard?.callToAction?.url}
         />
         <ServicesCard
           title={tailoredCard?.title}
           imageUrl={tailoredCard?.image}
           btnLinkText={tailoredCard?.callToAction?.linkText}
-          btnUrl={tailoredCard?.callToAction?.url}
+          btnURL={tailoredCard?.callToAction?.url}
         />
       </div>
     </section>
