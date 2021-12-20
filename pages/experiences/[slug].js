@@ -50,6 +50,8 @@ export default function ExperiencePage({ data = {}, preview }) {
           dateFrom={experience?.details?.dateFrom}
           dateTo={experience?.details?.dateTo}
           duration={experience?.details?.duration}
+          groupSizeMin={experience?.details?.groupSizeMin}
+          groupSizeMax={experience?.details?.groupSizeMax}
         />
       )}
 
