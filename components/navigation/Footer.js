@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Image from 'next/image';
 
 import {
@@ -33,12 +34,11 @@ export default function Footer() {
               <ul role="list" className="mt-4 space-y-4">
                 {navLinks.map((link) => (
                   <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className="text-base text-gray-300 hover:text-white tw-transition"
-                    >
-                      {link.name}
-                    </a>
+                    <Link href={link.href}>
+                      <a className="text-base text-gray-300 hover:text-white tw-transition">
+                        {link.name}
+                      </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -52,6 +52,8 @@ export default function Footer() {
                     <li key={social.name}>
                       <a
                         href={social.href}
+                        target="_blank"
+                        rel="noreferrer"
                         className="text-gray-400 hover:text-gray-300 tw-transition"
                       >
                         <span className="sr-only">{social.name}</span>
@@ -69,6 +71,8 @@ export default function Footer() {
                     <li key={contact.name}>
                       <a
                         href={contact.href}
+                        target="_blank"
+                        rel="noreferrer"
                         className="text-gray-400 hover:text-gray-300 tw-transition"
                       >
                         <span className="sr-only">{contact.name}</span>
