@@ -43,9 +43,11 @@ export default function Hero({ heading, tagline, body, coverImage, guideURL }) {
             </div>
           )}
 
-          <div className="flex justify-center space-x-12">
+          <div className="flex flex-col sm:flex-row sm:justify-center items-center space-y-3 sm:space-y-0 sm:space-x-24">
             <ButtonLink btnLinkText="Book Now" btnURL="#" />
-            <ButtonDownload btnLinkText="Download Guide" btnURL={guideURL} />
+            {guideURL && (
+              <ButtonDownload btnLinkText="Download Guide" btnURL={guideURL} />
+            )}
           </div>
         </div>
       </div>
