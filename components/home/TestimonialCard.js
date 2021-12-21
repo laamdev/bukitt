@@ -13,7 +13,7 @@ export default function TestimonialCard({ testimonial }) {
           <p>&ldquo;{testimonial.body}&ldquo;</p>
         </div>
         <footer className="mt-8">
-          <div className="md:flex md:items-center md:justify-center">
+          <div className="flex flex-col items-center md:flex-row justify-center">
             <div className="md:flex-shrink-0">
               <Image
                 src={urlForImage(testimonial.travelerImage)
@@ -25,7 +25,7 @@ export default function TestimonialCard({ testimonial }) {
                 height={50}
                 objectFit="cover"
                 objectPosition="center"
-                className="mx-auto rounded-full"
+                className="rounded-full"
                 alt=""
               />
             </div>
