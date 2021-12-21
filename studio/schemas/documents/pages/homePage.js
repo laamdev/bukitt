@@ -81,6 +81,13 @@ export default {
     },
 
     {
+      name: 'testimonialsSection',
+      type: 'homeTestimonialsSection',
+      title: 'Testimonials Section',
+      description: 'Home page testimonials section.',
+    },
+
+    {
       name: 'stepsSection',
       type: 'section',
       title: 'Steps Section',

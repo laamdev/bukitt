@@ -43,6 +43,8 @@ import servicesSection from './objects/pages/home/servicesSection';
 import experienceFeaturesSection from './objects/experience/experienceFeaturesSection';
 import experienceItinerarySection from './objects/experience/experienceItinerarySection';
 import experienceItineraryItem from './objects/experience/experienceItineraryItem';
+import homeTestimonialsSection from './objects/home/homeTestimonialsSection';
+import testimonial from './objects/shared/testimonial';
 
 // abstracts
 import blockContent from './objects/shared/blockContent';
@@ -88,6 +90,8 @@ export default createSchema({
     experienceFeaturesSection,
     experienceItinerarySection,
     experienceItineraryItem,
+    homeTestimonialsSection,
+    testimonial,
     // abstracts
     blockContent,
   ]),

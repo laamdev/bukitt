@@ -1,17 +1,17 @@
 import { homePageQuery } from '@/lib/queries';
 import { getClient } from '@/lib/sanity.server';
 
-import CardFeatured from '@/components/destination/CardFeatured';
-import FeaturedList from '@/components/home/FeaturedList';
 import Hero from '@/components/shared/Hero';
 import IntroductionSection from '@/components/home/IntroductionSection';
 import AboutSection from '@/components/home/AboutSection';
 import ServicesSection from '@/components/home/ServicesSection';
 import PartnersSection from '@/components/home/PartnersSection';
+import TestimonialsSection from '@/components/home/TestimonialsSection';
 import ContentWrapper from '@/components/shared/ContentWrapper';
 import ContactSection from '@/components/home/ContactSection';
 
 export default function HomePage({ homeData }) {
+  console.log(JSON.stringify(homeData.testimonialsSection, null, 2));
   return (
     <article>
       <Hero hero={homeData?.hero} />
@@ -20,33 +20,22 @@ export default function HomePage({ homeData }) {
           heading={homeData?.introductionSection?.heading}
           body={homeData?.introductionSection?.body}
         />
+
         <ServicesSection
           heading={homeData?.servicesSection?.heading}
           experiencesCard={homeData?.servicesSection?.experiencesCard}
           tailoredCard={homeData?.servicesSection?.tailoredCard}
         />
 
-        <div className="flex flex-col space-y-6 sm:space-y-12">
-          <h2 className="tw-subheading text-center">
-            {homeData?.featuredSection?.heading}
-          </h2>
-          <FeaturedList>
-            {homeData?.featured.map((destination) => (
-              <CardFeatured
-                key={destination?.card?.title}
-                title={destination?.card?.title}
-                slug={destination?.slug}
-                location={destination?.card?.location}
-                image={destination?.card?.image}
-              />
-            ))}
-          </FeaturedList>
-        </div>
-
         <AboutSection
           heading={homeData?.aboutSection?.heading}
           body={homeData?.aboutSection?.body}
           callToAction={homeData?.aboutSection?.callToAction}
+        />
+
+        <TestimonialsSection
+          heading={homeData?.testimonialsSection?.heading}
+          testimonials={homeData?.testimonialsSection?.testimonials}
         />
 
         <PartnersSection

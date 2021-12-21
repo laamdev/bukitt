@@ -19,8 +19,10 @@ export default function Hero({ heading, tagline, body, coverImage, guideURL }) {
               objectFit="cover"
               quality={100}
               priority
+              className="shadow-xl sm:rounded-2xl"
             />
             <div className="absolute inset-0 bg-gray-400 mix-blend-multiply" />
+            xx
           </>
         )}
 

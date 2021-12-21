@@ -28,5 +28,11 @@ export default {
       description: 'Card call to action.',
     },
   ],
-  options: { collapsible: true, collapsed: true, columns: 1 },
+  preview: {
+    select: {
+      title: 'name',
+      subtitle: 'priority',
+      media: 'profilePicture',
+    },
+  },
 };

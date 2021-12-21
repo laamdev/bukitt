@@ -78,7 +78,7 @@
   }
 
   html {
-    @apply h-full bg-white;
+    @apply h-full bg-gray-100;
   }
 
   body {
@@ -128,6 +128,6 @@
   }
 
   .tw-btn {
-    @apply px-2.5 py-1.5 border border-transparent uppercase font-bold rounded shadow-sm text-white tw-bg-hover tw-transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary w-fit-content;
+    @apply px-2.5 py-1.5 border border-transparent uppercase font-subheading text-sm sm:text-base font-bold tracking-widest rounded shadow-sm text-white tw-bg-hover tw-transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary w-fit-content;
   }
 }

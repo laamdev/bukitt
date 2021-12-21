@@ -58,7 +58,7 @@ export default function Header() {
                   focus
                   className="z-30 absolute top-0 inset-x-0 max-w-3xl mx-auto w-full p-2 transition transform origin-top"
                 >
-                  <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y divide-gray-200">
+                  <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 divide-y divide-gray-200">
                     <div className="pt-3 pb-2">
                       <div className="flex items-center justify-between px-4">
                         <div>
