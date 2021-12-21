@@ -6,7 +6,7 @@ import TextBody from '@/components/shared/TextBody';
 
 export default function Hero({ hero }) {
   return (
-    <div className="relative bg-gray-200 shadow-xl sm:rounded-2xl sm:overflow-hidden">
+    <div className="relative bg-gray-200 shadow-xl sm:overflow-hidden">
       <div className="relative w-full h-full pb-32 z-0">
         {hero?.coverImage && (
           <Image

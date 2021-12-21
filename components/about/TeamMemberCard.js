@@ -19,24 +19,22 @@ export default function TeamMemberCard({ teamMember }) {
       </div>
 
       <div className="self-center z-10 text-center space-y-1 sm:space-y-2">
-        <div className="w-fit-content -mt-3 bg-gray-100 rounded-lg shadow text-center tw-card-title px-4 sm:px-6 lg:px-8">
-          {teamMember.name}
-        </div>
-        <div className="text-base sm:text-lg">{teamMember.role}</div>
-      </div>
+        <div className="flex flex-col space-y-2 sm:space-y-3 w-fit-content -mt-3 bg-gray-100 rounded-lg shadow-md py-1 sm:py-2 px-3 sm:px-6">
+          <div className="flex flex-col pb-2 sm:pb-3 border-b-2 border-gray-200">
+            <span className="tw-card-title">{teamMember.name}</span>
+            <span className="tw-card-subtitle">{teamMember.role}</span>
+          </div>
 
-      <div className="self-center text-center mt-3 sm:mt-6 space-y-1.5 sm:space-y-3">
-        <div className="flex flex-col">
-          <span className="text-xs sm:text-sm">Recently checked off</span>
-          <span className="font-bold text-sm sm:text-base uppercase">
-            {teamMember.recentTrip}
-          </span>
-        </div>
-        <div className="flex flex-col">
-          <span className="text-xs sm:text-sm">Next on their Bukitt list</span>
-          <span className="font-bold text-sm sm:text-base uppercase">
-            {teamMember.futureTrip}
-          </span>
+          <div className="flex flex-col space-y-1 sm:space-y-2">
+            <div className="flex flex-col">
+              <span className="tw-sublabel">Recently checked off</span>
+              <span className="tw-label">{teamMember.recentTrip}</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="tw-sublabel">Next on their Bukitt list</span>
+              <span className="tw-label">{teamMember.futureTrip}</span>
+            </div>
+          </div>
         </div>
       </div>
     </li>

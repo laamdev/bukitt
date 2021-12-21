@@ -8,6 +8,7 @@ import {
 import { usePreviewSubscription } from '@/lib/sanity';
 import { sanityClient, getClient } from '@/lib/sanity.server';
 
+import Layout from '@/components/navigation/Layout';
 import Destination from '@/components/experience/Destination';
 
 export default function DestinationPage({ data = {}, preview }) {
@@ -28,13 +29,15 @@ export default function DestinationPage({ data = {}, preview }) {
   }
 
   return (
-    <Destination
-      key={destination?.title}
-      title={destination?.title}
-      hero={destination?.hero}
-      highlightsSection={destination?.highlightsSection}
-      mapSection={destination?.mapSection}
-    />
+    <Layout title={''} description={''}>
+      <Destination
+        key={destination?.title}
+        title={destination?.title}
+        hero={destination?.hero}
+        highlightsSection={destination?.highlightsSection}
+        mapSection={destination?.mapSection}
+      />
+    </Layout>
   );
 }
 

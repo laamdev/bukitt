@@ -5,23 +5,23 @@ export default {
   fields: [
     {
       name: 'heading',
-      title: 'Heading',
       type: 'string',
+      title: 'Heading',
     },
     {
       name: 'body',
+      type: 'text',
       title: 'Body',
-      type: 'blockContent',
     },
     {
       name: 'authorName',
-      title: 'Author Name',
       type: 'string',
+      title: 'Author Name',
     },
     {
       name: 'authorDetail',
-      title: 'Author Detail',
       type: 'string',
+      title: 'Author Detail',
       description: "Details of the quote's author",
     },
     {

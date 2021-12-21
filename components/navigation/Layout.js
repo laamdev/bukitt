@@ -1,19 +1,29 @@
-import Header from '@/components/navigation/Header';
-import Footer from '@/components/navigation/Footer';
+import { NextSeo } from 'next-seo';
+import { motion } from 'framer-motion';
 
-export default function Layout({ children }) {
+const variants = {
+  hidden: { opacity: 0, x: 0, y: 0 },
+  enter: { opacity: 1, x: 0, y: 0 },
+  exit: { opacity: 0, x: 0, y: 0 },
+};
+
+export default function Layout({ children, title, description }) {
   return (
     <div>
-      {/* <div className="min-h-full"> */}
-      <Header />
-
-      <main className="min-h-screen">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-          {children}
-        </div>
-      </main>
-
-      <Footer />
+      <NextSeo
+        title={title}
+        description={description}
+        openGraph={{ title, description }}
+      />
+      <motion.main
+        initial="hidden"
+        animate="enter"
+        exit="exit"
+        variants={variants}
+        transition={{ type: 'linear' }}
+      >
+        {children}
+      </motion.main>
     </div>
   );
 }

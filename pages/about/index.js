@@ -1,6 +1,7 @@
 import { aboutPageQuery } from '@/lib/queries';
 import { getClient } from '@/lib/sanity.server';
 
+import Layout from '@/components/navigation/Layout';
 import ContentWrapper from '@/components/shared/ContentWrapper';
 import Hero from '@/components/shared/Hero';
 import Section from '@/components/shared/Section';
@@ -9,7 +10,7 @@ import TeamQuote from '@/components/about/TeamQuote';
 
 export default function AboutPage({ aboutData }) {
   return (
-    <article>
+    <Layout title={''} description={''}>
       <Hero hero={aboutData?.hero} />
 
       <ContentWrapper>
@@ -23,7 +24,7 @@ export default function AboutPage({ aboutData }) {
 
         <TeamQuote quoteSection={aboutData?.quoteSection} />
       </ContentWrapper>
-    </article>
+    </Layout>
   );
 }
 

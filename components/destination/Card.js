@@ -8,14 +8,14 @@ export default function DestinationCard({ title, slug, image, location }) {
     <li className="relative text-center">
       <Link href={`/destinations/${slug}`}>
         <a>
-          <div className="group block w-full aspect-w-10 aspect-h-10 bg-gray-100 tw-transition focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-primary overflow-hidden">
+          <div className="group block w-full aspect-w-10 aspect-h-10 bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-primary overflow-hidden">
             {image && (
               <Image
                 src={urlForImage(image).width(1080).height(1080).url()}
                 alt={title}
                 layout="fill"
                 objectFit="cover"
-                className="hover:scale-110 tw-transition "
+                className="hover:scale-110 tw-transition"
               />
             )}
           </div>

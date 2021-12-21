@@ -9,7 +9,7 @@ import ButtonDownload from '@/components/shared/buttons/ButtonDownload';
 export default function Hero({ heading, tagline, body, coverImage, guideURL }) {
   return (
     <div className="relative">
-      <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
+      <div className="relative shadow-lg sm:overflow-hidden">
         {coverImage && (
           <>
             <Image
@@ -19,7 +19,6 @@ export default function Hero({ heading, tagline, body, coverImage, guideURL }) {
               objectFit="cover"
               quality={100}
               priority
-              className="shadow-xl sm:rounded-2xl"
             />
             <div className="absolute inset-0 bg-gray-400 mix-blend-multiply" />
             xx

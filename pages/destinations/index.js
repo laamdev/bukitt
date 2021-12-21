@@ -1,6 +1,7 @@
 import { destinationsPageQuery } from '@/lib/queries';
 import { getClient } from '@/lib/sanity.server';
 
+import Layout from '@/components/navigation/Layout';
 import Hero from '@/components/shared/Hero';
 import DestinationCard from '@/components/destination/Card';
 import DestinationsGrid from '@/components/destination/List';
@@ -15,9 +16,8 @@ export default function DestinationsPage({ destinationsPageData }) {
   });
 
   return (
-    <article>
+    <Layout title={''} description={''}>
       <Hero hero={destinationsPageData?.hero} />
-
       <ContentWrapper>
         <DestinationsGrid>
           {sortedDestinations.map((destination) => (
@@ -31,7 +31,7 @@ export default function DestinationsPage({ destinationsPageData }) {
           ))}
         </DestinationsGrid>
       </ContentWrapper>
-    </article>
+    </Layout>
   );
 }
 

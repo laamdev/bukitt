@@ -1,6 +1,7 @@
 import { experiencesPageQuery } from '@/lib/queries';
 import { getClient } from '@/lib/sanity.server';
 
+import Layout from '@/components/navigation/Layout';
 import Hero from '@/components/shared/Hero';
 import ContentWrapper from '@/components/shared/ContentWrapper';
 import ExperienceCard from '@/components/experience/Card';
@@ -8,7 +9,7 @@ import ExperiencesList from '@/components/experience/List';
 
 export default function ExperiencesPage({ experiencesPageData }) {
   return (
-    <article>
+    <Layout title={''} description={''}>
       <Hero hero={experiencesPageData?.hero} />
       <ContentWrapper>
         <section className="space-y-6 sm:space-y-12">
@@ -24,7 +25,7 @@ export default function ExperiencesPage({ experiencesPageData }) {
           </ExperiencesList>
         </section>
       </ContentWrapper>
-    </article>
+    </Layout>
   );
 }
 

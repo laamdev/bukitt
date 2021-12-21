@@ -42,7 +42,7 @@ export default function TestimonialsList({ testimonials }) {
   }, [embla, setScrollSnaps, onSelect]);
 
   return (
-    <div className="max-w-3xl mx-auto">
+    <div>
       {/* Carousel viewport */}
       <div className="overflow-hidden rounded-lg shadow-lg" ref={emblaRef}>
         {/* Carousel container */}

@@ -14,7 +14,7 @@ export default function Details({
   groupSizeMax,
 }) {
   return (
-    <section className="max-w-4xl mx-auto">
+    <section className="mx-auto">
       <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-4">
         <div className="flex flex-col items-center border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
           <IoCashOutline className="w-7 sm:w-8 h-7 sm:h-8 text-dark" />

@@ -16,7 +16,7 @@ export default function PartnerSlider({ partners }) {
     drag: false,
     breakpoints: {
       '(min-width: 1024px)': {
-        slides: { perView: 4, spacing: 100 },
+        slides: { perView: 4, spacing: 200 },
       },
     },
     slides: {

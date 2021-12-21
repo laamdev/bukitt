@@ -1,6 +1,7 @@
 import { homePageQuery } from '@/lib/queries';
 import { getClient } from '@/lib/sanity.server';
 
+import Layout from '@/components/navigation/Layout';
 import Hero from '@/components/shared/Hero';
 import IntroductionSection from '@/components/home/IntroductionSection';
 import AboutSection from '@/components/home/AboutSection';
@@ -11,9 +12,8 @@ import ContentWrapper from '@/components/shared/ContentWrapper';
 import ContactSection from '@/components/home/ContactSection';
 
 export default function HomePage({ homeData }) {
-  console.log(JSON.stringify(homeData.testimonialsSection, null, 2));
   return (
-    <article>
+    <Layout title={''} description={''}>
       <Hero hero={homeData?.hero} />
       <ContentWrapper>
         <IntroductionSection
@@ -26,12 +26,12 @@ export default function HomePage({ homeData }) {
           experiencesCard={homeData?.servicesSection?.experiencesCard}
           tailoredCard={homeData?.servicesSection?.tailoredCard}
         />
-
+        {/* 
         <AboutSection
           heading={homeData?.aboutSection?.heading}
           body={homeData?.aboutSection?.body}
           callToAction={homeData?.aboutSection?.callToAction}
-        />
+        /> */}
 
         <TestimonialsSection
           heading={homeData?.testimonialsSection?.heading}
@@ -45,7 +45,7 @@ export default function HomePage({ homeData }) {
 
         <ContactSection partners={homeData?.contact?.heading} />
       </ContentWrapper>
-    </article>
+    </Layout>
   );
 }
 

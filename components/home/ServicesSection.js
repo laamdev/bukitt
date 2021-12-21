@@ -9,7 +9,7 @@ export default function ServicesSection({
     <section className="space-y-6 sm:space-y-12">
       <div className="tw-subheading text-center">{heading}</div>
 
-      <div className="max-w-3xl mx-auto flex flex-col sm:flex-row space-x-0 sm:space-x-12 space-y-12 sm:space-y-0">
+      <div className="max-w-4xl mx-auto flex flex-col sm:flex-row space-x-0 sm:space-x-12 space-y-12 sm:space-y-0">
         <ServicesCard
           title={experiencesCard?.title}
           imageUrl={experiencesCard?.image}

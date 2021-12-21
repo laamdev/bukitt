@@ -3,7 +3,7 @@ import ButtonLink from '@/components/shared/buttons/ButtonLink';
 
 export default function AboutSection({ heading, body, callToAction }) {
   return (
-    <section className="max-w-xl flex-col space-y-6 mx-auto text-center">
+    <section className="max-w-4xl flex-col space-y-6 mx-auto text-center">
       <div>
         <h3 className="tw-subheading">{heading}</h3>
       </div>

@@ -8,14 +8,15 @@ import {
 import { usePreviewSubscription } from '@/lib/sanity';
 import { sanityClient, getClient } from '@/lib/sanity.server';
 
-import Hero from '@/components/experience/Hero';
+import Layout from '@/components/navigation/Layout';
+import ContentWrapper from '@/components/shared/ContentWrapper';
+import Hero from '@/components/shared/Hero';
 import MapSection from '@/components/experience/MapSection';
 import AccommodationSection from '@/components/experience/AccommodationSection';
 import Destination from '@/components/experience/Destination';
 import Details from '@/components/experience/Details';
 import FeaturesSection from '@/components/experience/features/Section';
 import ItinerarySection from '@/components/experience/itinerary/Section';
-import Meta from '@/components/shared/Meta';
 
 export default function ExperiencePage({ data = {}, preview }) {
   const router = useRouter();
@@ -35,66 +36,62 @@ export default function ExperiencePage({ data = {}, preview }) {
   }
 
   return (
-    <div className="space-y-12 sm:space-y-48">
-      <Hero
-        heading={experience?.hero?.heading}
-        tagline={experience?.hero?.tagline}
-        body={experience?.hero?.body}
-        coverImage={experience?.hero?.coverImage}
-        guideURL={experience?.guideURL}
-      />
+    <Layout title={''} description={''}>
+      <Hero hero={experience?.hero} guideURL={experience?.guideURL} />
 
-      {experience?.details && (
-        <Details
-          price={experience?.details?.price}
-          dateFrom={experience?.details?.dateFrom}
-          dateTo={experience?.details?.dateTo}
-          duration={experience?.details?.duration}
-          groupSizeMin={experience?.details?.groupSizeMin}
-          groupSizeMax={experience?.details?.groupSizeMax}
-        />
-      )}
+      <ContentWrapper>
+        {experience?.details && (
+          <Details
+            price={experience?.details?.price}
+            dateFrom={experience?.details?.dateFrom}
+            dateTo={experience?.details?.dateTo}
+            duration={experience?.details?.duration}
+            groupSizeMin={experience?.details?.groupSizeMin}
+            groupSizeMax={experience?.details?.groupSizeMax}
+          />
+        )}
 
-      {experience?.mapSection && (
-        <MapSection
-          heading={experience?.mapSection?.heading}
-          body={experience?.mapSection?.body}
-          image={experience?.mapSection?.image}
-        />
-      )}
+        {experience?.mapSection && (
+          <MapSection
+            heading={experience?.mapSection?.heading}
+            body={experience?.mapSection?.body}
+            image={experience?.mapSection?.image}
+          />
+        )}
+        {/* 
+        {experience?.featuresSection && (
+          <FeaturesSection
+            heading={experience?.featuresSection?.heading}
+            features={experience?.featuresSection?.features}
+          />
+        )} */}
 
-      {experience?.featuresSection && (
-        <FeaturesSection
-          heading={experience?.featuresSection?.heading}
-          features={experience?.featuresSection?.features}
-        />
-      )}
+        {experience?.itinerarySection && (
+          <ItinerarySection
+            heading={experience?.itinerarySection?.heading}
+            itinerary={experience?.itinerarySection?.itinerary}
+          />
+        )}
 
-      {experience?.itinerarySection && (
-        <ItinerarySection
-          heading={experience?.itinerarySection?.heading}
-          itinerary={experience?.itinerarySection?.itinerary}
-        />
-      )}
+        {experience?.accommodationSection && (
+          <AccommodationSection
+            heading={experience?.accommodationSection?.heading}
+            body={experience?.accommodationSection?.body}
+            image={experience?.accommodationSection?.image}
+          />
+        )}
+      </ContentWrapper>
 
-      {experience?.accommodationSection && (
-        <AccommodationSection
-          heading={experience?.accommodationSection?.heading}
-          body={experience?.accommodationSection?.body}
-          image={experience?.accommodationSection?.image}
-        />
-      )}
-
-      {experience?.destinations?.map((destination) => (
-        <Destination
-          key={destination?.title}
-          title={destination?.title}
-          hero={destination?.hero}
-          highlightsSection={destination?.highlightsSection}
-          mapSection={destination?.mapSection}
-        />
-      ))}
-    </div>
+      {/* {experience?.destinations?.map((destination) => (
+          <Destination
+            key={destination?.title}
+            title={destination?.title}
+            hero={destination?.hero}
+            highlightsSection={destination?.highlightsSection}
+            mapSection={destination?.mapSection}
+          />
+        ))} */}
+    </Layout>
   );
 }
 

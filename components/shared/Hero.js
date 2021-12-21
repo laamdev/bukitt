@@ -2,13 +2,16 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 import { urlForImage } from '@/lib/sanity';
-import TextBody from '@/components/shared/TextBody';
 
-export default function Hero({ hero }) {
+import TextBody from '@/components/shared/TextBody';
+import ButtonLink from '@/components/shared/buttons/ButtonLink';
+import ButtonDownload from '@/components/shared/buttons/ButtonDownload';
+
+export default function Hero({ hero, guideURL }) {
   const router = useRouter();
 
   return (
-    <div className="relative bg-gray-100 shadow-xl sm:rounded-2xl sm:overflow-hidden">
+    <div className="relative bg-gray-100 shadow-xl sm:overflow-hidden">
       <div className="relative w-full h-full pb-32 z-0">
         {hero?.coverImage && (
           <Image
@@ -46,6 +49,13 @@ export default function Hero({ hero }) {
                 </div>
               )}
             </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row sm:justify-center items-center space-y-3 sm:space-y-0 sm:space-x-24">
+            <ButtonLink btnLinkText="Book Now" btnURL="#" />
+            {guideURL && (
+              <ButtonDownload btnLinkText="Download Guide" btnURL={guideURL} />
+            )}
           </div>
         </header>
       </div>
