@@ -15,7 +15,7 @@ export default function Card({ title, slug, image, location }) {
                 layout="fill"
                 objectFit="cover"
                 alt={title}
-                className="hover:scale-110 tw-transition"
+                className="hover:scale-105 tw-transition"
               />
             )}
           </div>

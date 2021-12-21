@@ -4,7 +4,7 @@ import { ChevronUpIcon } from '@heroicons/react/solid';
 export default function DisclosureList({ items }) {
   return (
     <div className="w-full px-4 pt-16">
-      <div className="w-full max-w-md p-2 mx-auto bg-white rounded-2xl">
+      <div className="w-full max-w-md p-2 mx-auto bg-white rounded-lg">
         {items.map((item, idx) => (
           <Disclosure key={idx}>
             {({ open }) => (

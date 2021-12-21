@@ -20,14 +20,8 @@ export default function DestinationsPage({ destinationsPageData }) {
       <Hero hero={destinationsPageData?.hero} />
       <ContentWrapper>
         <DestinationsGrid>
-          {sortedDestinations.map((destination) => (
-            <DestinationCard
-              key={destination?._id}
-              title={destination?.card?.title}
-              location={destination?.location}
-              slug={destination?.slug}
-              image={destination?.card?.image}
-            />
+          {sortedDestinations.map((destination, idx) => (
+            <DestinationCard key={idx} destination={destination} />
           ))}
         </DestinationsGrid>
       </ContentWrapper>

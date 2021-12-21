@@ -3,7 +3,7 @@ import { IoChevronUpOutline } from 'react-icons/io5';
 
 export default function List({ itinerary }) {
   return (
-    <div className="max-w-4xl mx-auto p-2 bg-gray-100 rounded-2xl space-y-1.5 sm:space-y-3">
+    <div className="max-w-4xl mx-auto p-2 bg-gray-100 rounded-lg space-y-1.5 sm:space-y-3">
       {itinerary.map((item, idx) => (
         <Disclosure key={idx}>
           {({ open }) => (

@@ -4,7 +4,7 @@ import { getClient } from '@/lib/sanity.server';
 import Layout from '@/components/navigation/Layout';
 import ContentWrapper from '@/components/shared/ContentWrapper';
 import Hero from '@/components/shared/Hero';
-import Section from '@/components/shared/Section';
+import AboutSection from '@/components/about/AboutSection';
 import TeamList from '@/components/about/TeamList';
 import TeamQuote from '@/components/about/TeamQuote';
 
@@ -14,7 +14,7 @@ export default function AboutPage({ aboutData }) {
       <Hero hero={aboutData?.hero} />
 
       <ContentWrapper>
-        <Section
+        <AboutSection
           heading={aboutData?.aboutUsSection?.heading}
           body={aboutData?.aboutUsSection?.body}
           image={aboutData?.aboutUsSection?.image}
