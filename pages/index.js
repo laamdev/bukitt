@@ -3,7 +3,6 @@ import { getClient } from '@/lib/sanity.server';
 
 import Layout from '@/components/navigation/Layout';
 import Hero from '@/components/shared/Hero';
-import IntroductionSection from '@/components/home/IntroductionSection';
 import AboutSection from '@/components/home/AboutSection';
 import ServicesSection from '@/components/home/ServicesSection';
 import PartnersSection from '@/components/home/PartnersSection';
@@ -16,11 +15,6 @@ export default function HomePage({ homeData }) {
     <Layout title={''} description={''}>
       <Hero hero={homeData?.hero} />
       <ContentWrapper>
-        <IntroductionSection
-          heading={homeData?.introductionSection?.heading}
-          body={homeData?.introductionSection?.body}
-        />
-
         <ServicesSection
           heading={homeData?.servicesSection?.heading}
           experiencesCard={homeData?.servicesSection?.experiencesCard}
@@ -32,17 +26,14 @@ export default function HomePage({ homeData }) {
           body={homeData?.aboutSection?.body}
           callToAction={homeData?.aboutSection?.callToAction}
         /> */}
-
         <TestimonialsSection
           heading={homeData?.testimonialsSection?.heading}
           testimonials={homeData?.testimonialsSection?.testimonials}
         />
-
         <PartnersSection
           heading={homeData?.partnersSection?.heading}
           partners={homeData?.partnersSection?.partners}
         />
-
         <ContactSection partners={homeData?.contact?.heading} />
       </ContentWrapper>
     </Layout>

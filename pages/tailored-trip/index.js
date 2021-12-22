@@ -18,12 +18,10 @@ export default function TailoredTrip({ tailoredTripData }) {
   );
 }
 
-export async function getStaticProps({ preview = false }) {
-  const tailoredTripData = await getClient(preview).fetch(
-    tailoredTripPageQuery
-  );
+export async function getStaticProps() {
+  const tailoredTripData = await getClient().fetch(tailoredTripPageQuery);
 
   return {
-    props: { tailoredTripData, preview },
+    props: { tailoredTripData },
   };
 }

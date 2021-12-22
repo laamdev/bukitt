@@ -1,18 +1,18 @@
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 
 import { urlForImage } from '@/lib/sanity';
 
-import TextBody from '@/components/shared/TextBody';
+import HeroHeading from '@/components/shared/HeroHeading';
+import HeroTagline from '@/components/shared/HeroTagline';
+import HeroBody from '@/components/shared/HeroBody';
 import ButtonLink from '@/components/shared/buttons/ButtonLink';
 import ButtonDownload from '@/components/shared/buttons/ButtonDownload';
+import Divider from '@/components/shared/Divider';
 
 export default function Hero({ hero, guideURL }) {
-  const router = useRouter();
-
   return (
     <div className="relative bg-gray-100 shadow-xl sm:overflow-hidden">
-      <div className="relative w-full h-full pb-32 z-0">
+      <div className="relative w-full h-full px-6 pb-32 z-0">
         {hero?.coverImage && (
           <Image
             src={urlForImage(hero?.coverImage).width(1920).height(1080).url()}
@@ -27,26 +27,22 @@ export default function Hero({ hero, guideURL }) {
         )}
         <div className="absolute inset-0 bg-dark opacity-90 mix-blend-hard-light" />
 
-        <header className="relative py-10">
-          <div className="mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="w-full max-w-3xl mx-auto text-white space-y-3">
-              {router.route === '/' ? (
-                <div className="relative w-2/3 mx-auto">
-                  <Image
-                    src="/logos/rectangle.svg"
-                    alt="Bukitt logo"
-                    layout="responsive"
-                    width={16}
-                    height={9}
-                  />
-                </div>
-              ) : (
-                <div className="space-y-1.5 sm:space-y-3 py-12 text-center">
-                  <h1 className="tw-heading z-10">{hero?.heading}</h1>
-                  <div className="tw-body-hero z-10">
-                    <TextBody content={hero?.body} />
+        <header className="relative py-6 sm:py-12">
+          <div className="max-w-4xl mx-auto text-white text-left sm:text-center">
+            <div className="flex flex-col space-y-6">
+              <div>
+                {/* <HeroTagline>{hero?.tagline}</HeroTagline> */}
+                <HeroHeading>{hero?.heading}</HeroHeading>
+              </div>
+
+              {hero?.body && (
+                <>
+                  <div>
+                    <Divider />
                   </div>
-                </div>
+
+                  <HeroBody content={hero?.body} />
+                </>
               )}
             </div>
           </div>

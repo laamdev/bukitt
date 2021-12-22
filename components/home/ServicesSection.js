@@ -1,3 +1,4 @@
+import SectionHeading from '@/components/shared/SectionHeading';
 import ServicesCard from '@/components/home/ServicesCard';
 
 export default function ServicesSection({
@@ -7,9 +8,8 @@ export default function ServicesSection({
 }) {
   return (
     <section className="space-y-6 sm:space-y-12">
-      <div className="tw-subheading text-center">{heading}</div>
-
-      <div className="max-w-4xl mx-auto flex flex-col sm:flex-row space-x-0 sm:space-x-12 space-y-12 sm:space-y-0">
+      <SectionHeading>{heading}</SectionHeading>
+      <div className="max-w-4xl mx-auto flex flex-col sm:flex-row space-x-0 sm:space-x-12 space-y-6 sm:space-y-0">
         <ServicesCard
           title={experiencesCard?.title}
           imageUrl={experiencesCard?.image}

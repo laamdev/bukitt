@@ -4,8 +4,6 @@ import Link from 'next/link';
 import { urlForImage } from '@/lib/sanity';
 
 export default function DestinationCard({ destination }) {
-  console.log(JSON.stringify(destination, null, 2));
-
   return (
     <li className="relative text-center">
       <Link href={`/destinations/${destination?.slug}`}>

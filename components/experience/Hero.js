@@ -33,7 +33,7 @@ export default function Hero({ heading, tagline, body, coverImage, guideURL }) {
           )}
 
           {heading && (
-            <h1 className="text-center text-4xl font-bold tracking-tight sm:text-4xl lg:text-5xl text-white uppercase font-heading">
+            <h1 className="text-center text-4xl font-bold tracking-tight sm:text-4xl lg:text-5xl text-white uppercase font-primary">
               {heading}
             </h1>
           )}

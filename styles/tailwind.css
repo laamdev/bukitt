@@ -78,7 +78,7 @@
   }
 
   html {
-    @apply h-full font-body text-base sm:text-lg;
+    @apply h-full font-core text-base sm:text-lg;
   }
 
   body {
@@ -88,23 +88,19 @@
 
 @layer components {
   .tw-heading {
-    @apply text-4xl sm:text-5xl font-heading uppercase font-bold;
+    @apply text-4xl sm:text-5xl font-primary uppercase font-bold;
   }
 
   .tw-subheading {
-    @apply text-2xl sm:text-3xl font-heading uppercase font-bold;
+    @apply text-2xl sm:text-3xl font-primary uppercase font-bold;
   }
 
   .tw-card-title {
-    @apply text-xl sm:text-2xl font-subheading font-bold;
+    @apply text-xl sm:text-2xl font-secondary font-bold;
   }
 
   .tw-card-subtitle {
     @apply text-lg sm:text-xl text-gray-700;
-  }
-
-  .tw-tagline {
-    @apply font-subheading sm:text-xl lg:text-2xl;
   }
 
   .tw-body {
@@ -128,18 +124,22 @@
   }
 
   .tw-form-label {
-    @apply font-subheading font-medium text-sm sm:text-lg;
+    @apply font-secondary font-medium text-sm sm:text-lg;
   }
 
   .tw-btn {
-    @apply px-2.5 py-1.5 border border-transparent uppercase font-subheading text-sm sm:text-base font-bold tracking-widest rounded shadow-sm text-white tw-bg-hover tw-transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary w-fit-content;
+    @apply px-2.5 py-1.5 border border-transparent uppercase font-secondary text-sm sm:text-base font-bold tracking-widest rounded shadow-sm text-white tw-bg-hover tw-transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary w-fit-content;
   }
 
   .tw-label {
-    @apply font-subheading font-bold text-sm sm:text-base uppercase;
+    @apply font-secondary font-bold text-sm sm:text-base uppercase;
   }
 
   .tw-sublabel {
     @apply text-xs sm:text-sm text-gray-700;
+  }
+
+  .tw-navlink-mobile {
+    @apply text-2xl font-secondary;
   }
 }

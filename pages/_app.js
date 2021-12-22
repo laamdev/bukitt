@@ -35,7 +35,12 @@ function MyApp({ Component, pageProps, router }) {
         initial={false}
         onExitComplete={() => window.scrollTo(0, 0)}
       >
-        <Component {...pageProps} canonical={url} key={url} />
+        <Component
+          {...pageProps}
+          canonical={url}
+          key={url}
+          // exit={{ opacity: 0 }}
+        />
       </AnimatePresence>
       <Footer />
     </>
@@ -43,9 +48,3 @@ function MyApp({ Component, pageProps, router }) {
 }
 
 export default MyApp;
-
-// <main className="min-h-screen">
-//   <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-//     {children}
-//   </div>
-// </main>;

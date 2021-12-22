@@ -58,16 +58,16 @@ export default function Header() {
                   focus
                   className="z-30 absolute top-0 inset-x-0 max-w-3xl mx-auto w-full p-2 transition transform origin-top"
                 >
-                  <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 divide-y divide-gray-200">
-                    <div className="py-4 bg-gray-100">
+                  <div className="ring-1 ring-black ring-opacity-5 divide-y divide-gray-200">
+                    <div className="py-4 bg-gray-100 rounded-lg shadow-lg">
                       <div className="flex items-center justify-between px-4">
-                        <div>
+                        <Popover.Button>
                           <Link href="/">
                             <a>
                               <span className="sr-only">Bukitt</span>
                               <div className="relative">
                                 <Image
-                                  className="h-8 w-auto"
+                                  className="h-8 w-8"
                                   alt="Bukitt"
                                   src="/logos/wordmark-dark.svg"
                                   layout="intrinsic"
@@ -77,7 +77,7 @@ export default function Header() {
                               </div>
                             </a>
                           </Link>
-                        </div>
+                        </Popover.Button>
                         <div className="-mr-2">
                           <Popover.Button className="bg-transparent rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 tw-transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary">
                             <span className="sr-only">Close menu</span>

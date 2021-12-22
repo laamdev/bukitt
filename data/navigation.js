@@ -7,12 +7,12 @@ import {
 } from 'react-icons/io5';
 
 export const navLinks = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'Experiences', href: '/experiences', current: false },
-  { name: 'Destinations', href: '/destinations', current: false },
-  { name: 'Tailored Trip', href: '/tailored-trip', current: false },
-  { name: 'About', href: '/about', current: false },
-  { name: 'Blog', href: '/blog', current: false },
+  { name: 'Home', href: '/' },
+  { name: 'Experiences', href: '/experiences' },
+  { name: 'Destinations', href: '/destinations' },
+  { name: 'Tailored Trip', href: '/tailored-trip' },
+  { name: 'About', href: '/about' },
+  { name: 'Blog', href: '/blog' },
 ];
 
 export const socialLinks = [

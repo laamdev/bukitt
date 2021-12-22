@@ -29,11 +29,9 @@ export default function ExperiencesPage({ experiencesPageData }) {
   );
 }
 
-export async function getStaticProps({ preview = false }) {
-  const experiencesPageData = await getClient(preview).fetch(
-    experiencesPageQuery
-  );
+export async function getStaticProps() {
+  const experiencesPageData = await getClient().fetch(experiencesPageQuery);
   return {
-    props: { experiencesPageData, preview },
+    props: { experiencesPageData },
   };
 }

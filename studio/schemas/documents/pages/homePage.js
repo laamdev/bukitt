@@ -23,7 +23,6 @@ export default {
         ),
       ],
     },
-
     {
       name: 'slug',
       type: 'slug',
@@ -37,63 +36,48 @@ export default {
         Rule.required().error('A slug must be generated.'),
       ],
     },
-
     {
       name: 'hero',
       type: 'hero',
       title: 'Hero',
       description: 'Home page hero.',
     },
-
-    {
-      name: 'introductionSection',
-      type: 'section',
-      title: 'Introduction Section',
-      description: 'Home page introduction section.',
-    },
-
     {
       name: 'servicesSection',
       type: 'servicesSection',
       title: 'Services Section',
       description: 'Home page services section.',
     },
-
     {
       name: 'featuredSection',
       type: 'section',
       title: 'Featured Section',
       description: 'Home page featured section.',
     },
-
     {
       name: 'aboutSection',
       type: 'section',
       title: 'About Section',
       description: 'Home page about section.',
     },
-
     {
       name: 'exploreSection',
       type: 'section',
       title: 'Explore Section',
       description: 'Home page explore section.',
     },
-
     {
       name: 'testimonialsSection',
       type: 'homeTestimonialsSection',
       title: 'Testimonials Section',
       description: 'Home page testimonials section.',
     },
-
     {
       name: 'stepsSection',
       type: 'section',
       title: 'Steps Section',
       description: 'Home page steps section.',
     },
-
     {
       name: 'partnersSection',
       type: 'section',
