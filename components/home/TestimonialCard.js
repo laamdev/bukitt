@@ -1,16 +1,24 @@
 import Image from 'next/image';
-
+import { IoAirplaneOutline } from 'react-icons/io5';
 import { urlForImage } from '@/lib/sanity';
+
+import TestimonialTitle from '@/components/home/TestimonialTitle';
+import TestimonialQuote from '@/components/home/TestimonialQuote';
 
 export default function TestimonialCard({ testimonial }) {
   return (
-    <div className="relative min-w-full space-y-6 bg-gray-100 p-6">
-      <div className="text-center items-center tw-subheading">
-        {testimonial.travelerTripDestination}
+    <div className="relative min-w-full space-y-6 bg-gray-100 p-3 sm:p-6">
+      <div className="flex items-center justify-center space-x-1.5 sm:space-x-3">
+        <IoAirplaneOutline className="w-4 sm:w-6 h-4 sm:h-6 text-primary" />
+        <TestimonialTitle>
+          {testimonial.travelerTripDestination}
+        </TestimonialTitle>
+        <IoAirplaneOutline className="w-4 sm:w-6 h-4 sm:h-6 text-primary rotate-180" />
       </div>
+
       <blockquote>
         <div className="text-center">
-          <p>&ldquo;{testimonial.body}&ldquo;</p>
+          <TestimonialQuote>{testimonial.body}</TestimonialQuote>
         </div>
         <footer className="mt-8">
           <div className="flex flex-col items-center md:flex-row justify-center">
@@ -35,7 +43,7 @@ export default function TestimonialCard({ testimonial }) {
               </div>
 
               <svg
-                className="hidden md:block mx-1 h-5 w-5 text-primary"
+                className="hidden md:block mx-1 h-4 w-4 text-primary"
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
