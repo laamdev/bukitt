@@ -7,17 +7,25 @@ export default {
       name: 'heading',
       title: 'Heading',
       type: 'string',
+      description: 'Hero heading.',
     },
     {
       name: 'tagline',
       title: 'Tagline',
       type: 'string',
+      description: 'Hero tagline.',
     },
     {
       name: 'body',
       type: 'blockContent',
       title: 'Body',
-      description: 'Card text body.',
+      description: 'Hero body.',
+    },
+    {
+      name: 'callToAction',
+      type: 'callToAction',
+      title: 'CTA',
+      description: 'Hero CTA.',
     },
     {
       name: 'coverImage',

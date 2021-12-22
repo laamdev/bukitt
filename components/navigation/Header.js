@@ -13,11 +13,11 @@ import NavLinksMobile from '@/components/navigation/NavLinksMobile';
 
 export default function Header() {
   return (
-    <Popover as="header" className="py-6 sm:py-3">
+    <Popover as="header" className="py-12 sm:py-6">
       {({ open }) => (
         <>
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-            <div className="relative py-5 flex items-center justify-center lg:justify-between">
+            <div className="relative flex items-center justify-center lg:justify-between">
               {/* Logo */}
               <Logo />
 

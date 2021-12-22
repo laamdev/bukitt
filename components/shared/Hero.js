@@ -27,7 +27,7 @@ export default function Hero({ hero, guideURL }) {
         )}
         <div className="absolute inset-0 bg-dark opacity-90 mix-blend-hard-light" />
 
-        <header className="relative py-6 sm:py-12">
+        <header className="relative space-y-6 sm:space-y-6 py-6 sm:py-12">
           <div className="max-w-4xl mx-auto text-white text-left sm:text-center">
             <div className="flex flex-col space-y-6">
               <div>
@@ -49,7 +49,10 @@ export default function Hero({ hero, guideURL }) {
 
           <div className="flex flex-col sm:flex-row sm:justify-center items-center space-y-3 sm:space-y-0 sm:space-x-24">
             {hero?.callToAction && (
-              <ButtonLink btnLinkText="Book Now" btnURL="#" />
+              <ButtonLink
+                btnLinkText={hero?.callToAction?.linkText}
+                btnURL={hero?.callToAction?.url}
+              />
             )}
             {guideURL && (
               <ButtonDownload btnLinkText="Download Guide" btnURL={guideURL} />
