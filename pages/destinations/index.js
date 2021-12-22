@@ -8,7 +8,7 @@ import DestinationsGrid from '@/components/destination/List';
 import ContentWrapper from '@/components/shared/ContentWrapper';
 
 export default function DestinationsPage({ destinationsPageData }) {
-  let sortedDestinations = destinationsPageData?.destinations.sort(function (
+  const sortedDestinations = destinationsPageData?.destinations.sort(function (
     a,
     b
   ) {

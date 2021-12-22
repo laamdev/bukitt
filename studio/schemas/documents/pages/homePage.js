@@ -84,5 +84,11 @@ export default {
       title: 'Partners Section',
       description: 'Home page partners section.',
     },
+    {
+      name: 'seo',
+      type: 'seo',
+      title: 'SEO',
+      description: 'Page meta info for SEO.',
+    },
   ],
 };

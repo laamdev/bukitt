@@ -23,7 +23,6 @@ export default {
         ),
       ],
     },
-
     {
       name: 'slug',
       type: 'slug',
@@ -37,12 +36,17 @@ export default {
         Rule.required().error('A slug must be generated.'),
       ],
     },
-
     {
       name: 'hero',
       type: 'hero',
       title: 'Hero',
       description: 'Tailored trip page hero.',
+    },
+    {
+      name: 'seo',
+      type: 'seo',
+      title: 'SEO',
+      description: 'Page meta info for SEO.',
     },
   ],
 };

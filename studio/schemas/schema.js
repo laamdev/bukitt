@@ -33,6 +33,7 @@ import imageGallery from './objects/shared/imageGallery';
 import video from './objects/shared/video';
 import textWithImage from './objects/shared/textWithImage';
 import quote from './objects/shared/quote';
+import seo from './objects/shared/seo';
 
 import highlightsSection from './objects/destination/highlightsSection';
 import highlight from './objects/destination/highlight';
@@ -94,6 +95,7 @@ export default createSchema({
     experienceDestinationsSection,
     homeTestimonialsSection,
     testimonial,
+    seo,
     // abstracts
     blockContent,
   ]),

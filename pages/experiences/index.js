@@ -8,13 +8,19 @@ import ExperienceCard from '@/components/experience/Card';
 import ExperiencesList from '@/components/experience/List';
 
 export default function ExperiencesPage({ experiencesPageData }) {
+  const sortedExperiences = experiencesPageData?.experiences.sort(function (
+    a,
+    b
+  ) {
+    return a.name.localeCompare(b.name);
+  });
   return (
     <Layout title={''} description={''}>
       <Hero hero={experiencesPageData?.hero} />
       <ContentWrapper>
         <section className="space-y-6 sm:space-y-12">
           <ExperiencesList>
-            {experiencesPageData?.experiences.map((experience) => (
+            {sortedExperiences.map((experience) => (
               <ExperienceCard
                 key={experience?._id}
                 title={experience?.card?.title}

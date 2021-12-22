@@ -20,7 +20,6 @@ export default {
           scheme: ['mailto'],
         }).error('Must follow the format mailto:name@domain.com'),
     },
-
     {
       name: 'phone',
       title: 'Phone',

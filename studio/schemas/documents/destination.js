@@ -84,5 +84,11 @@ export default {
       description: 'Experience that includes the destination.',
       to: [{ type: 'experience' }],
     },
+    {
+      name: 'seo',
+      type: 'seo',
+      title: 'SEO',
+      description: 'Page meta info for SEO.',
+    },
   ],
 };

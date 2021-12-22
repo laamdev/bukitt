@@ -98,5 +98,11 @@ export default {
       title: 'Destinations Section',
       description: 'Destinations included in the experience package.',
     },
+    {
+      name: 'seo',
+      type: 'seo',
+      title: 'SEO',
+      description: 'Page meta info for SEO.',
+    },
   ],
 };
