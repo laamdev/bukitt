@@ -2,13 +2,14 @@ import { homePageQuery } from '@/lib/queries';
 import { getClient } from '@/lib/sanity.server';
 
 import Layout from '@/components/navigation/Layout';
-import Hero from '@/components/shared/Hero';
+import FeaturedDestinationsSection from '@/components/home/featuredDestinations/Section';
 import AboutSection from '@/components/home/AboutSection';
 import ServicesSection from '@/components/home/ServicesSection';
 import PartnersSection from '@/components/home/PartnersSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
-import ContentWrapper from '@/components/shared/ContentWrapper';
 import ContactSection from '@/components/home/ContactSection';
+import Hero from '@/components/shared/Hero';
+import ContentWrapper from '@/components/shared/ContentWrapper';
 
 export default function HomePage({ homeData }) {
   return (
@@ -19,6 +20,10 @@ export default function HomePage({ homeData }) {
           heading={homeData?.servicesSection?.heading}
           experiencesCard={homeData?.servicesSection?.experiencesCard}
           tailoredCard={homeData?.servicesSection?.tailoredCard}
+        />
+        <FeaturedDestinationsSection
+          heading={homeData?.featuredDestinationsSection?.heading}
+          featuredDestinations={homeData?.featuredDestinations}
         />
         {/* 
         <AboutSection

@@ -1,6 +1,8 @@
 import { Disclosure, Transition } from '@headlessui/react';
 import { IoChevronUpOutline } from 'react-icons/io5';
 
+import CardTitle from '@/components/shared/card/Title';
+
 export default function List({ itinerary }) {
   return (
     <div className="max-w-4xl mx-auto p-2 bg-gray-100 rounded-lg space-y-1.5 sm:space-y-3">
@@ -8,8 +10,8 @@ export default function List({ itinerary }) {
         <Disclosure key={idx}>
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between items-center w-full px-4 py-2 tw-card-title text-left text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-200 focus:outline-none focus-visible:ring focus-visible:ring-gray-500 focus-visible:ring-opacity-75">
-                <span>Day {item.day}</span>
+              <Disclosure.Button className="flex justify-between items-center w-full px-4 py-2 text-left bg-gray-50 rounded-lg hover:bg-gray-200 focus:outline-none focus-visible:ring focus-visible:ring-gray-500 focus-visible:ring-opacity-75">
+                <CardTitle>Day {item.day}</CardTitle>
                 <IoChevronUpOutline
                   className={`tw-transition ${
                     open ? 'transform rotate-180' : ''

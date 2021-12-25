@@ -1,11 +1,13 @@
-import Item from '@/components/experience/features/Item';
+import ExperienceFeaturesCard from '@/components/experience/features/Card';
 
 export default function List({ features }) {
   return (
-    <ul className="mx-auto grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-24 pl-4">
-      {features.map((feature) => (
-        <Item key={feature.name} feature={feature} />
-      ))}
-    </ul>
+    <div className="mt-12">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {features.map((feature, idx) => (
+          <ExperienceFeaturesCard key={idx} feature={feature} />
+        ))}
+      </div>
+    </div>
   );
 }

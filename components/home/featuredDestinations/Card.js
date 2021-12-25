@@ -8,12 +8,12 @@ export default function Card({ destination }) {
     <li className="relative text-center">
       <Link href={`/destinations/${destination?.slug}`}>
         <a>
-          <div className="group block w-full aspect-w-10 aspect-h-10 bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-primary overflow-hidden rounded-lg shadow-lg">
+          <div className="group block w-full aspect-w-4 aspect-h-5 bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-primary overflow-hidden rounded-lg shadow-lg">
             {destination?.card?.image && (
               <Image
                 src={urlForImage(destination?.card?.image)
                   .width(1080)
-                  .height(1080)
+                  .height(1350)
                   .url()}
                 alt={destination?.card?.title}
                 layout="fill"

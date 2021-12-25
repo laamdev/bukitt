@@ -58,13 +58,13 @@ export default function ExperiencePage({ data = {}, preview }) {
             image={experience?.mapSection?.image}
           />
         )}
-        {/* 
+
         {experience?.featuresSection && (
           <FeaturesSection
             heading={experience?.featuresSection?.heading}
             features={experience?.featuresSection?.features}
           />
-        )} */}
+        )}
 
         {experience?.itinerarySection && (
           <ItinerarySection

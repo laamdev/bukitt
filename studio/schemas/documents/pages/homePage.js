@@ -49,10 +49,10 @@ export default {
       description: 'Home page services section.',
     },
     {
-      name: 'featuredSection',
+      name: 'featuredDestinationsSection',
       type: 'section',
-      title: 'Featured Section',
-      description: 'Home page featured section.',
+      title: 'Featured Destinations Section',
+      description: 'Home page featured destinations section.',
     },
     {
       name: 'aboutSection',
