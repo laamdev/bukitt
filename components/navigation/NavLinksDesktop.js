@@ -12,7 +12,7 @@ export default function NavLinks({ navLinks }) {
             className={`cursor-pointer font-secondary ${
               router.asPath === link.href
                 ? 'text-primary'
-                : 'text-dark opacity-50 hover:text-primary hover:opacity-100 tw-transition'
+                : 'text-black opacity-50 hover:text-primary hover:opacity-100 tw-transition'
             }`}
             aria-current={link.current ? 'page' : undefined}
           >

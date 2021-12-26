@@ -31,7 +31,6 @@ export default function Hero({ hero, guideURL }) {
           <div className="max-w-4xl mx-auto text-white text-left sm:text-center">
             <div className="flex flex-col space-y-6">
               <div>
-                {/* <HeroTagline>{hero?.tagline}</HeroTagline> */}
                 <HeroHeading>{hero?.heading}</HeroHeading>
               </div>
 

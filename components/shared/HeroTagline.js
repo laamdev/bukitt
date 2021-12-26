@@ -1,6 +1,6 @@
 export default function HeroTagline({ children }) {
   return (
-    <h2 className="font-secondary text-base sm:text-xl uppercase font-medium tracking-widest">
+    <h2 className="text-sm sm:text-base font-secondary font-medium tracking-wider uppercase">
       {children}
     </h2>
   );

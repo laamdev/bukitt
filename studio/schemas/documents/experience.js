@@ -37,12 +37,6 @@ export default {
       ],
     },
     {
-      name: 'featured',
-      type: 'boolean',
-      title: 'Featured',
-      description: 'Experience will be featured in the homepage.',
-    },
-    {
       name: 'guide',
       type: 'file',
       title: 'Guide',

@@ -10,7 +10,7 @@ export default function Logo() {
           <div className="relative">
             <Image
               alt="Bukitt"
-              src="/logos/bukitt-logo-rectangle-dark.svg"
+              src="/logos/bukitt-logo-rectangle.svg"
               layout="intrinsic"
               width={128}
               height={72}

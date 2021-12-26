@@ -47,6 +47,9 @@ export const contactLinks = [
 ];
 
 export const currentYear = new Date().getFullYear();
+export const currentMonth = new Date().toLocaleString('default', {
+  month: 'long',
+});
 
 export const copyright =
   'Bukitt LLC. All Rights Reserved. Seller of Travel Reg. No. ST42985';

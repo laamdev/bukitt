@@ -55,6 +55,12 @@ export default {
       description: 'Home page featured destinations section.',
     },
     {
+      name: 'featuredExperienceSection',
+      type: 'homeFeaturedExperienceSection',
+      title: 'Featured Experience Section',
+      description: 'Home page featured experience section.',
+    },
+    {
       name: 'aboutSection',
       type: 'section',
       title: 'About Section',

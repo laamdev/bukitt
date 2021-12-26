@@ -13,7 +13,7 @@ export default function Card({ feature }) {
             <span className="inline-flex items-center justify-center p-3 bg-white border-2 border-primary rounded-lg shadow-lg">
               <Image
                 src={urlForImage(feature.icon).width(1080).height(1080).url()}
-                alt={feature.icon.alt}
+                alt={feature.icon.alt ? feature.icon.alt : 'Icon.'}
                 layout="intrinsic"
                 width={50}
                 height={50}

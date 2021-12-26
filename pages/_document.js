@@ -177,7 +177,7 @@ class MyDocument extends Document {
           />
         </Head>
 
-        <body className="bg-gray-100">
+        <body className="bg-gray-100 text-black">
           <Main />
           <NextScript />
         </body>

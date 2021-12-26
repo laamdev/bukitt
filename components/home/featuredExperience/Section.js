@@ -1,13 +1,13 @@
-import FeaturedDestinationsList from '@/components/home/featuredDestinations/List';
+import FeaturedExperienceCard from '@/components/home/featuredExperience/Card';
 import SectionWrapper from '@/components/shared/SectionWrapper';
 import SectionHeading from '@/components/shared/SectionHeading';
 
-export default function Section({ heading, featuredDestinations }) {
+export default function Section({ heading, body, featuredExperience }) {
   return (
     <SectionWrapper>
       <SectionHeading>{heading}</SectionHeading>
 
-      <FeaturedDestinationsList featuredDestinations={featuredDestinations} />
+      <FeaturedExperienceCard body={body} experience={featuredExperience} />
     </SectionWrapper>
   );
 }

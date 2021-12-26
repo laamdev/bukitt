@@ -3,6 +3,7 @@ import { getClient } from '@/lib/sanity.server';
 
 import Layout from '@/components/navigation/Layout';
 import FeaturedDestinationsSection from '@/components/home/featuredDestinations/Section';
+import FeaturedExperienceSection from '@/components/home/featuredExperience/Section';
 import AboutSection from '@/components/home/AboutSection';
 import ServicesSection from '@/components/home/ServicesSection';
 import PartnersSection from '@/components/home/PartnersSection';
@@ -24,6 +25,13 @@ export default function HomePage({ homeData }) {
         <FeaturedDestinationsSection
           heading={homeData?.featuredDestinationsSection?.heading}
           featuredDestinations={homeData?.featuredDestinations}
+        />
+        <FeaturedExperienceSection
+          heading={homeData?.featuredExperienceSection?.heading}
+          body={homeData?.featuredExperienceSection?.body}
+          featuredExperience={
+            homeData?.featuredExperienceSection?.featuredExperience
+          }
         />
         {/* 
         <AboutSection

@@ -17,7 +17,7 @@ export default function Details({
     <section className="mx-auto">
       <dl className="rounded-lg bg-gray-100 shadow-lg sm:grid sm:grid-cols-4">
         <div className="flex flex-col items-center border-b border-gray-300 sm:border-0 sm:border-r p-6 text-center">
-          <IoCashOutline className="w-6 sm:w-8 h-6 sm:h-8 text-dark" />
+          <IoCashOutline className="w-6 sm:w-8 h-6 sm:h-8" />
           <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
             Price
           </dt>
@@ -26,7 +26,7 @@ export default function Details({
           </dd>
         </div>
         <div className="flex flex-col items-center border-b border-gray-300 sm:border-0 sm:border-r p-6 text-center">
-          <IoCalendarNumberOutline className="w-6 sm:w-8 h-6 sm:h-8 text-dark" />
+          <IoCalendarNumberOutline className="w-6 sm:w-8 h-6 sm:h-8" />
           <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
             Season
           </dt>
@@ -36,7 +36,7 @@ export default function Details({
         </div>
 
         <div className="flex flex-col items-center border-b border-gray-300 sm:border-0 sm:border-r p-6 text-center">
-          <IoTimeOutline className="w-6 sm:w-8 h-6 sm:h-8 text-dark" />
+          <IoTimeOutline className="w-6 sm:w-8 h-6 sm:h-8" />
           <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
             Duration
           </dt>
@@ -46,7 +46,7 @@ export default function Details({
         </div>
 
         <div className="flex flex-col items-center border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l">
-          <IoPeopleOutline className="w-6 sm:w-8 h-6 sm:h-8 text-dark" />
+          <IoPeopleOutline className="w-6 sm:w-8 h-6 sm:h-8" />
           <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
             Group
           </dt>
