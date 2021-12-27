@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { urlForImage } from '@/lib/sanity';
 
 import TextBody from '@/components/shared/TextBody';
+import Title from '@/components/shared/card/Title';
 
 export default function Card({ title, body, image }) {
   return (
@@ -21,11 +22,9 @@ export default function Card({ title, body, image }) {
         </div>
       )}
 
-      <div className="tw-card-title">{title}</div>
+      <Title>{title}</Title>
 
-      <div className="tw-body">
-        <TextBody content={body} />
-      </div>
+      <TextBody content={body} />
     </li>
   );
 }

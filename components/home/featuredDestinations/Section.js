@@ -1,11 +1,10 @@
 import FeaturedDestinationsList from '@/components/home/featuredDestinations/List';
 import SectionWrapper from '@/components/shared/SectionWrapper';
-import SectionHeading from '@/components/shared/SectionHeading';
 
 export default function Section({ heading, featuredDestinations }) {
   return (
     <SectionWrapper>
-      <SectionHeading>{heading}</SectionHeading>
+      <h3 className="tw-section-heading text-center">{heading}</h3>
 
       <FeaturedDestinationsList featuredDestinations={featuredDestinations} />
     </SectionWrapper>

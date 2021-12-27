@@ -1,11 +1,10 @@
 import FeaturedExperienceCard from '@/components/home/featuredExperience/Card';
 import SectionWrapper from '@/components/shared/SectionWrapper';
-import SectionHeading from '@/components/shared/SectionHeading';
 
 export default function Section({ heading, body, featuredExperience }) {
   return (
     <SectionWrapper>
-      <SectionHeading>{heading}</SectionHeading>
+      <h3 className="tw-section-heading text-center">{heading}</h3>
 
       <FeaturedExperienceCard body={body} experience={featuredExperience} />
     </SectionWrapper>

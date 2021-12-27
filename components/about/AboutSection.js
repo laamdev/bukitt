@@ -7,14 +7,14 @@ import TextBody from '@/components/shared/TextBody';
 export default function AboutSection({ heading, body, image }) {
   return (
     <section className="flex flex-col space-y-6 sm:flex-row sm:space-y-0 sm:space-x-12 items-center text-left sm:text-right">
-      <div className="w-full sm:w-3/5 space-y-3">
-        <h3 className="tw-subheading">{heading}</h3>
+      <div className="w-full sm:w-1/2 space-y-3">
+        <h3 className="tw-section-heading">{heading}</h3>
         <div>
           <TextBody content={body} />
         </div>
       </div>
 
-      <div className="w-full sm:w-2/5 rounded shadow">
+      <div className="w-full sm:w-1/2 rounded shadow">
         {image && (
           <Image
             src={urlForImage(image).width(1080).height(1080).url()}

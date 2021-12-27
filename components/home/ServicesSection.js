@@ -1,4 +1,3 @@
-import SectionHeading from '@/components/shared/SectionHeading';
 import SectionWrapper from '@/components/shared/SectionWrapper';
 import ServicesCard from '@/components/home/ServicesCard';
 
@@ -9,7 +8,7 @@ export default function ServicesSection({
 }) {
   return (
     <SectionWrapper>
-      <SectionHeading>{heading}</SectionHeading>
+      <h3 className="tw-section-heading text-center">{heading}</h3>
       <div className="max-w-4xl mx-auto flex flex-col sm:flex-row space-x-0 sm:space-x-12 space-y-6 sm:space-y-0">
         <ServicesCard
           title={experiencesCard?.title}

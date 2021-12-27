@@ -10,7 +10,6 @@ import { sanityClient, getClient } from '@/lib/sanity.server';
 
 import Layout from '@/components/navigation/Layout';
 import ContentWrapper from '@/components/shared/ContentWrapper';
-import SectionHeading from '@/components/shared/SectionHeading';
 import HighlightCard from '@/components/destination/highlight/Card';
 import HighlightsList from '@/components/destination/highlight/List';
 import Hero from '@/components/shared/Hero';
@@ -49,9 +48,9 @@ export default function DestinationPage({ data = {}, preview }) {
         )}
 
         <SectionWrapper>
-          <SectionHeading>
+          <h3 className="tw-section-heading text-center">
             {destination?.highlightsSection?.heading}
-          </SectionHeading>
+          </h3>
 
           <HighlightsList>
             {destination?.highlightsSection?.highlights?.map((highlight) => (

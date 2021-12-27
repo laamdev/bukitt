@@ -13,7 +13,7 @@ import ContentWrapper from '@/components/shared/ContentWrapper';
 import Hero from '@/components/shared/Hero';
 import MapSection from '@/components/experience/MapSection';
 import AccommodationSection from '@/components/experience/AccommodationSection';
-import DestinationsSection from '@/components/experience/DestinationsSection';
+import DestinationsSection from '@/components/experience/destinations/Section';
 import Details from '@/components/experience/Details';
 import FeaturesSection from '@/components/experience/features/Section';
 import ItinerarySection from '@/components/experience/itinerary/Section';
