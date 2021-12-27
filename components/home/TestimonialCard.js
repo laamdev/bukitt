@@ -41,19 +41,13 @@ export default function TestimonialCard({ testimonial }) {
             <div className="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
               <div className="text-base font-medium text-gray-900">
                 {testimonial.travelerName}. {testimonial.travelerAge}
+                <span className="text-primary"> / </span>
+                <span className="text-gray-500 font-normal">
+                  {testimonial.travelerOriginLocation}
+                </span>
               </div>
 
-              <svg
-                className="hidden md:block mx-1 w-4 h-4 text-primary stroke-1"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path d="M11 0h3L9 20H6l5-20z" />
-              </svg>
-
-              <div className="text-base font-medium text-gray-500">
-                {testimonial.travelerOriginLocation}
-              </div>
+              <div className="text-base text-gray-500"></div>
             </div>
           </div>
         </footer>
