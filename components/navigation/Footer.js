@@ -88,7 +88,7 @@ export default function Footer() {
           <div className="w-full sm:w-1/4 flex justify-center items-center">
             <div className="w-24">
               <Image
-                src="/images/iata-logo.png"
+                src="/static/images/iata-logo.png"
                 alt="IATA logo"
                 layout="responsive"
                 width={1}

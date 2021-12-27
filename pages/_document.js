@@ -1,6 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-class MyDocument extends Document {
+export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
@@ -201,6 +201,8 @@ class MyDocument extends Document {
             type="font/woff2"
             crossOrigin="anonymous"
           />
+
+          <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         </Head>
 
         <body className="bg-gray-100 text-black">
@@ -211,5 +213,3 @@ class MyDocument extends Document {
     );
   }
 }
-
-export default MyDocument;

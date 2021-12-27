@@ -1,7 +1,7 @@
 const colors = require('tailwindcss/colors');
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  mode: 'jit',
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
@@ -21,11 +21,11 @@ module.exports = {
       dark: '#141f26',
       primary: '#2f7e84',
     },
+    fontFamily: {
+      sans: ['Neue Montreal', ...fontFamily.sans],
+      mono: ['Stellar', ...fontFamily.mono],
+    },
     extend: {
-      fontFamily: {
-        core: ['Neue Montreal', 'ui-sans-serif', 'system-ui'],
-        heading: ['Stellar', 'ui-sans-serif', 'system-ui'],
-      },
       width: {
         'fit-content': 'fit-content',
       },

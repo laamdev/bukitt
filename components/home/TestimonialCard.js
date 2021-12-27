@@ -10,11 +10,11 @@ export default function TestimonialCard({ testimonial }) {
   return (
     <div className="relative min-w-full space-y-6 bg-gray-100 p-3 sm:p-6">
       <div className="flex items-center justify-center space-x-1.5 sm:space-x-3">
-        <IoAirplaneOutline className="w-4 sm:w-6 h-4 sm:h-6 text-primary" />
-        <h3 className="tw-card-title-lg">
+        <IoAirplaneOutline className="w-6 sm:w-8 h-6 sm:h-8 text-primary" />
+        <h3 className="tw-card-title-lg text-center">
           {testimonial.travelerTripDestination}
         </h3>
-        <IoAirplaneOutline className="w-4 sm:w-6 h-4 sm:h-6 text-primary rotate-180" />
+        <IoAirplaneOutline className="w-6 sm:w-8 h-6 sm:h-8 text-primary rotate-180" />
       </div>
 
       <blockquote>
@@ -44,7 +44,7 @@ export default function TestimonialCard({ testimonial }) {
               </div>
 
               <svg
-                className="hidden md:block mx-1 h-4 w-4 text-primary"
+                className="hidden md:block mx-1 w-4 h-4 text-primary stroke-1"
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
