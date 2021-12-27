@@ -7,170 +7,196 @@ class MyDocument extends Document {
         <Head>
           <link
             rel="preload"
-            href="/fonts/integral/integral-regular.woff2"
+            href="/fonts/fuji/fuji-light.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/integral/integral-regular-oblique.woff2"
+            href="/fonts/fuji/fuji-regular.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/integral/integral-medium.woff2"
+            href="/fonts/fuji/fuji-medium.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/integral/integral-medium-oblique.woff2"
+            href="/fonts/fuji/fuji-bold.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/integral/integral-demibold.woff2"
+            href="/fonts/neue/neuemontreal-thin.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/integral/integral-demibold-oblique.woff2"
+            href="/fonts/neue/neuemontreal-lightitalic.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/integral/integral-bold.woff2"
+            href="/fonts/neue/neuemontreal-regular.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/integral/integral-bold-oblique.woff2"
+            href="/fonts/neue/neuemontreal-italic.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/integral/integral-extrabold.woff2"
+            href="/fonts/neue/neuemontreal-medium.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/integral/integral-extrabold-oblique.woff2"
+            href="/fonts/neue/neuemontreal-mediumitalic.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/integral/integral-heavy.woff2"
+            href="/fonts/neue/neuemontreal-bold.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/integral/integral-heavy-oblique.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-
-          <link
-            rel="preload"
-            href="/fonts/proxima/proxima-thin.woff2"
+            href="/fonts/neue/neuemontreal-bolditalic.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/proxima/proxima-regular.woff2"
+            href="/fonts/pangram/pangram-extralight.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/proxima/proxima-semibold.woff2"
+            href="/fonts/pangram/pangram-light.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/proxima/proxima-bold.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-
-          <link
-            rel="preload"
-            href="/fonts/neue/neue-light.woff2"
+            href="/fonts/pangram/pangram-regular.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/neue/neue-light-italic.woff2"
+            href="/fonts/pangram/pangram-medium.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/neue/neue-medium.woff2"
+            href="/fonts/pangram/pangram-bold.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/neue/neue-medium-italic.woff2"
+            href="/fonts/pangram/pangram-extrabold.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/neue/neue-regular.woff2"
+            href="/fonts/pangram/pangram-black.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/neue/neue-regular-italic.woff2"
+            href="/fonts/stellar/stellar-light.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/neue/neue-bold.woff2"
+            href="/fonts/stellar/stellar-regular.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/neue/neue-bold-italic.woff2"
+            href="/fonts/stellar/stellar-medium.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/stellar/stellar-bold.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/supply/supply-ultralight.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/supply/supply-light.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/supply/supply-regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/supply/supply-medium.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/supply/supply-bold.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"

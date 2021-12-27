@@ -9,7 +9,13 @@ import { usePreviewSubscription } from '@/lib/sanity';
 import { sanityClient, getClient } from '@/lib/sanity.server';
 
 import Layout from '@/components/navigation/Layout';
-import Destination from '@/components/experience/Destination';
+import ContentWrapper from '@/components/shared/ContentWrapper';
+import SectionHeading from '@/components/shared/SectionHeading';
+import HighlightCard from '@/components/destination/highlight/Card';
+import HighlightsList from '@/components/destination/highlight/List';
+import Hero from '@/components/shared/Hero';
+import MapSection from '@/components/experience/MapSection';
+import SectionWrapper from '@/components/shared/SectionWrapper';
 
 export default function DestinationPage({ data = {}, preview }) {
   const router = useRouter();
@@ -30,13 +36,35 @@ export default function DestinationPage({ data = {}, preview }) {
 
   return (
     <Layout title={''} description={''}>
-      <Destination
-        key={destination?.title}
-        title={destination?.title}
-        hero={destination?.hero}
-        highlightsSection={destination?.highlightsSection}
-        mapSection={destination?.mapSection}
-      />
+      <Hero hero={destination?.hero} />
+      <ContentWrapper>
+        {destination?.mapSection && (
+          <>
+            <MapSection
+              heading={destination?.mapSection?.heading}
+              body={destination?.mapSection?.body}
+              image={destination?.mapSection?.image}
+            />
+          </>
+        )}
+
+        <SectionWrapper>
+          <SectionHeading>
+            {destination?.highlightsSection?.heading}
+          </SectionHeading>
+
+          <HighlightsList>
+            {destination?.highlightsSection?.highlights?.map((highlight) => (
+              <HighlightCard
+                key={highlight?.title}
+                title={highlight?.title}
+                image={highlight?.image}
+                body={highlight?.body}
+              />
+            ))}
+          </HighlightsList>
+        </SectionWrapper>
+      </ContentWrapper>
     </Layout>
   );
 }

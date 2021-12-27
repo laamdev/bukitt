@@ -1,7 +1,5 @@
 export default function Heading({ children }) {
   return (
-    <h2 className="text-4xl font-primary uppercase font-bold text-center">
-      {children}
-    </h2>
+    <h2 className="text-4xl uppercase font-bold text-center">{children}</h2>
   );
 }

@@ -23,9 +23,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        primary: ['Integral CF', 'ui-sans-serif', 'system-ui'],
-        secondary: ['Neue Montreal', 'ui-sans-serif', 'system-ui'],
-        core: ['Proxima Nova', 'ui-sans-serif', 'system-ui'],
+        core: ['Neue Montreal', 'ui-sans-serif', 'system-ui'],
+        heading: ['Stellar', 'ui-sans-serif', 'system-ui'],
       },
       width: {
         'fit-content': 'fit-content',

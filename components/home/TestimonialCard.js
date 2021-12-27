@@ -4,15 +4,16 @@ import { urlForImage } from '@/lib/sanity';
 
 import TestimonialTitle from '@/components/home/TestimonialTitle';
 import TestimonialQuote from '@/components/home/TestimonialQuote';
+import CardTitleLarge from '@/components/shared/CardTitleLarge';
 
 export default function TestimonialCard({ testimonial }) {
   return (
     <div className="relative min-w-full space-y-6 bg-gray-100 p-3 sm:p-6">
       <div className="flex items-center justify-center space-x-1.5 sm:space-x-3">
         <IoAirplaneOutline className="w-4 sm:w-6 h-4 sm:h-6 text-primary" />
-        <TestimonialTitle>
+        <h3 className="tw-card-title-lg">
           {testimonial.travelerTripDestination}
-        </TestimonialTitle>
+        </h3>
         <IoAirplaneOutline className="w-4 sm:w-6 h-4 sm:h-6 text-primary rotate-180" />
       </div>
 

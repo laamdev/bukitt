@@ -13,7 +13,7 @@ import NavLinksMobile from '@/components/navigation/NavLinksMobile';
 
 export default function Header() {
   return (
-    <Popover as="header" className="py-12 sm:py-6">
+    <Popover as="header" className="py-12 sm:py-3">
       {({ open }) => (
         <>
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -59,7 +59,7 @@ export default function Header() {
                   className="z-30 absolute top-0 inset-x-0 max-w-3xl mx-auto w-full p-2 transition transform origin-top"
                 >
                   <div className="ring-1 ring-black ring-opacity-5 divide-y divide-gray-200">
-                    <div className="py-4 bg-gray-100 rounded-lg shadow-lg">
+                    <div className="py-4 bg-gray-100 rounded shadow">
                       <div className="flex items-center justify-between px-4">
                         <Popover.Button>
                           <Link href="/">

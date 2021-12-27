@@ -7,10 +7,10 @@ import CardTitle from '@/components/shared/card/Title';
 export default function Card({ feature }) {
   return (
     <div className="pt-6">
-      <div className="flow-root bg-gray-100 rounded-lg shadow-lg px-6 pb-8">
+      <div className="flow-root bg-gray-100 rounded shadow px-6 pb-8">
         <div className="-mt-6">
           <div>
-            <span className="inline-flex items-center justify-center p-3 bg-white border-2 border-primary rounded-lg shadow-lg">
+            <span className="inline-flex items-center justify-center p-3 bg-white border-2 border-primary rounded shadow">
               <Image
                 src={urlForImage(feature.icon).width(1080).height(1080).url()}
                 alt={feature.icon.alt ? feature.icon.alt : 'Icon.'}
@@ -19,7 +19,7 @@ export default function Card({ feature }) {
                 height={50}
                 objectFit="cover"
                 objectPosition="center"
-                className="rounded-lg"
+                className="rounded"
                 aria-hidden="true"
               />
             </span>

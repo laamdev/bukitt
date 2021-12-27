@@ -9,7 +9,7 @@ export default function NavLinks({ navLinks }) {
       {navLinks.map((link) => (
         <Link key={link.name} href={link.href}>
           <a
-            className={`cursor-pointer font-secondary ${
+            className={`cursor-pointer ${
               router.asPath === link.href
                 ? 'text-primary'
                 : 'text-black opacity-50 hover:text-primary hover:opacity-100 tw-transition'

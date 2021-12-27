@@ -44,7 +44,7 @@ export default function TestimonialsList({ testimonials }) {
   return (
     <div>
       {/* Carousel viewport */}
-      <div className="overflow-hidden rounded-lg shadow-lg" ref={emblaRef}>
+      <div className="overflow-hidden rounded shadow" ref={emblaRef}>
         {/* Carousel container */}
         <div className="flex w-full">
           {/* Carousel slide's */}

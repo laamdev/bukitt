@@ -1,7 +1,7 @@
 export default function Title({ children }) {
   return (
-    <h3 className="font-secondary text-lg sm:text-2xl font-medium tracking-tight">
+    <h4 className="mt:1.5 sm:mt-1.5 text-base sm:text-lg font-medium uppercase">
       {children}
-    </h3>
+    </h4>
   );
 }

@@ -12,7 +12,7 @@ export default function NavLinksMobile({ navLinks }) {
           <li key={link.name}>
             <Link href={link.href}>
               <a
-                className={`cursor-pointer font-secondary ${
+                className={`cursor-pointer ${
                   router.asPath === link.href
                     ? 'text-primary font-bold '
                     : 'text-black hover:text-primary tw-transition'

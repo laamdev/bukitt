@@ -14,7 +14,7 @@ export default function Section({ heading, body, image }) {
         </div>
       </div>
 
-      <div className="w-full sm:w-2/5 rounded-2xl shadow-lg">
+      <div className="w-full sm:w-2/5 rounded shadow">
         {image && (
           <Image
             src={urlForImage(image).width(1080).height(1080).url()}
@@ -24,7 +24,7 @@ export default function Section({ heading, body, image }) {
             height={1}
             objectFit="cover"
             objectPosition="center"
-            className="rounded-2xl"
+            className="rounded"
           />
         )}
       </div>

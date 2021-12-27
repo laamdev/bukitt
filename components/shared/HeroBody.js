@@ -2,7 +2,7 @@ import TextBody from '@/components/shared/TextBody';
 
 export default function HeroBody({ content }) {
   return (
-    <div className="max-w-prose mx-auto text-lg sm:text-xl">
+    <div className="text-lg sm:text-2xl">
       <TextBody content={content} />
     </div>
   );

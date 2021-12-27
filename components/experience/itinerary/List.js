@@ -5,12 +5,12 @@ import CardTitle from '@/components/shared/card/Title';
 
 export default function List({ itinerary }) {
   return (
-    <div className="max-w-4xl mx-auto p-2 bg-gray-100 rounded-lg space-y-1.5 sm:space-y-3">
+    <div className="max-w-4xl mx-auto p-2 bg-gray-100 rounded space-y-1.5 sm:space-y-3">
       {itinerary.map((item, idx) => (
         <Disclosure key={idx}>
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between items-center w-full px-4 py-2 text-left bg-gray-50 rounded-lg hover:bg-gray-200 focus:outline-none focus-visible:ring focus-visible:ring-gray-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex justify-between items-center w-full px-4 py-2 text-left bg-gray-50 rounded hover:bg-gray-200 focus:outline-none focus-visible:ring focus-visible:ring-gray-500 focus-visible:ring-opacity-75">
                 <CardTitle>Day {item.day}</CardTitle>
                 <IoChevronUpOutline
                   className={`tw-transition ${

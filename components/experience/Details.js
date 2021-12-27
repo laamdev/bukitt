@@ -15,13 +15,13 @@ export default function Details({
 }) {
   return (
     <section className="mx-auto">
-      <dl className="rounded-lg bg-gray-100 shadow-lg sm:grid sm:grid-cols-4">
+      <dl className="rounded bg-gray-100 shadow sm:grid sm:grid-cols-4">
         <div className="flex flex-col items-center border-b border-gray-300 sm:border-0 sm:border-r p-6 text-center">
           <IoCashOutline className="w-6 sm:w-8 h-6 sm:h-8" />
           <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
             Price
           </dt>
-          <dd className="order-1 font-secondary text-3xl font-bold text-primary">
+          <dd className="order-1 text-3xl font-bold text-primary">
             {price} <span className="text-xs sm:text-sm">pp</span>
           </dd>
         </div>
@@ -30,7 +30,7 @@ export default function Details({
           <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
             Season
           </dt>
-          <dd className="order-1 font-secondary text-3xl font-bold text-primary">
+          <dd className="order-1 text-3xl font-bold text-primary">
             <span>{dateFrom}</span> {dateTo && <span> - {dateTo}</span>}
           </dd>
         </div>
@@ -40,7 +40,7 @@ export default function Details({
           <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
             Duration
           </dt>
-          <dd className="order-1 font-secondary text-3xl font-bold text-primary">
+          <dd className="order-1 text-3xl font-bold text-primary">
             {duration} <span className="text-xs sm:text-sm">days</span>
           </dd>
         </div>
@@ -50,7 +50,7 @@ export default function Details({
           <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
             Group
           </dt>
-          <dd className="order-1 font-secondary text-3xl font-bold text-primary">
+          <dd className="order-1 text-3xl font-bold text-primary">
             <span>
               {groupSizeMin}
               <span className="text-xs sm:text-sm"> min</span>

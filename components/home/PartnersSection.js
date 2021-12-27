@@ -1,10 +1,12 @@
 import PartnersSlider from '@/components/home/PartnersSlider';
+import SeactionHeading from '@/components/shared/SectionHeading';
+import SectionWrapper from '@/components/shared/SectionWrapper';
 
 export default function PartnersSection({ heading, partners }) {
   return (
-    <section className="space-y-6 sm:space-y-12">
-      <h2 className="tw-subheading text-center">{heading}</h2>
+    <SectionWrapper>
+      <SeactionHeading>{heading}</SeactionHeading>
       <PartnersSlider partners={partners} />
-    </section>
+    </SectionWrapper>
   );
 }

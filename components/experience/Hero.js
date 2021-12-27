@@ -9,7 +9,7 @@ import ButtonDownload from '@/components/shared/buttons/ButtonDownload';
 export default function Hero({ heading, tagline, body, coverImage, guideURL }) {
   return (
     <div className="relative">
-      <div className="relative shadow-lg sm:overflow-hidden">
+      <div className="relative shadow sm:overflow-hidden">
         {coverImage && (
           <>
             <Image
@@ -33,7 +33,7 @@ export default function Hero({ heading, tagline, body, coverImage, guideURL }) {
           )}
 
           {heading && (
-            <h1 className="text-center text-4xl font-bold tracking-tight sm:text-4xl lg:text-5xl text-white uppercase font-primary">
+            <h1 className="text-center text-4xl font-bold tracking-tight sm:text-4xl lg:text-5xl text-white uppercase">
               {heading}
             </h1>
           )}

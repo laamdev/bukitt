@@ -14,7 +14,7 @@ export default function AccommodationSection({ heading, body, image }) {
         </div>
       </div>
 
-      <div className="w-full sm:w-2/5 bg-gray-100 rounded-lg shadow-lg">
+      <div className="w-full sm:w-2/5 bg-gray-100 rounded shadow">
         {image && (
           <Image
             src={urlForImage(image).width(1080).height(1080).url()}
@@ -22,7 +22,7 @@ export default function AccommodationSection({ heading, body, image }) {
             layout="responsive"
             width={1}
             height={1}
-            className="rounded-lg"
+            className="rounded"
           />
         )}
       </div>

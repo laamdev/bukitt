@@ -1,19 +1,20 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { urlForImage } from '@/lib/sanity';
 import { currentMonth } from '@/data/navigation';
 
 import ButtonLink from '@/components/shared/buttons/ButtonLink';
-import FeaturedExperienceTitle from '@/components/home/featuredExperience/Title';
+import CardTitleLarge from '@/components/shared/CardTitleLarge';
 import FeaturedExperienceTagline from '@/components/home/featuredExperience/Tagline';
 import FeaturedExperienceBody from '@/components/home/featuredExperience/Body';
 
 export default function Card({ experience, body }) {
   return (
-    <div className="relative">
-      <div className="max-w-4xl mx-auto sm:px-6 lg:px-8">
-        <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
-          <div className="absolute inset-0">
+    <div className="max-w-3xl mx-auto shadow rounded">
+      <Link href={`experiences/${experience.slug}`}>
+        <a>
+          <div className="relative aspect-w-16 aspect-h-9 group">
             <Image
               src={urlForImage(experience?.hero?.coverImage)
                 .width(1920)
@@ -24,27 +25,18 @@ export default function Card({ experience, body }) {
               objectFit="cover"
               className="h-full w-full hover:scale-105 tw-transition"
             />
-            <div className="absolute inset-0 bg-gray-400 mix-blend-multiply" />
-          </div>
-          <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8 text-center text-white">
-            <div>
-              <FeaturedExperienceTagline>
+            <div className="absolute inset-0 bg-gray-300 opacity-100 group-hover:opacity-0 tw-transition mix-blend-multiply rounded" />
+            <div className="absolute flex flex-col items-center justify-center px-3 sm:px-6 text-center">
+              <h4 className="w-fit-content text-base sm:text-lg tracking-widest uppercase italic border-b-2 border-gray-300 text-white font-medium">
                 {currentMonth}
-              </FeaturedExperienceTagline>
-              <FeaturedExperienceTitle>
+              </h4>
+              <h3 className="tw-card-title-lg text-white mt-1.5 sm:mt-3">
                 {experience?.hero?.heading}
-              </FeaturedExperienceTitle>
-            </div>
-            <FeaturedExperienceBody>{body}</FeaturedExperienceBody>
-            <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
-              <ButtonLink
-                btnLinkText="Explore"
-                btnURL={`experiences/${experience.slug}`}
-              />
+              </h3>
             </div>
           </div>
-        </div>
-      </div>
+        </a>
+      </Link>
     </div>
   );
 }

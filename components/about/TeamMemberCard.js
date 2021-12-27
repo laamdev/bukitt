@@ -19,7 +19,7 @@ export default function TeamMemberCard({ teamMember }) {
       </div>
 
       <div className="self-center z-10 text-center space-y-1 sm:space-y-2">
-        <div className="flex flex-col space-y-2 sm:space-y-3 w-fit-content -mt-3 bg-gray-100 rounded-lg shadow-md py-1 sm:py-2 px-3 sm:px-6">
+        <div className="flex flex-col space-y-2 sm:space-y-3 w-fit-content -mt-3 bg-gray-100 rounded shadow-md py-1 sm:py-2 px-3 sm:px-6">
           <div className="flex flex-col pb-2 sm:pb-3 border-b-2 border-gray-200">
             <span className="tw-card-title">{teamMember.name}</span>
             <span className="tw-card-subtitle">{teamMember.role}</span>

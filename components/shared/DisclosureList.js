@@ -4,12 +4,12 @@ import { ChevronUpIcon } from '@heroicons/react/solid';
 export default function DisclosureList({ items }) {
   return (
     <div className="w-full px-4 pt-16">
-      <div className="w-full max-w-md p-2 mx-auto bg-white rounded-lg">
+      <div className="w-full max-w-md p-2 mx-auto bg-white rounded">
         {items.map((item, idx) => (
           <Disclosure key={idx}>
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-purple-900 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-purple-900 bg-purple-100 rounded hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                   <span>{item.label}</span>
                   <ChevronUpIcon
                     className={`${
