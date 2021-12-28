@@ -5,21 +5,25 @@ export default function NavLinks({ navLinks }) {
   const router = useRouter();
 
   return (
-    <nav className="flex space-x-6">
-      {navLinks.map((link) => (
-        <Link key={link.name} href={link.href}>
-          <a
-            className={`cursor-pointer ${
-              router.asPath === link.href
-                ? 'text-primary'
-                : 'text-black opacity-50 hover:text-primary hover:opacity-100 tw-transition'
-            }`}
-            aria-current={link.current ? 'page' : undefined}
-          >
-            {link.name}
-          </a>
-        </Link>
-      ))}
+    <nav>
+      <ul className="flex space-x-6 items-baseline">
+        {navLinks.map((link) => (
+          <li key={link.name}>
+            <Link href={link.href} className="relative">
+              <a
+                className={`cursor-pointer tw-transition text-base sm:text-lg ${
+                  router.asPath === link.href
+                    ? 'text-teal-500 font-medium'
+                    : 'text-black hover:text-teal-500'
+                }`}
+                aria-current={link.current ? 'page' : undefined}
+              >
+                {link.name}
+              </a>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
 }
