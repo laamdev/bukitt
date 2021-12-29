@@ -7,10 +7,10 @@ import { urlForImage } from '@/lib/sanity';
 
 export default function Card({ destination }) {
   return (
-    <li className="relative">
+    <li>
       <Link href={`/destinations/${destination?.slug}`}>
         <a>
-          <div className="group block w-full aspect-w-10 aspect-h-10 bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-primary overflow-hidden rounded shadow">
+          <div className="relative aspect-square bg-gray-100 overflow-hidden rounded shadow focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-primary">
             {destination?.card?.image && (
               <Image
                 src={urlForImage(destination?.card?.image)
@@ -20,11 +20,11 @@ export default function Card({ destination }) {
                 alt={destination?.card?.title}
                 layout="fill"
                 objectFit="cover"
+                objectPosition="center"
                 className="hover:scale-105 tw-transition"
               />
             )}
           </div>
-
           <Title>{destination?.card?.title}</Title>
         </a>
       </Link>

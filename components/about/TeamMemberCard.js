@@ -4,7 +4,7 @@ import { urlForImage } from '@/lib/sanity';
 
 export default function TeamMemberCard({ teamMember }) {
   return (
-    <li className="col-span-1 md:col-span-2 lg:col-span-1 flex flex-col">
+    <li className="relative col-span-1 md:col-span-2 lg:col-span-1 flex flex-col">
       <div>
         <Image
           src={urlForImage(teamMember.profilePicture).url()}

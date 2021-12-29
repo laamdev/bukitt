@@ -3,12 +3,14 @@ import Link from 'next/link';
 
 import { urlForImage } from '@/lib/sanity';
 
+import Overlay from '@/components/shared/image/Overlay';
+
 export default function Card({ destination }) {
   return (
-    <li className="relative">
+    <li>
       <Link href={`/destinations/${destination?.slug}`}>
-        <a className="relative">
-          <div className="relative group block w-full aspect-w-3 aspect-h-4 bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-primary overflow-hidden rounded shadow ">
+        <a>
+          <div className="relative aspect-4/5 bg-gray-100 overflow-hidden rounded shadow focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-primary">
             {destination?.card?.image && (
               <Image
                 src={urlForImage(destination?.card?.image)
@@ -21,8 +23,9 @@ export default function Card({ destination }) {
                 className="hover:scale-105 tw-transition"
               />
             )}
-            <div className="absolute inset-0 bg-gray-300 opacity-100 group-hover:opacity-0 tw-transition mix-blend-multiply rounded" />
-            <div className="absolute flex flex-col space-y-3 sm:space-y-6 justify-center items-center px-3 sm:px-6 text-center">
+            <Overlay />
+
+            <div className="w-full px-1.5 sm:px-3 py-3 sm:py-6 text-center tw-center">
               <h3 className="tw-card-title-lg text-white">
                 {destination?.card?.title}
               </h3>

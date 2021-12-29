@@ -3,11 +3,14 @@ import Image from 'next/image';
 import { urlForImage } from '@/lib/sanity';
 
 import HeroHeading from '@/components/shared/HeroHeading';
+import HeroTagline from '@/components/shared/HeroTagline';
 import HeroBody from '@/components/shared/HeroBody';
+import ButtonLink from '@/components/shared/buttons/ButtonLink';
+import ButtonDownload from '@/components/shared/buttons/ButtonDownload';
 import Divider from '@/components/shared/Divider';
 import OverlayHero from '@/components/shared/image/OverlayHero';
 
-export default function Hero({ hero }) {
+export default function HeroProduct({ hero, guideURL }) {
   return (
     <div className="relative bg-gray-100 shadow-xl sm:overflow-hidden">
       <div className="relative w-full h-full px-6 pb-32 z-0">
@@ -41,6 +44,13 @@ export default function Hero({ hero }) {
 
                 <HeroBody content={hero?.body} />
               </>
+            )}
+          </div>
+
+          <div className="mt-6 sm:mt-12 flex flex-col sm:flex-row sm:justify-center items-center space-y-3 sm:space-y-0 sm:space-x-24">
+            <ButtonLink btnLinkText="Book Now" btnURL="tailored-trip" />
+            {guideURL && (
+              <ButtonDownload btnLinkText="Download Guide" btnURL={guideURL} />
             )}
           </div>
         </header>

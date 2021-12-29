@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps, router }) {
       <Header />
       <AnimatePresence
         exitBeforeEnter
-        // initial={false}
+        initial={false}
         onExitComplete={() => window.scrollTo(0, 0)}
       >
         <Component

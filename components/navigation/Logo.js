@@ -7,13 +7,13 @@ export default function Logo() {
       <Link href="/">
         <a>
           <span className="sr-only">Bukitt</span>
-          <div className="relative">
+          <div className="relative w-32">
             <Image
-              alt="Bukitt"
               src="/logos/bukitt-logo-rectangle.svg"
-              layout="intrinsic"
-              width={128}
-              height={72}
+              alt="Bukitt"
+              layout="responsive"
+              width={16}
+              height={9}
             />
           </div>
         </a>

@@ -15,7 +15,7 @@ export default function NavLinksMobile({ navLinks }) {
                 className={`cursor-pointer ${
                   router.asPath === link.href
                     ? 'text-primary font-bold '
-                    : 'text-black hover:text-primary tw-transition'
+                    : 'text-dark hover:text-primary tw-transition'
                 } 
             `}
               >

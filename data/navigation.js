@@ -7,7 +7,6 @@ import {
 } from 'react-icons/io5';
 
 export const navLinks = [
-  { name: 'Home', href: '/' },
   { name: 'Experiences', href: '/experiences' },
   { name: 'Destinations', href: '/destinations' },
   { name: 'Tailored Trip', href: '/tailored-trip' },

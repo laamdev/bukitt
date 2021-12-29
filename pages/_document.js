@@ -205,7 +205,7 @@ export default class MyDocument extends Document {
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         </Head>
 
-        <body className="bg-gray-100 text-black">
+        <body className="bg-gray-100 text-dark">
           <Main />
           <NextScript />
         </body>

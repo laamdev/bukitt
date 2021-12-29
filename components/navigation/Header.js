@@ -65,14 +65,13 @@ export default function Header() {
                           <Link href="/">
                             <a>
                               <span className="sr-only">Bukitt</span>
-                              <div className="relative">
+                              <div className="relative w-12">
                                 <Image
-                                  className="h-8 w-8"
+                                  src="/logos/bukitt-logo-square.svg"
                                   alt="Bukitt"
-                                  src="/logos/wordmark-dark.svg"
-                                  layout="intrinsic"
-                                  width={50}
-                                  height={50}
+                                  layout="responsive"
+                                  width={1}
+                                  height={1}
                                 />
                               </div>
                             </a>

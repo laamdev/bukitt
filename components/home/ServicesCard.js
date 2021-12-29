@@ -3,12 +3,14 @@ import Image from 'next/image';
 
 import { urlForImage } from '@/lib/sanity';
 
+import Overlay from '@/components/shared/image/Overlay';
+
 export default function ServicesCard({ title, imageUrl, btnURL }) {
   return (
     <div className="w-full sm:w-1/2 shadow rounded">
       <Link href={btnURL}>
         <a>
-          <div className="relative aspect-w-3 aspect-h-4 group">
+          <div className="relative group aspect-9/16">
             <Image
               src={urlForImage(imageUrl).width(1080).height(1920).url()}
               alt={imageUrl?.alt}
@@ -16,9 +18,9 @@ export default function ServicesCard({ title, imageUrl, btnURL }) {
               objectFit="cover"
               className="rounded"
             />
-            <div className="absolute inset-0 bg-gray-300 opacity-100 group-hover:opacity-0 tw-transition mix-blend-multiply rounded" />
+            <Overlay />
 
-            <div className="absolute flex flex-col space-y-3 sm:space-y-6 justify-center items-center px-3 sm:px-6 text-center">
+            <div className="absolute tw-center w-full px-1.5 sm:px-3 py-3 sm:py-6 text-center">
               <h3 className="tw-card-title-lg text-white">{title}</h3>
             </div>
           </div>

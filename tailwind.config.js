@@ -35,6 +35,10 @@ module.exports = {
       width: {
         'fit-content': 'fit-content',
       },
+      aspectRatio: {
+        '9/16': '9 / 16',
+        '4/5': '4 / 5',
+      },
     },
   },
   variants: {
@@ -42,8 +46,5 @@ module.exports = {
       opacity: ['hover'],
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/aspect-ratio'),
-  ],
+  plugins: [require('@tailwindcss/forms')],
 };

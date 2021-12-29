@@ -10,11 +10,11 @@ import { sanityClient, getClient } from '@/lib/sanity.server';
 
 import Layout from '@/components/navigation/Layout';
 import ContentWrapper from '@/components/shared/ContentWrapper';
-import Hero from '@/components/shared/Hero';
+import Hero from '@/components/shared/HeroProduct';
 import MapSection from '@/components/experience/MapSection';
 import AccommodationSection from '@/components/experience/AccommodationSection';
 import DestinationsSection from '@/components/experience/destinations/Section';
-import Details from '@/components/experience/Details';
+import DetailsSection from '@/components/experience/details/Section';
 import FeaturesSection from '@/components/experience/features/Section';
 import ItinerarySection from '@/components/experience/itinerary/Section';
 
@@ -41,7 +41,7 @@ export default function ExperiencePage({ data = {}, preview }) {
 
       <ContentWrapper>
         {experience?.details && (
-          <Details
+          <DetailsSection
             price={experience?.details?.price}
             dateFrom={experience?.details?.dateFrom}
             dateTo={experience?.details?.dateTo}

@@ -12,7 +12,7 @@ import Layout from '@/components/navigation/Layout';
 import ContentWrapper from '@/components/shared/ContentWrapper';
 import HighlightCard from '@/components/destination/highlight/Card';
 import HighlightsList from '@/components/destination/highlight/List';
-import Hero from '@/components/shared/Hero';
+import Hero from '@/components/shared/HeroProduct';
 import MapSection from '@/components/experience/MapSection';
 import SectionWrapper from '@/components/shared/SectionWrapper';
 

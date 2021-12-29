@@ -6,11 +6,11 @@ import CardTitle from '@/components/shared/card/Title';
 
 export default function Card({ feature }) {
   return (
-    <div className="pt-6">
-      <div className="flow-root bg-gray-100 rounded shadow px-6 pb-8">
+    <div className="min-h-content">
+      <div className="h-full flow-root bg-gray-100 rounded shadow px-6 pb-8">
         <div className="-mt-6">
           <div>
-            <span className="inline-flex items-center justify-center p-3 bg-white border-2 border-primary rounded shadow">
+            <span className="inline-flex items-center justify-center p-3 bg-white border-2 border-dark rounded shadow">
               <Image
                 src={urlForImage(feature.icon).width(1080).height(1080).url()}
                 alt={feature.icon.alt ? feature.icon.alt : 'Icon.'}
@@ -24,6 +24,7 @@ export default function Card({ feature }) {
               />
             </span>
           </div>
+
           <div className="mt-6">
             <CardTitle>{feature.title}</CardTitle>
           </div>

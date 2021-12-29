@@ -4,17 +4,14 @@ import Link from 'next/link';
 import { urlForImage } from '@/lib/sanity';
 import { currentMonth } from '@/data/navigation';
 
-import ButtonLink from '@/components/shared/buttons/ButtonLink';
-import CardTitleLarge from '@/components/shared/CardTitleLarge';
-import FeaturedExperienceTagline from '@/components/home/featuredExperience/Tagline';
-import FeaturedExperienceBody from '@/components/home/featuredExperience/Body';
+import Overlay from '@/components/shared/image/Overlay';
 
 export default function Card({ experience, body }) {
   return (
     <div className="max-w-3xl mx-auto shadow rounded">
       <Link href={`experiences/${experience.slug}`}>
         <a>
-          <div className="relative aspect-w-16 aspect-h-9 group">
+          <div className="relative group aspect-video">
             <Image
               src={urlForImage(experience?.hero?.coverImage)
                 .width(1920)
@@ -23,11 +20,13 @@ export default function Card({ experience, body }) {
               alt={experience?.hero?.coverImage?.alt}
               layout="fill"
               objectFit="cover"
-              className="h-full w-full hover:scale-105 tw-transition"
+              objectPosition="center"
+              className="hover:scale-105 tw-transition"
             />
-            <div className="absolute inset-0 bg-gray-300 opacity-100 group-hover:opacity-0 tw-transition mix-blend-multiply rounded" />
-            <div className="absolute flex flex-col items-center justify-center px-3 sm:px-6 text-center">
-              <h4 className="w-fit-content text-base sm:text-lg tracking-widest uppercase italic border-b-2 border-gray-300 text-white font-medium">
+            <Overlay />
+
+            <div className="w-full flex flex-col items-center px-1.5 sm:px-3 py-3 sm:py-6 tw-center text-center">
+              <h4 className="text-base sm:text-lg tracking-widest uppercase italic text-white font-medium border-b-2 border-gray-300">
                 {currentMonth}
               </h4>
               <h3 className="tw-card-title-lg text-white mt-1.5 sm:mt-3">
