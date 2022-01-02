@@ -15,7 +15,7 @@ import MapSection from '@/components/experience/MapSection';
 import AccommodationSection from '@/components/experience/AccommodationSection';
 import DestinationsSection from '@/components/experience/destinations/Section';
 import DetailsSection from '@/components/experience/details/Section';
-import FeaturesSection from '@/components/experience/features/Section';
+import FeaturesSection from '@/components/shared/features/Section';
 import ItinerarySection from '@/components/experience/itinerary/Section';
 
 export default function ExperiencePage({ data = {}, preview }) {

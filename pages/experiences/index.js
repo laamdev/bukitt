@@ -21,12 +21,7 @@ export default function ExperiencesPage({ experiencesPageData }) {
         <section className="space-y-6 sm:space-y-12">
           <ExperiencesList>
             {sortedExperiences.map((experience) => (
-              <ExperienceCard
-                key={experience?._id}
-                title={experience?.card?.title}
-                slug={experience?.slug}
-                image={experience?.card?.image}
-              />
+              <ExperienceCard key={experience?._id} experience={experience} />
             ))}
           </ExperiencesList>
         </section>

@@ -58,13 +58,13 @@ export default () =>
                     .title('Destinations')
                 ),
               S.listItem()
-                .title('Tailored Trip')
+                .title('Enquiry Form')
                 .icon(IoPencilOutline)
                 .child(
                   S.document()
-                    .schemaType('tailoredTripPage')
-                    .documentId('tailoredTripPage')
-                    .title('Tailored Trip')
+                    .schemaType('enquiryFormPage')
+                    .documentId('enquiryFormPage')
+                    .title('Enquiry Form')
                 ),
             ])
         ),
@@ -106,7 +106,7 @@ export default () =>
             'aboutPage',
             'experiencesPage',
             'destinationsPage',
-            'tailoredTripPage',
+            'enquiryFormPage',
             'socials',
             'contact',
           ].includes(item.getId())

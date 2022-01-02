@@ -2,12 +2,14 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Popover } from '@headlessui/react';
 
+import ButtonLink from '@/components/shared/buttons/ButtonLink';
+
 export default function NavLinksMobile({ navLinks }) {
   const router = useRouter();
 
   return (
-    <div>
-      <ul className="flex flex-col px-6 py-12 space-y-6 tw-navlink-mobile">
+    <div className="mt-6">
+      <ul className="flex flex-col space-y-6 tw-navlink-mobile border-b-2 border-gray-300 pb-6">
         {navLinks.map((link) => (
           <li key={link.name}>
             <Link href={link.href}>
@@ -25,6 +27,9 @@ export default function NavLinksMobile({ navLinks }) {
           </li>
         ))}
       </ul>
+      <div className="flex justify-center mt-6">
+        <ButtonLink btnLinkText="Enquire" btnURL="enquiry-form" />
+      </div>
     </div>
   );
 }

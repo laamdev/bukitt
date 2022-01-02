@@ -29,7 +29,7 @@ export default function Card({ experience, body }) {
               <h4 className="text-base sm:text-lg tracking-widest uppercase italic text-white font-medium border-b-2 border-gray-300">
                 {currentMonth}
               </h4>
-              <h3 className="tw-card-title-lg text-white mt-1.5 sm:mt-3">
+              <h3 className="font-mono font-bold uppercase text-2xl sm:text-5xl lg:text-6xl text-white mt-1.5 sm:mt-3">
                 {experience?.hero?.heading}
               </h3>
             </div>

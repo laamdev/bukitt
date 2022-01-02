@@ -10,7 +10,7 @@ export default function Card({ feature }) {
       <div className="h-full flow-root bg-gray-100 rounded shadow px-6 pb-8">
         <div className="-mt-6">
           <div>
-            <span className="inline-flex items-center justify-center p-3 bg-white border-2 border-dark rounded shadow">
+            <span className="inline-flex items-center justify-center p-3 bg-white border-2 border-primary rounded shadow">
               <Image
                 src={urlForImage(feature.icon).width(1080).height(1080).url()}
                 alt={feature.icon.alt ? feature.icon.alt : 'Icon.'}

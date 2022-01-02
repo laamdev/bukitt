@@ -44,7 +44,7 @@ export default {
     },
     {
       name: 'servicesSection',
-      type: 'servicesSection',
+      type: 'homeServicesSection',
       title: 'Services Section',
       description: 'Home page services section.',
     },
@@ -71,6 +71,12 @@ export default {
       type: 'section',
       title: 'Explore Section',
       description: 'Home page explore section.',
+    },
+    {
+      name: 'featuresSection',
+      type: 'homeFeaturesSection',
+      title: 'Features Section',
+      description: 'Home page features section.',
     },
     {
       name: 'testimonialsSection',

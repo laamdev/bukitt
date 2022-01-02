@@ -10,20 +10,25 @@ import MenuButton from '@/components/navigation/MenuButton';
 import Logo from '@/components/navigation/Logo';
 import NavLinksDesktop from '@/components/navigation/NavLinksDesktop';
 import NavLinksMobile from '@/components/navigation/NavLinksMobile';
+import ButtonLink from '@/components/shared/buttons/ButtonLink';
 
 export default function Header() {
   return (
-    <Popover as="header" className="py-12 sm:py-3">
+    <Popover as="header">
       {({ open }) => (
         <>
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-            <div className="relative flex items-center justify-center lg:justify-between">
+            <div className="h-16 sm:h-20 lg:h-24 relative flex items-center justify-center lg:justify-between">
               {/* Logo */}
               <Logo />
 
               {/* Right section on desktop */}
               <div className="hidden lg:ml-4 lg:flex lg:items-center lg:pr-0.5">
                 <NavLinksDesktop navLinks={navLinks} />
+              </div>
+
+              <div className="hidden lg:block">
+                <ButtonLink btnLinkText="Enquire" btnURL="enquiry-form" />
               </div>
 
               {/* Mobule menu button */}
@@ -59,13 +64,13 @@ export default function Header() {
                   className="z-30 absolute top-0 inset-x-0 max-w-3xl mx-auto w-full p-2 transition transform origin-top"
                 >
                   <div className="ring-1 ring-black ring-opacity-5 divide-y divide-gray-200">
-                    <div className="py-4 bg-gray-100 rounded shadow">
-                      <div className="flex items-center justify-between px-4">
+                    <div className="p-6 bg-gray-100 rounded shadow">
+                      <div className="flex items-center justify-between border-b-2 border-gray-300 pb-6">
                         <Popover.Button>
                           <Link href="/">
                             <a>
                               <span className="sr-only">Bukitt</span>
-                              <div className="relative w-12">
+                              <div className="relative w-10">
                                 <Image
                                   src="/logos/bukitt-logo-square.svg"
                                   alt="Bukitt"
@@ -77,7 +82,7 @@ export default function Header() {
                             </a>
                           </Link>
                         </Popover.Button>
-                        <div className="-mr-2">
+                        <div>
                           <Popover.Button className="bg-transparent rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 tw-transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary">
                             <span className="sr-only">Close menu</span>
                             <XIcon className="h-6 w-6" aria-hidden="true" />

@@ -1,19 +1,19 @@
 export default {
-  name: 'experienceFeaturesSection',
+  name: 'homeFeaturesSection',
   type: 'object',
   title: 'Features Section',
   fields: [
     {
       name: 'heading',
-      type: 'string',
       title: 'Heading',
+      type: 'string',
     },
     {
       name: 'features',
+      title: 'Bukitt Features',
       type: 'array',
-      title: 'Features',
       of: [{ type: 'feature' }],
     },
   ],
-  options: { collapsible: true, collapsed: true },
+  options: { collapsible: true, collapsed: true, columns: 1 },
 };

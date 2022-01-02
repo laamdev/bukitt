@@ -244,6 +244,10 @@
     @apply text-base sm:text-lg;
   }
 
+  .tw-external-link {
+    @apply font-medium text-primary underline;
+  }
+
   .tw-body-hero {
     @apply text-lg sm:text-xl;
   }
@@ -281,11 +285,11 @@
   }
 
   .tw-card-title-lg {
-    @apply text-2xl sm:text-5xl font-mono font-bold uppercase;
+    @apply font-mono font-bold uppercase;
   }
 
   .tw-section-heading {
-    @apply text-3xl sm:text-2xl font-bold uppercase;
+    @apply text-lg sm:text-xl lg:text-2xl font-bold;
   }
 
   .tw-details-icon {

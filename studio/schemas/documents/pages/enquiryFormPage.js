@@ -1,19 +1,19 @@
 import { IoPencilOutline } from 'react-icons/io5';
 
 export default {
-  name: 'tailoredTripPage',
+  name: 'enquiryFormPage',
   type: 'document',
-  title: 'Tailored Trip Page',
+  title: 'Enquiry Form Page',
   icon: IoPencilOutline,
   initialValue: {
-    title: 'Tailored Trip',
+    title: 'Enquiry Form',
   },
   fields: [
     {
       name: 'title',
       type: 'string',
       title: 'Title',
-      description: 'Tailored trip page title.',
+      description: 'Enquiry Form page title.',
       validation: (Rule) => [
         Rule.required()
           .min(2)
@@ -27,7 +27,7 @@ export default {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
-      description: 'Tailored trip page slug.',
+      description: 'Enquiry Form page slug.',
       options: {
         source: 'title',
         maxLength: 30,
@@ -40,7 +40,7 @@ export default {
       name: 'hero',
       type: 'hero',
       title: 'Hero',
-      description: 'Tailored trip page hero.',
+      description: 'Enquiry Form page hero.',
     },
     {
       name: 'seo',

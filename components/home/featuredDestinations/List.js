@@ -1,4 +1,4 @@
-import FeaturedDestinationCard from '@/components/home/featuredDestinations/Card';
+import FeaturedDestinationCard from '@/components/destination/Card';
 
 export default function List({ featuredDestinations }) {
   return (

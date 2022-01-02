@@ -1,7 +1,7 @@
 export default {
-  name: 'experienceFeature',
+  name: 'feature',
   type: 'object',
-  title: 'Experience Feature',
+  title: 'Feature',
   fields: [
     {
       name: 'title',

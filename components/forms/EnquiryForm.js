@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 
 import FormLabel from '@/components/forms/Label';
 
-export default function TailoredTrip() {
+export default function EnquiryForm() {
   const [serverError, setServerError] = useState('');
   const [success, setSuccess] = useState('');
   const [submitting, setSubmitting] = useState(false);

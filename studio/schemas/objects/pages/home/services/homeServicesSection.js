@@ -1,5 +1,5 @@
 export default {
-  name: 'servicesSection',
+  name: 'homeServicesSection',
   title: 'Services Section',
   type: 'object',
   fields: [
@@ -11,15 +11,15 @@ export default {
     },
     {
       name: 'experiencesCard',
+      type: 'homeServicesCard',
       title: 'Experiences Card',
-      type: 'card',
-      description: 'Experiences card.',
+      description: 'Card links to our list of experiences.',
     },
     {
       name: 'tailoredCard',
-      type: 'card',
+      type: 'homeServicesCard',
       title: 'Tailored Card',
-      description: 'Tailored card.',
+      description: 'Card links to our list of destinations.',
     },
   ],
   options: { collapsible: true, collapsed: true, columns: 1 },

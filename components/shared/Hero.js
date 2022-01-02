@@ -9,7 +9,7 @@ import OverlayHero from '@/components/shared/image/OverlayHero';
 
 export default function Hero({ hero }) {
   return (
-    <div className="relative bg-gray-100 shadow-xl sm:overflow-hidden">
+    <div className="relative bg-dark shadow-xl sm:overflow-hidden">
       <div className="relative w-full h-full px-6 pb-32 z-0">
         {hero?.coverImage && (
           <>

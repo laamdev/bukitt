@@ -1,7 +1,7 @@
 export default function List({ children }) {
   return (
-    <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6">
+    <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 sm:gap-x-6 gap-y-8">
       {children}
-    </div>
+    </ul>
   );
 }

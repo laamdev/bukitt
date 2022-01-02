@@ -18,16 +18,11 @@ export default {
           { title: 'Experiences Page', value: 'experiences' },
           { title: 'Destinations Page', value: 'destinations' },
           { title: 'About Page', value: 'about' },
-          { title: 'Tailored Trip Page', value: 'tailored-trip' },
+          { title: 'Enquiry Form Page', value: 'enquiry-form' },
         ],
         layout: 'radio',
       },
       title: 'URL',
     },
-    // {
-    //   name: 'url',
-    //   type: 'url',
-    //   title: 'URL',
-    // },
   ],
 };

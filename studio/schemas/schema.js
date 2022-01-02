@@ -13,7 +13,7 @@ import homePage from './documents/pages/homePage';
 import aboutPage from './documents/pages/aboutPage';
 import experiencesPage from './documents/pages/experiencesPage';
 import destinationsPage from './documents/pages/destinationsPage';
-import tailoredTripPage from './documents/pages/tailoredTripPage';
+import enquiryFormPage from './documents/pages/enquiryFormPage';
 // --- misc
 import teamMember from './documents/teamMember';
 import socials from './documents/socials';
@@ -35,15 +35,20 @@ import textWithImage from './objects/shared/textWithImage';
 import quote from './objects/shared/quote';
 import seo from './objects/shared/seo';
 
-import highlightsSection from './objects/destination/highlightsSection';
-import highlight from './objects/destination/highlight';
-import teamSection from './objects/pages/about/teamSection';
-import experienceDetails from './objects/experience/experienceDetails';
-import experienceFeature from './objects/experience/experienceFeature';
-import servicesSection from './objects/pages/home/servicesSection';
+//home
+import homeServicesSection from './objects/pages/home/services/homeServicesSection';
+import homeServicesCard from './objects/pages/home/services/homeServicesCard';
+import homeFeaturesSection from './objects/pages/home/homeFeaturesSection';
+
+import feature from './objects/shared/feature';
+//individual experience
 import experienceFeaturesSection from './objects/experience/experienceFeaturesSection';
 import experienceDestinationsSection from './objects/experience/experienceDestinationsSection';
+import highlightsSection from './objects/destination/highlightsSection';
 import experienceItinerarySection from './objects/experience/experienceItinerarySection';
+import experienceDetails from './objects/experience/experienceDetails';
+import highlight from './objects/destination/highlight';
+import teamSection from './objects/pages/about/teamSection';
 import experienceItineraryItem from './objects/experience/experienceItineraryItem';
 import homeTestimonialsSection from './objects/pages/home/homeTestimonialsSection';
 import homeFeaturedExperienceSection from './objects/pages/home/homeFeaturedExperienceSection';
@@ -64,7 +69,7 @@ export default createSchema({
     aboutPage,
     experiencesPage,
     destinationsPage,
-    tailoredTripPage,
+    enquiryFormPage,
     // --- misc
     teamMember,
     socials,
@@ -86,16 +91,21 @@ export default createSchema({
     quote,
     highlight,
     highlightsSection,
-    servicesSection,
     teamSection,
+    //home
     homeFeaturedExperienceSection,
+    homeServicesSection,
+    homeServicesCard,
+    homeTestimonialsSection,
+    homeFeaturesSection,
+    //experience
     experienceDetails,
-    experienceFeature,
+    feature,
     experienceFeaturesSection,
     experienceItinerarySection,
     experienceItineraryItem,
     experienceDestinationsSection,
-    homeTestimonialsSection,
+    //
     testimonial,
     seo,
     // abstracts

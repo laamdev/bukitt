@@ -5,6 +5,7 @@ import Layout from '@/components/navigation/Layout';
 import FeaturedDestinationsSection from '@/components/home/featuredDestinations/Section';
 import FeaturedExperienceSection from '@/components/home/featuredExperience/Section';
 import AboutSection from '@/components/home/AboutSection';
+import FeaturesSection from '@/components/shared/features/Section';
 import ServicesSection from '@/components/home/ServicesSection';
 import PartnersSection from '@/components/home/PartnersSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
@@ -22,9 +23,17 @@ export default function HomePage({ homeData }) {
           experiencesCard={homeData?.servicesSection?.experiencesCard}
           tailoredCard={homeData?.servicesSection?.tailoredCard}
         />
+        <FeaturesSection
+          heading={homeData?.featuresSection?.heading}
+          features={homeData?.featuresSection?.features}
+        />
         <FeaturedDestinationsSection
           heading={homeData?.featuredDestinationsSection?.heading}
           featuredDestinations={homeData?.featuredDestinations}
+        />
+        <TestimonialsSection
+          heading={homeData?.testimonialsSection?.heading}
+          testimonials={homeData?.testimonialsSection?.testimonials}
         />
         <FeaturedExperienceSection
           heading={homeData?.featuredExperienceSection?.heading}
@@ -33,21 +42,18 @@ export default function HomePage({ homeData }) {
             homeData?.featuredExperienceSection?.featuredExperience
           }
         />
+
         {/* 
         <AboutSection
           heading={homeData?.aboutSection?.heading}
           body={homeData?.aboutSection?.body}
           callToAction={homeData?.aboutSection?.callToAction}
         /> */}
-        <TestimonialsSection
-          heading={homeData?.testimonialsSection?.heading}
-          testimonials={homeData?.testimonialsSection?.testimonials}
-        />
+
         <PartnersSection
           heading={homeData?.partnersSection?.heading}
           partners={homeData?.partnersSection?.partners}
         />
-        <ContactSection partners={homeData?.contact?.heading} />
       </ContentWrapper>
     </Layout>
   );

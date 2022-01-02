@@ -43,7 +43,7 @@ export default {
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
           {
-            title: 'URL',
+            title: 'External Link',
             name: 'link',
             type: 'object',
             fields: [
@@ -51,6 +51,32 @@ export default {
                 title: 'URL',
                 name: 'href',
                 type: 'url',
+              },
+              {
+                title: 'Open in new window',
+                name: 'blank',
+                type: 'boolean',
+              },
+            ],
+          },
+          {
+            name: 'internalLink',
+            type: 'object',
+            title: 'Internal link',
+            fields: [
+              {
+                name: 'reference',
+                type: 'reference',
+                title: 'Reference',
+                to: [
+                  { type: 'destination' },
+                  { type: 'experience' },
+                  { type: 'homePage' },
+                  { type: 'experiencesPage' },
+                  { type: 'destinationsPage' },
+                  { type: 'aboutPage' },
+                  // other types you may want to link to
+                ],
               },
             ],
           },
