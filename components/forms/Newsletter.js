@@ -74,11 +74,7 @@ export default function Newsletter() {
         {errors.email && <span role="alert">{errors.email.message}</span>}
 
         <div className="rounded-md sm:mt-0 sm:flex-shrink-0 w-fit-content">
-          <button
-            type="submit"
-            disabled={submitting}
-            className="w-full bg-primary border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-teal-600 tw-transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-primary"
-          >
+          <button type="submit" disabled={submitting} className="tw-btn">
             Subscribe
           </button>
           {serverError && <span className="text-white">{serverError}</span>}

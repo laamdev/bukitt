@@ -29,7 +29,7 @@ export default function ServicesCard({
           {title}
         </h3>
         <p className="mt-2 text-xl text-white ">{description}</p>
-        <div className="mt-6">
+        <div className="mt-6 flex justify-center">
           <ButtonLink btnLinkText={btnLinkText} btnURL={btnURL} />
         </div>
       </div>

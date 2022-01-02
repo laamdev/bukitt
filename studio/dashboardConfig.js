@@ -1,19 +1,21 @@
 export default {
   widgets: [
     {
-      name: 'vercel',
-      layout: {
-        width: 'full', // full width is recommended!
-      },
+      name: 'sanity-tutorials',
     },
     {
       name: 'project-info',
+      layout: {
+        width: 'large',
+        height: 'small',
+      },
     },
     {
       name: 'project-users',
-    },
-    {
-      name: 'sanity-tutorials',
+      layout: {
+        width: 'medium',
+        height: 'small',
+      },
     },
   ],
 };
