@@ -9,7 +9,7 @@ export default function AboutSection({ heading, body, image }) {
     <section className="flex flex-col space-y-6 sm:flex-row sm:space-y-0 sm:space-x-12 items-center text-left sm:text-right">
       <div className="w-full sm:w-1/2 space-y-3">
         <h3 className="tw-section-heading">{heading}</h3>
-        <div>
+        <div className="tw-body">
           <TextBody content={body} />
         </div>
       </div>

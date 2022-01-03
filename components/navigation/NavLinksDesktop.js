@@ -13,8 +13,8 @@ export default function NavLinks({ navLinks }) {
               <a
                 className={`text-sm cursor-pointer tw-transition uppercase tracking-wider ${
                   router.asPath.includes(link.href)
-                    ? 'text-primary font-bold'
-                    : 'text-dark font-medium opacity-50 hover:text-primary hover:opacity-100'
+                    ? 'text-primary font-medium'
+                    : 'text-dark opacity-75 hover:text-primary hover:opacity-100'
                 }`}
                 aria-current={link.current ? 'page' : undefined}
               >

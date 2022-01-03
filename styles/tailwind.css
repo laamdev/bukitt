@@ -290,7 +290,7 @@
   }
 
   .tw-section-heading {
-    @apply text-lg sm:text-xl lg:text-2xl font-bold;
+    @apply text-xl sm:text-2xl lg:text-3xl font-bold tracking-widest uppercase;
   }
 
   .tw-details-icon {

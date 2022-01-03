@@ -23,7 +23,7 @@ export default function DetailsSection({
         <Wrapper>
           <IoCashOutline className="tw-details-icon" />
           <Label>Price</Label>
-          <dd className="order-1 tw-card-title-lg mt-3">
+          <dd className="order-1 tw-card-title-lg text-2xl sm:text-3xl lg:text-4xl mt-3">
             ${price} <span className="text-xs sm:text-sm">pp</span>
           </dd>
         </Wrapper>
@@ -31,7 +31,7 @@ export default function DetailsSection({
         <Wrapper>
           <IoCalendarNumberOutline className="tw-details-icon" />
           <Label>Season</Label>
-          <dd className="order-1 tw-card-title-lg mt-3">
+          <dd className="order-1 tw-card-title-lg text-2xl sm:text-3xl lg:text-4xl mt-3">
             <span>{dateFrom}</span> {dateTo && <span> - {dateTo}</span>}
           </dd>
         </Wrapper>
@@ -39,7 +39,7 @@ export default function DetailsSection({
         <Wrapper>
           <IoTimeOutline className="tw-details-icon" />
           <Label>Duration</Label>
-          <dd className="order-1 tw-card-title-lg mt-3">
+          <dd className="order-1 tw-card-title-lg text-4xl mt-3">
             {duration} <span className="text-xs sm:text-sm">days</span>
           </dd>
         </Wrapper>
@@ -47,7 +47,7 @@ export default function DetailsSection({
         <Wrapper>
           <IoPeopleOutline className="tw-details-icon" />
           <Label>Group</Label>
-          <dd className="order-1 tw-card-title-lg mt-3">
+          <dd className="order-1 tw-card-title-lg text-2xl sm:text-3xl lg:text-4xl mt-3">
             <span>
               {groupSizeMin}
               <span className="text-xs sm:text-sm"> min</span>

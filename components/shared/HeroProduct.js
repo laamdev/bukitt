@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { urlForImage } from '@/lib/sanity';
 
 import HeroHeading from '@/components/shared/HeroHeading';
-import HeroTagline from '@/components/shared/HeroTagline';
 import HeroBody from '@/components/shared/HeroBody';
 import ButtonLink from '@/components/shared/buttons/ButtonLink';
 import ButtonDownload from '@/components/shared/buttons/ButtonDownload';
@@ -32,6 +31,7 @@ export default function HeroProduct({ hero, guideURL }) {
 
         <header className="max-w-3xl mx-auto relative py-6 sm:py-12">
           <div className="flex flex-col space-y-6 text-white text-left sm:text-center">
+            <div></div>
             <div>
               <HeroHeading>{hero?.heading}</HeroHeading>
             </div>

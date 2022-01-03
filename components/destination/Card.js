@@ -27,7 +27,7 @@ export default function Card({ destination }) {
 
             <div className="tw-center flex flex-col text-center">
               <h3 className="font-mono font-bold uppercase text-white text-xl sm:text-2xl lg:text-3xl">
-                {destination?.card?.title}
+                {destination?.card?.title}, {destination?.location}
               </h3>
             </div>
           </div>
