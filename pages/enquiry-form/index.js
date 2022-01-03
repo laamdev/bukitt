@@ -4,15 +4,18 @@ import { getClient } from '@/lib/sanity.server';
 import Layout from '@/components/navigation/Layout';
 import ContentWrapper from '@/components/shared/ContentWrapper';
 import Hero from '@/components/shared/Hero';
-import Contact from '@/components/forms/Contact';
+import EnquiryForm from '@/components/forms/EnquiryForm';
 
-export default function EnquiryForm({ enquiryFormPageData }) {
+export default function EnquiryFormPage({ enquiryFormPageData }) {
   return (
     <Layout title={''} description={''}>
       <Hero hero={enquiryFormPageData?.hero} />
 
       <ContentWrapper>
-        <Contact />
+        <EnquiryForm
+          destinations={enquiryFormPageData?.destinations}
+          experiences={enquiryFormPageData?.experiences}
+        />
       </ContentWrapper>
     </Layout>
   );
