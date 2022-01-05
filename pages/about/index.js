@@ -5,13 +5,14 @@ import Layout from '@/components/navigation/Layout';
 import ContentWrapper from '@/components/shared/ContentWrapper';
 import Hero from '@/components/shared/Hero';
 import AboutSection from '@/components/about/AboutSection';
-import TeamList from '@/components/about/TeamList';
+import TeamSection from '@/components/about/team/Section';
 import TeamQuote from '@/components/about/TeamQuote';
+import Divider from '@/components/shared/Divider';
 
 export default function AboutPage({ aboutData }) {
   return (
     <Layout title={''} description={''}>
-      <Hero hero={aboutData?.hero} />
+      <Hero hero={aboutData?.hero} page={aboutData?.slug} />
 
       <ContentWrapper>
         <AboutSection
@@ -19,9 +20,12 @@ export default function AboutPage({ aboutData }) {
           body={aboutData?.aboutUsSection?.body}
           image={aboutData?.aboutUsSection?.image}
         />
-
-        <TeamList teamSection={aboutData?.teamSection} />
-
+        <Divider />
+        <TeamSection
+          heading={aboutData?.teamSection?.heading}
+          team={aboutData?.teamSection?.team}
+        />
+        <Divider />
         <TeamQuote quoteSection={aboutData?.quoteSection} />
       </ContentWrapper>
     </Layout>

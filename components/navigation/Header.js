@@ -10,30 +10,23 @@ import MenuButton from '@/components/navigation/MenuButton';
 import Logo from '@/components/navigation/Logo';
 import NavLinksDesktop from '@/components/navigation/NavLinksDesktop';
 import NavLinksMobile from '@/components/navigation/NavLinksMobile';
-import ButtonLink from '@/components/shared/buttons/ButtonLink';
 
 export default function Header() {
   return (
     <Popover as="header">
       {({ open }) => (
         <>
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-            <div className="h-16 sm:h-20 lg:h-24 relative flex items-center justify-center lg:justify-between">
-              {/* Logo */}
-              <Logo />
+          <div className="fixed top-0 inset-x-0 z-20 flex items-center justify-between h-16 sm:h-20 mx-auto px-4 sm:px-6 lg:px-8 bg-white border-b-2 border-gray-100">
+            {/* Logo */}
+            <Logo />
 
-              {/* Right section on desktop */}
-              <div className="hidden lg:ml-4 lg:flex lg:items-center lg:pr-0.5">
-                <NavLinksDesktop navLinks={navLinks} />
-              </div>
-
-              <div className="hidden lg:block">
-                <ButtonLink btnLinkText="Enquire" btnURL="enquiry-form" />
-              </div>
-
-              {/* Mobule menu button */}
-              <MenuButton open={open} />
+            {/* Right section on desktop */}
+            <div className="hidden lg:ml-4 lg:flex lg:items-center lg:pr-0.5">
+              <NavLinksDesktop navLinks={navLinks} />
             </div>
+
+            {/* Mobule menu button */}
+            <MenuButton open={open} />
           </div>
 
           <Transition.Root as={Fragment}>
@@ -64,7 +57,7 @@ export default function Header() {
                   className="z-30 absolute top-0 inset-x-0 max-w-3xl mx-auto w-full p-2 transition transform origin-top"
                 >
                   <div className="ring-1 ring-black ring-opacity-5 divide-y divide-gray-200">
-                    <div className="p-6 bg-gray-100 rounded shadow">
+                    <div className="p-6 bg-gray-100 rounded-2xl shadow">
                       <div className="flex items-center justify-between border-b-2 border-gray-300 pb-6">
                         <Popover.Button>
                           <Link href="/">
@@ -83,7 +76,7 @@ export default function Header() {
                           </Link>
                         </Popover.Button>
                         <div>
-                          <Popover.Button className="bg-transparent rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 tw-transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary">
+                          <Popover.Button className="bg-transparent rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 tw-transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-paradiso">
                             <span className="sr-only">Close menu</span>
                             <XIcon className="h-6 w-6" aria-hidden="true" />
                           </Popover.Button>

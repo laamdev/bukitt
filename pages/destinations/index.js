@@ -3,8 +3,8 @@ import { getClient } from '@/lib/sanity.server';
 
 import Layout from '@/components/navigation/Layout';
 import Hero from '@/components/shared/Hero';
-import DestinationCard from '@/components/destination/Card';
-import DestinationsGrid from '@/components/destination/List';
+import Card from '@/components/shared/Card';
+import GridList from '@/components/shared/list/GridList';
 import ContentWrapper from '@/components/shared/ContentWrapper';
 
 export default function DestinationsPage({ destinationsPageData }) {
@@ -17,13 +17,20 @@ export default function DestinationsPage({ destinationsPageData }) {
 
   return (
     <Layout title={''} description={''}>
-      <Hero hero={destinationsPageData?.hero} />
+      <Hero
+        hero={destinationsPageData?.hero}
+        page={destinationsPageData?.slug}
+      />
       <ContentWrapper>
-        <DestinationsGrid>
-          {sortedDestinations.map((destination, idx) => (
-            <DestinationCard key={idx} destination={destination} />
+        <GridList>
+          {sortedDestinations.map((destination) => (
+            <Card
+              key={destination?._id}
+              content={destination?.card}
+              linkURL={`destinations/${destination?.slug}`}
+            />
           ))}
-        </DestinationsGrid>
+        </GridList>
       </ContentWrapper>
     </Layout>
   );

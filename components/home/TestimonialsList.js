@@ -44,7 +44,7 @@ export default function TestimonialsList({ testimonials }) {
   return (
     <div>
       {/* Carousel viewport */}
-      <div className="overflow-hidden rounded shadow" ref={emblaRef}>
+      <div className="overflow-hidden rounded-2xl shadow" ref={emblaRef}>
         {/* Carousel container */}
         <div className="flex w-full">
           {/* Carousel slide's */}
@@ -54,11 +54,11 @@ export default function TestimonialsList({ testimonials }) {
         </div>
       </div>
 
-      <div className="flex items-center justify-center mt-5 space-x-2">
+      <div className="flex items-center justify-center mt-6 space-x-3">
         {scrollSnaps.map((_, idx) => (
           <button
             className={`w-2 h-2 rounded-full ${
-              idx === selectedIndex ? 'bg-primary' : 'bg-gray-300'
+              idx === selectedIndex ? 'bg-paradiso' : 'bg-gray-300'
             }`}
             key={idx}
             onClick={() => scrollTo(idx)}

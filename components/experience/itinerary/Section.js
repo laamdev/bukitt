@@ -1,11 +1,10 @@
-import List from '@/components/experience/itinerary/List';
+import SectionContainer from '@/components/shared/SectionContainer';
+import DisclosureList from '@/components/experience/itinerary/DisclosureList';
 
 export default function Section({ heading, itinerary }) {
   return (
-    <section className="space-y-12">
-      <h3 className="tw-section-heading text-center">{heading}</h3>
-
-      <List itinerary={itinerary} />
-    </section>
+    <SectionContainer heading={heading}>
+      <DisclosureList itinerary={itinerary} />
+    </SectionContainer>
   );
 }

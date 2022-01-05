@@ -6,15 +6,15 @@ export default function NavLinks({ navLinks }) {
 
   return (
     <nav>
-      <ul className="flex space-x-6 items-baseline">
+      <ul className="flex space-x-12 items-baseline">
         {navLinks.map((link) => (
           <li key={link.name}>
             <Link href={link.href} className="relative">
               <a
-                className={`text-sm cursor-pointer tw-transition uppercase tracking-wider ${
+                className={`cursor-pointer text-lg tw-transition font-sans ${
                   router.asPath.includes(link.href)
-                    ? 'text-primary font-medium'
-                    : 'text-dark opacity-75 hover:text-primary hover:opacity-100'
+                    ? 'text-paradiso font-medium'
+                    : 'hover:text-paradiso-400'
                 }`}
                 aria-current={link.current ? 'page' : undefined}
               >

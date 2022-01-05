@@ -2,10 +2,10 @@ import { experiencesPageQuery } from '@/lib/queries';
 import { getClient } from '@/lib/sanity.server';
 
 import Layout from '@/components/navigation/Layout';
-import Hero from '@/components/shared/Hero';
 import ContentWrapper from '@/components/shared/ContentWrapper';
-import ExperienceCard from '@/components/experience/Card';
-import ExperiencesList from '@/components/experience/List';
+import Hero from '@/components/shared/Hero';
+import GridList from '@/components/shared/list/GridList';
+import Card from '@/components/shared/Card';
 
 export default function ExperiencesPage({ experiencesPageData }) {
   const sortedExperiences = experiencesPageData?.experiences.sort(function (
@@ -16,14 +16,18 @@ export default function ExperiencesPage({ experiencesPageData }) {
   });
   return (
     <Layout title={''} description={''}>
-      <Hero hero={experiencesPageData?.hero} />
+      <Hero hero={experiencesPageData?.hero} page={experiencesPageData?.slug} />
       <ContentWrapper>
         <section className="space-y-6 sm:space-y-12">
-          <ExperiencesList>
+          <GridList>
             {sortedExperiences.map((experience) => (
-              <ExperienceCard key={experience?._id} experience={experience} />
+              <Card
+                key={experience?._id}
+                content={experience?.card}
+                linkURL={`experiences/${experience?.slug}`}
+              />
             ))}
-          </ExperiencesList>
+          </GridList>
         </section>
       </ContentWrapper>
     </Layout>

@@ -9,7 +9,7 @@ import EnquiryForm from '@/components/forms/EnquiryForm';
 export default function EnquiryFormPage({ enquiryFormPageData }) {
   return (
     <Layout title={''} description={''}>
-      <Hero hero={enquiryFormPageData?.hero} />
+      <Hero hero={enquiryFormPageData?.hero} page={enquiryFormPageData?.slug} />
 
       <ContentWrapper>
         <EnquiryForm

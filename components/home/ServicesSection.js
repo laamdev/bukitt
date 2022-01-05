@@ -1,4 +1,4 @@
-import SectionWrapper from '@/components/shared/SectionWrapper';
+import SectionContainer from '@/components/shared/SectionContainer';
 import ServicesCard from '@/components/home/ServicesCard';
 
 export default function ServicesSection({
@@ -7,9 +7,8 @@ export default function ServicesSection({
   tailoredCard,
 }) {
   return (
-    <SectionWrapper>
-      <h3 className="tw-section-heading text-center">{heading}</h3>
-      <div className="max-w-3xl mx-auto flex flex-col sm:flex-row space-x-0 sm:space-x-6 space-y-6 sm:space-y-0">
+    <SectionContainer heading={heading}>
+      <div className="mx-auto flex flex-col sm:flex-row justify-evenly space-x-0 sm:space-x-6 space-y-6 sm:space-y-0">
         <ServicesCard
           title={experiencesCard?.title}
           description={experiencesCard?.description}
@@ -25,6 +24,6 @@ export default function ServicesSection({
           btnURL={tailoredCard?.callToAction?.url}
         />
       </div>
-    </SectionWrapper>
+    </SectionContainer>
   );
 }

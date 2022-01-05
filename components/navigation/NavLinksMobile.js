@@ -2,8 +2,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Popover } from '@headlessui/react';
 
-import ButtonLink from '@/components/shared/buttons/ButtonLink';
-
 export default function NavLinksMobile({ navLinks }) {
   const router = useRouter();
 
@@ -16,8 +14,8 @@ export default function NavLinksMobile({ navLinks }) {
               <a
                 className={`cursor-pointer ${
                   router.asPath === link.href
-                    ? 'text-primary font-bold '
-                    : 'text-dark hover:text-primary tw-transition'
+                    ? 'text-paradiso font-bold '
+                    : 'text-shark hover:text-paradiso tw-transition'
                 } 
             `}
               >
@@ -27,9 +25,6 @@ export default function NavLinksMobile({ navLinks }) {
           </li>
         ))}
       </ul>
-      <div className="flex justify-center mt-6">
-        <ButtonLink btnLinkText="Enquire" btnURL="enquiry-form" />
-      </div>
     </div>
   );
 }

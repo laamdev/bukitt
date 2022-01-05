@@ -1,25 +1,21 @@
 import Image from 'next/image';
-import { IoAirplaneOutline } from 'react-icons/io5';
-import { urlForImage } from '@/lib/sanity';
 
-import TestimonialTitle from '@/components/home/TestimonialTitle';
-import TestimonialQuote from '@/components/home/TestimonialQuote';
-import CardTitleLarge from '@/components/shared/CardTitleLarge';
+import { urlForImage } from '@/lib/sanity';
 
 export default function TestimonialCard({ testimonial }) {
   return (
-    <div className="relative min-w-full space-y-6 bg-gray-100 p-3 sm:p-6">
+    <div className="relative min-w-full space-y-3 bg-gray-100 p-6 sm:p-12">
       <div className="flex items-center justify-center space-x-1.5 sm:space-x-3">
-        <IoAirplaneOutline className="w-6 sm:w-8 h-6 sm:h-8 text-primary" />
-        <h3 className="tw-card-title-lg text-center">
+        <h3 className="text-3xl sm:text-4xl lg:text-5xl text-center font-medium font-mono uppercase">
           {testimonial.travelerTripDestination}
         </h3>
-        <IoAirplaneOutline className="w-6 sm:w-8 h-6 sm:h-8 text-primary rotate-180" />
       </div>
 
       <blockquote>
         <div className="text-center">
-          <TestimonialQuote>{testimonial.body}</TestimonialQuote>
+          <p className="max-w-prose mx-auto text-lg sm:text-xl text-gray-500">
+            &ldquo;{testimonial.body}&ldquo;
+          </p>
         </div>
         <footer className="mt-8">
           <div className="flex flex-col items-center md:flex-row justify-center">
@@ -39,12 +35,12 @@ export default function TestimonialCard({ testimonial }) {
               />
             </div>
             <div className="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
-              <div className="text-base font-medium text-gray-900">
-                {testimonial.travelerName}. {testimonial.travelerAge}
-                <span className="text-primary"> / </span>
-                <span className="text-gray-500 font-normal">
-                  {testimonial.travelerOriginLocation}
+              <div className="text-xs sm:text-sm lg:text-base">
+                <span className="">
+                  {testimonial.travelerName}, {testimonial.travelerAge}
                 </span>
+                <span className=""> / </span>
+                <span className="">{testimonial.travelerOriginLocation}</span>
               </div>
 
               <div className="text-base text-gray-500"></div>

@@ -10,11 +10,9 @@ import { sanityClient, getClient } from '@/lib/sanity.server';
 
 import Layout from '@/components/navigation/Layout';
 import ContentWrapper from '@/components/shared/ContentWrapper';
-import HighlightCard from '@/components/destination/highlight/Card';
-import HighlightsList from '@/components/destination/highlight/List';
-import Hero from '@/components/shared/HeroProduct';
+import HighlightsSection from '@/components/destination/highlight/Section';
+import Hero from '@/components/shared/Hero';
 import MapSection from '@/components/experience/MapSection';
-import SectionWrapper from '@/components/shared/SectionWrapper';
 
 export default function DestinationPage({ data = {}, preview }) {
   const router = useRouter();
@@ -35,7 +33,7 @@ export default function DestinationPage({ data = {}, preview }) {
 
   return (
     <Layout title={''} description={''}>
-      <Hero hero={destination?.hero} location={destination?.location} />
+      <Hero hero={destination?.hero} page={destination?.slug} />
       <ContentWrapper>
         {destination?.mapSection && (
           <>
@@ -46,23 +44,12 @@ export default function DestinationPage({ data = {}, preview }) {
             />
           </>
         )}
-
-        <SectionWrapper>
-          <h3 className="tw-section-heading text-center">
-            {destination?.highlightsSection?.heading}
-          </h3>
-
-          <HighlightsList>
-            {destination?.highlightsSection?.highlights?.map((highlight) => (
-              <HighlightCard
-                key={highlight?.title}
-                title={highlight?.title}
-                image={highlight?.image}
-                body={highlight?.body}
-              />
-            ))}
-          </HighlightsList>
-        </SectionWrapper>
+        {destination?.highlightsSection && (
+          <HighlightsSection
+            heading={destination?.highlightsSection?.heading}
+            highlights={destination?.highlightsSection?.highlights}
+          />
+        )}
       </ContentWrapper>
     </Layout>
   );

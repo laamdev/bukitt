@@ -87,7 +87,7 @@ module.exports = {
         ],
       },
       {
-        source: '/fonts/stellar/stellar-light.woff2',
+        source: '/fonts/fuji/fuji-light.woff2',
         headers: [
           {
             key: 'Cache-control',
@@ -96,7 +96,7 @@ module.exports = {
         ],
       },
       {
-        source: '/fonts/stellar/stellar-regular.woff2',
+        source: '/fonts/fuji/fuji-regular.woff2',
         headers: [
           {
             key: 'Cache-control',
@@ -105,7 +105,7 @@ module.exports = {
         ],
       },
       {
-        source: '/fonts/stellar/stellar-medium.woff2',
+        source: '/fonts/fuji/fuji-medium.woff2',
         headers: [
           {
             key: 'Cache-control',
@@ -114,7 +114,7 @@ module.exports = {
         ],
       },
       {
-        source: '/fonts/stellar/stellar-bold.woff2',
+        source: '/fonts/fuji/fuji-bold.woff2',
         headers: [
           {
             key: 'Cache-control',

@@ -1,11 +1,10 @@
 import PartnersSlider from '@/components/home/PartnersSlider';
-import SectionWrapper from '@/components/shared/SectionWrapper';
 
 export default function PartnersSection({ heading, partners }) {
   return (
-    <SectionWrapper>
+    <section className="tw-section">
       <h3 className="tw-section-heading text-center">{heading}</h3>
       <PartnersSlider partners={partners} />
-    </SectionWrapper>
+    </section>
   );
 }

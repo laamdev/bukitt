@@ -6,7 +6,7 @@ import TextBody from '@/components/shared/TextBody';
 
 export default function AboutSection({ heading, body, image }) {
   return (
-    <section className="flex flex-col space-y-6 sm:flex-row sm:space-y-0 sm:space-x-12 items-center text-left sm:text-right">
+    <section className="max-w-7xl mx-auto flex flex-col-reverse space-y-12 space-y-reverse sm:flex-row sm:space-y-0 sm:space-x-24 items-center text-center sm:text-right">
       <div className="w-full sm:w-1/2 space-y-3">
         <h3 className="tw-section-heading">{heading}</h3>
         <div className="tw-body">
@@ -14,7 +14,7 @@ export default function AboutSection({ heading, body, image }) {
         </div>
       </div>
 
-      <div className="w-full sm:w-1/2 rounded shadow">
+      <div className="w-full sm:w-1/2 rounded-2xl shadow">
         {image && (
           <Image
             src={urlForImage(image).width(1080).height(1080).url()}
@@ -24,7 +24,7 @@ export default function AboutSection({ heading, body, image }) {
             height={1}
             objectFit="cover"
             objectPosition="center"
-            className="rounded"
+            className="rounded-2xl"
           />
         )}
       </div>

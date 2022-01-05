@@ -86,7 +86,7 @@ export default function EnquiryForm({ destinations, experiences }) {
           autoComplete="name"
           placeholder="Jon Doe"
           {...register('name', { required: true, maxLength: 80 })}
-          className="focus:ring-primary focus:border-primary flex-grow block w-full min-w-0 rounded-md sm:text-sm border-gray-300"
+          className="focus:ring-paradiso focus:border-paradiso flex-grow block w-full min-w-0 rounded-md sm:text-sm border-gray-300"
         />
         {errors.name && <span role="alert">{errors.name.message}</span>}
       </div>
@@ -105,7 +105,7 @@ export default function EnquiryForm({ destinations, experiences }) {
           autoComplete="email"
           placeholder="my@email.com"
           {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
-          className="focus:ring-primary focus:border-primary flex-grow block w-full min-w-0 rounded-md sm:text-sm border-gray-300"
+          className="focus:ring-paradiso focus:border-paradiso flex-grow block w-full min-w-0 rounded-md sm:text-sm border-gray-300"
         />
         {errors.email && <span role="alert">{errors.email.message}</span>}
       </div>
@@ -166,7 +166,7 @@ export default function EnquiryForm({ destinations, experiences }) {
             id="product"
             name="product"
             {...register('product')}
-            className="mt-1 block w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
+            className="mt-1 block w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-paradiso focus:border-paradiso sm:text-sm"
           >
             {watchCategory === 'Experience' && (
               <>

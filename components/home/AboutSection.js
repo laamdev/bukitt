@@ -1,5 +1,5 @@
 import TextBody from '@/components/shared/TextBody';
-import ButtonLink from '@/components/shared/buttons/ButtonLink';
+import ButtonLink from '@/components/shared/ButtonLink';
 
 export default function AboutSection({ heading, body, callToAction }) {
   return (

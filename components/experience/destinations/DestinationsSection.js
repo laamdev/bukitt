@@ -1,12 +1,12 @@
-import SectionContainer from '@/components/shared/SectionContainer';
 import GridList from '@/components/shared/list/GridList';
 import Card from '@/components/shared/Card';
+import SectionContainer from '@/components/shared/SectionContainer';
 
-export default function Section({ heading, featuredDestinations }) {
+export default function DestinationsSection({ heading, destinations }) {
   return (
     <SectionContainer heading={heading}>
       <GridList>
-        {featuredDestinations.map((destination) => (
+        {destinations.map((destination) => (
           <Card
             key={destination?._id}
             content={destination?.card}

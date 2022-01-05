@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { urlForImage } from '@/lib/sanity';
 
 import TextBody from '@/components/shared/TextBody';
-import ButtonLink from '@/components/shared/buttons/ButtonLink';
+import ButtonLink from '@/components/shared/ButtonLink';
 import ButtonDownload from '@/components/shared/buttons/ButtonDownload';
 
 export default function Hero({ heading, tagline, body, coverImage, guideURL }) {

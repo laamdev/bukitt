@@ -4,7 +4,7 @@ import Image from 'next/image';
 import {
   socialLinks,
   contactLinks,
-  quickLinks,
+  navLinks,
   copyright,
   currentYear,
 } from '@/data/navigation';
@@ -32,7 +32,7 @@ export default function Footer() {
             <div>
               <FooterHeading>Quick Links</FooterHeading>
               <ul role="list" className="mt-4 space-y-4">
-                {quickLinks.map((link) => (
+                {navLinks.map((link) => (
                   <li key={link.name}>
                     <Link href={link.href}>
                       <a className="text-base text-gray-300 hover:text-white tw-transition">
