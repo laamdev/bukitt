@@ -6,6 +6,9 @@ import ButtonLink from '@/components/shared/ButtonLink';
 import ButtonDownload from '@/components/shared/ButtonDownload';
 
 export default function Hero({ hero, guideURL, page }) {
+  console.log(hero);
+  console.log(guideURL);
+  console.log(page);
   return (
     <div className="relative mt-6">
       <div className="max-w-screen-2xl mx-auto sm:px-6 lg:px-8">

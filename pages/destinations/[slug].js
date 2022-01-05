@@ -9,7 +9,7 @@ import { usePreviewSubscription } from '@/lib/sanity';
 import { sanityClient, getClient } from '@/lib/sanity.server';
 
 import Layout from '@/components/navigation/Layout';
-// import Hero from '@/components/shared/Hero';
+import Hero from '@/components/shared/Hero';
 import ContentWrapper from '@/components/shared/ContentWrapper';
 import HighlightsSection from '@/components/destination/highlight/Section';
 import MapSection from '@/components/experience/MapSection';
@@ -33,7 +33,7 @@ export default function DestinationPage({ data = {}, preview }) {
 
   return (
     <Layout title="" description="">
-      {/* <Hero hero={destination?.hero} page={slug} /> */}
+      <Hero hero={destination?.hero} page={slug} />
       <ContentWrapper>
         {destination?.mapSection && (
           <>
