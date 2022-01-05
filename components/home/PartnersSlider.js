@@ -36,8 +36,8 @@ export default function PartnerSlider({ partners }) {
 
   return (
     <div ref={sliderRef} className="keen-slider bg-gray-100 rounded-2xl shadow">
-      {partners.map((partner, idx) => (
-        <div key={idx} className="keen-slider__slide">
+      {partners.map((partner) => (
+        <div key={partner.name} className="keen-slider__slide">
           <Image
             src={urlForImage(partner.logo).width(1080).height(1080).url()}
             alt={partner.logo.alt}

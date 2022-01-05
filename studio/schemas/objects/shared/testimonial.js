@@ -4,48 +4,43 @@ export default {
   title: 'Testimonial',
   fields: [
     {
-      name: 'heading',
-      type: 'string',
-      title: 'Heading',
-    },
-    {
-      name: 'body',
+      name: 'quote',
       type: 'text',
-      title: 'Body',
+      title: 'Quote',
     },
     {
-      name: 'travelerName',
+      name: 'name',
       type: 'string',
-      title: 'Traveler Name',
+      title: 'Name',
     },
     {
-      name: 'travelerAge',
+      name: 'age',
       type: 'number',
-      title: 'Traveler Age',
+      title: 'Age',
     },
     {
-      name: 'travelerOriginLocation',
+      name: 'origin',
       type: 'string',
-      title: 'Traveler Origin Location',
+      title: 'Origin',
     },
     {
-      name: 'travelerTripDestination',
+      name: 'destination',
       type: 'string',
-      title: 'Traveler Trip Destination',
+      title: 'Destination',
     },
     {
-      name: 'travelerImage',
+      name: 'thumbnail',
       type: 'imageCustom',
-      title: 'Traveler Image',
+      title: 'Thumbnail',
       description:
         'Image should be in JPG format and have a 1:1 aspect ratio (1080x1080 preferred).',
     },
   ],
   preview: {
     select: {
-      title: 'travelerName',
+      title: 'name',
       subtitle: 'travelerTripDestination',
-      media: 'travelerImage',
+      media: 'thumbnail',
     },
   },
 };

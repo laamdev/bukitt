@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { urlForImage } from '@/lib/sanity';
 
 import TextBody from '@/components/shared/TextBody';
-import Title from '@/components/shared/card/Title';
+import CardTitle from '@/components/shared/card/CardTitle';
 
 export default function HighlightCard({ highlight }) {
   return (
@@ -20,7 +20,7 @@ export default function HighlightCard({ highlight }) {
         </div>
       )}
 
-      <Title>{highlight?.title}</Title>
+      <h4>{highlight?.title}</h4>
 
       <div className="tw-body">
         <TextBody content={highlight?.body} />

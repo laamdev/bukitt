@@ -14,14 +14,14 @@
     "@hookform/error-message": "^2.0.0",
     "@hookform/resolvers": "^2.8.5",
     "@sanity/block-content-to-react": "^3.0.0",
-    "@sanity/cli": "^2.23.2",
+    "@sanity/cli": "^2.23.3",
     "@sanity/client": "^2.23.2",
     "@sanity/image-url": "^1.0.1",
     "@sendgrid/mail": "^7.6.0",
     "classnames": "^2.3.1",
     "embla-carousel-react": "^6.0.2",
     "framer-motion": "^5.5.5",
-    "keen-slider": "^6.6.2",
+    "keen-slider": "^6.6.3",
     "next": "12.0.7",
     "next-sanity": "^0.4.0",
     "next-sanity-image": "^3.2.1",
@@ -37,7 +37,7 @@
   "devDependencies": {
     "@tailwindcss/forms": "^0.4.0",
     "autoprefixer": "^10.4.1",
-    "concurrently": "^6.5.1",
+    "concurrently": "^7.0.0",
     "eslint": "8.6.0",
     "eslint-config-next": "12.0.7",
     "eslint-config-prettier": "^8.3.0",
@@ -46,6 +46,6 @@
     "lint-staged": "^12.1.5",
     "postcss": "^8.4.5",
     "prettier": "^2.5.1",
-    "tailwindcss": "^3.0.8"
+    "tailwindcss": "^3.0.11"
   }
 }

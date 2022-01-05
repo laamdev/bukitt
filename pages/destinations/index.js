@@ -23,12 +23,13 @@ export default function DestinationsPage({ destinationsPageData }) {
       />
       <ContentWrapper>
         <GridList>
-          {sortedDestinations.map((destination) => (
-            <Card
-              key={destination?._id}
-              content={destination?.card}
-              linkURL={`destinations/${destination?.slug}`}
-            />
+          {sortedDestinations.map((destination, idx) => (
+            <li key={idx}>
+              <Card
+                content={destination?.card}
+                linkURL={`destinations/${destination?.slug}`}
+              />
+            </li>
           ))}
         </GridList>
       </ContentWrapper>

@@ -7,21 +7,21 @@ export default function TestimonialCard({ testimonial }) {
     <div className="relative min-w-full space-y-3 bg-gray-100 p-6 sm:p-12">
       <div className="flex items-center justify-center space-x-1.5 sm:space-x-3">
         <h3 className="text-3xl sm:text-4xl lg:text-5xl text-center font-medium font-mono uppercase">
-          {testimonial.travelerTripDestination}
+          {testimonial.destination}
         </h3>
       </div>
 
       <blockquote>
         <div className="text-center">
           <p className="max-w-prose mx-auto text-lg sm:text-xl text-gray-500">
-            &ldquo;{testimonial.body}&ldquo;
+            &ldquo;{testimonial.quote}&ldquo;
           </p>
         </div>
         <footer className="mt-8">
           <div className="flex flex-col items-center md:flex-row justify-center">
             <div className="md:flex-shrink-0">
               <Image
-                src={urlForImage(testimonial.travelerImage)
+                src={urlForImage(testimonial.thumbnail)
                   .width(1080)
                   .height(1080)
                   .url()}
@@ -37,10 +37,10 @@ export default function TestimonialCard({ testimonial }) {
             <div className="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
               <div className="text-xs sm:text-sm lg:text-base">
                 <span className="">
-                  {testimonial.travelerName}, {testimonial.travelerAge}
+                  {testimonial.name}, {testimonial.age}
                 </span>
                 <span className=""> / </span>
-                <span className="">{testimonial.travelerOriginLocation}</span>
+                <span className="">{testimonial.origin}</span>
               </div>
 
               <div className="text-base text-gray-500"></div>

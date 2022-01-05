@@ -4,7 +4,7 @@ import { getClient } from '@/lib/sanity.server';
 import Layout from '@/components/navigation/Layout';
 import FeaturedDestinationsSection from '@/components/home/featuredDestinations/Section';
 import FeaturedExperienceSection from '@/components/home/featuredExperience/Section';
-import FeaturesSection from '@/components/shared/features/Section';
+import FeaturesSection from '@/components/shared/features/FeaturesSection';
 import ServicesSection from '@/components/home/ServicesSection';
 import PartnersSection from '@/components/home/PartnersSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';

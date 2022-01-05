@@ -4,8 +4,8 @@ import { IoChevronUpOutline } from 'react-icons/io5';
 export default function DisclosureList({ itinerary }) {
   return (
     <div className="max-w-5xl mx-auto space-y-6 sm:space-y-12">
-      {itinerary.map((item, idx) => (
-        <Disclosure key={idx}>
+      {itinerary.map((item) => (
+        <Disclosure key={item._key}>
           {({ open }) => (
             <>
               <Disclosure.Button

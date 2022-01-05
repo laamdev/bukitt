@@ -8,7 +8,9 @@ export default function Section({ heading, highlights }) {
 
       <GridList>
         {highlights.map((highlight, idx) => (
-          <HighlightCard key={idx} highlight={highlight} />
+          <li key={idx}>
+            <HighlightCard highlight={highlight} />
+          </li>
         ))}
       </GridList>
     </section>

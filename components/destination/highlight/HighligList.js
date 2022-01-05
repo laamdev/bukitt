@@ -1,6 +1,8 @@
 import Card from '@/components/shared/HighlightCard';
 
 export default function List({ highlights }) {
+  console.log(highlights);
+
   return (
     <ul
       role="list"

@@ -1,4 +1,4 @@
-import List from '@/components/about/team/List';
+import List from '@/components/about/team/TeamList';
 
 export default function Section({ heading, team }) {
   return (

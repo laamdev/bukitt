@@ -5,7 +5,7 @@ import Layout from '@/components/navigation/Layout';
 import ContentWrapper from '@/components/shared/ContentWrapper';
 import Hero from '@/components/shared/Hero';
 import AboutSection from '@/components/about/AboutSection';
-import TeamSection from '@/components/about/team/Section';
+import TeamSection from '@/components/about/team/TeamSection';
 import TeamQuote from '@/components/about/TeamQuote';
 import Divider from '@/components/shared/Divider';
 

@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-import FormLabel from '@/components/forms/Label';
-
 export default function EnquiryForm({ destinations, experiences }) {
   const [serverError, setServerError] = useState('');
   const [success, setSuccess] = useState('');
@@ -65,7 +63,7 @@ export default function EnquiryForm({ destinations, experiences }) {
     reset();
   };
 
-  console.log('watchCategory', watchCategory);
+  console.log(experiences);
 
   return (
     <form

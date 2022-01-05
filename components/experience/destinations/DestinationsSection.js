@@ -6,12 +6,13 @@ export default function DestinationsSection({ heading, destinations }) {
   return (
     <SectionContainer heading={heading}>
       <GridList>
-        {destinations.map((destination) => (
-          <Card
-            key={destination?._id}
-            content={destination?.card}
-            linkURL={`destinations/${destination?.slug}`}
-          />
+        {destinations.map((destination, idx) => (
+          <li key={idx}>
+            <Card
+              content={destination?.card}
+              linkURL={`destinations/${destination?.slug}`}
+            />
+          </li>
         ))}
       </GridList>
     </SectionContainer>

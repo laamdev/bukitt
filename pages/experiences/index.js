@@ -20,12 +20,13 @@ export default function ExperiencesPage({ experiencesPageData }) {
       <ContentWrapper>
         <section className="space-y-6 sm:space-y-12">
           <GridList>
-            {sortedExperiences.map((experience) => (
-              <Card
-                key={experience?._id}
-                content={experience?.card}
-                linkURL={`experiences/${experience?.slug}`}
-              />
+            {sortedExperiences.map((experience, idx) => (
+              <li key={idx}>
+                <Card
+                  content={experience?.card}
+                  linkURL={`experiences/${experience?.slug}`}
+                />
+              </li>
             ))}
           </GridList>
         </section>

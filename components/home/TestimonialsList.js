@@ -48,8 +48,8 @@ export default function TestimonialsList({ testimonials }) {
         {/* Carousel container */}
         <div className="flex w-full">
           {/* Carousel slide's */}
-          {testimonials.map((testimonial, idx) => (
-            <TestimonialCard key={idx} testimonial={testimonial} />
+          {testimonials.map((testimonial) => (
+            <TestimonialCard key={testimonial._key} testimonial={testimonial} />
           ))}
         </div>
       </div>
