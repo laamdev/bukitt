@@ -41,7 +41,7 @@ export default function ExperiencePage({ data = {}, preview }) {
       <Hero
         hero={experience?.hero}
         guideURL={experience?.guideURL}
-        page={experience?.slug}
+        page={slug}
       />
       <ContentWrapper>
         {experience?.details && (

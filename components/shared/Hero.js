@@ -6,7 +6,6 @@ import ButtonLink from '@/components/shared/ButtonLink';
 import ButtonDownload from '@/components/shared/ButtonDownload';
 
 export default function Hero({ hero, guideURL, page }) {
-  console.log(page);
   return (
     <div className="relative mt-6">
       <div className="max-w-screen-2xl mx-auto sm:px-6 lg:px-8">
@@ -14,7 +13,7 @@ export default function Hero({ hero, guideURL, page }) {
           <div className="absolute inset-0">
             <Image
               src={urlForImage(hero?.coverImage).width(1920).height(1080).url()}
-              alt={hero?.coverImage?.alt}
+              alt={hero?.heading}
               layout="fill"
               objectFit="cover"
               objectPosition="center"
