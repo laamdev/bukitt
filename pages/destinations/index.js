@@ -17,10 +17,7 @@ export default function DestinationsPage({ destinationsPageData }) {
 
   return (
     <Layout title={''} description={''}>
-      <Hero
-        hero={destinationsPageData?.hero}
-        page={destinationsPageData?.slug}
-      />
+      <Hero hero={destinationsPageData?.hero} />
       <ContentWrapper>
         <GridList>
           {sortedDestinations.map((destination, idx) => (

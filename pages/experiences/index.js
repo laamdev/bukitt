@@ -16,7 +16,7 @@ export default function ExperiencesPage({ experiencesPageData }) {
   });
   return (
     <Layout title={''} description={''}>
-      <Hero hero={experiencesPageData?.hero} page={experiencesPageData?.slug} />
+      <Hero hero={experiencesPageData?.hero} />
       <ContentWrapper>
         <section className="space-y-6 sm:space-y-12">
           <GridList>

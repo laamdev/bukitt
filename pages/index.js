@@ -15,7 +15,7 @@ import Divider from '@/components/shared/Divider';
 export default function HomePage({ homeData }) {
   return (
     <Layout title={''} description={''}>
-      <Hero hero={homeData?.hero} page={homeData?.slug} />
+      <Hero hero={homeData?.hero} />
       <ContentWrapper>
         <ServicesSection
           heading={homeData?.servicesSection?.heading}

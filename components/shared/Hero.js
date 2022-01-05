@@ -5,10 +5,7 @@ import { urlForImage } from '@/lib/sanity';
 import ButtonLink from '@/components/shared/ButtonLink';
 import ButtonDownload from '@/components/shared/ButtonDownload';
 
-export default function Hero({ hero, guideURL, page }) {
-  console.log(hero);
-  console.log(guideURL);
-  console.log(page);
+export default function Hero({ hero, guideURL }) {
   return (
     <div className="relative mt-6">
       <div className="max-w-screen-2xl mx-auto sm:px-6 lg:px-8">
@@ -29,14 +26,7 @@ export default function Hero({ hero, guideURL, page }) {
 
           <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-24 lg:px-8">
             <h1 className="flex flex-col text-center text-4xl uppercase font-extrabold tracking-tight sm:text-5xl lg:text-9xl font-mono text-white bg-gradient-to-b from-white to-paradiso-400 text-transparent bg-clip-text">
-              {page === 'home' ? (
-                <>
-                  <span>Your Concierge</span>
-                  <span>to the Outdoors</span>
-                </>
-              ) : (
-                <span>{hero?.heading}</span>
-              )}
+              <span>{hero?.heading}</span>
             </h1>
 
             <div className="mt-3 max-w-lg mx-auto text-center text-2xl text-white sm:max-w-3xl">

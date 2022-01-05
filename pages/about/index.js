@@ -12,7 +12,7 @@ import Divider from '@/components/shared/Divider';
 export default function AboutPage({ aboutData }) {
   return (
     <Layout title={''} description={''}>
-      <Hero hero={aboutData?.hero} page={aboutData?.slug} />
+      <Hero hero={aboutData?.hero} />
 
       <ContentWrapper>
         <AboutSection

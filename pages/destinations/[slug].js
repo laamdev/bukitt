@@ -33,7 +33,7 @@ export default function DestinationPage({ data = {}, preview }) {
 
   return (
     <Layout title="" description="">
-      <Hero hero={destination?.hero} page={slug} />
+      <Hero hero={destination?.hero} />
       <ContentWrapper>
         {destination?.mapSection && (
           <>
