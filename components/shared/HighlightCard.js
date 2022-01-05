@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { urlForImage } from '@/lib/sanity';
 
 import TextBody from '@/components/shared/TextBody';
-import CardTitle from '@/components/shared/card/CardTitle';
 
 export default function HighlightCard({ highlight }) {
   return (
