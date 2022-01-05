@@ -9,7 +9,7 @@ import { usePreviewSubscription } from '@/lib/sanity';
 import { sanityClient, getClient } from '@/lib/sanity.server';
 
 import ContentWrapper from '@/components/shared/ContentWrapper';
-import Hero from '@/components/shared/Hero';
+// import Hero from '@/components/shared/Hero';
 import Divider from '@/components/shared/Divider';
 import Layout from '@/components/navigation/Layout';
 import MapSection from '@/components/experience/MapSection';
@@ -38,11 +38,11 @@ export default function ExperiencePage({ data = {}, preview }) {
 
   return (
     <Layout title={''} description={''}>
-      <Hero
+      {/* <Hero
         hero={experience?.hero}
         guideURL={experience?.guideURL}
         page={slug}
-      />
+      /> */}
       <ContentWrapper>
         {experience?.details && (
           <DetailsSection
