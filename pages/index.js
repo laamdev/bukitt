@@ -2,8 +2,8 @@ import { homePageQuery } from '@/lib/queries';
 import { getClient } from '@/lib/sanity.server';
 
 import Layout from '@/components/navigation/Layout';
-import FeaturedDestinationsSection from '@/components/home/featuredDestinations/Section';
-import FeaturedExperienceSection from '@/components/home/featuredExperience/Section';
+import FeaturedDestinationsSection from '@/components/home/FeaturedDestinationsSection';
+import FeaturedExperienceSection from '@/components/home/FeaturedExperienceSection';
 import FeaturesSection from '@/components/shared/features/FeaturesSection';
 import ServicesSection from '@/components/home/ServicesSection';
 import PartnersSection from '@/components/home/PartnersSection';

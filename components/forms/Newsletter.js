@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-import FooterHeading from '@/components/footer/Heading';
-
 export default function Newsletter() {
   const [serverError, setServerError] = useState('');
   const [success, setSuccess] = useState('');
@@ -46,7 +44,7 @@ export default function Newsletter() {
 
   return (
     <div>
-      <FooterHeading>Newsletter</FooterHeading>
+      <h5>Newsletter</h5>
       <p className="mt-4 text-base text-gray-300">
         The latest news, articles, and resources, sent to your inbox monthly.
       </p>

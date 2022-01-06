@@ -2,7 +2,10 @@ import SectionContainer from '@/components/shared/SectionContainer';
 import GridList from '@/components/shared/list/GridList';
 import Card from '@/components/shared/Card';
 
-export default function Section({ heading, featuredDestinations }) {
+export default function FeaturedDestinationsSection({
+  heading,
+  featuredDestinations,
+}) {
   return (
     <SectionContainer heading={heading}>
       <GridList>

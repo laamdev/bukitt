@@ -10,8 +10,9 @@ import { sanityClient, getClient } from '@/lib/sanity.server';
 
 import Layout from '@/components/navigation/Layout';
 import ContentWrapper from '@/components/shared/ContentWrapper';
-import HighlightsSection from '@/components/destination/highlight/Section';
-import MapSection from '@/components/experience/MapSection';
+import HighlightsSection from '@/components/destination/highlight/HighlightSection';
+import MapSection from '@/components/shared/MapSection';
+import Hero from '@/components/shared/Hero';
 
 export default function DestinationPage({ data = {}, preview }) {
   const router = useRouter();
@@ -32,6 +33,8 @@ export default function DestinationPage({ data = {}, preview }) {
 
   return (
     <Layout title="" description="">
+      <Hero hero={destination?.hero} />
+
       <ContentWrapper>
         {destination?.mapSection && (
           <>

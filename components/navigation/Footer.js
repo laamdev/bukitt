@@ -9,7 +9,6 @@ import {
   currentYear,
 } from '@/data/navigation';
 
-import FooterHeading from '@/components/footer/Heading';
 import Newsletter from '@/components/forms/Newsletter';
 
 export default function Footer() {
@@ -30,7 +29,7 @@ export default function Footer() {
 
           <div className="w-full sm:w-2/4 flex justify-between sm:justify-evenly">
             <div>
-              <FooterHeading>Quick Links</FooterHeading>
+              <h4 className="text-gray-200 uppercase">Quick Links</h4>
               <ul role="list" className="mt-4 space-y-4">
                 {navLinks.map((link) => (
                   <li key={link.name}>
@@ -46,7 +45,7 @@ export default function Footer() {
 
             <div className="space-y-12">
               <div>
-                <FooterHeading>Socials</FooterHeading>
+                <h4 className="text-gray-200 uppercase">Socials</h4>
                 <ul role="list" className="mt-4 space-y-4">
                   {socialLinks.map((social) => (
                     <li key={social.name}>
@@ -65,7 +64,7 @@ export default function Footer() {
               </div>
 
               <div>
-                <FooterHeading>Contacts</FooterHeading>
+                <h4 className="text-gray-200 uppercase">Contacts</h4>
                 <ul role="list" className="mt-4 space-y-4">
                   {contactLinks.map((contact) => (
                     <li key={contact.name}>

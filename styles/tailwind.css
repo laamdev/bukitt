@@ -136,7 +136,7 @@
   }
 
   .tw-card-title {
-    @apply text-xl sm:text-2xl font-bold;
+    @apply text-xl sm:text-2xl font-medium font-mono uppercase;
   }
 
   .tw-card-subtitle {

@@ -6,7 +6,7 @@ import { currentMonth } from '@/data/navigation';
 
 import Overlay from '@/components/shared/image/Overlay';
 
-export default function Card({ experience }) {
+export default function FeaturedExperienceCard({ experience }) {
   return (
     <div className="max-w-5xl mx-auto">
       <Link href={`experiences/${experience.slug}`}>

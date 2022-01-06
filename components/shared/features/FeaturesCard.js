@@ -4,7 +4,7 @@ import { urlForImage } from '@/lib/sanity';
 
 export default function FeaturesCard({ feature }) {
   return (
-    <div className="min-h-content text-center">
+    <li className="min-h-content text-center">
       <div className="h-full flow-root bg-gray-100 rounded-2xl shadow px-6 pb-8">
         <div className="-mt-6">
           <div>
@@ -24,13 +24,11 @@ export default function FeaturesCard({ feature }) {
           </div>
 
           <div className="mt-6 space-y-3">
-            <h4 className="text-lg sm:text-xl font-bold uppercase">
-              {feature.title}
-            </h4>
+            <h4 className="tw-card-title">{feature.title}</h4>
             <p className="text-base sm:text-lg ">{feature.description}</p>
           </div>
         </div>
       </div>
-    </div>
+    </li>
   );
 }

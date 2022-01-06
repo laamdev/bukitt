@@ -5,9 +5,9 @@ import {
   IoPeopleOutline,
 } from 'react-icons/io5';
 
-import Container from '@/components/experience/details/Container';
-import Label from '@/components/experience/details/Label';
-import Wrapper from '@/components/experience/details/Wrapper';
+import DetailsContainer from '@/components/experience/details/DetailsContainer';
+import DetailsLabel from '@/components/experience/details/DetailsLabel';
+import DetailsWrapper from '@/components/experience/details/DetailsWrapper';
 
 export default function DetailsSection({
   price,
@@ -19,34 +19,34 @@ export default function DetailsSection({
 }) {
   return (
     <section className="mx-auto">
-      <Container>
-        <Wrapper>
+      <DetailsContainer>
+        <DetailsWrapper>
           <IoCashOutline className="tw-details-icon" />
-          <Label>Price</Label>
+          <DetailsLabel>Price</DetailsLabel>
           <dd className="order-1 tw-card-title-lg text-2xl sm:text-3xl lg:text-4xl mt-3">
             ${price} <span className="text-xs sm:text-sm">pp</span>
           </dd>
-        </Wrapper>
+        </DetailsWrapper>
 
-        <Wrapper>
+        <DetailsWrapper>
           <IoCalendarNumberOutline className="tw-details-icon" />
-          <Label>Season</Label>
+          <DetailsLabel>Season</DetailsLabel>
           <dd className="order-1 tw-card-title-lg text-2xl sm:text-3xl lg:text-4xl mt-3">
             <span>{dateFrom}</span> {dateTo && <span> - {dateTo}</span>}
           </dd>
-        </Wrapper>
+        </DetailsWrapper>
 
-        <Wrapper>
+        <DetailsWrapper>
           <IoTimeOutline className="tw-details-icon" />
-          <Label>Duration</Label>
+          <DetailsLabel>Duration</DetailsLabel>
           <dd className="order-1 tw-card-title-lg text-4xl mt-3">
             {duration} <span className="text-xs sm:text-sm">days</span>
           </dd>
-        </Wrapper>
+        </DetailsWrapper>
 
-        <Wrapper>
+        <DetailsWrapper>
           <IoPeopleOutline className="tw-details-icon" />
-          <Label>Group</Label>
+          <DetailsLabel>Group</DetailsLabel>
           <dd className="order-1 tw-card-title-lg text-2xl sm:text-3xl lg:text-4xl mt-3">
             <span>
               {groupSizeMin}
@@ -60,8 +60,8 @@ export default function DetailsSection({
               </span>
             )}
           </dd>
-        </Wrapper>
-      </Container>
+        </DetailsWrapper>
+      </DetailsContainer>
     </section>
   );
 }

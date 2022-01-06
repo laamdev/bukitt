@@ -11,12 +11,13 @@ import { sanityClient, getClient } from '@/lib/sanity.server';
 import ContentWrapper from '@/components/shared/ContentWrapper';
 import Divider from '@/components/shared/Divider';
 import Layout from '@/components/navigation/Layout';
-import MapSection from '@/components/experience/MapSection';
+import MapSection from '@/components/shared/MapSection';
 import AccommodationSection from '@/components/experience/AccommodationSection';
 import DestinationsSection from '@/components/experience/destinations/DestinationsSection';
-import DetailsSection from '@/components/experience/details/Section';
+import DetailsSection from '@/components/experience/details/DetailsSection';
 import FeaturesSection from '@/components/shared/features/FeaturesSection';
-import ItinerarySection from '@/components/experience/itinerary/Section';
+import ItinerarySection from '@/components/experience/itinerary/ItinerarySection';
+import Hero from '@/components/shared/Hero';
 
 export default function ExperiencePage({ data = {}, preview }) {
   const router = useRouter();
@@ -37,6 +38,8 @@ export default function ExperiencePage({ data = {}, preview }) {
 
   return (
     <Layout title={''} description={''}>
+      <Hero hero={experience?.hero} />
+
       <ContentWrapper>
         {experience?.details && (
           <DetailsSection

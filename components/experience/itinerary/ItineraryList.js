@@ -1,7 +1,7 @@
 import { Disclosure, Transition } from '@headlessui/react';
 import { IoChevronUpOutline } from 'react-icons/io5';
 
-export default function DisclosureList({ itinerary }) {
+export default function ItineraryList({ itinerary }) {
   return (
     <div className="max-w-5xl mx-auto space-y-6 sm:space-y-12">
       {itinerary.map((item) => (

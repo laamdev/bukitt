@@ -7,9 +7,7 @@ export default function Section({ heading, features }) {
     <SectionContainer heading={heading}>
       <GridListFeatures>
         {features.map((feature, idx) => (
-          <li key={idx}>
-            <FeaturesCard feature={feature} />
-          </li>
+          <FeaturesCard feature={feature} key={idx} />
         ))}
       </GridListFeatures>
     </SectionContainer>

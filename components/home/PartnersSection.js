@@ -1,10 +1,10 @@
 import PartnersSlider from '@/components/home/PartnersSlider';
+import SectionContainer from '@/components/shared/SectionContainer';
 
 export default function PartnersSection({ heading, partners }) {
   return (
-    <section className="tw-section">
-      <h3 className="tw-section-heading text-center">{heading}</h3>
+    <SectionContainer heading={heading}>
       <PartnersSlider partners={partners} />
-    </section>
+    </SectionContainer>
   );
 }

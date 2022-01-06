@@ -1,18 +1,15 @@
 import GridList from '@/components/shared/list/GridList';
 import HighlightCard from '@/components/shared/HighlightCard';
+import SectionContainer from '@/components/shared/SectionContainer';
 
 export default function Section({ heading, highlights }) {
   return (
-    <section className="tw-section">
-      <h3 className="tw-section-heading text-center">{heading}</h3>
-
+    <SectionContainer heading={heading}>
       <GridList>
         {highlights.map((highlight, idx) => (
-          <li key={idx}>
-            <HighlightCard highlight={highlight} />
-          </li>
+          <HighlightCard highlight={highlight} key={idx} />
         ))}
       </GridList>
-    </section>
+    </SectionContainer>
   );
 }
