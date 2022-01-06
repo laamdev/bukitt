@@ -11,16 +11,21 @@ export default function Hero({ hero, guideURL }) {
       <div className="max-w-screen-2xl mx-auto sm:px-6 lg:px-8">
         <div className="relative shadow sm:rounded-2xl sm:overflow-hidden">
           <div className="absolute inset-0">
-            <Image
-              src={urlForImage(hero?.coverImage).width(1920).height(1080).url()}
-              alt={hero?.heading}
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
-              quality={100}
-              priority
-              className="grayscale"
-            />
+            {hero?.coverImage && (
+              <Image
+                src={urlForImage(hero?.coverImage)
+                  .width(1920)
+                  .height(1080)
+                  .url()}
+                alt={hero?.coverImage.alt ? hero?.coverImage.alt : ''}
+                layout="fill"
+                objectFit="cover"
+                objectPosition="center"
+                quality={100}
+                priority
+                className="grayscale"
+              />
+            )}
             <div className="absolute inset-0 bg-dark mix-blend-hard-light" />
           </div>
 
