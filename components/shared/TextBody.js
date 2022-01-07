@@ -16,18 +16,11 @@ const serializers = {
     link: ({ mark, children }) => {
       const { blank, href } = mark;
       return blank ? (
-        <a
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="tw-external-link"
-        >
+        <a href={href} target="_blank" rel="noopener noreferrer">
           {children}
         </a>
       ) : (
-        <a href={href} className="tw-external-link">
-          {children}
-        </a>
+        <a href={href}>{children}</a>
       );
     },
   },
@@ -35,7 +28,7 @@ const serializers = {
 
 export default function TextBody({ content }) {
   return (
-    <div className="max-w-prose">
+    <div className="prose prose-gray prose-a:font-medium prose-a:text-paradiso hover:prose-a:text-paradiso-400 prose-img:rounded-2xl prose-img:shadow-md tw-transition">
       <BlockContent
         blocks={content}
         serializers={serializers}

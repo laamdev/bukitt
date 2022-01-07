@@ -1,11 +1,12 @@
 import Image from 'next/image';
 
 import { urlForImage } from '@/lib/sanity';
+import SimpleText from '@/components/shared/SimpleText';
 
 export default function FeaturesCard({ feature }) {
   return (
     <li className="min-h-content text-center">
-      <div className="h-full flow-root bg-gray-100 rounded-2xl shadow px-6 pb-8">
+      <div className="h-full flow-root bg-gray-100 rounded-2xl shadow-md px-6 pb-8">
         <div className="-mt-6">
           <div>
             <span className="inline-flex items-center justify-center p-3 bg-white border-2 border-paradiso rounded-2xl shadow">
@@ -25,7 +26,7 @@ export default function FeaturesCard({ feature }) {
 
           <div className="mt-6 space-y-3">
             <h4 className="tw-card-title">{feature.title}</h4>
-            <p className="text-base sm:text-lg ">{feature.description}</p>
+            <SimpleText>{feature.description}</SimpleText>
           </div>
         </div>
       </div>

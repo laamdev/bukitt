@@ -11,10 +11,10 @@ export default function NavLinks({ navLinks }) {
           <li key={link.name}>
             <Link href={link.href} className="relative">
               <a
-                className={`cursor-pointer text-lg tw-transition font-sans ${
+                className={`cursor-pointer text-lg tw-transition font-sans underline-offset-4 ${
                   router.asPath.includes(link.href)
-                    ? 'text-paradiso font-medium'
-                    : 'hover:text-paradiso-400'
+                    ? 'text-paradiso underline'
+                    : 'hover:text-paradiso'
                 }`}
                 aria-current={link.current ? 'page' : undefined}
               >

@@ -7,7 +7,8 @@ export default function FeaturedExperienceSection({
   featuredExperience,
 }) {
   return (
-    <SectionContainer heading={heading}>
+    <SectionContainer>
+      <h3 className="tw-section-heading text-center">{heading}</h3>
       <FeaturedExperienceCard body={body} experience={featuredExperience} />
     </SectionContainer>
   );

@@ -99,7 +99,7 @@ export default class MyDocument extends Document {
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         </Head>
 
-        <body className="bg-white text-shark text-base sm:text-lg lg:text-xl mt-20 sm:mt-24">
+        <body className="bg-white text-shark text-base sm:text-lg lg:text-xl mt-16 sm:mt-20">
           <Main />
           <NextScript />
         </body>

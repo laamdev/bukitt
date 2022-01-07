@@ -10,19 +10,26 @@ import MenuButton from '@/components/navigation/MenuButton';
 import Logo from '@/components/navigation/Logo';
 import NavLinksDesktop from '@/components/navigation/NavLinksDesktop';
 import NavLinksMobile from '@/components/navigation/NavLinksMobile';
+import ButtonLinkHeader from '@/components/shared/ButtonLinkHeader';
 
 export default function Header() {
   return (
     <Popover as="header">
       {({ open }) => (
         <>
-          <div className="fixed top-0 inset-x-0 z-20 flex items-center justify-between h-16 sm:h-20 mx-auto px-4 sm:px-6 lg:px-8 bg-white border-b-2 border-gray-100">
+          <div className="fixed top-0 inset-x-0 z-20 flex items-center justify-between h-16 sm:h-20 px-4 sm:px-6 lg:px-8 bg-white border-b-2 border-gray-100">
             {/* Logo */}
-            <Logo />
+            <div>
+              <Logo />
+            </div>
 
             {/* Right section on desktop */}
             <div className="hidden lg:ml-4 lg:flex lg:items-center lg:pr-0.5">
               <NavLinksDesktop navLinks={navLinks} />
+            </div>
+
+            <div className="hidden lg:ml-4 lg:flex lg:items-center lg:pr-0.5">
+              <ButtonLinkHeader btnLinkText="Enquire" btnURL="enquiry-form" />
             </div>
 
             {/* Mobule menu button */}

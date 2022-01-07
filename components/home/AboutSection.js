@@ -8,9 +8,7 @@ export default function AboutSection({ heading, body, callToAction }) {
         <h3 className="tw-subheading">{heading}</h3>
       </div>
 
-      <div className="space-y-6">
-        <TextBody content={body} />
-      </div>
+      <TextBody content={body} />
 
       <div>
         <ButtonLink

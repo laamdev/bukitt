@@ -148,15 +148,11 @@
   }
 
   .tw-btn {
-    @apply inline-flex items-center px-2.5 sm:px-6 py-1.5 sm:py-3 text-xs sm:text-base rounded-full shadow-sm text-white bg-transparent border-2 border-white hover:bg-paradiso-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-100 tw-transition uppercase tracking-widest;
+    @apply inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base rounded-full shadow-sm text-white bg-transparent border-2 border-white hover:bg-paradiso-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-100 tw-transition uppercase tracking-widest w-fit-content;
   }
 
   .tw-grid-gap {
     @apply gap-x-4 gap-y-8 sm:gap-x-6 xl:gap-x-8;
-  }
-
-  .tw-external-link {
-    @apply font-medium text-paradiso underline;
   }
 
   .tw-body-hero {
@@ -196,7 +192,7 @@
   }
 
   .tw-section-heading {
-    @apply text-xl sm:text-2xl lg:text-5xl font-medium;
+    @apply text-3xl sm:text-2xl lg:text-5xl font-medium font-mono uppercase;
   }
 
   .tw-details-icon {

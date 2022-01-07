@@ -8,6 +8,7 @@ export default function ServicesSection({
 }) {
   return (
     <SectionContainer heading={heading}>
+      <h3 className="tw-section-heading text-center">{heading}</h3>
       <div className="mx-auto flex flex-col sm:flex-row justify-evenly space-x-0 sm:space-x-6 space-y-6 sm:space-y-0">
         <ServicesCard
           title={experiencesCard?.title}

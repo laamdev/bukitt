@@ -105,7 +105,7 @@ export default createSchema({
     experienceItinerarySection,
     experienceItineraryItem,
     experienceDestinationsSection,
-    //
+
     testimonial,
     seo,
     // abstracts

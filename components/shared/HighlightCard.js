@@ -22,9 +22,7 @@ export default function HighlightCard({ highlight }) {
 
       <h4 className="tw-card-title">{highlight?.title}</h4>
 
-      <div className="tw-body">
-        <TextBody content={highlight?.body} />
-      </div>
+      <TextBody content={highlight?.body} />
     </li>
   );
 }

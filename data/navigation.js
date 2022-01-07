@@ -9,8 +9,8 @@ import {
 export const navLinks = [
   { name: 'Experiences', href: '/experiences' },
   { name: 'Destinations', href: '/destinations' },
-  { name: 'Enquire', href: '/enquiry-form' },
   { name: 'About', href: '/about' },
+  { name: 'Enquire', href: '/enquiry-form' },
   // { name: 'Blog', href: '/blog' },
 ];
 

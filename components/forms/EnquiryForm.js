@@ -63,8 +63,6 @@ export default function EnquiryForm({ destinations, experiences }) {
     reset();
   };
 
-  console.log(experiences);
-
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}

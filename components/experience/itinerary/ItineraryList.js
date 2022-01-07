@@ -9,7 +9,7 @@ export default function ItineraryList({ itinerary }) {
           {({ open }) => (
             <>
               <Disclosure.Button
-                className={`flex justify-between items-center w-full px-6 py-12 text-left shadow rounded-2xl tw-transition focus:outline-none focus-visible:ring focus-visible:ring-gray-500 focus-visible:ring-opacity-75 ${
+                className={`flex justify-between items-center w-full px-6 py-12 text-left shadow-md rounded-2xl tw-transition focus:outline-none focus-visible:ring focus-visible:ring-gray-500 focus-visible:ring-opacity-75 ${
                   open
                     ? 'bg-gray-white hover:bg-gray-100'
                     : 'bg-gray-100 hover:bg-white'

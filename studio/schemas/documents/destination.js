@@ -1,21 +1,21 @@
 import { IoMapOutline } from 'react-icons/io5';
 
-import { locations } from '../../data';
+import { locations, categories, seasons } from '../../data';
 
 export default {
   name: 'destination',
+  type: 'document',
   title: 'Destination',
   icon: IoMapOutline,
-  type: 'document',
   initialValue: () => ({
     featured: false,
   }),
   fields: [
     {
       name: 'name',
+      type: 'string',
       title: 'Name',
       description: 'Destination name.',
-      type: 'string',
       validation: (Rule) => [
         Rule.required()
           .min(2)
@@ -27,8 +27,8 @@ export default {
     },
     {
       name: 'slug',
-      title: 'Slug',
       type: 'slug',
+      title: 'Slug',
       description: 'Destination slug.',
       options: {
         source: 'name',
@@ -40,14 +40,34 @@ export default {
     },
     {
       name: 'featured',
-      title: 'Featured',
       type: 'boolean',
+      title: 'Featured',
       description: 'Destination featured in the homepage.',
     },
     {
-      name: 'location',
-      title: 'Location',
+      name: 'category',
       type: 'string',
+      title: 'Category',
+      description: 'Destination category.',
+      options: {
+        list: [...categories],
+        layout: 'radio',
+      },
+    },
+    {
+      name: 'season',
+      type: 'string',
+      title: 'Season',
+      description: 'Destination season.',
+      options: {
+        list: [...seasons],
+        layout: 'radio',
+      },
+    },
+    {
+      name: 'location',
+      type: 'string',
+      title: 'Location',
       description: 'Destination location (state or country).',
       options: {
         list: [...locations],
@@ -55,26 +75,26 @@ export default {
     },
     {
       name: 'card',
-      title: 'Card',
       type: 'cardSimple',
+      title: 'Card',
       description: 'Destination card.',
     },
     {
       name: 'hero',
-      title: 'Hero',
       type: 'hero',
+      title: 'Hero',
       description: 'Destination page hero.',
     },
     {
       name: 'mapSection',
-      title: 'Map Section',
       type: 'section',
+      title: 'Map Section',
       description: 'Map section of the destination page.',
     },
     {
       name: 'highlightsSection',
-      title: 'Highlights Section',
       type: 'highlightsSection',
+      title: 'Highlights Section',
       description: 'Highlight section of the destination page.',
     },
     {

@@ -5,9 +5,15 @@ export default {
   fields: [
     {
       name: 'heading',
-      title: 'Heading',
       type: 'string',
+      title: 'Heading',
       description: 'Hero heading.',
+    },
+    {
+      name: 'tagline',
+      type: 'string',
+      title: 'Tagline',
+      description: 'Hero tagline.',
     },
     {
       name: 'body',

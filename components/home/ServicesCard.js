@@ -14,7 +14,7 @@ export default function ServicesCard({
   btnURL,
 }) {
   return (
-    <div className="w-full shadow rounded-2xl relative group aspect-4/5">
+    <div className="w-full shadow-md rounded-2xl relative group aspect-4/5">
       <Image
         src={urlForImage(imageUrl).width(1080).height(1350).url()}
         alt={imageUrl?.alt}
@@ -25,10 +25,12 @@ export default function ServicesCard({
       <Overlay />
 
       <div className="absolute tw-center w-full px-3 sm:px-4 lg:px-6 py-3 sm:py-6 text-center">
-        <h3 className="text-2xl sm:text-3xl lg:text-7xl font-mono text-white font-bold uppercase ">
+        <h3 className="text-4xl sm:text-5xl lg:text-7xl font-mono text-white font-bold uppercase ">
           {title}
         </h3>
-        <p className="mt-2 text-3xl text-paradiso-100">{description}</p>
+        <p className="mt-2 text-xl lg:text-3xl text-paradiso-100">
+          {description}
+        </p>
         <div className="mt-6 flex justify-center">
           <ButtonLink btnLinkText={btnLinkText} btnURL={btnURL} />
         </div>

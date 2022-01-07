@@ -9,7 +9,7 @@ export default function Card({ content, linkURL }) {
   return (
     <Link href={linkURL}>
       <a>
-        <div className="relative aspect-4/5 group bg-gray-100 overflow-hidden rounded-2xl shadow focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-paradiso">
+        <div className="relative aspect-4/5 group bg-gray-100 overflow-hidden rounded-2xl shadow-md focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-paradiso">
           {content?.image && (
             <Image
               src={urlForImage(content?.image).width(1080).height(1350).url()}
