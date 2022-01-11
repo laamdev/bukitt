@@ -158,7 +158,7 @@
   }
 
   .tw-radio-btn {
-    @apply focus:ring-neutral-100 h-4 w-4 text-brand border-neutral-300 cursor-pointer;
+    @apply focus:ring-neutral-100 h-6 w-6 text-brand border-neutral-300 cursor-pointer hover:border-brand tw-transition;
   }
 
   /* xxxxxx */

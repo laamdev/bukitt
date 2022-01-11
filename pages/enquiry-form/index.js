@@ -11,12 +11,14 @@ export default function EnquiryFormPage({ enquiryFormPageData }) {
     <Layout title={''} description={''}>
       <Hero hero={enquiryFormPageData?.hero} />
 
-      <ContentWrapper>
-        <EnquiryForm
-          destinations={enquiryFormPageData?.destinations}
-          experiences={enquiryFormPageData?.experiences}
-        />
-      </ContentWrapper>
+      <section className="tw-section">
+        <div className="max-w-4xl mx-auto">
+          <EnquiryForm
+            destinations={enquiryFormPageData?.destinations}
+            experiences={enquiryFormPageData?.experiences}
+          />
+        </div>
+      </section>
     </Layout>
   );
 }

@@ -3,14 +3,23 @@ const mail = require('@sendgrid/mail');
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async (req, res) => {
-  const { name, email, category, product, message } = req.body;
+  const { firstName, lastName, email, phone, category, product, message } =
+    req.body;
 
-  if (!name) {
-    return res.status(400).json({ error: 'A name is required!' });
+  if (!firstName) {
+    return res.status(400).json({ error: 'A first name is required!' });
+  }
+
+  if (!lastName) {
+    return res.status(400).json({ error: 'A last name is required!' });
   }
 
   if (!email) {
     return res.status(400).json({ error: 'An email is required!' });
+  }
+
+  if (!phone) {
+    return res.status(400).json({ error: 'An phone is required!' });
   }
 
   if (!category) {
@@ -26,8 +35,9 @@ export default async (req, res) => {
   }
 
   const formattedMessage = `
-    Name: ${name}\r\n
+    Name: ${firstName} ${lastName}\r\n
     Email: ${email}\r\n
+    Phone: ${phone}\r\n
     Category: ${category}\r\n
     Product: ${product}\r\n
     Message: ${message}
@@ -36,7 +46,7 @@ export default async (req, res) => {
   await mail.send({
     to: 'hello@bukitt.com',
     from: 'hello@bukitt.com',
-    subject: `Enquiry Form: ${category} - ${product} (by ${name})`,
+    subject: `Enquiry Form: ${category} - ${product} (by ${firstName} ${lastName})`,
     text: formattedMessage,
     html: formattedMessage.replace(/\r\n/g, '<br>'),
   });
