@@ -176,7 +176,7 @@ export default function EnquiryForm({ destinations, experiences }) {
                   autoComplete="phone"
                   {...register('phone', {
                     required: true,
-                    pattern: /^\+(?:[0-9] ?){6,14}[0-9]$/,
+                    // pattern: /^\+(?:[0-9] ?){6,14}[0-9]$/,
                   })}
                   className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md"
                 />
