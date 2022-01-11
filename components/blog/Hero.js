@@ -20,7 +20,7 @@ export default function Hero({
         {coverImage && (
           <Image
             src={urlForImage(coverImage).width(1350).height(1080).url()}
-            alt={coverImage?.alt}
+            alt={coverImage?.alt ? coverImage?.alt : ''}
             layout="responsive"
             width={5}
             height={4}
