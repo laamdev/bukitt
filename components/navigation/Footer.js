@@ -13,7 +13,10 @@ import Newsletter from '@/components/forms/Newsletter';
 
 export default function Footer() {
   return (
-    <footer className="bg-dark-500 py-12" aria-labelledby="footer-heading">
+    <footer
+      className="bg-dark-500 py-10 lg:py-12"
+      aria-labelledby="footer-heading"
+    >
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -26,7 +29,9 @@ export default function Footer() {
 
           <div className="w-full sm:w-2/4 flex justify-between sm:justify-evenly">
             <div>
-              <h4 className="text-neutral-200 uppercase">Quick Links</h4>
+              <h4 className="text-neutral-200 text-2xl font-medium font-mono uppercase">
+                Quick Links
+              </h4>
               <ul role="list" className="mt-4 space-y-4">
                 {navLinks.map((link) => (
                   <li key={link.name}>
@@ -42,7 +47,9 @@ export default function Footer() {
 
             <div className="space-y-12">
               <div>
-                <h4 className="text-neutral-200 uppercase">Socials</h4>
+                <h4 className="text-neutral-200 text-2xl font-medium font-mono uppercase">
+                  Socials
+                </h4>
                 <ul role="list" className="mt-4 space-y-4">
                   {socialLinks.map((social) => (
                     <li key={social.name}>
@@ -61,7 +68,9 @@ export default function Footer() {
               </div>
 
               <div>
-                <h4 className="text-neutral-200 uppercase">Contacts</h4>
+                <h4 className="text-neutral-200 text-2xl font-medium font-mono uppercase">
+                  Contacts
+                </h4>
                 <ul role="list" className="mt-4 space-y-4">
                   {contactLinks.map((contact) => (
                     <li key={contact.name}>

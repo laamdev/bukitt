@@ -121,7 +121,7 @@ export default function FeaturedExperienceSection({
                 sed lacus, fames.
               </p>
               <button className="tw-btn hover:bg-white hover:text-brand">
-                <Link href="experiences">
+                <Link href={`/experiences/${featuredExperience.slug}`}>
                   <a>Learn More</a>
                 </Link>
               </button>
@@ -132,24 +132,3 @@ export default function FeaturedExperienceSection({
     </section>
   );
 }
-// // import FeaturedExperienceCard from '@/components/home/FeaturedExperienceCard';
-// // import ButtonTo from '@/components/shared/ButtonTo';
-
-// // export default function FeaturedExperienceSection({
-// //   heading,
-// //   body,
-// //   featuredExperience,
-// // }) {
-// //   return (
-// //     <section className="tw-section-py">
-// //       <div className="max-w-7xl mx-auto tw-section-px">
-// //         <h3 className="tw-section-heading">{heading}</h3>
-// //         <FeaturedExperienceCard body={body} experience={featuredExperience} />
-
-// //         <div className="flex justify-center mt-6 sm:mt-8 lg:mt-10">
-// //           <ButtonTo btnLink="experiences" btnText="All Experiences" />
-// //         </div>
-// //       </div>
-// //     </section>
-// //   );
-// // }

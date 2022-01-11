@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   const { email } = req.body;
 
   if (!email) {
-    return res.status(400).json({ error: 'Email is required!' });
+    return res.status(400).json({ error: 'Please enter your email.' });
   }
 
   // 2. Use the Revue API Key and create a subscriber using

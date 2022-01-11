@@ -44,15 +44,14 @@ export default function Newsletter() {
 
   return (
     <div>
-      <h5>Newsletter</h5>
-      <p className="mt-4 text-base text-neutral-300">
-        The latest news, articles, and resources, sent to your inbox monthly.
+      <h5 className="text-neutral-200 text-2xl font-medium font-mono uppercase">
+        Newsletter
+      </h5>
+      <p className="mt-1 text-base text-neutral-300">
+        Get your dose of Bukitt travel sent to your inbox monthly.
       </p>
 
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className="space-y-1.5 sm:space-y-3"
-      >
+      <form onSubmit={handleSubmit(onSubmit)} className="mt-6">
         <label htmlFor="email" className="sr-only">
           Email address
         </label>
@@ -61,22 +60,23 @@ export default function Newsletter() {
           {...register('email', {
             pattern: {
               value: /\S+@\S+\.\S+/,
-              message: 'Entered value does not match email format',
+              message: 'Enter an email',
             },
           })}
           type="email"
-          placeholder="john@email.com"
           aria-label="Email for newsletter"
           className="appearance-none min-w-0 w-full bg-white border border-transparent rounded-md py-2 px-4 text-base text-neutral-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 focus:ring-white focus:border-white focus:placeholder-slate-400"
         />
-        {errors.email && <span role="alert">{errors.email.message}</span>}
+        <div className="h-4 mt-1 text-sm text-brand-300">
+          {errors.email && <span role="alert">{errors.email.message}</span>}
+          {serverError && <span>{serverError}</span>}
+          {success && <span>{success}</span>}
+        </div>
 
-        <div className="rounded-md sm:mt-0 sm:flex-shrink-0 w-fit-content">
+        <div className="mt-6 rounded-md sm:flex-shrink-0 w-fit-content">
           <button type="submit" disabled={submitting} className="tw-btn">
             Subscribe
           </button>
-          {serverError && <span className="text-white">{serverError}</span>}
-          {success && <span className="text-white">{success}</span>}
         </div>
       </form>
     </div>
