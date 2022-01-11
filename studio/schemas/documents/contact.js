@@ -1,10 +1,10 @@
-import { IoShareSocialOutline } from 'react-icons/io5';
+import { IoAtOutline } from 'react-icons/io5';
 
 export default {
   name: 'contact',
   title: 'Contact',
   type: 'document',
-  icon: IoShareSocialOutline,
+  icon: IoAtOutline,
   initialValue: {
     email: 'mailto:',
     phone: 'tel:',
@@ -34,7 +34,7 @@ export default {
       name: 'address',
       title: 'Address',
       type: 'string',
-      description: 'Contact phone number.',
+      description: 'Physical address.',
     },
   ],
 };

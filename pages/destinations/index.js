@@ -14,7 +14,19 @@ export default function DestinationsPage({ destinationsPageData }) {
   });
 
   return (
-    <Layout title={''} description={''}>
+    <Layout
+      title={`${
+        destinationsPageData?.seo?.title
+          ? destinationsPageData?.seo?.title
+          : 'Destinations'
+      }`}
+      description={`${
+        destinationsPageData?.seo?.description
+          ? destinationsPageData?.seo?.description
+          : 'A unique selection of unforgettable destinations hand-picked by our expert travel concierge for a unique blend of outdoorsy adventure and luxurious comfort.'
+      }`}
+    >
+      {' '}
       <Hero hero={destinationsPageData?.hero} />
       <section className="tw-section">
         <div className="max-w-7xl mx-auto">

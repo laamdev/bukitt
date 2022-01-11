@@ -12,7 +12,10 @@ import Hero from '@/components/shared/Hero';
 
 export default function HomePage({ homeData }) {
   return (
-    <Layout title={''} description={''}>
+    <Layout
+      title={homeData?.seo?.title}
+      description={homeData?.seo?.description}
+    >
       <Hero hero={homeData?.hero} />
       <ServicesSection
         heading={homeData?.servicesSection?.heading}

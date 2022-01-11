@@ -18,7 +18,7 @@ export default {
           { title: 'Experiences Page', value: 'experiences' },
           { title: 'Destinations Page', value: 'destinations' },
           { title: 'About Page', value: 'about' },
-          { title: 'Enquiry Form Page', value: 'enquiry-form' },
+          { title: 'Inquiry Form Page', value: 'inquiry-form' },
         ],
         layout: 'radio',
       },

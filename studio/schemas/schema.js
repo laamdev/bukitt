@@ -13,7 +13,7 @@ import homePage from './documents/pages/homePage';
 import aboutPage from './documents/pages/aboutPage';
 import experiencesPage from './documents/pages/experiencesPage';
 import destinationsPage from './documents/pages/destinationsPage';
-import enquiryFormPage from './documents/pages/enquiryFormPage';
+import inquiryFormPage from './documents/pages/inquiryFormPage';
 import blogPage from './documents/pages/blogPage';
 // --- misc
 import teamMember from './documents/teamMember';
@@ -71,7 +71,7 @@ export default createSchema({
     aboutPage,
     experiencesPage,
     destinationsPage,
-    enquiryFormPage,
+    inquiryFormPage,
     // --- misc
     teamMember,
     socials,

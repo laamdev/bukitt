@@ -29,7 +29,7 @@ export default function Header() {
             </div>
 
             <div className="hidden lg:ml-4 lg:flex lg:items-center lg:pr-0.5">
-              <ButtonLinkHeader btnLinkText="Enquire" btnURL="enquiry-form" />
+              <ButtonLinkHeader btnLinkText="Inquire" btnURL="inquiry-form" />
             </div>
 
             {/* Mobule menu button */}

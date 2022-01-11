@@ -6,7 +6,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function EnquiryForm({ destinations, experiences }) {
+export default function InquiryForm({ destinations, experiences }) {
   const [agreed, setAgreed] = useState(false);
   const [serverError, setServerError] = useState('');
   const [success, setSuccess] = useState('');

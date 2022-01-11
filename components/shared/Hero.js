@@ -49,7 +49,7 @@ export default function Hero({ hero, guideURL, location, category }) {
           </p>
 
           <div className="flex flex-col sm:flex-row space-x-0 sm:space-x-12 space-y-6 sm:space-y-0 justify-center items-center mt-6 lg:mt-12">
-            <ButtonLink btnLinkText="Book Now" btnURL="enquiry-form" />
+            <ButtonLink btnLinkText="Book Now" btnURL="inquiry-form" />
             {guideURL && (
               <ButtonDownload btnLinkText="Download Guide" btnURL={guideURL} />
             )}

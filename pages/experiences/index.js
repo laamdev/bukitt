@@ -15,7 +15,18 @@ export default function ExperiencesPage({ experiencesPageData }) {
   });
 
   return (
-    <Layout title={''} description={''}>
+    <Layout
+      title={`${
+        experiencesPageData?.seo?.title
+          ? experiencesPageData?.seo?.title
+          : 'Experiences'
+      }`}
+      description={`${
+        experiencesPageData?.seo?.description
+          ? experiencesPageData?.seo?.description
+          : 'Hand-made experience packages for nonconformist travelers looking for the perfect blend of adventure and luxury.'
+      }`}
+    >
       <Hero hero={experiencesPageData?.hero} />
       <section className="tw-section">
         <div className="max-w-7xl mx-auto">

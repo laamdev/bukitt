@@ -10,7 +10,7 @@ export const navLinks = [
   { name: 'Experiences', href: '/experiences' },
   { name: 'Destinations', href: '/destinations' },
   { name: 'About', href: '/about' },
-  // // { name: 'Enquire', href: '/enquiry-form' },
+  // // { name: 'Inquire', href: '/inquiry-form' },
   { name: 'Blog', href: '/blog' },
 ];
 

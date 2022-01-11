@@ -21,7 +21,7 @@ export default function Footer() {
         Footer
       </h2>
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-0">
+      <div className="max-w-7xl mx-auto px-6 lg:px-0">
         <div className="flex flex-col space-y-12 sm:space-y-0 sm:flex-row">
           <div className="w-full sm:w-1/4">
             <Newsletter />

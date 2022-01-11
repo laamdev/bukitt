@@ -9,6 +9,7 @@ import {
   IoPeopleOutline,
   IoPencilOutline,
   IoNewspaperOutline,
+  IoAtOutline,
 } from 'react-icons/io5';
 
 export default () =>
@@ -59,13 +60,13 @@ export default () =>
                     .title('Destinations')
                 ),
               S.listItem()
-                .title('Enquiry Form')
+                .title('Inquiry Form')
                 .icon(IoPencilOutline)
                 .child(
                   S.document()
-                    .schemaType('enquiryFormPage')
-                    .documentId('enquiryFormPage')
-                    .title('Enquiry Form')
+                    .schemaType('inquiryFormPage')
+                    .documentId('inquiryFormPage')
+                    .title('Inquiry Form')
                 ),
               S.listItem()
                 .title('Blog')
@@ -97,7 +98,7 @@ export default () =>
                 ),
               S.listItem()
                 .title('Contact')
-                .icon(IoShareSocialOutline)
+                .icon(IoAtOutline)
                 .child(
                   S.document()
                     .schemaType('contact')
@@ -116,7 +117,7 @@ export default () =>
             'aboutPage',
             'experiencesPage',
             'destinationsPage',
-            'enquiryFormPage',
+            'inquiryFormPage',
             'blogPage',
             'socials',
             'contact',

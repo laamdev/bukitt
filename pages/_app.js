@@ -12,10 +12,6 @@ function MyApp({ Component, pageProps, router }) {
 
   return (
     <>
-      <Head>
-        <link rel="icon" href="/favicon.png" type="image/png" />
-      </Head>
-
       <DefaultSeo
         titleTemplate="%s - Bukitt"
         openGraph={{

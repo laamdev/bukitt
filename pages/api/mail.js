@@ -46,7 +46,7 @@ export default async (req, res) => {
   await mail.send({
     to: 'hello@bukitt.com',
     from: 'hello@bukitt.com',
-    subject: `Enquiry Form: ${category} - ${product} (by ${firstName} ${lastName})`,
+    subject: `Inquiry Form: ${category} - ${product} (by ${firstName} ${lastName})`,
     text: formattedMessage,
     html: formattedMessage.replace(/\r\n/g, '<br>'),
   });
