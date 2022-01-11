@@ -40,7 +40,7 @@ export default function Hero({
             <span className="sr-only">{author?.name}</span>
             <Image
               src={urlForImage(author?.picture).width(1080).height(1080).url()}
-              alt={author?.picture?.alt}
+              alt={author?.picture?.alt ? author?.picture?.alt : ''}
               layout="responsive"
               width={1}
               height={1}
