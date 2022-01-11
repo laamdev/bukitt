@@ -1,19 +1,33 @@
+import Image from 'next/image';
+
+import { urlForImage } from '@/lib/sanity';
+
 export default function TeamQuote({ quoteSection }) {
   return (
-    <div className="bg-white pt-16 lg:py-24">
-      <div className="pb-16 bg-shark lg:pb-0 lg:z-10 lg:relative rounded-2xl">
+    <section className="tw-section">
+      <h3 className="tw-section-heading">{quoteSection?.heading}</h3>
+
+      <div className="pb-16 bg-brand-600 lg:pb-0 lg:z-10 lg:relative shadow-xl rounded-2xl">
         <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8">
           <div className="relative lg:-my-8">
             <div
               aria-hidden="true"
-              className="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"
+              className="absolute inset-x-0 top-0 h-1/2 lg:hidden bg-white"
             />
             <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full">
-              <div className="aspect-w-10 aspect-h-6 rounded-xl shadow-md overflow-hidden sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
-                <img
-                  className="object-cover lg:h-full lg:w-full"
-                  src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
-                  alt=""
+              <div className="bg-gray-500 rounded-2xl shadow-xl overflow-hidden aspect-4/5">
+                <Image
+                  src={urlForImage(quoteSection?.profilePicture)
+                    .width(1080)
+                    .height(1350)
+                    .url()}
+                  alt={quoteSection?.profilePicture?.alt}
+                  layout="responsive"
+                  width={4}
+                  height={5}
+                  objectFit="cover"
+                  objectPosition="center"
+                  className="lg:h-full lg:w-full"
                 />
               </div>
             </div>
@@ -31,17 +45,15 @@ export default function TeamQuote({ quoteSection }) {
                     <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                   </svg>
                   <p className="mt-6 text-2xl font-medium text-white">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    urna nulla vitae laoreet augue. Amet feugiat est integer
-                    dolor auctor adipiscing nunc urna, sit.
+                    {quoteSection?.body}
                   </p>
                 </div>
                 <footer className="mt-6">
                   <p className="text-base font-medium text-white">
-                    Judith Black
+                    {quoteSection?.author}
                   </p>
-                  <p className="text-base font-medium text-shark-100">
-                    CEO at PureInsights
+                  <p className="text-base font-medium text-brand-100">
+                    {quoteSection?.role}
                   </p>
                 </footer>
               </blockquote>
@@ -49,22 +61,6 @@ export default function TeamQuote({ quoteSection }) {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/

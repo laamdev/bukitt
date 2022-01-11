@@ -13,10 +13,7 @@ import Newsletter from '@/components/forms/Newsletter';
 
 export default function Footer() {
   return (
-    <footer
-      className="bg-dark mt-12 sm:mt-24 py-12"
-      aria-labelledby="footer-heading"
-    >
+    <footer className="bg-dark-500 py-12" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -29,12 +26,12 @@ export default function Footer() {
 
           <div className="w-full sm:w-2/4 flex justify-between sm:justify-evenly">
             <div>
-              <h4 className="text-gray-200 uppercase">Quick Links</h4>
+              <h4 className="text-neutral-200 uppercase">Quick Links</h4>
               <ul role="list" className="mt-4 space-y-4">
                 {navLinks.map((link) => (
                   <li key={link.name}>
                     <Link href={link.href}>
-                      <a className="text-base text-gray-300 hover:text-white tw-transition">
+                      <a className="text-base text-neutral-300 hover:text-white tw-transition">
                         {link.name}
                       </a>
                     </Link>
@@ -45,7 +42,7 @@ export default function Footer() {
 
             <div className="space-y-12">
               <div>
-                <h4 className="text-gray-200 uppercase">Socials</h4>
+                <h4 className="text-neutral-200 uppercase">Socials</h4>
                 <ul role="list" className="mt-4 space-y-4">
                   {socialLinks.map((social) => (
                     <li key={social.name}>
@@ -53,7 +50,7 @@ export default function Footer() {
                         href={social.href}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-gray-400 hover:text-gray-300 tw-transition"
+                        className="text-neutral-400 hover:text-neutral-300 tw-transition"
                       >
                         <span className="sr-only">{social.name}</span>
                         {social.icon}
@@ -64,7 +61,7 @@ export default function Footer() {
               </div>
 
               <div>
-                <h4 className="text-gray-200 uppercase">Contacts</h4>
+                <h4 className="text-neutral-200 uppercase">Contacts</h4>
                 <ul role="list" className="mt-4 space-y-4">
                   {contactLinks.map((contact) => (
                     <li key={contact.name}>
@@ -72,7 +69,7 @@ export default function Footer() {
                         href={contact.href}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-gray-400 hover:text-gray-300 tw-transition"
+                        className="text-neutral-400 hover:text-neutral-300 tw-transition"
                       >
                         <span className="sr-only">{contact.name}</span>
                         {contact.icon}
@@ -97,9 +94,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex justify-center mt-12 pt-12 border-t border-gray-700">
+        <div className="flex justify-center mt-12 pt-12 border-t border-neutral-700">
           <div>
-            <p className="sm:mt-8 text-xs sm:text-sm text-gray-400 md:mt-0 md:order-1">
+            <p className="sm:mt-8 text-xs sm:text-sm text-neutral-400 md:mt-0 md:order-1">
               © {currentYear}, {copyright}
             </p>
           </div>

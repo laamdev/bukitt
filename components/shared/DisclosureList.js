@@ -19,7 +19,7 @@ export default function ItineraryList({ items }) {
                   xxx
                 </Disclosure.Button>
                 xxx
-                <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
+                <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-neutral-500">
                   {item.body}
                 </Disclosure.Panel>
               </>

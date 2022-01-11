@@ -9,7 +9,6 @@ import { usePreviewSubscription } from '@/lib/sanity';
 import { sanityClient, getClient } from '@/lib/sanity.server';
 
 import Layout from '@/components/navigation/Layout';
-import ContentWrapper from '@/components/shared/ContentWrapper';
 import HighlightsSection from '@/components/destination/highlight/HighlightSection';
 import MapSection from '@/components/shared/MapSection';
 import Hero from '@/components/shared/Hero';
@@ -39,23 +38,21 @@ export default function DestinationPage({ data = {}, preview }) {
         category={destination?.category}
       />
 
-      <ContentWrapper>
-        {destination?.mapSection && (
-          <>
-            <MapSection
-              heading={destination?.mapSection?.heading}
-              body={destination?.mapSection?.body}
-              image={destination?.mapSection?.image}
-            />
-          </>
-        )}
-        {destination?.highlightsSection && (
-          <HighlightsSection
-            heading={destination?.highlightsSection?.heading}
-            highlights={destination?.highlightsSection?.highlights}
+      {destination?.mapSection && (
+        <>
+          <MapSection
+            heading={destination?.mapSection?.heading}
+            body={destination?.mapSection?.body}
+            image={destination?.mapSection?.image}
           />
-        )}
-      </ContentWrapper>
+        </>
+      )}
+      {destination?.highlightsSection && (
+        <HighlightsSection
+          heading={destination?.highlightsSection?.heading}
+          highlights={destination?.highlightsSection?.highlights}
+        />
+      )}
     </Layout>
   );
 }

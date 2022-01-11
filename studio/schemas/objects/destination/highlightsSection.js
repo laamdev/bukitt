@@ -9,9 +9,9 @@ export default {
       type: 'string',
     },
     {
-      name: 'summary',
-      title: 'Summary',
+      name: 'body',
       type: 'text',
+      title: 'Body',
     },
     {
       name: 'highlights',

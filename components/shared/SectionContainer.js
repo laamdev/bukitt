@@ -1,6 +1,6 @@
-export default function SectionContainer({ children, heading }) {
+export default function SectionContainer({ children, modClass }) {
   return (
-    <section className="space-y-12 sm:space-y-12 lg:space-y-16">
+    <section className={`py-24 ${modClass ? modClass : ''}`}>
       {children}
     </section>
   );

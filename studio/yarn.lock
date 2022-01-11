@@ -7503,7 +7503,7 @@ postcss-color-function@^4.0.0, postcss-color-function@^4.1.0:
 
 postcss-color-gray@^4.0.0:
   version "4.1.0"
-  resolved "https://registry.npmjs.org/postcss-color-gray/-/postcss-color-gray-4.1.0.tgz#e5581ed57eaa826fb652ca11b1e2b7b136a9f9df"
+  resolved "https://registry.npmjs.org/postcss-color-gray/-/postcss-color-slate-4.1.0.tgz#e5581ed57eaa826fb652ca11b1e2b7b136a9f9df"
   integrity sha512-L4iLKQLdqChz6ZOgGb6dRxkBNw78JFYcJmBz1orHpZoeLtuhDDGegRtX9gSyfoCIM7rWZ3VNOyiqqvk83BEN+w==
   dependencies:
     color "^2.0.1"

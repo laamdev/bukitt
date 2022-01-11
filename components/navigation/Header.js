@@ -17,7 +17,7 @@ export default function Header() {
     <Popover as="header">
       {({ open }) => (
         <>
-          <div className="fixed top-0 inset-x-0 z-20 flex items-center justify-between h-16 sm:h-20 px-4 sm:px-6 lg:px-8 bg-white border-b-2 border-gray-100">
+          <div className="fixed top-0 inset-x-0 z-20 flex items-center justify-between h-16 sm:h-20 px-4 sm:px-6 lg:px-8 bg-white border-b-2 border-neutral-100">
             {/* Logo */}
             <div>
               <Logo />
@@ -63,9 +63,9 @@ export default function Header() {
                   focus
                   className="z-30 absolute top-0 inset-x-0 max-w-3xl mx-auto w-full p-2 transition transform origin-top"
                 >
-                  <div className="ring-1 ring-black ring-opacity-5 divide-y divide-gray-200">
-                    <div className="p-6 bg-gray-100 rounded-2xl shadow">
-                      <div className="flex items-center justify-between border-b-2 border-gray-300 pb-6">
+                  <div className="ring-1 ring-black ring-opacity-5 divide-y divide-slate-200">
+                    <div className="p-6 bg-neutral-100 rounded-2xl shadow">
+                      <div className="flex items-center justify-between border-b-2 border-neutral-300 pb-6">
                         <Popover.Button>
                           <Link href="/">
                             <a>
@@ -83,7 +83,7 @@ export default function Header() {
                           </Link>
                         </Popover.Button>
                         <div>
-                          <Popover.Button className="bg-transparent rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 tw-transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-paradiso">
+                          <Popover.Button className="bg-transparent rounded-md p-2 inline-flex items-center justify-center text-neutral-400 hover:text-neutral-500 hover:bg-neutral-100 tw-transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand">
                             <span className="sr-only">Close menu</span>
                             <XIcon className="h-6 w-6" aria-hidden="true" />
                           </Popover.Button>

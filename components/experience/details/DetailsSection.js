@@ -18,50 +18,46 @@ export default function DetailsSection({
   groupSizeMax,
 }) {
   return (
-    <section className="mx-auto">
-      <DetailsContainer>
-        <DetailsWrapper>
-          <IoCashOutline className="tw-details-icon" />
-          <DetailsLabel>Price</DetailsLabel>
-          <dd className="order-1 tw-card-title-lg text-2xl sm:text-3xl lg:text-4xl mt-3">
-            ${price} <span className="text-xs sm:text-sm">pp</span>
-          </dd>
-        </DetailsWrapper>
-
-        <DetailsWrapper>
-          <IoCalendarNumberOutline className="tw-details-icon" />
-          <DetailsLabel>Season</DetailsLabel>
-          <dd className="order-1 tw-card-title-lg text-2xl sm:text-3xl lg:text-4xl mt-3">
-            <span>{dateFrom}</span> {dateTo && <span> - {dateTo}</span>}
-          </dd>
-        </DetailsWrapper>
-
-        <DetailsWrapper>
-          <IoTimeOutline className="tw-details-icon" />
-          <DetailsLabel>Duration</DetailsLabel>
-          <dd className="order-1 tw-card-title-lg text-4xl mt-3">
-            {duration} <span className="text-xs sm:text-sm">days</span>
-          </dd>
-        </DetailsWrapper>
-
-        <DetailsWrapper>
-          <IoPeopleOutline className="tw-details-icon" />
-          <DetailsLabel>Group</DetailsLabel>
-          <dd className="order-1 tw-card-title-lg text-2xl sm:text-3xl lg:text-4xl mt-3">
-            <span>
-              {groupSizeMin}
-              <span className="text-xs sm:text-sm"> min</span>
-            </span>
-            {groupSizeMax && (
-              <span>
-                {' '}
-                - {groupSizeMax}
-                <span className="text-xs sm:text-sm"> max</span>
-              </span>
-            )}
-          </dd>
-        </DetailsWrapper>
-      </DetailsContainer>
+    <section className="tw-section">
+      <div className="max-w-7xl mx-auto">
+        <div className="relative">
+          <dl className="rounded-lg bg-neutral-50 shadow-lg sm:grid sm:grid-cols-4">
+            <div className="flex flex-col border-b border-neutral-200 p-6 text-center sm:border-0 sm:border-r">
+              <dt className="order-2 mt-2 text-lg leading-6 font-medium text-neutral-500">
+                Price
+              </dt>
+              <dd className="order-1 text-5xl font-medium text-brand-600 font-mono uppercase">
+                ${price}
+                <span className="text-sm font-thin"> pp</span>
+              </dd>
+            </div>
+            <div className="flex flex-col border-t border-b border-neutral-200 p-6 text-center sm:border-0 sm:border-l sm:border-r">
+              <dt className="order-2 mt-2 text-lg leading-6 font-medium text-neutral-500">
+                Season
+              </dt>
+              <dd className="order-1 text-5xl font-medium text-brand-600 font-mono uppercase">
+                {dateFrom} - {dateTo}
+              </dd>
+            </div>
+            <div className="flex flex-col border-t border-b border-neutral-200 p-6 text-center sm:border-0 sm:border-l sm:border-r">
+              <dt className="order-2 mt-2 text-lg leading-6 font-medium text-neutral-500">
+                Delivery
+              </dt>
+              <dd className="order-1 text-5xl font-medium text-brand-600 font-mono uppercase">
+                24/7
+              </dd>
+            </div>
+            <div className="flex flex-col border-t border-neutral-200 p-6 text-center sm:border-0 sm:border-l">
+              <dt className="order-2 mt-2 text-lg leading-6 font-medium text-neutral-500">
+                Calories
+              </dt>
+              <dd className="order-1 text-5xl font-medium text-brand-600 font-mono uppercase">
+                100k
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
     </section>
   );
 }

@@ -4,14 +4,14 @@ import { urlForImage } from '@/lib/sanity';
 
 import TextBody from '@/components/shared/TextBody';
 
-export default function HighlightCard({ highlight }) {
+export default function HighlightCard({ title, body, image }) {
   return (
-    <li className="col-span-1 flex flex-col space-y-2">
-      {highlight?.image && (
-        <div className="relative aspect-square bg-gray-100 mx-auto w-full rounded-2xl shadow">
+    <li className="col-span-1">
+      {image && (
+        <div className="relative aspect-square bg-neutral-100 mx-auto w-full rounded-2xl shadow-xl">
           <Image
-            src={urlForImage(highlight?.image).width(1080).height(1080).url()}
-            alt={highlight?.image.alt}
+            src={urlForImage(image).width(1080).height(1080).url()}
+            alt={image?.alt}
             layout="fill"
             objectFit="cover"
             objectPosition="center"
@@ -20,9 +20,11 @@ export default function HighlightCard({ highlight }) {
         </div>
       )}
 
-      <h4 className="tw-card-title">{highlight?.title}</h4>
+      <h4 className="mt-6 text-xl sm:text-2xl font-medium font-mono uppercase">
+        {title}
+      </h4>
 
-      <TextBody content={highlight?.body} />
+      <p className="mt-2">{body}</p>
     </li>
   );
 }

@@ -1,14 +1,14 @@
-import TextBody from '@/components/shared/TextBody';
 import ButtonLink from '@/components/shared/ButtonLink';
+import TextBody from '@/components/shared/TextBody';
 
 export default function AboutSection({ heading, body, callToAction }) {
   return (
     <section className="max-w-4xl flex-col space-y-6 mx-auto text-center">
       <div>
-        <h3 className="tw-subheading">{heading}</h3>
+        <h3 className="">{heading}</h3>
       </div>
 
-      <TextBody content={body} />
+      <p className="">{body}</p>
 
       <div>
         <ButtonLink

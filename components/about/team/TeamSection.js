@@ -1,10 +1,10 @@
-import List from '@/components/about/team/TeamList';
+import TeamList from '@/components/about/team/TeamList';
 
-export default function Section({ heading, team }) {
+export default function TeamSection({ heading, team, body }) {
   return (
     <section className="tw-section">
-      <h3 className="tw-section-heading text-center">{heading}</h3>
-      <List team={team} />
+      <h3 className="tw-section-heading">{heading}</h3>
+      <TeamList team={team} />
     </section>
   );
 }

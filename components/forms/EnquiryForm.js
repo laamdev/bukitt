@@ -32,8 +32,6 @@ export default function EnquiryForm({ destinations, experiences }) {
     setSubmitting(true);
     setServerError('');
 
-    console.log(JSON.stringify(formData, null, 2));
-
     const res = await fetch('/api/mail', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -71,7 +69,7 @@ export default function EnquiryForm({ destinations, experiences }) {
       <div>
         <label
           htmlFor="name"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium text-neutral-700"
         >
           Name
         </label>
@@ -82,7 +80,7 @@ export default function EnquiryForm({ destinations, experiences }) {
           autoComplete="name"
           placeholder="Jon Doe"
           {...register('name', { required: true, maxLength: 80 })}
-          className="focus:ring-paradiso focus:border-paradiso flex-grow block w-full min-w-0 rounded-md sm:text-sm border-gray-300"
+          className="focus:ring-brand focus:border-brand flex-grow block w-full min-w-0 rounded-md sm:text-sm border-neutral-300"
         />
         {errors.name && <span role="alert">{errors.name.message}</span>}
       </div>
@@ -90,7 +88,7 @@ export default function EnquiryForm({ destinations, experiences }) {
       <div>
         <label
           htmlFor="email"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium text-neutral-700"
         >
           Email
         </label>
@@ -101,16 +99,16 @@ export default function EnquiryForm({ destinations, experiences }) {
           autoComplete="email"
           placeholder="my@email.com"
           {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
-          className="focus:ring-paradiso focus:border-paradiso flex-grow block w-full min-w-0 rounded-md sm:text-sm border-gray-300"
+          className="focus:ring-brand focus:border-brand flex-grow block w-full min-w-0 rounded-md sm:text-sm border-neutral-300"
         />
         {errors.email && <span role="alert">{errors.email.message}</span>}
       </div>
 
       <fieldset className="mt-6">
-        <legend className="text-base font-medium text-gray-900">
+        <legend className="text-base font-medium text-neutral-900">
           Category
         </legend>
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-neutral-500">
           These are delivered via SMS to your mobile phone.
         </p>
         <div className="mt-4 space-y-4">
@@ -124,7 +122,7 @@ export default function EnquiryForm({ destinations, experiences }) {
               className="tw-radio-btn"
             />
             <label htmlFor="category-experience" className="ml-3">
-              <span className="block text-sm font-medium text-gray-700">
+              <span className="block text-sm font-medium text-neutral-700">
                 Experience
               </span>
             </label>
@@ -140,7 +138,7 @@ export default function EnquiryForm({ destinations, experiences }) {
               className="tw-radio-btn"
             />
             <label htmlFor="category-destination" className="ml-3">
-              <span className="block text-sm font-medium text-gray-700">
+              <span className="block text-sm font-medium text-neutral-700">
                 Destination
               </span>
             </label>
@@ -152,7 +150,7 @@ export default function EnquiryForm({ destinations, experiences }) {
         <fieldset className="mt-6">
           <label
             htmlFor="product"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium text-neutral-700"
           >
             {watchCategory === 'Experience' && <span>Experience</span>}
             {watchCategory === 'Destination' && <span>Destination</span>}
@@ -162,7 +160,7 @@ export default function EnquiryForm({ destinations, experiences }) {
             id="product"
             name="product"
             {...register('product')}
-            className="mt-1 block w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-paradiso focus:border-paradiso sm:text-sm"
+            className="mt-1 block w-full bg-white border border-neutral-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-brand focus:border-brand sm:text-sm"
           >
             {watchCategory === 'Experience' && (
               <>
@@ -189,7 +187,7 @@ export default function EnquiryForm({ destinations, experiences }) {
       <div className="sm:col-span-6">
         <label
           htmlFor="message"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium text-neutral-700"
         >
           Message
         </label>
@@ -201,11 +199,11 @@ export default function EnquiryForm({ destinations, experiences }) {
             defaultValue={''}
             placeholder="Let's talk..."
             {...register('message', {})}
-            className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
+            className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-neutral-300 rounded-md"
           />
           {errors.message && <span role="alert">{errors.message.message}</span>}
         </div>
-        <p className="mt-2 text-sm text-gray-500">
+        <p className="mt-2 text-sm text-neutral-500">
           Write a few sentences about your request.
         </p>
       </div>

@@ -1,4 +1,4 @@
-export const categories = [
+export const destinationCategories = [
   { title: 'Beach', value: 'beach' },
   { title: 'City', value: 'city' },
   { title: 'Countryside', value: 'countryside' },
@@ -6,6 +6,12 @@ export const categories = [
   { title: 'Forest', value: 'forest' },
   { title: 'Mountain', value: 'mountain' },
   { title: 'National Park', value: 'national park' },
+];
+
+export const blogPostCategories = [
+  { title: 'Travel Insight', value: 'travel insight' },
+  { title: 'Guide', value: 'guide' },
+  { title: 'Listicle', value: 'listicle' },
 ];
 
 export const seasons = [

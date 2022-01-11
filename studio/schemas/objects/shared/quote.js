@@ -6,28 +6,28 @@ export default {
     {
       name: 'heading',
       type: 'string',
-      title: 'Heading',
+      title: 'Quote heading',
     },
     {
       name: 'body',
       type: 'text',
-      title: 'Body',
+      title: 'Quote body',
     },
     {
-      name: 'authorName',
+      name: 'author',
       type: 'string',
       title: 'Author Name',
     },
     {
-      name: 'authorDetail',
+      name: 'role',
       type: 'string',
-      title: 'Author Detail',
-      description: "Details of the quote's author",
+      title: 'Author Role',
+      description: "Role of the quote's author",
     },
     {
-      name: 'authorImage',
+      name: 'profilePicture',
       type: 'imageCustom',
-      title: 'Author Image',
+      title: 'Profile Picture',
       description:
         'Image should be in JPG format and have a 1:1 aspect ratio (1080x1080 preferred).',
     },

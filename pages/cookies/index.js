@@ -2,7 +2,7 @@ export default function Cookies() {
   return (
     <div className="space-y-12">
       <div>
-        <h1 className="tw-heading">Cookie Policy for Bukitt</h1>
+        <h1>Cookie Policy for Bukitt</h1>
       </div>
 
       <div>
@@ -10,7 +10,7 @@ export default function Cookies() {
       </div>
 
       <div className="space-y-6">
-        <h2 className="tw-subheading">What Are Cookies</h2>
+        <h2 className="">What Are Cookies</h2>
 
         <p>
           As is common practice with almost all professional websites this site
@@ -24,7 +24,7 @@ export default function Cookies() {
       </div>
 
       <div className="space-y-6">
-        <h2 className="tw-subheading">How We Use Cookies</h2>
+        <h2 className="">How We Use Cookies</h2>
 
         <p>
           We use cookies for a variety of reasons detailed below. Unfortunately
@@ -37,7 +37,7 @@ export default function Cookies() {
       </div>
 
       <div className="space-y-6">
-        <h2 className="tw-subheading">Disabling Cookies</h2>
+        <h2 className="">Disabling Cookies</h2>
         <p>
           You can prevent the setting of cookies by adjusting the settings on
           your browser (see your browser Help for how to do this). Be aware that
@@ -54,7 +54,7 @@ export default function Cookies() {
       </div>
 
       <div className="space-y-6">
-        <h2 className="tw-subheading">The Cookies We Set</h2>
+        <h2 className="">The Cookies We Set</h2>
 
         <ul className="space-y-6">
           <li className="space-y-2">
@@ -88,7 +88,7 @@ export default function Cookies() {
       </div>
 
       <div className="space-y-6">
-        <h2 className="tw-subheading">Third Party Cookies</h2>
+        <h2 className="">Third Party Cookies</h2>
 
         <p>
           In some special cases we also use cookies provided by trusted third
@@ -136,7 +136,7 @@ export default function Cookies() {
       </div>
 
       <div className="space-y-6">
-        <h2 className="tw-subheading">More Information</h2>
+        <h2 className="">More Information</h2>
 
         <p>
           Hopefully that has clarified things for you and as was previously

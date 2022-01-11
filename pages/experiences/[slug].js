@@ -40,64 +40,49 @@ export default function ExperiencePage({ data = {}, preview }) {
     <Layout title={''} description={''}>
       <Hero hero={experience?.hero} guideURL={experience?.guideURL} />
 
-      <ContentWrapper>
-        {experience?.details && (
-          <DetailsSection
-            price={experience?.details?.price}
-            dateFrom={experience?.details?.dateFrom}
-            dateTo={experience?.details?.dateTo}
-            duration={experience?.details?.duration}
-            groupSizeMin={experience?.details?.groupSizeMin}
-            groupSizeMax={experience?.details?.groupSizeMax}
-          />
-        )}
-        <Divider />
+      {experience?.details && (
+        <DetailsSection
+          price={experience?.details?.price}
+          dateFrom={experience?.details?.dateFrom}
+          dateTo={experience?.details?.dateTo}
+          duration={experience?.details?.duration}
+          groupSizeMin={experience?.details?.groupSizeMin}
+          groupSizeMax={experience?.details?.groupSizeMax}
+        />
+      )}
 
-        {experience?.mapSection && (
-          <>
-            <MapSection
-              heading={experience?.mapSection?.heading}
-              body={experience?.mapSection?.body}
-              image={experience?.mapSection?.image}
-            />
-            <Divider />
-          </>
-        )}
-        {experience?.featuresSection && (
-          <>
-            <FeaturesSection
-              heading={experience?.featuresSection?.heading}
-              features={experience?.featuresSection?.features}
-            />
-            <Divider />
-          </>
-        )}
-        {experience?.accommodationSection && (
-          <>
-            <AccommodationSection
-              heading={experience?.accommodationSection?.heading}
-              body={experience?.accommodationSection?.body}
-              image={experience?.accommodationSection?.image}
-            />
-            <Divider />
-          </>
-        )}
-        {experience?.itinerarySection && (
-          <>
-            <ItinerarySection
-              heading={experience?.itinerarySection?.heading}
-              itinerary={experience?.itinerarySection?.itinerary}
-            />
-            <Divider />
-          </>
-        )}
-        {experience?.destinationsSection && (
-          <DestinationsSection
-            heading={experience?.destinationsSection?.heading}
-            destinations={experience?.destinationsSection?.destinations}
-          />
-        )}
-      </ContentWrapper>
+      {experience?.mapSection && (
+        <MapSection
+          heading={experience?.mapSection?.heading}
+          body={experience?.mapSection?.body}
+          image={experience?.mapSection?.image}
+        />
+      )}
+      {experience?.featuresSection && (
+        <FeaturesSection
+          heading={experience?.featuresSection?.heading}
+          features={experience?.featuresSection?.features}
+        />
+      )}
+      {experience?.accommodationSection && (
+        <AccommodationSection
+          heading={experience?.accommodationSection?.heading}
+          body={experience?.accommodationSection?.body}
+          image={experience?.accommodationSection?.image}
+        />
+      )}
+      {experience?.itinerarySection && (
+        <ItinerarySection
+          heading={experience?.itinerarySection?.heading}
+          itinerary={experience?.itinerarySection?.itinerary}
+        />
+      )}
+      {experience?.destinationsSection && (
+        <DestinationsSection
+          heading={experience?.destinationsSection?.heading}
+          destinations={experience?.destinationsSection?.destinations}
+        />
+      )}
     </Layout>
   );
 }

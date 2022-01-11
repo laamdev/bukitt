@@ -26,9 +26,13 @@ const serializers = {
   },
 };
 
-export default function TextBody({ content }) {
+export default function TextBody({ content, modClass }) {
   return (
-    <div className="prose prose-gray prose-a:font-medium prose-a:text-paradiso hover:prose-a:text-paradiso-400 prose-img:rounded-2xl prose-img:shadow-md tw-transition">
+    <div
+      className={`prose prose-slate prose-a:font-medium prose-a:text-brand hover:prose-a:text-brand-400 prose-img:rounded-2xl prose-img:shadow-xl prose-img:mx-auto tw-transition ${
+        modClass ? modClass : ''
+      }`}
+    >
       <BlockContent
         blocks={content}
         serializers={serializers}

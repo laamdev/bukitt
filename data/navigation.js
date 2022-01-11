@@ -10,8 +10,8 @@ export const navLinks = [
   { name: 'Experiences', href: '/experiences' },
   { name: 'Destinations', href: '/destinations' },
   { name: 'About', href: '/about' },
-  { name: 'Enquire', href: '/enquiry-form' },
-  // { name: 'Blog', href: '/blog' },
+  // // { name: 'Enquire', href: '/enquiry-form' },
+  { name: 'Blog', href: '/blog' },
 ];
 
 export const socialLinks = [

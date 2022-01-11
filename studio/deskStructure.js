@@ -8,6 +8,7 @@ import {
   IoSettingsOutline,
   IoPeopleOutline,
   IoPencilOutline,
+  IoNewspaperOutline,
 } from 'react-icons/io5';
 
 export default () =>
@@ -66,6 +67,15 @@ export default () =>
                     .documentId('enquiryFormPage')
                     .title('Enquiry Form')
                 ),
+              S.listItem()
+                .title('Blog')
+                .icon(IoNewspaperOutline)
+                .child(
+                  S.document()
+                    .schemaType('blogPage')
+                    .documentId('blogPage')
+                    .title('Blog')
+                ),
             ])
         ),
 
@@ -107,6 +117,7 @@ export default () =>
             'experiencesPage',
             'destinationsPage',
             'enquiryFormPage',
+            'blogPage',
             'socials',
             'contact',
           ].includes(item.getId())

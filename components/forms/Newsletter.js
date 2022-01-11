@@ -45,7 +45,7 @@ export default function Newsletter() {
   return (
     <div>
       <h5>Newsletter</h5>
-      <p className="mt-4 text-base text-gray-300">
+      <p className="mt-4 text-base text-neutral-300">
         The latest news, articles, and resources, sent to your inbox monthly.
       </p>
 
@@ -67,7 +67,7 @@ export default function Newsletter() {
           type="email"
           placeholder="john@email.com"
           aria-label="Email for newsletter"
-          className="appearance-none min-w-0 w-full bg-white border border-transparent rounded-md py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white focus:border-white focus:placeholder-gray-400"
+          className="appearance-none min-w-0 w-full bg-white border border-transparent rounded-md py-2 px-4 text-base text-neutral-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 focus:ring-white focus:border-white focus:placeholder-slate-400"
         />
         {errors.email && <span role="alert">{errors.email.message}</span>}
 

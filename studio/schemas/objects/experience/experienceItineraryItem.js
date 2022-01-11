@@ -13,6 +13,11 @@ export default {
       type: 'text',
       title: 'Activity',
     },
+    {
+      name: 'description',
+      type: 'text',
+      title: 'Description',
+    },
   ],
   preview: {
     select: {

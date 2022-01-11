@@ -2,21 +2,19 @@ import Image from 'next/image';
 
 import { urlForImage } from '@/lib/sanity';
 
+import Body from '@/components/shared/Body';
+
 export default function TestimonialCard({ testimonial }) {
   return (
-    <div className="relative min-w-full space-y-3 bg-gray-100 p-6 sm:p-12">
+    <div className="relative min-w-full space-y-3 bg-white p-6 sm:p-12">
       <div className="flex items-center justify-center space-x-1.5 sm:space-x-3">
-        <h3 className="text-3xl sm:text-4xl lg:text-5xl text-center font-medium font-mono uppercase">
-          {testimonial.destination}
-        </h3>
+        <h4 className="text-xl sm:text-2xl lg:text-3xl text-center font-bold">
+          {testimonial?.destination}
+        </h4>
       </div>
 
       <blockquote>
-        <div className="text-center">
-          <p className="max-w-prose mx-auto text-lg sm:text-xl text-gray-500">
-            &ldquo;{testimonial.quote}&ldquo;
-          </p>
-        </div>
+        <Body>&quot;{testimonial?.quote}&quot;</Body>
         <footer className="mt-8">
           <div className="flex flex-col items-center md:flex-row justify-center">
             <div className="md:flex-shrink-0">

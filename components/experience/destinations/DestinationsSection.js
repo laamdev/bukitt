@@ -4,17 +4,19 @@ import SectionContainer from '@/components/shared/SectionContainer';
 
 export default function DestinationsSection({ heading, destinations }) {
   return (
-    <SectionContainer heading={heading}>
-      <GridList>
-        {destinations.map((destination, idx) => (
-          <li key={idx}>
+    <section className="tw-section">
+      <div className="max-w-7xl mx-auto">
+        <h3 className="tw-section-heading">{heading}</h3>
+        <GridList>
+          {destinations.map((destination) => (
             <Card
+              key={destination?._id}
               content={destination?.card}
-              linkURL={`destinations/${destination?.slug}`}
+              linkURL={`/destinations/${destination?.slug}`}
             />
-          </li>
-        ))}
-      </GridList>
-    </SectionContainer>
+          ))}
+        </GridList>
+      </div>
+    </section>
   );
 }

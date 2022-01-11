@@ -1,16 +1,26 @@
-import SectionContainer from '@/components/shared/SectionContainer';
-import GridListFeatures from '@/components/shared/list/GridList';
 import FeaturesCard from '@/components/shared/features/FeaturesCard';
 
-export default function Section({ heading, features }) {
+export default function FeaturesSection({ heading, features }) {
   return (
-    <SectionContainer>
-      <h3 className="tw-section-heading text-center">{heading}</h3>
-      <GridListFeatures>
-        {features.map((feature, idx) => (
-          <FeaturesCard feature={feature} key={idx} />
-        ))}
-      </GridListFeatures>
-    </SectionContainer>
+    <section className="tw-section">
+      <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
+        <h3 className="tw-section-heading">{heading}</h3>
+
+        <ul
+          role="list"
+          className="grid grid-cols-1 gap-y-24 gap-x-8 sm:grid-cols-2 lg:grid-cols-3 mt-24"
+        >
+          {features.map((feature) => (
+            <FeaturesCard
+              feature={feature}
+              key={feature._id}
+              // // icon={feature?.icon}
+              // // title={feature?.title}
+              // // description={feature?.description}
+            />
+          ))}
+        </ul>
+      </div>
+    </section>
   );
 }

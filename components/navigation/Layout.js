@@ -21,6 +21,7 @@ export default function Layout({ children, title, description }) {
         exit="exit"
         variants={variants}
         transition={{ duration: 0.7, type: 'easeInOut' }}
+        className="max-w-screen-2xl mx-auto px-3 sm:px-4 lg:px-6"
       >
         {children}
       </motion.main>

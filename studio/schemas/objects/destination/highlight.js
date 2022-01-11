@@ -17,7 +17,7 @@ export default {
     },
     {
       name: 'body',
-      type: 'blockContent',
+      type: 'text',
       title: 'Body',
       description: 'Highlight card text body.',
     },

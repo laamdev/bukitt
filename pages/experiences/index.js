@@ -2,7 +2,6 @@ import { experiencesPageQuery } from '@/lib/queries';
 import { getClient } from '@/lib/sanity.server';
 
 import Layout from '@/components/navigation/Layout';
-import ContentWrapper from '@/components/shared/ContentWrapper';
 import Hero from '@/components/shared/Hero';
 import GridList from '@/components/shared/list/GridList';
 import Card from '@/components/shared/Card';
@@ -14,23 +13,23 @@ export default function ExperiencesPage({ experiencesPageData }) {
   ) {
     return a.name.localeCompare(b.name);
   });
+
   return (
     <Layout title={''} description={''}>
       <Hero hero={experiencesPageData?.hero} />
-      <ContentWrapper>
-        <section className="space-y-6 sm:space-y-12">
+      <section className="tw-section">
+        <div className="max-w-7xl mx-auto">
           <GridList>
-            {sortedExperiences.map((experience, idx) => (
-              <li key={idx}>
-                <Card
-                  content={experience?.card}
-                  linkURL={`experiences/${experience?.slug}`}
-                />
-              </li>
+            {sortedExperiences.map((experience) => (
+              <Card
+                key={experience?._id}
+                content={experience?.card}
+                linkURL={`experiences/${experience?.slug}`}
+              />
             ))}
           </GridList>
-        </section>
-      </ContentWrapper>
+        </div>
+      </section>
     </Layout>
   );
 }

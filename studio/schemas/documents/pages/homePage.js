@@ -60,18 +60,18 @@ export default {
       title: 'Featured Experience Section',
       description: 'Home page featured experience section.',
     },
-    {
-      name: 'aboutSection',
-      type: 'section',
-      title: 'About Section',
-      description: 'Home page about section.',
-    },
-    {
-      name: 'exploreSection',
-      type: 'section',
-      title: 'Explore Section',
-      description: 'Home page explore section.',
-    },
+    // {
+    //   name: 'aboutSection',
+    //   type: 'section',
+    //   title: 'About Section',
+    //   description: 'Home page about section.',
+    // },
+    // {
+    //   name: 'exploreSection',
+    //   type: 'section',
+    //   title: 'Explore Section',
+    //   description: 'Home page explore section.',
+    // },
     {
       name: 'featuresSection',
       type: 'homeFeaturesSection',
@@ -84,12 +84,12 @@ export default {
       title: 'Testimonials Section',
       description: 'Home page testimonials section.',
     },
-    {
-      name: 'stepsSection',
-      type: 'section',
-      title: 'Steps Section',
-      description: 'Home page steps section.',
-    },
+    // {
+    //   name: 'stepsSection',
+    //   type: 'section',
+    //   title: 'Steps Section',
+    //   description: 'Home page steps section.',
+    // },
     {
       name: 'partnersSection',
       type: 'section',

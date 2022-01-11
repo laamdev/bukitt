@@ -14,6 +14,7 @@ import aboutPage from './documents/pages/aboutPage';
 import experiencesPage from './documents/pages/experiencesPage';
 import destinationsPage from './documents/pages/destinationsPage';
 import enquiryFormPage from './documents/pages/enquiryFormPage';
+import blogPage from './documents/pages/blogPage';
 // --- misc
 import teamMember from './documents/teamMember';
 import socials from './documents/socials';
@@ -26,12 +27,10 @@ import card from './objects/shared/card';
 import cardSimple from './objects/shared/cardSimple';
 import form from './objects/shared/form';
 import section from './objects/shared/section';
-import sectionSimple from './objects/shared/sectionSimple';
 import callToAction from './objects/shared/callToAction';
 import imageCustom from './objects/shared/imageCustom';
 import imageGallery from './objects/shared/imageGallery';
 import video from './objects/shared/video';
-import textWithImage from './objects/shared/textWithImage';
 import quote from './objects/shared/quote';
 import seo from './objects/shared/seo';
 
@@ -53,6 +52,9 @@ import experienceItineraryItem from './objects/experience/experienceItineraryIte
 import homeTestimonialsSection from './objects/pages/home/homeTestimonialsSection';
 import homeFeaturedExperienceSection from './objects/pages/home/homeFeaturedExperienceSection';
 import testimonial from './objects/shared/testimonial';
+//blog
+import blogPost from './objects/blog/blogPost';
+import blogPostAuthor from './objects/blog/blogPostAuthor';
 
 // abstracts
 import blockContent from './objects/shared/blockContent';
@@ -82,12 +84,10 @@ export default createSchema({
     cardSimple,
     form,
     section,
-    sectionSimple,
     imageCustom,
     imageGallery,
     callToAction,
     video,
-    textWithImage,
     quote,
     highlight,
     highlightsSection,
@@ -108,7 +108,11 @@ export default createSchema({
 
     testimonial,
     seo,
-    // abstracts
+    //blog
+    blogPage,
+    blogPost,
+    blogPostAuthor,
+    //abstracts
     blockContent,
   ]),
 });

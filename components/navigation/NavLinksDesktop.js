@@ -13,8 +13,8 @@ export default function NavLinks({ navLinks }) {
               <a
                 className={`cursor-pointer text-lg tw-transition font-sans underline-offset-4 ${
                   router.asPath.includes(link.href)
-                    ? 'text-paradiso underline'
-                    : 'hover:text-paradiso'
+                    ? 'text-brand underline font-medium'
+                    : 'hover:text-brand'
                 }`}
                 aria-current={link.current ? 'page' : undefined}
               >

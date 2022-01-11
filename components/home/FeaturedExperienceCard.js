@@ -1,9 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { urlForImage } from '@/lib/sanity';
-import { currentMonth } from '@/data/navigation';
-
 import Overlay from '@/components/shared/image/Overlay';
 
 export default function FeaturedExperienceCard({ experience }) {
@@ -11,7 +8,7 @@ export default function FeaturedExperienceCard({ experience }) {
     <div className="max-w-5xl mx-auto">
       <Link href={`experiences/${experience.slug}`}>
         <a>
-          <div className="relative aspect-video group bg-gray-100 overflow-hidden rounded-2xl shadow-md focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-paradiso">
+          <div className="relative aspect-video group bg-neutral-100 overflow-hidden rounded-2xl shadow-md focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-slate-100 focus-within:ring-brand">
             <Image
               src={urlForImage(experience?.hero?.coverImage)
                 .width(1920)
@@ -26,7 +23,7 @@ export default function FeaturedExperienceCard({ experience }) {
             <Overlay />
 
             <div className="w-full flex flex-col items-center px-1.5 sm:px-3 py-3 sm:py-6 tw-center text-center">
-              {/* <h4 className="text-base sm:text-lg tracking-widest text-white font-medium border-b-2 border-gray-300">
+              {/* <h4 className="text-base sm:text-lg tracking-widest text-white font-medium border-b-2 border-neutral-300">
                 {currentMonth}
               </h4> */}
               <h3 className="text-2xl sm:text-6xl lg:text-8xl text-white mt-1.5 sm:mt-3 font-mono font-bold uppercase group-hover:scale-95 tw-transition">

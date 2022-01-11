@@ -10,7 +10,7 @@ export default {
     },
     {
       name: 'body',
-      type: 'blockContent',
+      type: 'text',
       title: 'Body',
     },
   ],

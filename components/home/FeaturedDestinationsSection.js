@@ -1,24 +1,29 @@
-import SectionContainer from '@/components/shared/SectionContainer';
-import GridList from '@/components/shared/list/GridList';
-import Card from '@/components/shared/Card';
+import DestinationCard from '@/components/shared/DestinationCard';
+import ButtonTo from '@/components/shared/ButtonTo';
 
 export default function FeaturedDestinationsSection({
   heading,
   featuredDestinations,
 }) {
   return (
-    <SectionContainer>
-      <h3 className="tw-section-heading text-center">{heading}</h3>
-      <GridList>
-        {featuredDestinations.map((destination, idx) => (
-          <li key={idx}>
-            <Card
-              content={destination?.card}
-              linkURL={`destinations/${destination?.slug}`}
-            />
-          </li>
+    <section className="tw-section max-w-full mx-auto">
+      <h3 className="tw-section-heading">{heading}</h3>
+      <ul
+        role="list"
+        className="mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 lg:gap-x-8 gap-y-4"
+      >
+        {featuredDestinations.map((destination) => (
+          <DestinationCard
+            key={destination?._id}
+            content={destination?.card}
+            linkURL={`destinations/${destination?.slug}`}
+          />
         ))}
-      </GridList>
-    </SectionContainer>
+      </ul>
+
+      <div className="flex justify-center mt-6 sm:mt-8 lg:mt-10">
+        <ButtonTo btnLink="destinations" btnText="All Destinations" />
+      </div>
+    </section>
   );
 }

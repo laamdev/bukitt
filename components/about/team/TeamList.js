@@ -1,13 +1,13 @@
 import TeamCard from '@/components/about/team/TeamCard';
 
-export default function List({ team }) {
+export default function TeamList({ team }) {
   return (
     <ul
       role="list"
-      className="space-y-4 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 lg:grid-cols-3 lg:gap-8"
+      className="mx-auto space-y-16 sm:grid sm:grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-3 lg:max-w-5xl"
     >
       {team.map((teamMember) => (
-        <TeamCard key={teamMember._id} teamMember={teamMember} />
+        <TeamCard key={teamMember._idx} teamMember={teamMember} />
       ))}
     </ul>
   );
