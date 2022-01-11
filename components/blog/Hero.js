@@ -38,16 +38,21 @@ export default function Hero({
         <div className="flex items-center space-x-3 mt-3">
           <div className="w-12">
             <span className="sr-only">{author?.name}</span>
-            <Image
-              src={urlForImage(author?.picture).width(1080).height(1080).url()}
-              alt={author?.picture?.alt ? author?.picture?.alt : ''}
-              layout="responsive"
-              width={1}
-              height={1}
-              objectFit="cover"
-              objectPosition="center"
-              className="rounded-full"
-            />
+            {coverImage && (
+              <Image
+                src={urlForImage(author?.picture)
+                  .width(1080)
+                  .height(1080)
+                  .url()}
+                alt={author?.picture?.alt ? author?.picture?.alt : ''}
+                layout="responsive"
+                width={1}
+                height={1}
+                objectFit="cover"
+                objectPosition="center"
+                className="rounded-full"
+              />
+            )}
           </div>
           <div className="flex flex-col">
             <div>
