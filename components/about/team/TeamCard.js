@@ -12,7 +12,11 @@ export default function TeamCard({ teamMember }) {
             .width(1080)
             .height(1080)
             .url()}
-          alt={teamMember?.profilePicture?.alt}
+          alt={
+            teamMember?.profilePicture?.alt
+              ? teamMember?.profilePicture?.alt
+              : ''
+          }
           layout="responsive"
           width={1}
           height={1}
