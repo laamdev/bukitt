@@ -11,13 +11,7 @@ export default function FeaturesSection({ heading, features }) {
           className="grid grid-cols-1 gap-y-24 gap-x-8 sm:grid-cols-2 lg:grid-cols-3 mt-24"
         >
           {features.map((feature) => (
-            <FeaturesCard
-              feature={feature}
-              key={feature._id}
-              // // icon={feature?.icon}
-              // // title={feature?.title}
-              // // description={feature?.description}
-            />
+            <FeaturesCard key={feature._key} feature={feature} />
           ))}
         </ul>
       </div>
