@@ -8,7 +8,7 @@ export default function ServicesSection({
   return (
     <section className="tw-section max-w-7xl mx-auto">
       <h3 className="tw-section-heading">{heading}</h3>
-      <div className="flex flex-col sm:flex-row justify-between space-x-0 lg:space-x-24 space-y-6 sm:space-y-0">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <ServicesCard
           title={experiencesCard?.title}
           description={experiencesCard?.description}

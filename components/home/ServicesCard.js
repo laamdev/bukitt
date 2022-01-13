@@ -15,7 +15,7 @@ export default function ServicesCard({
   btnURL,
 }) {
   return (
-    <div className="w-full shadow-xl rounded-2xl relative group aspect-4/5">
+    <div className="col-span-1 shadow-xl rounded-2xl relative group aspect-4/5">
       <Link href={`/${btnURL}`}>
         <a>
           <Image
