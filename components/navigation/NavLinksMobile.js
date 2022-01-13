@@ -7,7 +7,7 @@ export default function NavLinksMobile({ navLinks }) {
 
   return (
     <div className="mt-6">
-      <ul className="flex flex-col space-y-6 text-2xl border-b-2 border-neutral-300 pb-6">
+      <ul className="flex flex-col space-y-6 text-4xl pb-6">
         {navLinks.map((link) => (
           <li key={link.name}>
             <Link href={link.href}>

@@ -65,7 +65,7 @@ export default function Header() {
                 >
                   <div className="ring-1 ring-black ring-opacity-5 divide-y divide-slate-200">
                     <div className="p-6 bg-neutral-100 rounded-2xl shadow">
-                      <div className="flex items-center justify-between border-b-2 border-neutral-300 pb-6">
+                      <div className="flex items-center justify-between pb-6">
                         <Popover.Button>
                           <Link href="/">
                             <a>
@@ -85,7 +85,10 @@ export default function Header() {
                         <div>
                           <Popover.Button className="bg-transparent rounded-md p-2 inline-flex items-center justify-center text-neutral-400 hover:text-neutral-500 hover:bg-neutral-100 tw-transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand">
                             <span className="sr-only">Close menu</span>
-                            <XIcon className="h-6 w-6" aria-hidden="true" />
+                            <XIcon
+                              className="h-6 w-6 text-black hover:text-neutral-700"
+                              aria-hidden="true"
+                            />
                           </Popover.Button>
                         </div>
                       </div>
