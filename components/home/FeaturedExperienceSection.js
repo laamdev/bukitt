@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { urlForImage } from '@/lib/sanity';
+import { currentMonth } from '@/utils/data';
 
 export default function FeaturedExperienceSection({
   heading,
@@ -109,19 +110,22 @@ export default function FeaturedExperienceSection({
               </svg>
             </div>
             <div className="relative max-w-md mx-auto py-12 px-4 space-y-6 sm:max-w-3xl sm:py-16 sm:px-6 lg:max-w-none lg:p-0 lg:col-start-4 lg:col-span-6">
-              <h2
-                className="text-5xl font-mono font-medium uppercase text-white"
-                id="join-heading"
-              >
-                {featuredExperience?.name}
-              </h2>
+              <div>
+                <h5 className="text-lg text-white uppercase tracking-widest font-mono font-light opacity-80">
+                  {currentMonth}
+                </h5>
+                <h4
+                  className="text-5xl font-mono font-medium uppercase text-white"
+                  id="join-heading"
+                >
+                  {featuredExperience?.name}
+                </h4>
+              </div>
               <p className="text-lg text-white">
-                Varius facilisi mauris sed sit. Non sed et duis dui leo,
-                vulputate id malesuada non. Cras aliquet purus dui laoreet diam
-                sed lacus, fames.
+                {featuredExperience?.hero?.body}
               </p>
               <button className="tw-btn hover:bg-white hover:text-brand">
-                <Link href={`/experiences/${featuredExperience.slug}`}>
+                <Link href={`/experiences/${featuredExperience?.slug}`}>
                   <a>Learn More</a>
                 </Link>
               </button>

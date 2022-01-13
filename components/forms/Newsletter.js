@@ -65,7 +65,7 @@ export default function Newsletter() {
           })}
           type="email"
           aria-label="Email for newsletter"
-          className="appearance-none min-w-0 w-full bg-white border border-transparent rounded-md py-2 px-4 text-base text-neutral-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 focus:ring-white focus:border-white focus:placeholder-slate-400"
+          className="appearance-none min-w-0 w-full bg-white border border-transparent rounded-md py-2 px-4 text-base text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-neutral-800 focus:ring-white focus:border-white focus:placeholder-neutral-400"
         />
         <div className="h-4 mt-1 text-sm text-brand-300">
           {errors.email && <span role="alert">{errors.email.message}</span>}

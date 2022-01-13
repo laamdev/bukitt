@@ -7,7 +7,7 @@ import {
   navLinks,
   copyright,
   currentYear,
-} from '@/data/navigation';
+} from '@/utils/data';
 
 import Newsletter from '@/components/forms/Newsletter';
 

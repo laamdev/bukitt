@@ -106,7 +106,7 @@
 
 @layer components {
   .tw-body {
-    @apply prose prose-slate text-base sm:text-lg lg:text-xl;
+    @apply prose prose-neutral text-base sm:text-lg lg:text-xl;
   }
 
   .tw-center {

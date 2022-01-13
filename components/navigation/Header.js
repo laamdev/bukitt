@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Popover, Transition } from '@headlessui/react';
 import { XIcon } from '@heroicons/react/outline';
 
-import { navLinks } from '@/data/navigation';
+import { navLinks } from '@/utils/data';
 
 import MenuButton from '@/components/navigation/MenuButton';
 import Logo from '@/components/navigation/Logo';
@@ -63,7 +63,7 @@ export default function Header() {
                   focus
                   className="z-30 absolute top-0 inset-x-0 max-w-3xl mx-auto w-full p-2 transition transform origin-top"
                 >
-                  <div className="ring-1 ring-black ring-opacity-5 divide-y divide-slate-200">
+                  <div className="ring-1 ring-black ring-opacity-5 divide-y divide-neutral-200">
                     <div className="p-6 bg-neutral-100 rounded-2xl shadow">
                       <div className="flex items-center justify-between pb-6">
                         <Popover.Button>
@@ -83,7 +83,7 @@ export default function Header() {
                           </Link>
                         </Popover.Button>
                         <div>
-                          <Popover.Button className="bg-transparent rounded-md p-2 inline-flex items-center justify-center text-neutral-400 hover:text-neutral-500 hover:bg-neutral-100 tw-transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand">
+                          <Popover.Button className="bg-transparent rounded-md inline-flex items-center justify-center text-neutral-400 hover:text-neutral-500 hover:bg-neutral-100 tw-transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand">
                             <span className="sr-only">Close menu</span>
                             <XIcon
                               className="h-6 w-6 text-black hover:text-neutral-700"

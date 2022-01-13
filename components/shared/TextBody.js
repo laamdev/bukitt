@@ -29,7 +29,7 @@ const serializers = {
 export default function TextBody({ content, modClass }) {
   return (
     <div
-      className={`prose prose-slate prose-a:font-medium prose-a:text-brand hover:prose-a:text-brand-400 prose-img:rounded-2xl prose-img:shadow-xl prose-img:mx-auto tw-transition ${
+      className={`prose prose-neutral prose-a:font-medium prose-a:text-brand hover:prose-a:text-brand-400 prose-img:rounded-2xl prose-img:shadow-xl prose-img:mx-auto tw-transition ${
         modClass ? modClass : ''
       }`}
     >
