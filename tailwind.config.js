@@ -67,11 +67,6 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {
-      opacity: ['hover'],
-    },
-  },
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),

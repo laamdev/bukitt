@@ -20,7 +20,7 @@ export default function FeaturedDestinationCard({ content, linkURL }) {
                 className="group-hover:scale-105 tw-transition rounded-2xl"
               />
             )}
-            <Overlay />
+            {/* <Overlay /> */}
 
             <div className="tw-center text-center w-full px-1.5 sm:px-2 lg:px-3">
               <h3 className="text-xl sm:text-3xl lg:text-4xl text-white font-mono font-medium uppercase group-hover:scale-95 tw-transition break-words">
