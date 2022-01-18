@@ -3,6 +3,7 @@ import { getClient } from '@/lib/sanity.server';
 
 import Layout from '@/components/navigation/Layout';
 import Hero from '@/components/shared/Hero';
+import GridList from '@/components/shared/list/GridList';
 import ProductCard from '@/components/shared/ProductCard';
 
 export default function DestinationsPage({ destinationsPageData }) {
@@ -30,19 +31,15 @@ export default function DestinationsPage({ destinationsPageData }) {
       <Hero hero={destinationsPageData?.hero} />
       <section className="tw-section">
         <div className="max-w-7xl mx-auto">
-          <ul
-            role="list"
-            className="mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 sm:gap-x-6 xl:gap-x-8 gap-y-12 sm:gap-y-14 lg:gap-y-16"
-          >
+          <GridList>
             {sortedDestinations.map((destination, idx) => (
-              <li key={idx}>
-                <ProductCard
-                  content={destination?.card}
-                  linkURL={`destinations/${destination?.slug}`}
-                />
-              </li>
+              <ProductCard
+                key={destination?._id}
+                content={destination?.card}
+                linkURL={`destinations/${destination?.slug}`}
+              />
             ))}
-          </ul>
+          </GridList>
         </div>
       </section>
     </Layout>
