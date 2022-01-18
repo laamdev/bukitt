@@ -4,7 +4,7 @@ import { getClient } from '@/lib/sanity.server';
 import Layout from '@/components/navigation/Layout';
 import Hero from '@/components/shared/Hero';
 import GridList from '@/components/shared/list/GridList';
-import Card from '@/components/shared/Card';
+import ProductCard from '@/components/shared/ProductCard';
 
 export default function ExperiencesPage({ experiencesPageData }) {
   const sortedExperiences = experiencesPageData?.experiences.sort(function (
@@ -32,7 +32,7 @@ export default function ExperiencesPage({ experiencesPageData }) {
         <div className="max-w-7xl mx-auto">
           <GridList>
             {sortedExperiences.map((experience) => (
-              <Card
+              <ProductCard
                 key={experience?._id}
                 content={experience?.card}
                 linkURL={`experiences/${experience?.slug}`}

@@ -3,7 +3,7 @@ import { getClient } from '@/lib/sanity.server';
 
 import Layout from '@/components/navigation/Layout';
 import Hero from '@/components/shared/Hero';
-import DestinationCard from '@/components/shared/DestinationCard';
+import ProductCard from '@/components/shared/ProductCard';
 
 export default function DestinationsPage({ destinationsPageData }) {
   const sortedDestinations = destinationsPageData?.destinations.sort(function (
@@ -36,7 +36,7 @@ export default function DestinationsPage({ destinationsPageData }) {
           >
             {sortedDestinations.map((destination, idx) => (
               <li key={idx}>
-                <DestinationCard
+                <ProductCard
                   content={destination?.card}
                   linkURL={`destinations/${destination?.slug}`}
                 />

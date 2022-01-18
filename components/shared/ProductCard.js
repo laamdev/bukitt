@@ -5,7 +5,7 @@ import { urlForImage } from '@/lib/sanity';
 
 import Overlay from '@/components/shared/image/Overlay';
 
-export default function FeaturedDestinationCard({ content, linkURL }) {
+export default function ProductCard({ content, linkURL }) {
   return (
     <li className="shadow-xl rounded-2xl">
       <Link href={linkURL}>

@@ -1,4 +1,4 @@
-import DestinationCard from '@/components/shared/DestinationCard';
+import DestinationCard from '@/components/shared/ProductCard';
 import ButtonTo from '@/components/shared/ButtonTo';
 
 export default function FeaturedDestinationsSection({
