@@ -5,7 +5,6 @@ export default function FeaturedDestinationsSection({
   heading,
   featuredDestinations,
 }) {
-  console.log(featuredDestinations);
   return (
     <section className="tw-section max-w-full mx-auto">
       <h3 className="tw-section-heading">{heading}</h3>
