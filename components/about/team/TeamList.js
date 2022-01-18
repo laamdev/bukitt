@@ -1,7 +1,6 @@
 import TeamCard from '@/components/about/team/TeamCard';
 
 export default function TeamList({ team }) {
-  console.log(JSON.stringify(team, null, 2));
   return (
     <ul
       role="list"

@@ -36,8 +36,6 @@ export default function ExperiencePage({ data = {}, preview }) {
     return <ErrorPage statusCode={404} />;
   }
 
-  console.log(JSON.stringify(experience.seo, null, 2));
-
   return (
     <Layout
       title={experience?.seo?.title ? experience?.seo?.title : ''}
