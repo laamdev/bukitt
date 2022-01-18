@@ -5,7 +5,6 @@ import { urlForImage } from '@/lib/sanity';
 
 import Overlay from '@/components/shared/image/Overlay';
 import ButtonLink from '@/components/shared/ButtonLink';
-import TextBody from '@/components/shared/TextBody';
 
 export default function ServicesCard({
   title,

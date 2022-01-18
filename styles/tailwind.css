@@ -214,3 +214,9 @@
     @apply right-6;
   }
 }
+
+@layer utilities {
+  .gradient-text {
+    -webkit-box-decoration-break: clone;
+  }
+}
