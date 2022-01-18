@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { DefaultSeo } from 'next-seo';
 import { AnimatePresence } from 'framer-motion';
 
@@ -31,12 +30,7 @@ function MyApp({ Component, pageProps, router }) {
         initial={false}
         onExitComplete={() => window.scrollTo(0, 0)}
       >
-        <Component
-          {...pageProps}
-          canonical={url}
-          key={url}
-          // exit={{ opacity: 0 }}
-        />
+        <Component {...pageProps} canonical={url} key={url} />
       </AnimatePresence>
       <Footer />
     </>
