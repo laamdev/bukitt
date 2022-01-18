@@ -161,11 +161,23 @@
     @apply focus:ring-neutral-100 h-6 w-6 text-brand border-neutral-300 cursor-pointer hover:border-brand tw-transition;
   }
 
-  .tw-gradient-text {
+  .gradient-text {
+    background: linear-gradient(
+      to right,
+      #fc5404 20%,
+      #f9b208 70%,
+      #fc5404 80%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Some animation code */
+  }
+
+  /* .tw-gradient-text {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     @apply bg-gradient-to-b from-white to-brand text-transparent bg-clip-text;
-  }
+  } */
 
   /* xxxxxx */
 

@@ -26,7 +26,7 @@ export default function Hero({ hero, guideURL, location, category }) {
           <div className="absolute inset-0 bg-gradient-to-br from-dark-500 to-dark-400 mix-blend-hard-light rounded-2xl" />
         </div>
 
-        <div className="max-w-6xl mx-auto relative px-1 sm:px-3 py-12 sm:py-14 lg:py-16 text-center tw-gradient-text">
+        <div className="max-w-6xl mx-auto relative px-1 sm:px-3 py-12 sm:py-14 lg:py-16 text-center">
           <div className="text-white text-sm sm:text-xl lg:text-2xl font-mono font-thin uppercase tracking-widest">
             <h2 className="flex justify-center">
               {hero?.tagline && <span>{hero?.tagline}</span>}
@@ -40,7 +40,7 @@ export default function Hero({ hero, guideURL, location, category }) {
             </h2>
           </div>
 
-          <h1 className="flex flex-col mt-1 text-5xl sm:text-7xl lg:text-9xl font-bold font-mono tracking-tight uppercase tw-gradient-text">
+          <h1 className="flex flex-col mt-1 text-5xl sm:text-7xl lg:text-9xl font-bold font-mono tracking-tight uppercase gradient-text">
             {hero?.heading}
           </h1>
 
