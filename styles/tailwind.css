@@ -161,6 +161,12 @@
     @apply focus:ring-neutral-100 h-6 w-6 text-brand border-neutral-300 cursor-pointer hover:border-brand tw-transition;
   }
 
+  .tw-gradient-text {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @apply bg-gradient-to-b from-white to-brand text-transparent bg-clip-text;
+  }
+
   /* xxxxxx */
 
   .embla {
@@ -212,11 +218,5 @@
 
   .embla__button--next {
     @apply right-6;
-  }
-}
-
-@layer utilities {
-  .gradient-text {
-    -webkit-box-decoration-break: clone;
   }
 }
