@@ -40,7 +40,7 @@ export default function Hero({ hero, guideURL, location, category }) {
             </h2>
           </div>
 
-          <h1 className="flex flex-col mt-1 text-5xl sm:text-7xl lg:text-9xl font-bold font-mono tracking-tight uppercase gradient-text">
+          <h1 className="flex flex-col mt-1 text-5xl sm:text-7xl lg:text-9xl font-bold font-mono tracking-tight uppercase text-white">
             {hero?.heading}
           </h1>
 
