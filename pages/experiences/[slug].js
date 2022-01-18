@@ -40,8 +40,10 @@ export default function ExperiencePage({ data = {}, preview }) {
 
   return (
     <Layout
-      title={experience?.seo?.title}
-      description={experience?.seo?.description}
+      title={experience?.seo?.title ? experience?.seo?.title : ''}
+      description={
+        experience?.seo?.description ? experience?.seo?.description : ''
+      }
     >
       <Hero hero={experience?.hero} guideURL={experience?.guideURL} />
 
