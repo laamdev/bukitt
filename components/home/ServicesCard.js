@@ -14,13 +14,16 @@ export default function ServicesCard({
   btnURL,
 }) {
   return (
-    <div className="col-span-1 shadow-xl rounded-2xl relative group aspect-4/5">
+    <div className="col-span-1 shadow-xl rounded-2xl relative group">
       <Link href={`/${btnURL}`}>
         <a>
           <Image
             src={urlForImage(imageUrl).width(1080).height(1350).url()}
             alt={imageUrl?.alt}
-            layout="fill"
+            layout="responsive"
+            width={4}
+            height={5}
+            objectPosition="center"
             objectFit="cover"
             className="rounded-2xl"
           />

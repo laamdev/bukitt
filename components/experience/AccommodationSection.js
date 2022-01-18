@@ -14,12 +14,14 @@ export default function AccommodationSection({ heading, body, image }) {
             <p className="">{body}</p>
           </div>
 
-          <div className="relative aspect-square w-full sm:w-1/2 bg-neutral-100 rounded-2xl shadow-xl">
+          <div className="w-full sm:w-1/2 bg-neutral-100 rounded-2xl shadow-xl">
             {image && (
               <Image
                 src={urlForImage(image).width(1080).height(1080).url()}
                 alt={image.alt}
-                layout="fill"
+                layout="responsive"
+                width={1}
+                height={1}
                 className="rounded-2xl"
               />
             )}

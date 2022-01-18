@@ -8,14 +8,16 @@ export default function FeaturedExperienceCard({ experience }) {
     <div className="max-w-5xl mx-auto">
       <Link href={`experiences/${experience.slug}`}>
         <a>
-          <div className="relative aspect-video group bg-neutral-100 overflow-hidden rounded-2xl shadow-md focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-neutral-100 focus-within:ring-brand">
+          <div className="group bg-neutral-100 overflow-hidden rounded-2xl shadow-md focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-neutral-100 focus-within:ring-brand">
             <Image
               src={urlForImage(experience?.hero?.coverImage)
                 .width(1920)
                 .height(1080)
                 .url()}
               alt={experience?.hero?.coverImage?.alt}
-              layout="fill"
+              layout="responsive"
+              width={16}
+              height={9}
               objectFit="cover"
               objectPosition="center"
               className="group-hover:scale-105 tw-transition rounded-2xl"

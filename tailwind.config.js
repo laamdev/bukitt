@@ -57,11 +57,6 @@ module.exports = {
       width: {
         'fit-content': 'fit-content',
       },
-      aspectRatio: {
-        '9/16': '9 / 16',
-        '4/5': '4 / 5',
-        '5/4': '5 / 4',
-      },
       backgroundImage: {
         texture: "url('/static/images/texture.png')",
       },

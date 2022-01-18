@@ -10,12 +10,15 @@ export default function Card({ content, linkURL }) {
     <li className="shadow-xl rounded-2xl">
       <Link href={linkURL}>
         <a>
-          <div className="relative aspect-4/5 group bg-neutral-100 overflow-hidden rounded-2xl focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-neutral-100 focus-within:ring-brand">
+          <div className="group bg-neutral-100 overflow-hidden rounded-2xl focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-neutral-100 focus-within:ring-brand">
             {content?.image && (
               <Image
                 src={urlForImage(content?.image).width(1080).height(1350).url()}
                 alt={content?.title}
-                layout="fill"
+                layout="responsive"
+                width={4}
+                height={5}
+                objectPosition="center"
                 objectFit="cover"
                 className="group-hover:scale-105 tw-transition rounded-2xl"
               />
