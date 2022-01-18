@@ -23,7 +23,7 @@ export default function Hero({ hero, guideURL, location, category }) {
               className="grayscale rounded-2xl"
             />
           )}
-          <div className="absolute inset-0 bg-gradient-to-br from-dark-500 to-dark-400 mix-blend-hard-light rounded-2xl" />
+          <div className="absolute inset-0 bg-gradient-to-br from-dark-500 to-dark-400 mix-blend-hard-light rounded-2xl box-decoration-clone" />
         </div>
 
         <div className="max-w-6xl mx-auto relative px-1 sm:px-3 py-12 sm:py-14 lg:py-16 text-center">
@@ -40,7 +40,7 @@ export default function Hero({ hero, guideURL, location, category }) {
             </h2>
           </div>
 
-          <h1 className="flex flex-col mt-1 text-5xl sm:text-7xl lg:text-9xl font-bold font-mono tracking-tight uppercase text-white bg-gradient-to-b from-white to-brand text-transparent bg-clip-text">
+          <h1 className="flex flex-col mt-1 text-5xl sm:text-7xl lg:text-9xl font-bold font-mono tracking-tight uppercase text-white bg-gradient-to-b from-white to-brand text-transparent bg-clip-text box-decoration-clone">
             {hero?.heading}
           </h1>
 
