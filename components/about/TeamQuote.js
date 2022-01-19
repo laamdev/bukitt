@@ -5,7 +5,7 @@ import { urlForImage } from '@/lib/sanity';
 export default function TeamQuote({ quoteSection }) {
   return (
     <section className="tw-section">
-      <h3 className="tw-section-heading">{quoteSection?.heading}</h3>
+      {/* <h3 className="tw-section-heading">{quoteSection?.heading}</h3> */}
 
       <div className="pb-16 bg-brand-600 lg:pb-0 lg:z-10 lg:relative shadow-xl rounded-2xl">
         <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8">
