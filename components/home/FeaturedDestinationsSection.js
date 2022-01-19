@@ -1,5 +1,5 @@
 import DestinationCard from '@/components/shared/ProductCard';
-import ButtonTo from '@/components/shared/ButtonTo';
+import ButtonPrimary from '@/components/shared/buttons/ButtonPrimary';
 
 export default function FeaturedDestinationsSection({
   heading,
@@ -22,7 +22,7 @@ export default function FeaturedDestinationsSection({
       </ul>
 
       <div className="flex justify-center mt-6 sm:mt-8 lg:mt-10">
-        <ButtonTo btnLink="destinations" btnText="All Destinations" />
+        <ButtonPrimary btnLinkText="Destinations" btnURL="destinations" />
       </div>
     </section>
   );

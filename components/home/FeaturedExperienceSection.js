@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import ButtonPrimary from '@/components/shared/buttons/ButtonPrimary';
 
 import { urlForImage } from '@/lib/sanity';
 import { currentMonth } from '@/utils/data';
@@ -124,11 +124,10 @@ export default function FeaturedExperienceSection({
               <p className="text-lg text-white">
                 {featuredExperience?.hero?.body}
               </p>
-              <button className="tw-btn hover:bg-white hover:text-brand">
-                <Link href={`/experiences/${featuredExperience?.slug}`}>
-                  <a>Learn More</a>
-                </Link>
-              </button>
+              <ButtonPrimary
+                btnLinkText="Learn More"
+                btnURL={`/experiences/${featuredExperience?.slug}`}
+              />
             </div>
           </div>
         </div>

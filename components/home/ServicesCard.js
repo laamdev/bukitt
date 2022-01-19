@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { urlForImage } from '@/lib/sanity';
 
 import Overlay from '@/components/shared/image/Overlay';
-import ButtonLink from '@/components/shared/ButtonLink';
+import ButtonPrimary from '@/components/shared/buttons/ButtonPrimary';
 
 export default function ServicesCard({
   title,
@@ -35,7 +35,7 @@ export default function ServicesCard({
             </h3>
             <p className="text-neutral-100 lg:text-2xl">{description}</p>
             <div className="mt-6 flex justify-center">
-              <ButtonLink btnLinkText={btnLinkText} btnURL={btnURL} />
+              <ButtonPrimary btnLinkText={btnLinkText} btnURL={btnURL} />
             </div>
           </div>
         </a>

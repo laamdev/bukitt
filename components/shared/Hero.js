@@ -3,8 +3,8 @@ import { IoPinOutline } from 'react-icons/io5';
 
 import { urlForImage } from '@/lib/sanity';
 
-import ButtonLink from '@/components/shared/ButtonLink';
-import ButtonDownload from '@/components/shared/ButtonDownload';
+import ButtonPrimary from '@/components/shared/buttons/ButtonPrimary';
+import ButtonSecondary from '@/components/shared/buttons/ButtonSecondary';
 
 export default function Hero({ hero, guideURL, location, category }) {
   return (
@@ -27,13 +27,13 @@ export default function Hero({ hero, guideURL, location, category }) {
         </div>
 
         <div className="max-w-6xl mx-auto relative px-1 sm:px-3 py-12 sm:py-14 lg:py-16 text-center">
-          <div className="text-white text-sm sm:text-xl lg:text-2xl font-mono font-thin uppercase tracking-widest">
+          <div className="text-brand-200 text-sm sm:text-xl lg:text-2xl font-mono font-thin uppercase tracking-widest">
             <h2 className="flex justify-center">
               {hero?.tagline && <span>{hero?.tagline}</span>}
               {category && <span>{category}</span>}
               {location && (
                 <>
-                  <IoPinOutline className=" text-brand" />
+                  <IoPinOutline className="text-white" />
                   <span>{location}</span>
                 </>
               )}
@@ -44,14 +44,14 @@ export default function Hero({ hero, guideURL, location, category }) {
             {hero?.heading}
           </h1>
 
-          <p className="max-w-lg lg:max-w-3xl mx-auto mt-3 text-lg sm:text-2xl lg:text-3xl text-neutral-200">
+          <p className="max-w-lg lg:max-w-3xl mx-auto mt-3 text-lg sm:text-2xl lg:text-3xl text-white opacity-80">
             {hero?.body}
           </p>
 
           <div className="flex flex-col sm:flex-row space-x-0 sm:space-x-12 space-y-6 sm:space-y-0 justify-center items-center mt-6 lg:mt-12">
-            <ButtonLink btnLinkText="Book Now" btnURL="inquiry-form" />
+            <ButtonPrimary btnLinkText="Book Now" btnURL="inquiry-form" />
             {guideURL && (
-              <ButtonDownload btnLinkText="Download Guide" btnURL={guideURL} />
+              <ButtonSecondary btnLinkText="Download Guide" btnURL={guideURL} />
             )}
           </div>
         </div>

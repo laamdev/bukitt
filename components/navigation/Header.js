@@ -10,7 +10,7 @@ import MenuButton from '@/components/navigation/MenuButton';
 import Logo from '@/components/navigation/Logo';
 import NavLinksDesktop from '@/components/navigation/NavLinksDesktop';
 import NavLinksMobile from '@/components/navigation/NavLinksMobile';
-import ButtonLinkHeader from '@/components/shared/ButtonLinkHeader';
+import ButtonPrimary from '@/components/shared/buttons/ButtonPrimary';
 
 export default function Header() {
   return (
@@ -29,7 +29,7 @@ export default function Header() {
             </div>
 
             <div className="hidden lg:ml-4 lg:flex lg:items-center lg:pr-0.5">
-              <ButtonLinkHeader btnLinkText="Inquire" btnURL="inquiry-form" />
+              <ButtonPrimary btnLinkText="Inquire" btnURL="inquiry-form" />
             </div>
 
             {/* Mobule menu button */}

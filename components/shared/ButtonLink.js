@@ -2,10 +2,12 @@ import Link from 'next/link';
 
 export default function ButtonLink({ btnLinkText, btnURL, modClass }) {
   return (
-    <button type="button" className={`tw-btn ${modClass}`}>
-      <Link href={`/${btnURL}`}>
-        <a>{btnLinkText}</a>
-      </Link>
-    </button>
+    <Link href={`/${btnURL}`}>
+      <a>
+        <button type="button" className={`tw-btn ${modClass}`}>
+          {btnLinkText}
+        </button>
+      </a>
+    </Link>
   );
 }

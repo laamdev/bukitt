@@ -10,7 +10,7 @@ export default function HighlightCard({ title, body, image }) {
           <Image
             src={urlForImage(image).width(1080).height(1080).url()}
             alt={image?.alt}
-            layout="relative"
+            layout="responsive"
             width={1}
             height={1}
             objectFit="cover"
