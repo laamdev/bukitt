@@ -11,7 +11,7 @@ export default function DestinationsSection({ heading, destinations }) {
             <ProductCard
               key={destination?._id}
               content={destination?.card}
-              linkURL={`destinations/${destination?.slug}`}
+              linkURL={`/destinations/${destination?.slug}`}
             />
           ))}
         </GridList>
