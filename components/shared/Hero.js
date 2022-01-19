@@ -5,10 +5,11 @@ import { urlForImage } from '@/lib/sanity';
 
 import ButtonPrimary from '@/components/shared/buttons/ButtonPrimary';
 import ButtonSecondary from '@/components/shared/buttons/ButtonSecondary';
+import HeroOverlay from '@/components/shared/overlays/HeroOverlay';
 
-export default function Hero({ hero, guideURL, location, category }) {
+export default function Hero({ hero, guideURL, location, category, page }) {
   return (
-    <div className="relative rounded-2xl shadow-xl">
+    <section className="relative rounded-2xl shadow-xl">
       <div className="sm:overflow-hidden">
         <div className="absolute inset-0">
           {hero?.coverImage && (
@@ -23,7 +24,7 @@ export default function Hero({ hero, guideURL, location, category }) {
               className="grayscale rounded-2xl"
             />
           )}
-          <div className="absolute inset-0 bg-gradient-to-br from-dark-500 to-dark-400 mix-blend-hard-light rounded-2xl" />
+          <HeroOverlay />
         </div>
 
         <div className="max-w-6xl mx-auto relative px-1 sm:px-3 py-12 sm:py-14 lg:py-16 text-center">
@@ -48,7 +49,13 @@ export default function Hero({ hero, guideURL, location, category }) {
             {hero?.body}
           </p>
 
-          <div className="flex flex-col sm:flex-row space-x-0 sm:space-x-12 space-y-6 sm:space-y-0 justify-center items-center mt-6 lg:mt-12">
+          <div
+            className={`flex flex-col sm:flex-row space-x-0 sm:space-x-12 space-y-6 sm:space-y-0 justify-center items-center mt-6 lg:mt-12 ${
+              page === 'inquiry' || page === 'blog' || page === 'about'
+                ? 'hidden'
+                : 'block'
+            }`}
+          >
             <ButtonPrimary btnLinkText="Book Now" btnURL="inquiry-form" />
             {guideURL && (
               <ButtonSecondary btnLinkText="Download Guide" btnURL={guideURL} />
@@ -56,6 +63,6 @@ export default function Hero({ hero, guideURL, location, category }) {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

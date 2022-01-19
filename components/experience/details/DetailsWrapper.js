@@ -1,6 +1,8 @@
-export default function DetailsWrapper({ children }) {
+export default function DetailsWrapper({ children, passedClassName }) {
   return (
-    <div className="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
+    <div
+      className={`flex flex-col border-neutral-200 p-6 text-center ${passedClassName}`}
+    >
       {children}
     </div>
   );

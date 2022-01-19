@@ -109,7 +109,7 @@ export default function FeaturedExperienceSection({
                 />
               </svg>
             </div>
-            <div className="relative max-w-md mx-auto py-12 px-4 space-y-6 sm:max-w-3xl sm:py-16 sm:px-6 lg:max-w-none lg:p-0 lg:col-start-4 lg:col-span-6">
+            <div className="relative max-w-md mx-auto py-12 px-4 space-y-3 sm:max-w-3xl sm:py-16 sm:px-6 lg:max-w-none lg:p-0 lg:col-start-4 lg:col-span-6 text-center lg:text-left">
               <div>
                 <h5 className="text-lg text-white uppercase tracking-widest font-mono font-light opacity-80">
                   {currentMonth}
@@ -121,13 +121,18 @@ export default function FeaturedExperienceSection({
                   {featuredExperience?.name}
                 </h4>
               </div>
-              <p className="text-lg text-white">
-                {featuredExperience?.hero?.body}
-              </p>
-              <ButtonPrimary
-                btnLinkText="Learn More"
-                btnURL={`/experiences/${featuredExperience?.slug}`}
-              />
+              <div>
+                <p className="text-lg text-white">
+                  {featuredExperience?.hero?.body}
+                </p>
+              </div>
+              <div>
+                <ButtonPrimary
+                  btnLinkText="Learn More"
+                  btnURL={`experiences/${featuredExperience?.slug}`}
+                  passedClassName="mt-3"
+                />
+              </div>
             </div>
           </div>
         </div>

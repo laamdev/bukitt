@@ -74,7 +74,11 @@ export default function Newsletter() {
         </div>
 
         <div className="mt-6 rounded-md sm:flex-shrink-0 w-fit-content">
-          <button type="submit" disabled={submitting} className="tw-btn">
+          <button
+            type="submit"
+            disabled={submitting}
+            className="inline-flex mx-auto w-fit-content items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-brand-600 hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 tw-transition disabled:opacity-50 disabled:hover:bg-brand-600"
+          >
             Subscribe
           </button>
         </div>

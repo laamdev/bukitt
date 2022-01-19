@@ -8,8 +8,6 @@ import {
 import { usePreviewSubscription } from '@/lib/sanity';
 import { sanityClient, getClient } from '@/lib/sanity.server';
 
-import ContentWrapper from '@/components/shared/ContentWrapper';
-import Divider from '@/components/shared/Divider';
 import Layout from '@/components/navigation/Layout';
 import MapSection from '@/components/shared/MapSection';
 import AccommodationSection from '@/components/experience/AccommodationSection';

@@ -16,7 +16,7 @@ export default function HomePage({ homeData }) {
       title={homeData?.seo?.title}
       description={homeData?.seo?.description}
     >
-      <Hero hero={homeData?.hero} />
+      <Hero hero={homeData?.hero} page="home" />
       <ServicesSection
         heading={homeData?.servicesSection?.heading}
         experiencesCard={homeData?.servicesSection?.experiencesCard}

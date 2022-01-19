@@ -1,6 +1,5 @@
 import GridList from '@/components/shared/list/GridList';
-import Card from '@/components/shared/Card';
-import SectionContainer from '@/components/shared/SectionContainer';
+import ProductCard from '@/components/shared/ProductCard';
 
 export default function DestinationsSection({ heading, destinations }) {
   return (
@@ -9,7 +8,7 @@ export default function DestinationsSection({ heading, destinations }) {
         <h3 className="tw-section-heading">{heading}</h3>
         <GridList>
           {destinations.map((destination) => (
-            <Card
+            <ProductCard
               key={destination?._id}
               content={destination?.card}
               linkURL={`destinations/${destination?.slug}`}

@@ -42,17 +42,21 @@ export default function InquiryForm({ destinations, experiences }) {
     setSubmitting(true);
     setServerError('');
 
+    console.log(errors);
+
     const res = await fetch('/api/mail', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        // name: formData.name,
         firstName: formData.firstName,
         lastName: formData.lastName,
         email: formData.email,
         phone: formData.phone,
         category: formData.category,
         product: formData.product,
+        group: formData.group,
+        startDate: formData.startDate,
+        endDate: formData.endDate,
         message: formData.message,
       }),
     });
@@ -75,18 +79,8 @@ export default function InquiryForm({ destinations, experiences }) {
   };
 
   return (
-    <div className="bg-neutral-50 rounded-2xl shadow-md py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
-      <div className="relative max-w-xl mx-auto">
-        {/* <div className="text-center">
-          <h2 className="text-3xl font-extrabold tracking-tight text-neutral-900 sm:text-4xl">
-            Contact sales
-          </h2>
-          <p className="mt-4 text-lg leading-6 text-neutral-500">
-            Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat
-            massa dictumst amet. Sapien tortor lacus arcu.
-          </p>
-        </div> */}
-        {/* <div className="mt-12"> */}
+    <div className="bg-neutral-50 rounded-2xl shadow-md py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-12">
+      <div className="relative max-w-3xl mx-auto">
         <div>
           <form
             onSubmit={handleSubmit(onSubmit)}
@@ -273,6 +267,77 @@ export default function InquiryForm({ destinations, experiences }) {
 
             <div className="sm:col-span-2">
               <label
+                htmlFor="group"
+                className="block text-xl font-mono uppercase font-medium text-neutral-700"
+              >
+                Group Size
+              </label>
+              <div className="mt-1">
+                <input
+                  id="group"
+                  name="group"
+                  type="number"
+                  min={1}
+                  max={20}
+                  {...register('group', {
+                    required: true,
+                    min: 1,
+                    max: 20,
+                  })}
+                  className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md"
+                />
+                {errors.group && (
+                  <span role="alert" className="text-red-500 text-2xl">
+                    {errors.group.message}
+                  </span>
+                )}
+              </div>
+            </div>
+
+            <div>
+              <label
+                htmlFor="startDate"
+                className="block text-xl font-medium font-mono uppercase text-neutral-700"
+              >
+                Travel Start Date
+              </label>
+              <div className="mt-1">
+                <input
+                  type="date"
+                  name="startDate"
+                  id="startDate"
+                  {...register('startDate', { required: true })}
+                  className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md"
+                />
+                {errors.startDate && (
+                  <span role="alert">{errors.startDate.message}</span>
+                )}
+              </div>
+            </div>
+
+            <div>
+              <label
+                htmlFor="endDate"
+                className="block text-xl font-mono uppercase font-medium text-neutral-700"
+              >
+                Travel End Date
+              </label>
+              <div className="mt-1">
+                <input
+                  type="date"
+                  name="endDate"
+                  id="endDate"
+                  {...register('endDate', { required: true })}
+                  className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md"
+                />
+                {errors.endDate && (
+                  <span role="alert">{errors.endDate.message}</span>
+                )}
+              </div>
+            </div>
+
+            <div className="sm:col-span-2">
+              <label
                 htmlFor="message"
                 className="block text-xl font-mono uppercase font-medium text-neutral-700"
               >
@@ -334,11 +399,11 @@ export default function InquiryForm({ destinations, experiences }) {
                 </div>
               </div>
             </div>
-            <div className="sm:col-span-2">
+            <div className="sm:col-span-2 mx-auto">
               <button
                 type="submit"
                 disabled={submitting || agreed === false}
-                className={`tw-btn w-full justify-center border-brand text-brand hover:text-white disabled:opacity-75 disabled:hover:bg-white disabled:hover:text-brand`}
+                className="inline-flex mx-auto w-fit-content items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-brand-600 hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 tw-transition disabled:opacity-50 disabled:hover:bg-brand-600"
               >
                 Let&apos;s talk
               </button>

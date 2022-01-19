@@ -3,8 +3,18 @@ const mail = require('@sendgrid/mail');
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async (req, res) => {
-  const { firstName, lastName, email, phone, category, product, message } =
-    req.body;
+  const {
+    firstName,
+    lastName,
+    email,
+    phone,
+    category,
+    product,
+    group,
+    startDate,
+    endDate,
+    message,
+  } = req.body;
 
   if (!firstName) {
     return res.status(400).json({ error: 'A first name is required!' });
@@ -30,6 +40,18 @@ export default async (req, res) => {
     return res.status(400).json({ error: 'A product is required!' });
   }
 
+  if (!group) {
+    return res.status(400).json({ error: 'A group size is required!' });
+  }
+
+  if (!startDate) {
+    return res.status(400).json({ error: 'A travel start date is required!' });
+  }
+
+  if (!endDate) {
+    return res.status(400).json({ error: 'A travel end date is required!' });
+  }
+
   if (!message) {
     return res.status(400).json({ error: 'A message is required!' });
   }
@@ -40,6 +62,9 @@ export default async (req, res) => {
     Phone: ${phone}\r\n
     Category: ${category}\r\n
     Product: ${product}\r\n
+    Group Size: ${group}\r\n
+    Travel Start Date: ${startDate}\r\n
+    Travel End Date: ${endDate}\r\n
     Message: ${message}
   `;
 
