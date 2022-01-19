@@ -104,7 +104,7 @@ export default function TestimonialsSlider({ testimonials }) {
                   </svg>
 
                   <div className="relative lg:flex lg:items-center">
-                    <div className="hidden lg:block lg:flex-shrink-0 relative h-64 w-64 rounded-full xl:h-80 xl:w-80">
+                    <div className="hidden lg:block lg:shrink-0 relative h-64 w-64 rounded-full xl:h-80 xl:w-80">
                       <Image
                         src={urlForImage(index.thumbnail)
                           .width(1080)
@@ -142,7 +142,7 @@ export default function TestimonialsSlider({ testimonials }) {
                         </div>
                         <footer className="mt-8">
                           <div className="flex">
-                            <div className="flex-shrink-0 lg:hidden w-12 h-12">
+                            <div className="shrink-0 lg:hidden w-12 h-12">
                               <Image
                                 src={urlForImage(index.thumbnail)
                                   .width(1080)

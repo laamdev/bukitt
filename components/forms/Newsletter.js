@@ -73,7 +73,7 @@ export default function Newsletter() {
           {success && <span>{success}</span>}
         </div>
 
-        <div className="mt-6 rounded-md sm:flex-shrink-0 w-fit-content">
+        <div className="mt-6 rounded-md sm:shrink-0 w-fit-content">
           <button
             type="submit"
             disabled={submitting}

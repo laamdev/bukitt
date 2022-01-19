@@ -17,7 +17,7 @@ export default function TestimonialCard({ testimonial }) {
         <Body>&quot;{testimonial?.quote}&quot;</Body>
         <footer className="mt-8">
           <div className="flex flex-col items-center md:flex-row justify-center">
-            <div className="md:flex-shrink-0">
+            <div className="md:shrink-0">
               <Image
                 src={urlForImage(testimonial.thumbnail)
                   .width(1080)

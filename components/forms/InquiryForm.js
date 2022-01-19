@@ -359,13 +359,13 @@ export default function InquiryForm({ destinations, experiences }) {
 
             <div className="sm:col-span-2">
               <div className="flex items-start">
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <Switch
                     checked={agreed}
                     onChange={setAgreed}
                     className={classNames(
                       agreed ? 'bg-brand-600' : 'bg-neutral-200',
-                      'relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500'
+                      'relative inline-flex shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500'
                     )}
                   >
                     <span className="sr-only">Agree to policies</span>

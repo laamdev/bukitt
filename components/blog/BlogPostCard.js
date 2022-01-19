@@ -11,7 +11,7 @@ export default function BlogPostCard({ blogPost }) {
     <li className="flex flex-col rounded-2xl shadow-xl overflow-hidden group">
       <Link href={`blog/${blogPost?.slug}`}>
         <a className="flex flex-col bg-gray-400 h-full">
-          <div className="flex-shrink-0">
+          <div className="shrink-0">
             <Image
               className="h-48 w-full object-cover group-hover:scale-105 tw-transition "
               src={urlForImage(blogPost?.coverImage)
@@ -41,7 +41,7 @@ export default function BlogPostCard({ blogPost }) {
               </div>
             </div>
             <div className="mt-6 flex items-center">
-              <div className="flex-shrink-0">
+              <div className="shrink-0">
                 <a href={blogPost?.author?.href}>
                   <span className="sr-only">{blogPost?.author?.name}</span>
                   <div className="h-10 w-10">
