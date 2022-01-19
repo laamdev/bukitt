@@ -34,16 +34,16 @@ export default function HomePage({ homeData }) {
         heading={homeData?.testimonialsSection?.heading}
         testimonials={homeData?.testimonialsSection?.testimonials}
       />
+      <PartnersSection
+        heading={homeData?.partnersSection?.heading}
+        partners={homeData?.partnersSection?.partners}
+      />
       <FeaturedExperienceSection
         heading={homeData?.featuredExperienceSection?.heading}
         body={homeData?.featuredExperienceSection?.body}
         featuredExperience={
           homeData?.featuredExperienceSection?.featuredExperience
         }
-      />
-      <PartnersSection
-        heading={homeData?.partnersSection?.heading}
-        partners={homeData?.partnersSection?.partners}
       />
     </Layout>
   );

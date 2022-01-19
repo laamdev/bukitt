@@ -37,7 +37,7 @@ export default function FeaturedExperienceSection({
             </div>
           </div>
 
-          <div className="relative bg-brand-500 shadow-xl lg:col-start-3 lg:row-start-1 lg:col-span-10 lg:rounded-3xl lg:grid lg:grid-cols-10 lg:items-center">
+          <div className="relative bg-brand-600 shadow-xl lg:col-start-3 lg:row-start-1 lg:col-span-10 lg:rounded-3xl lg:grid lg:grid-cols-10 lg:items-center">
             <div
               className="hidden absolute inset-0 overflow-hidden rounded-3xl lg:block"
               aria-hidden="true"
