@@ -1,10 +1,11 @@
 import FeaturesCard from '@/components/shared/features/FeaturesCard';
+import SectionHeading from '@/components/shared/SectionHeading';
 
 export default function FeaturesSection({ heading, features }) {
   return (
     <section className="tw-section">
       <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-        <h3 className="tw-section-heading">{heading}</h3>
+        <SectionHeading passedClassName="text-center">{heading}</SectionHeading>
 
         <ul
           role="list"

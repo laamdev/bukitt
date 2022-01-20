@@ -26,6 +26,9 @@ export default {
         { title: 'H2', value: 'h2' },
         { title: 'H3', value: 'h3' },
         { title: 'H4', value: 'h4' },
+        { title: 'H5', value: 'h5' },
+        { title: 'H6', value: 'h6' },
+        { title: 'Small', value: 'small' },
         { title: 'Quote', value: 'blockquote' },
       ],
       lists: [
@@ -43,9 +46,9 @@ export default {
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
           {
-            title: 'External Link',
             name: 'link',
             type: 'object',
+            title: 'External Link',
             fields: [
               {
                 title: 'URL',
@@ -89,6 +92,29 @@ export default {
     {
       type: 'image',
       options: { hotspot: true },
+      fields: [
+        {
+          name: 'caption',
+          type: 'string',
+          title: 'Caption',
+          options: {
+            isHighlighted: true,
+          },
+        },
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alt',
+          options: {
+            isHighlighted: true,
+          },
+        },
+        {
+          name: 'attribution',
+          type: 'string',
+          title: 'Attribution',
+        },
+      ],
     },
   ],
 };

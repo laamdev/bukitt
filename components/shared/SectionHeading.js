@@ -1,9 +1,7 @@
-export default function SectionHeading({ children, modClass }) {
+export default function SectionHeading({ passedClassName, children }) {
   return (
     <h3
-      className={`mb-3 sm:mb-6 text-3xl sm:text-5xl lg:text-6xl font-medium font-mono uppercase tracking-wider ${
-        modClass ? modClass : ''
-      }`}
+      className={`text-3xl sm:text-5xl lg:text-6xl font-bold mb-12 ${passedClassName}`}
     >
       {children}
     </h3>

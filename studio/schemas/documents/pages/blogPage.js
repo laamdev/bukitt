@@ -3,8 +3,8 @@ import { IoNewspaperOutline } from 'react-icons/io5';
 export default {
   name: 'blogPage',
   title: 'Blog Page',
-  type: 'document',
   icon: IoNewspaperOutline,
+  type: 'document',
   initialValue: {
     title: 'blog',
   },

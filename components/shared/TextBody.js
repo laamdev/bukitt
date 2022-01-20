@@ -1,8 +1,35 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import markdownStyles from './markdown-styles.module.css';
 import BlockContent from '@sanity/block-content-to-react';
+import { urlForImage } from '@/lib/sanity';
 
 const serializers = {
+  types: {
+    image: ({ node }) => {
+      if (!node || !node.asset || !node.asset._ref) {
+        return null;
+      }
+
+      console.log(node);
+
+      return (
+        <div className="text-center">
+          <Image
+            src={urlForImage(node).width(1080).height(1080).url()}
+            alt={node.alt}
+            layout="responsive"
+            width={1}
+            height={1}
+            objectFit="cover"
+            objectPosition="center"
+            className="rounded-2xl"
+          />
+          <small className="text-neutral-500 text-xs">{node.caption}</small>
+        </div>
+      );
+    },
+  },
   marks: {
     internalLink: ({ mark, children }) => {
       const { slug = {} } = mark;

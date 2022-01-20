@@ -1,4 +1,5 @@
 import DestinationCard from '@/components/shared/ProductCard';
+import SectionHeading from '@/components/shared/SectionHeading';
 import ButtonPrimary from '@/components/shared/buttons/ButtonPrimary';
 
 export default function FeaturedDestinationsSection({
@@ -7,7 +8,7 @@ export default function FeaturedDestinationsSection({
 }) {
   return (
     <section className="tw-section max-w-full mx-auto">
-      <h3 className="tw-section-heading">{heading}</h3>
+      <SectionHeading passedClassName="text-center">{heading}</SectionHeading>
       <ul
         role="list"
         className="mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 lg:gap-x-8 gap-y-4"

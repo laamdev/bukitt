@@ -1,14 +1,14 @@
 import { homePageQuery } from '@/lib/queries';
 import { getClient } from '@/lib/sanity.server';
 
+import Hero from '@/components/shared/Hero';
+import FeaturesSection from '@/components/shared/features/FeaturesSection';
 import Layout from '@/components/navigation/Layout';
 import FeaturedDestinationsSection from '@/components/home/FeaturedDestinationsSection';
 import FeaturedExperienceSection from '@/components/home/FeaturedExperienceSection';
-import FeaturesSection from '@/components/shared/features/FeaturesSection';
 import ServicesSection from '@/components/home/ServicesSection';
 import PartnersSection from '@/components/home/PartnersSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
-import Hero from '@/components/shared/Hero';
 
 export default function HomePage({ homeData }) {
   return (

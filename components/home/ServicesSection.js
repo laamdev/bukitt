@@ -1,4 +1,5 @@
 import ServicesCard from '@/components/home/ServicesCard';
+import SectionHeading from '@/components/shared/SectionHeading';
 
 export default function ServicesSection({
   heading,
@@ -7,7 +8,7 @@ export default function ServicesSection({
 }) {
   return (
     <section className="tw-section max-w-7xl mx-auto">
-      <h3 className="tw-section-heading">{heading}</h3>
+      <SectionHeading passedClassName="text-center">{heading}</SectionHeading>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <ServicesCard
           title={experiencesCard?.title}

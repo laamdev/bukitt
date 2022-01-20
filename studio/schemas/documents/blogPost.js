@@ -1,8 +1,10 @@
-import { blogPostCategories } from '../../../data';
+import { BsPencilSquare } from 'react-icons/bs';
+import { blogPostCategories } from '../../data';
 
 export default {
   name: 'blogPost',
   title: 'Blog Post',
+  icon: BsPencilSquare,
   type: 'document',
   fields: [
     {
@@ -23,7 +25,7 @@ export default {
       name: 'author',
       title: 'Author',
       type: 'reference',
-      to: { type: 'blogPostAuthor' },
+      to: { type: 'teamMember' },
     },
     {
       name: 'mainImage',

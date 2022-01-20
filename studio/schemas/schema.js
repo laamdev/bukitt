@@ -20,6 +20,8 @@ import teamMember from './documents/teamMember';
 import socials from './documents/socials';
 import contact from './documents/contact';
 import partner from './documents/partner';
+// --- blog
+import blogPost from './documents/blogPost';
 
 // objects
 import hero from './objects/shared/hero';
@@ -52,9 +54,6 @@ import experienceItineraryItem from './objects/experience/experienceItineraryIte
 import homeTestimonialsSection from './objects/pages/home/homeTestimonialsSection';
 import homeFeaturedExperienceSection from './objects/pages/home/homeFeaturedExperienceSection';
 import testimonial from './objects/shared/testimonial';
-//blog
-import blogPost from './objects/blog/blogPost';
-import blogPostAuthor from './objects/blog/blogPostAuthor';
 
 // abstracts
 import blockContent from './objects/shared/blockContent';
@@ -111,7 +110,6 @@ export default createSchema({
     //blog
     blogPage,
     blogPost,
-    blogPostAuthor,
     //abstracts
     blockContent,
   ]),

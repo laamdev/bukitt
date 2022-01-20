@@ -1,8 +1,10 @@
 import Image from 'next/image';
-import ButtonPrimary from '@/components/shared/buttons/ButtonPrimary';
 
 import { urlForImage } from '@/lib/sanity';
 import { currentMonth } from '@/utils/data';
+
+import ButtonPrimary from '@/components/shared/buttons/ButtonPrimary';
+import SectionHeading from '@/components/shared/SectionHeading';
 
 export default function FeaturedExperienceSection({
   heading,
@@ -10,7 +12,7 @@ export default function FeaturedExperienceSection({
 }) {
   return (
     <section className="tw-section max-w-7xl mx-auto">
-      <h3 className="tw-section-heading">{heading}</h3>
+      <SectionHeading passedClassName="text-center">{heading}</SectionHeading>
       <div className="bg-brand-500 lg:bg-transparent lg:px-8">
         <div className="lg:grid lg:grid-cols-12">
           <div className="relative z-10 lg:col-start-1 lg:row-start-1 lg:col-span-4 lg:py-16 lg:bg-transparent">
