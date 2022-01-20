@@ -4,6 +4,7 @@ import { urlForImage } from '@/lib/sanity';
 
 import PlaneArrivalIcon from '@/components/shared/icons/PlaneArrival';
 import PlaneDepartureIcon from '@/components/shared/icons/PlaneDeparture';
+import Divider from '@/components/shared/Divider';
 
 export default function TeamCard({ teamMember }) {
   console.log(JSON.stringify(teamMember, null, 2));
@@ -28,12 +29,15 @@ export default function TeamCard({ teamMember }) {
       </div>
 
       <div className="mt-3">
-        <div className="border-b border-brand pb-3">
+        <div className="pb-3">
           <h4 className="font-bold text-2xl text-dark font-mono uppercase">
             {teamMember?.name}
           </h4>
           <p className="text-brand font-medium text-lg">{teamMember?.role}</p>
         </div>
+
+        <div className="mx-auto w-full border-t border-neutral-300" />
+
         <div className="flex justify-around mt-6">
           <div className="w-1/2 flex flex-col items-center">
             <PlaneArrivalIcon passedClassName="w-6 h-6 fill-brand" />

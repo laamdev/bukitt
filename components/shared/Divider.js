@@ -1,7 +1,3 @@
 export default function Divider() {
-  return (
-    <div className="relative">
-      <div className="w-full border-t border-neutral-300" />
-    </div>
-  );
+  return <div className="mx-auto w-3/5 border-t border-neutral-300" />;
 }
