@@ -1,104 +1,118 @@
-import { Fragment } from 'react';
+/* This example requires Tailwind CSS v2.0+ */
 import Link from 'next/link';
-import Image from 'next/image';
-import { Popover, Transition } from '@headlessui/react';
-import { XIcon } from '@heroicons/react/outline';
+import { Fragment } from 'react';
 
+import { Popover, Transition } from '@headlessui/react';
+import { XIcon, MenuIcon } from '@heroicons/react/outline';
+import { socialLinks } from '@/utils/data';
 import { navLinks } from '@/utils/data';
 
-import MenuButton from '@/components/navigation/MenuButton';
 import Logo from '@/components/navigation/Logo';
 import NavLinksDesktop from '@/components/navigation/NavLinksDesktop';
-import NavLinksMobile from '@/components/navigation/NavLinksMobile';
 import ButtonPrimary from '@/components/shared/buttons/ButtonPrimary';
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ');
+}
 
 export default function Header() {
   return (
-    <Popover as="header">
+    <Popover className="fixed z-20 top-0 inset-x-0">
       {({ open }) => (
         <>
-          <div className="fixed top-0 inset-x-0 z-20 flex items-center justify-between h-16 sm:h-20 px-4 sm:px-6 lg:px-8 bg-white border-b-2 border-neutral-100">
-            {/* Logo */}
-            <div>
-              <Logo />
-            </div>
+          <div className="relative z-10 bg-white shadow">
+            <div className="max-w-7xl mx-auto flex justify-between items-center h-16 lg:h-20 px-3 lg:px-0">
+              <div>
+                <Logo />
+              </div>
 
-            {/* Right section on desktop */}
-            <div className="hidden lg:ml-4 lg:flex lg:items-center lg:pr-0.5">
-              <NavLinksDesktop navLinks={navLinks} />
-            </div>
+              <div className="hidden lg:ml-4 lg:flex lg:items-center lg:pr-0.5">
+                <NavLinksDesktop navLinks={navLinks} />
+              </div>
 
-            <div className="hidden lg:ml-4 lg:flex lg:items-center lg:pr-0.5">
-              <ButtonPrimary btnLinkText="Inquire" btnURL="inquiry-form" />
-            </div>
+              <div className="hidden lg:ml-4 lg:flex lg:items-center lg:pr-0.5">
+                <ButtonPrimary btnLinkText="Inquire" btnURL="inquiry-form" />
+              </div>
 
-            {/* Mobule menu button */}
-            <MenuButton open={open} />
+              <Popover.Button
+                className={classNames(
+                  open ? 'text-gray-900' : 'text-gray-500',
+                  'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 lg:hidden'
+                )}
+              >
+                <span className="sr-only">Open main menu</span>
+                {open ? (
+                  <XIcon className="block w-6" aria-hidden="true" />
+                ) : (
+                  <MenuIcon className="block w-6" aria-hidden="true" />
+                )}{' '}
+                {/* <ChevronDownIcon
+                  className={classNames(
+                    open ? 'text-gray-600' : 'text-gray-400',
+                    'ml-2 h-5 w-5 group-hover:text-gray-500'
+                  )}
+                  aria-hidden="true"
+                /> */}
+              </Popover.Button>
+              <Popover.Overlay className="z-30 fixed inset-0 bg-black bg-opacity-75 mt-24" />
+            </div>
           </div>
 
-          <Transition.Root as={Fragment}>
-            <div className="lg:hidden">
-              <Transition.Child
-                as={Fragment}
-                enter="duration-150 ease-out"
-                enterFrom="opacity-0"
-                enterTo="opacity-100"
-                leave="duration-150 ease-in"
-                leaveFrom="opacity-100"
-                leaveTo="opacity-0"
-              >
-                <Popover.Overlay className="z-30 fixed inset-0 bg-black bg-opacity-25" />
-              </Transition.Child>
-
-              <Transition.Child
-                as={Fragment}
-                enter="duration-150 ease-out"
-                enterFrom="opacity-0 scale-95"
-                enterTo="opacity-100 scale-100"
-                leave="duration-150 ease-in"
-                leaveFrom="opacity-100 scale-100"
-                leaveTo="opacity-0 scale-95"
-              >
-                <Popover.Panel
-                  focus
-                  className="z-30 absolute top-0 inset-x-0 max-w-3xl mx-auto w-full p-2 transition transform origin-top"
-                >
-                  <div className="ring-1 ring-black ring-opacity-5 divide-y divide-neutral-200">
-                    <div className="p-6 bg-neutral-100 rounded-2xl shadow">
-                      <div className="flex items-center justify-between pb-6">
-                        <Popover.Button>
-                          <Link href="/">
-                            <a>
-                              <span className="sr-only">Bukitt</span>
-                              <div className="relative w-10">
-                                <Image
-                                  src="/logos/bukitt-logo-square.svg"
-                                  alt="Bukitt"
-                                  layout="responsive"
-                                  width={1}
-                                  height={1}
-                                />
-                              </div>
-                            </a>
-                          </Link>
+          <Transition
+            as={Fragment}
+            enter="transition ease-out duration-200"
+            enterFrom="opacity-0 -translate-y-1"
+            enterTo="opacity-100 translate-y-0"
+            leave="transition ease-in duration-150"
+            leaveFrom="opacity-100 translate-y-0"
+            leaveTo="opacity-0 -translate-y-1"
+          >
+            <Popover.Panel className="absolute z-10 inset-x-0 transform shadow-lg">
+              <div className="bg-white">
+                <div className="max-w-7xl mx-auto grid gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16">
+                  {navLinks.map((item) => (
+                    <Link href={item.href} key={item.name}>
+                      <a>
+                        <Popover.Button className="text-3xl font-medium">
+                          {item.name}
                         </Popover.Button>
-                        <div>
-                          <Popover.Button className="bg-transparent rounded-md inline-flex items-center justify-center text-neutral-400 hover:text-neutral-500 hover:bg-neutral-100 tw-transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand">
-                            <span className="sr-only">Close menu</span>
-                            <XIcon
-                              className="h-6 w-6 text-black hover:text-neutral-700"
-                              aria-hidden="true"
-                            />
-                          </Popover.Button>
-                        </div>
-                      </div>
-                      <NavLinksMobile navLinks={navLinks} />
-                    </div>
+                      </a>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-gray-50">
+                <div className="max-w-7xl mx-auto space-y-12 px-4 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-6 lg:px-8">
+                  <div className="flex justify-center">
+                    <Popover.Button>
+                      <ButtonPrimary
+                        btnLinkText="Inquire"
+                        btnURL="inquiry-form"
+                      />
+                    </Popover.Button>
                   </div>
-                </Popover.Panel>
-              </Transition.Child>
-            </div>
-          </Transition.Root>
+                  <ul role="list" className="flex justify-evenly">
+                    {socialLinks.map((social) => (
+                      <li key={social.name}>
+                        <a
+                          href={social.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-neutral-700 hover:text-neutral-500 tw-transition"
+                        >
+                          <Popover.Button>
+                            <span className="sr-only">{social.name}</span>
+                            {social.icon}
+                          </Popover.Button>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </Popover.Panel>
+          </Transition>
         </>
       )}
     </Popover>
