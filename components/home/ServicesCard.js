@@ -33,7 +33,9 @@ export default function ServicesCard({
             <h3 className="text-4xl sm:text-5xl lg:text-7xl font-mono text-white font-medium uppercase">
               {title}
             </h3>
-            <p className="text-neutral-100 lg:text-2xl">{description}</p>
+            <p className="text-neutral-100 text-lg lg:text-2xl">
+              {description}
+            </p>
             <div className="mt-6 flex justify-center">
               <ButtonPrimary btnLinkText={btnLinkText} btnURL={btnURL} />
             </div>
