@@ -11,8 +11,6 @@ const serializers = {
         return null;
       }
 
-      console.log(node);
-
       return (
         <div className="text-center">
           <Image
