@@ -13,7 +13,7 @@ export default function FeaturedExperienceSection({
   return (
     <section className="tw-section max-w-7xl mx-auto">
       <SectionHeading passedClassName="text-center">{heading}</SectionHeading>
-      <div className="bg-brand-500 lg:bg-transparent lg:px-8">
+      <div className="bg-brand-600 lg:bg-transparent lg:px-8">
         <div className="lg:grid lg:grid-cols-12">
           <div className="relative z-10 lg:col-start-1 lg:row-start-1 lg:col-span-4 lg:py-16 lg:bg-transparent">
             <div

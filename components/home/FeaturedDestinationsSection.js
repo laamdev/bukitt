@@ -1,6 +1,6 @@
-import DestinationCard from '@/components/shared/ProductCard';
 import SectionHeading from '@/components/shared/SectionHeading';
 import ButtonPrimary from '@/components/shared/buttons/ButtonPrimary';
+import FeaturedDestinationCard from '@/components/shared/FeaturedDestinationCard';
 
 export default function FeaturedDestinationsSection({
   heading,
@@ -11,10 +11,10 @@ export default function FeaturedDestinationsSection({
       <SectionHeading passedClassName="text-center">{heading}</SectionHeading>
       <ul
         role="list"
-        className="mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 lg:gap-x-8 gap-y-4"
+        className="mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-x-12"
       >
         {featuredDestinations.map((destination) => (
-          <DestinationCard
+          <FeaturedDestinationCard
             key={destination?._id}
             content={destination?.card}
             linkURL={`destinations/${destination?.slug}`}

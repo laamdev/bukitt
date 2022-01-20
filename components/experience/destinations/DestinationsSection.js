@@ -1,11 +1,12 @@
 import GridList from '@/components/shared/list/GridList';
 import ProductCard from '@/components/shared/ProductCard';
+import SectionHeading from '@/components/shared/SectionHeading';
 
 export default function DestinationsSection({ heading, destinations }) {
   return (
     <section className="tw-section">
       <div className="max-w-7xl mx-auto">
-        <h3 className="tw-section-heading">{heading}</h3>
+        <SectionHeading passedClassName="text-center">{heading}</SectionHeading>
         <GridList>
           {destinations.map((destination) => (
             <ProductCard
