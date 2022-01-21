@@ -15,7 +15,7 @@ export default function ErrorPage() {
                   Page not found
                 </h1>
                 <p className="mt-1 text-base text-gray-500">
-                  Please check the URL in the address bar and try again.
+                  Please check the URL in the address bar and try again!
                 </p>
               </div>
               <div className="mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6">
