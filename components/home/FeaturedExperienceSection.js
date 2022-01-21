@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { urlForImage } from '@/lib/sanity';
 import { currentMonth } from '@/utils/data';
 
-import ButtonPrimary from '@/components/shared/buttons/ButtonPrimary';
+import ButtonPrimaryLight from '@/components/shared/buttons/ButtonPrimaryLight';
 import SectionHeading from '@/components/shared/SectionHeading';
 
 export default function FeaturedExperienceSection({
@@ -111,28 +111,28 @@ export default function FeaturedExperienceSection({
                 />
               </svg>
             </div>
-            <div className="relative max-w-md mx-auto py-12 px-4 space-y-3 sm:max-w-3xl sm:py-16 sm:px-6 lg:max-w-none lg:p-0 lg:col-start-4 lg:col-span-6 text-center lg:text-left">
+
+            <div className="relative max-w-md mx-auto py-12 px-4 sm:max-w-3xl sm:py-16 sm:px-6 lg:max-w-none lg:p-0 lg:col-start-4 lg:col-span-6 text-center lg:text-left">
               <div>
-                <h5 className="text-lg text-white uppercase tracking-widest font-mono font-light opacity-80">
+                <h5 className="text-base md:text-2xl text-white uppercase tracking-widest font-mono font-light opacity-80">
                   {currentMonth}
                 </h5>
                 <h4
-                  className="text-5xl font-mono font-medium uppercase text-white"
+                  className="text-4xl md:text-7xl font-mono font-medium uppercase text-white"
                   id="join-heading"
                 >
                   {featuredExperience?.name}
                 </h4>
               </div>
-              <div>
-                <p className="text-lg text-white">
+              <div className="mt-3">
+                <p className="text-base md:text-2xl text-white">
                   {featuredExperience?.hero?.body}
                 </p>
               </div>
-              <div>
-                <ButtonPrimary
+              <div className="mt-6">
+                <ButtonPrimaryLight
                   btnLinkText="Learn More"
                   btnURL={`experiences/${featuredExperience?.slug}`}
-                  passedClassName="mt-3"
                 />
               </div>
             </div>

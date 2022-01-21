@@ -57,7 +57,7 @@ export default function TestimonialsSlider({ testimonials }) {
                           y={0}
                           width={4}
                           height={4}
-                          className="text-gray-200"
+                          className="text-neutral-200"
                           fill="currentColor"
                         />
                       </pattern>
@@ -91,7 +91,7 @@ export default function TestimonialsSlider({ testimonials }) {
                           y={0}
                           width={4}
                           height={4}
-                          className="text-gray-200"
+                          className="text-neutral-200"
                           fill="currentColor"
                         />
                       </pattern>
@@ -133,16 +133,16 @@ export default function TestimonialsSlider({ testimonials }) {
                       </svg>
                       <blockquote className="relative">
                         <div>
-                          <h4 className="text-3xl lg:text-5xl font-mono uppercase text-brand">
+                          <h4 className="text-3xl md:text-5xl lg:text-5xl font-mono uppercase text-brand">
                             {index.destination}
                           </h4>
                         </div>
-                        <div className="mt-4 text-2xl leading-9 font-medium text-gray-900">
+                        <div className="mt-4 text-xl md:text-3xl lg:text-2xl leading-7 font-medium text-neutral-900">
                           <p>{index.quote}</p>
                         </div>
                         <footer className="mt-8">
                           <div className="flex">
-                            <div className="shrink-0 lg:hidden w-12 h-12">
+                            <div className="shrink-0 lg:hidden w-12 h-12 md:w-24 md:h-24">
                               <Image
                                 src={urlForImage(index.thumbnail)
                                   .width(1080)
@@ -158,10 +158,10 @@ export default function TestimonialsSlider({ testimonials }) {
                               />
                             </div>
                             <div className="ml-4 lg:ml-0">
-                              <div className="text-base font-medium text-gray-900">
+                              <div className="text-base md:text-2xl lg:text-lg font-medium text-neutral-900">
                                 {index.name}
                               </div>
-                              <div className="text-base font-medium text-brand-600">
+                              <div className="text-base md:text-2xl lg:text-lg font-medium text-brand-600">
                                 {index.origin}, {index.age}
                               </div>
                             </div>

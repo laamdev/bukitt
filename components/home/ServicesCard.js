@@ -30,9 +30,9 @@ export default function ServicesCard({
           <Overlay />
 
           <div className="absolute tw-center w-full px-3 sm:px-4 lg:px-6 py-3 sm:py-6 text-center">
-            <h3 className="text-4xl sm:text-5xl lg:text-7xl font-mono text-white font-medium uppercase">
+            <h4 className="text-4xl sm:text-5xl lg:text-7xl font-mono text-white font-medium uppercase">
               {title}
-            </h3>
+            </h4>
             <p className="text-neutral-100 text-lg lg:text-2xl">
               {description}
             </p>

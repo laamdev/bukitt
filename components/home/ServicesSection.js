@@ -9,7 +9,7 @@ export default function ServicesSection({
   return (
     <section className="tw-section max-w-7xl mx-auto">
       <SectionHeading passedClassName="text-center">{heading}</SectionHeading>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 md:gap-y-0 md:gap-x-6 lg:gap-x-12">
         <ServicesCard
           title={experiencesCard?.title}
           description={experiencesCard?.description}

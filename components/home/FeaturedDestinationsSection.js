@@ -11,7 +11,7 @@ export default function FeaturedDestinationsSection({
       <SectionHeading passedClassName="text-center">{heading}</SectionHeading>
       <ul
         role="list"
-        className="mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-x-12"
+        className="mx-auto grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12 lg:gap-x-12"
       >
         {featuredDestinations.map((destination) => (
           <FeaturedDestinationCard
@@ -23,7 +23,7 @@ export default function FeaturedDestinationsSection({
       </ul>
 
       <div className="flex justify-center mt-6 sm:mt-8 lg:mt-10">
-        <ButtonPrimary btnLinkText="Destinations" btnURL="destinations" />
+        <ButtonPrimary btnLinkText="All Destinations" btnURL="destinations" />
       </div>
     </section>
   );
