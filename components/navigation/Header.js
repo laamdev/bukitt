@@ -9,7 +9,7 @@ import { navLinks } from '@/utils/data';
 
 import Logo from '@/components/navigation/Logo';
 import NavLinksDesktop from '@/components/navigation/NavLinksDesktop';
-import ButtonPrimary from '@/components/shared/buttons/ButtonPrimary';
+import BtnPrimary from '@/components/shared/buttons/BtnPrimary';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -31,7 +31,7 @@ export default function Header() {
               </div>
 
               <div className="hidden lg:ml-4 lg:flex lg:items-center lg:pr-0.5">
-                <ButtonPrimary btnLinkText="Inquire" btnURL="inquiry-form" />
+                <BtnPrimary btnLinkText="Inquire" btnURL="inquiry-form" />
               </div>
 
               <Popover.Button
@@ -86,10 +86,7 @@ export default function Header() {
                 <div className="max-w-7xl mx-auto space-y-12 px-4 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-6 lg:px-8">
                   <div className="flex justify-center">
                     <Popover.Button>
-                      <ButtonPrimary
-                        btnLinkText="Inquire"
-                        btnURL="inquiry-form"
-                      />
+                      <BtnPrimary btnLinkText="Inquire" btnURL="inquiry-form" />
                     </Popover.Button>
                   </div>
                   <ul role="list" className="flex justify-evenly">

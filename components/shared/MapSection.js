@@ -2,6 +2,8 @@ import Image from 'next/image';
 
 import { urlForImage } from '@/lib/sanity';
 
+import SectionHeading from '@/components/shared/SectionHeading';
+
 export default function MapSection({ heading, body, image }) {
   return (
     <section className="tw-section">
@@ -22,7 +24,7 @@ export default function MapSection({ heading, body, image }) {
             )}
           </div>
           <div className="w-full sm:w-1/2 space-y-3">
-            <h3 className="tw-section-heading mb-4">{heading}</h3>
+            <SectionHeading>{heading}</SectionHeading>
             <p className="text-lg sm:text-2xl">{body}</p>
           </div>
         </div>

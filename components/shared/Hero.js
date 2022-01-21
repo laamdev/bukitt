@@ -3,7 +3,7 @@ import { IoPinOutline } from 'react-icons/io5';
 
 import { urlForImage } from '@/lib/sanity';
 
-import ButtonPrimary from '@/components/shared/buttons/ButtonPrimary';
+import BtnPrimaryTransparent from '@/components/shared/buttons/BtnPrimaryTransparent';
 import ButtonSecondary from '@/components/shared/buttons/ButtonSecondary';
 import HeroOverlay from '@/components/shared/overlays/HeroOverlay';
 
@@ -56,7 +56,10 @@ export default function Hero({ hero, guideURL, location, category, page }) {
                 : 'block'
             }`}
           >
-            <ButtonPrimary btnLinkText="Book Now" btnURL="inquiry-form" />
+            <BtnPrimaryTransparent
+              btnLinkText="Book Now"
+              btnURL="inquiry-form"
+            />
             {guideURL && (
               <ButtonSecondary btnLinkText="Download Guide" btnURL={guideURL} />
             )}

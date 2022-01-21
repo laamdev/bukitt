@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Switch } from '@headlessui/react';
 import { useForm } from 'react-hook-form';
 
+import BtnInquiryForm from '@/components/shared/buttons/BtnInquiryForm';
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
@@ -241,7 +243,7 @@ export default function InquiryForm({ destinations, experiences }) {
                   id="product"
                   name="product"
                   {...register('product')}
-                  className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md"
+                  className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md cursor-pointer"
                 >
                   {watchCategory === 'Experience' && (
                     <>
@@ -307,7 +309,7 @@ export default function InquiryForm({ destinations, experiences }) {
                   name="startDate"
                   id="startDate"
                   {...register('startDate', { required: true })}
-                  className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md"
+                  className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md cursor-pointer"
                 />
                 {errors.startDate && (
                   <span role="alert">{errors.startDate.message}</span>
@@ -328,7 +330,7 @@ export default function InquiryForm({ destinations, experiences }) {
                   name="endDate"
                   id="endDate"
                   {...register('endDate', { required: true })}
-                  className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md"
+                  className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md cursor-pointer"
                 />
                 {errors.endDate && (
                   <span role="alert">{errors.endDate.message}</span>
@@ -400,13 +402,11 @@ export default function InquiryForm({ destinations, experiences }) {
               </div>
             </div>
             <div className="sm:col-span-2 mx-auto">
-              <button
-                type="submit"
+              <BtnInquiryForm
                 disabled={submitting || agreed === false}
-                className="inline-flex mx-auto w-fit-content items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-brand-600 hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 tw-transition disabled:opacity-50 disabled:hover:bg-brand-600"
-              >
-                Let&apos;s talk
-              </button>
+                btnLinkText="Let's Talk"
+              />
+
               <div className="flex justify-center">
                 {serverError && <span className="mt-6">{serverError}</span>}
                 {success && <span className="mt-6 text-sm ">👌 {success}</span>}

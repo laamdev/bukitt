@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import BtnNewsletter from '@/components/shared/buttons/BtnNewsletter';
 
 export default function Newsletter() {
   const [serverError, setServerError] = useState('');
@@ -74,13 +75,7 @@ export default function Newsletter() {
         </div>
 
         <div className="mt-6 rounded-md sm:shrink-0 w-fit-content">
-          <button
-            type="submit"
-            disabled={submitting}
-            className="inline-flex mx-auto w-fit-content items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-brand-600 hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 tw-transition disabled:opacity-50 disabled:hover:bg-brand-600"
-          >
-            Subscribe
-          </button>
+          <BtnNewsletter btnLinkText="Subscribe" disabled={submitting} />
         </div>
       </form>
     </div>
