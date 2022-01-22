@@ -9,12 +9,14 @@ export default function AboutSection({ heading, body, image }) {
   return (
     <section className="tw-section">
       <div className="max-w-6xl mx-auto flex flex-col space-y-3 lg:space-y-0 lg:flex-row lg:space-x-24">
-        <div className="w-full sm:w-1/2">
-          <SectionHeading>{heading}</SectionHeading>
-          <Body>{body}</Body>
+        <div className="w-full lg:w-1/2">
+          <SectionHeading passedClassName="text-center">
+            {heading}
+          </SectionHeading>
+          <Body passedClassName="text-center">{body}</Body>
         </div>
 
-        <div className="w-full sm:w-1/2 rounded-2xl shadow">
+        <div className="w-full lg:w-1/2 rounded-2xl shadow">
           {image && (
             <Image
               src={urlForImage(image).width(1080).height(1080).url()}

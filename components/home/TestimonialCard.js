@@ -41,7 +41,7 @@ export default function TestimonialCard({ testimonial }) {
                 <span className="">{testimonial.origin}</span>
               </div>
 
-              <div className="text-base text-gray-500"></div>
+              <div className="text-base text-neutral-500"></div>
             </div>
           </div>
         </footer>

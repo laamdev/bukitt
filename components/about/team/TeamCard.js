@@ -7,7 +7,6 @@ import PlaneDepartureIcon from '@/components/shared/icons/PlaneDeparture';
 import Divider from '@/components/shared/Divider';
 
 export default function TeamCard({ teamMember }) {
-  console.log(JSON.stringify(teamMember, null, 2));
   return (
     <li className="text-center">
       <div>

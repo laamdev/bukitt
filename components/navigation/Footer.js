@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import {
-  socialLinks,
+  socialLinksFooter,
   contactLinks,
   navLinks,
   copyright,
@@ -51,16 +51,16 @@ export default function Footer() {
                   Socials
                 </h4>
                 <ul role="list" className="mt-4 space-y-4">
-                  {socialLinks.map((social) => (
+                  {socialLinksFooter.map((social) => (
                     <li key={social.name}>
                       <a
                         href={social.href}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-neutral-400 hover:text-neutral-300 tw-transition"
+                        className="text-neutral-400 hover:text-neutral-300 tw-transition "
                       >
                         <span className="sr-only">{social.name}</span>
-                        {social.icon}
+                        <span className="w-12 h-12">{social.icon}</span>
                       </a>
                     </li>
                   ))}

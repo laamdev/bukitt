@@ -104,7 +104,7 @@ export default function TestimonialsSlider({ testimonials }) {
                   </svg>
 
                   <div className="relative lg:flex lg:items-center">
-                    <div className="hidden lg:block lg:shrink-0 relative h-64 w-64 rounded-full xl:h-80 xl:w-80">
+                    <div className="hidden lg:block lg:shrink-0 relative h-64 lg:h-80 w-64 lg:w-80 rounded-full">
                       <Image
                         src={urlForImage(index.thumbnail)
                           .width(1080)
@@ -137,12 +137,12 @@ export default function TestimonialsSlider({ testimonials }) {
                             {index.destination}
                           </h4>
                         </div>
-                        <div className="mt-4 text-xl md:text-3xl lg:text-2xl leading-7 font-medium text-neutral-900">
+                        <div className="mt-4 text-xl md:text-2xl lg:text-2xl leading-7 font-medium text-neutral-900">
                           <p>{index.quote}</p>
                         </div>
                         <footer className="mt-8">
-                          <div className="flex">
-                            <div className="shrink-0 lg:hidden w-12 h-12 md:w-24 md:h-24">
+                          <div className="flex items-center">
+                            <div className="shrink-0 lg:hidden w-16 h-16 md:w-24 md:h-24">
                               <Image
                                 src={urlForImage(index.thumbnail)
                                   .width(1080)
@@ -157,11 +157,11 @@ export default function TestimonialsSlider({ testimonials }) {
                                 className="rounded-full"
                               />
                             </div>
-                            <div className="ml-4 lg:ml-0">
-                              <div className="text-base md:text-2xl lg:text-lg font-medium text-neutral-900">
+                            <div className="ml-4 md:ml-6 lg:ml-0">
+                              <div className="text-base md:text-xl lg:text-lg font-medium text-neutral-900">
                                 {index.name}
                               </div>
-                              <div className="text-base md:text-2xl lg:text-lg font-medium text-brand-600">
+                              <div className="text-sm md:text-lg lg:text-base font-ligth text-brand-600">
                                 {index.origin}, {index.age}
                               </div>
                             </div>

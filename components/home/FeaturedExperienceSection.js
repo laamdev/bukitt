@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { urlForImage } from '@/lib/sanity';
 import { currentMonth } from '@/utils/data';
 
-import BtnFeaturedExperience from '@/components/shared/buttons/BtnFeaturedExperience';
+import BtnNav from '@/components/shared/buttons/BtnNav';
 import SectionHeading from '@/components/shared/SectionHeading';
 
 export default function FeaturedExperienceSection({
@@ -130,9 +130,10 @@ export default function FeaturedExperienceSection({
                 </p>
               </div>
               <div className="mt-6">
-                <BtnFeaturedExperience
+                <BtnNav
                   btnLinkText="Learn More"
                   btnURL={`experiences/${featuredExperience?.slug}`}
+                  secondary
                 />
               </div>
             </div>

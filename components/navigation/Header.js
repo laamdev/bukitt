@@ -1,15 +1,14 @@
-/* This example requires Tailwind CSS v2.0+ */
 import Link from 'next/link';
 import { Fragment } from 'react';
 
 import { Popover, Transition } from '@headlessui/react';
 import { XIcon, MenuIcon } from '@heroicons/react/outline';
-import { socialLinks } from '@/utils/data';
+import { socialLinkMobileMenu } from '@/utils/data';
 import { navLinks } from '@/utils/data';
 
 import Logo from '@/components/navigation/Logo';
 import NavLinksDesktop from '@/components/navigation/NavLinksDesktop';
-import BtnPrimary from '@/components/shared/buttons/BtnPrimary';
+import BtnNav from '@/components/shared/buttons/BtnNav';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -31,13 +30,13 @@ export default function Header() {
               </div>
 
               <div className="hidden lg:ml-4 lg:flex lg:items-center lg:pr-0.5">
-                <BtnPrimary btnLinkText="Inquire" btnURL="inquiry-form" />
+                <BtnNav btnLinkText="Inquire" btnURL="inquiry-form" primary />
               </div>
 
               <Popover.Button
                 className={classNames(
-                  open ? 'text-gray-900' : 'text-gray-500',
-                  'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 lg:hidden'
+                  open ? 'text-neutral-900' : 'text-neutral-500',
+                  'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 lg:hidden'
                 )}
               >
                 <span className="sr-only">Open main menu</span>
@@ -48,8 +47,8 @@ export default function Header() {
                 )}{' '}
                 {/* <ChevronDownIcon
                   className={classNames(
-                    open ? 'text-gray-600' : 'text-gray-400',
-                    'ml-2 h-5 w-5 group-hover:text-gray-500'
+                    open ? 'text-neutral-600' : 'text-neutral-400',
+                    'ml-2 h-5 w-5 group-hover:text-neutral-500'
                   )}
                   aria-hidden="true"
                 /> */}
@@ -69,28 +68,36 @@ export default function Header() {
           >
             <Popover.Panel className="absolute z-10 inset-x-0 transform shadow-lg">
               <div className="bg-white">
-                <div className="max-w-7xl mx-auto grid gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16">
-                  {navLinks.map((item) => (
-                    <Link href={item.href} key={item.name}>
-                      <a>
-                        <Popover.Button className="text-3xl font-medium">
-                          {item.name}
-                        </Popover.Button>
-                      </a>
-                    </Link>
-                  ))}
+                <div className="max-w-7xl mx-auto px-4 py-12 md:py-24 text-center">
+                  <ul className="space-y-6 md:space-y-12">
+                    {navLinks.map((item) => (
+                      <li key={item.name}>
+                        <Link href={item.href}>
+                          <a>
+                            <Popover.Button className="text-3xl md:text-6xl font-mono font-medium uppercase">
+                              {item.name}
+                            </Popover.Button>
+                          </a>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
 
-              <div className="bg-gray-50">
-                <div className="max-w-7xl mx-auto space-y-12 px-4 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-6 lg:px-8">
+              <div className="bg-neutral-50">
+                <div className="max-w-7xl mx-auto space-y-12 px-4 py-5">
                   <div className="flex justify-center">
                     <Popover.Button>
-                      <BtnPrimary btnLinkText="Inquire" btnURL="inquiry-form" />
+                      <BtnNav
+                        btnLinkText="Inquire"
+                        btnURL="inquiry-form"
+                        primary
+                      />
                     </Popover.Button>
                   </div>
                   <ul role="list" className="flex justify-evenly">
-                    {socialLinks.map((social) => (
+                    {socialLinkMobileMenu.map((social) => (
                       <li key={social.name}>
                         <a
                           href={social.href}
@@ -98,7 +105,7 @@ export default function Header() {
                           rel="noreferrer"
                           className="text-neutral-700 hover:text-neutral-500 tw-transition"
                         >
-                          <Popover.Button>
+                          <Popover.Button className="w-6 h-6 md:w-12 md:h-12">
                             <span className="sr-only">{social.name}</span>
                             {social.icon}
                           </Popover.Button>

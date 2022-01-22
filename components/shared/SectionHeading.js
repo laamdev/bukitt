@@ -1,7 +1,7 @@
 export default function SectionHeading({ passedClassName, children }) {
   return (
     <h3
-      className={`text-3xl sm:text-5xl lg:text-6xl font-bold mb-12 ${passedClassName}`}
+      className={`mb-6 text-4xl md:text-5xl lg:text-6xl font-bold ${passedClassName}`}
     >
       {children}
     </h3>

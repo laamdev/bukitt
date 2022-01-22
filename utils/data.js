@@ -13,21 +13,45 @@ export const navLinks = [
   { name: 'Blog', href: '/blog' },
 ];
 
-export const socialLinks = [
+export const socialLinksFooter = [
   {
     name: 'Instagram',
     href: 'https://www.instagram.com/bukitttravel/?hl=en',
-    icon: <IoLogoInstagram className="w-6 h-6 " aria-hidden="true" />,
+    icon: <IoLogoInstagram aria-hidden="true" />,
   },
   {
     name: 'Facebook',
     href: 'https://www.facebook.com/bukitttravel/',
-    icon: <IoLogoFacebook className="w-6 h-6" aria-hidden="true" />,
+    icon: <IoLogoFacebook aria-hidden="true" />,
   },
   {
     name: 'Twitter',
     href: 'https://twitter.com/bukitttravel',
-    icon: <IoLogoTwitter className="w-6 h-6" aria-hidden="true" />,
+    icon: <IoLogoTwitter aria-hidden="true" />,
+  },
+];
+
+export const socialLinkMobileMenu = [
+  {
+    name: 'Instagram',
+    href: 'https://www.instagram.com/bukitttravel/?hl=en',
+    icon: (
+      <IoLogoInstagram className="w-6 h-6 md:w-12 md:h-12" aria-hidden="true" />
+    ),
+  },
+  {
+    name: 'Facebook',
+    href: 'https://www.facebook.com/bukitttravel/',
+    icon: (
+      <IoLogoFacebook className="w-6 h-6 md:w-12 md:h-12" aria-hidden="true" />
+    ),
+  },
+  {
+    name: 'Twitter',
+    href: 'https://twitter.com/bukitttravel',
+    icon: (
+      <IoLogoTwitter className="w-6 h-6 md:w-12 md:h-12" aria-hidden="true" />
+    ),
   },
 ];
 

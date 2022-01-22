@@ -16,12 +16,12 @@ export default function AboutPage({ aboutData }) {
         body={aboutData?.aboutUsSection?.body}
         image={aboutData?.aboutUsSection?.image}
       />
-      <TeamQuote quoteSection={aboutData?.quoteSection} />
       <TeamSection
         heading={aboutData?.teamSection?.heading}
         body={aboutData?.teamSection?.body}
         team={aboutData?.teamSection?.team}
       />
+      <TeamQuote quoteSection={aboutData?.quoteSection} />
     </Layout>
   );
 }

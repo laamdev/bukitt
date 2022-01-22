@@ -15,7 +15,7 @@ export default function TeamQuote({ quoteSection }) {
               className="absolute inset-x-0 top-0 h-1/2 lg:hidden bg-white"
             />
             <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full">
-              <div className="bg-gray-500 rounded-2xl shadow-xl overflow-hidden">
+              <div className="bg-neutral-500 rounded-2xl shadow-xl overflow-hidden">
                 <Image
                   src={urlForImage(quoteSection?.profilePicture)
                     .width(1080)

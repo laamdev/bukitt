@@ -3,8 +3,8 @@ import { IoPinOutline } from 'react-icons/io5';
 
 import { urlForImage } from '@/lib/sanity';
 
-import BtnPrimaryTransparent from '@/components/shared/buttons/BtnPrimaryTransparent';
-import ButtonSecondary from '@/components/shared/buttons/ButtonSecondary';
+import BtnNav from '@/components/shared/buttons/BtnNav';
+import BtnDownload from '@/components/shared/buttons/BtnDownload';
 import HeroOverlay from '@/components/shared/overlays/HeroOverlay';
 
 export default function Hero({ hero, guideURL, location, category, page }) {
@@ -28,7 +28,7 @@ export default function Hero({ hero, guideURL, location, category, page }) {
         </div>
 
         <div className="max-w-6xl mx-auto relative px-1 sm:px-3 py-12 sm:py-14 lg:py-16 text-center">
-          <div className="text-brand-200 text-sm sm:text-xl lg:text-2xl font-mono font-thin uppercase tracking-widest">
+          <div className="text-brand-200 text-sm md:text-lg lg:text-xl font-mono font-thin uppercase tracking-widest">
             <h2 className="flex justify-center">
               {hero?.tagline && <span>{hero?.tagline}</span>}
               {category && <span>{category}</span>}
@@ -45,7 +45,7 @@ export default function Hero({ hero, guideURL, location, category, page }) {
             {hero?.heading}
           </h1>
 
-          <p className="max-w-lg lg:max-w-3xl mx-auto mt-3 text-lg sm:text-2xl lg:text-3xl text-white opacity-80">
+          <p className="max-w-lg lg:max-w-3xl mx-auto mt-3 text-xl md:text-2xl lg:text-3xl text-white opacity-80">
             {hero?.body}
           </p>
 
@@ -56,12 +56,13 @@ export default function Hero({ hero, guideURL, location, category, page }) {
                 : 'block'
             }`}
           >
-            <BtnPrimaryTransparent
-              btnLinkText="Book Now"
-              btnURL="inquiry-form"
-            />
+            <BtnNav btnLinkText="Book Now" btnURL="inquiry-form" secondary />
             {guideURL && (
-              <ButtonSecondary btnLinkText="Download Guide" btnURL={guideURL} />
+              <BtnDownload
+                btnLinkText="Download Guide"
+                btnURL={guideURL}
+                secondary
+              />
             )}
           </div>
         </div>
