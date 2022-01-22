@@ -17,17 +17,32 @@ export const socialLinksFooter = [
   {
     name: 'Instagram',
     href: 'https://www.instagram.com/bukitttravel/?hl=en',
-    icon: <IoLogoInstagram aria-hidden="true" />,
+    icon: (
+      <IoLogoInstagram
+        aria-hidden="true"
+        className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"
+      />
+    ),
   },
   {
     name: 'Facebook',
     href: 'https://www.facebook.com/bukitttravel/',
-    icon: <IoLogoFacebook aria-hidden="true" />,
+    icon: (
+      <IoLogoFacebook
+        aria-hidden="true"
+        className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"
+      />
+    ),
   },
   {
     name: 'Twitter',
     href: 'https://twitter.com/bukitttravel',
-    icon: <IoLogoTwitter aria-hidden="true" />,
+    icon: (
+      <IoLogoTwitter
+        aria-hidden="true"
+        className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"
+      />
+    ),
   },
 ];
 
@@ -59,12 +74,22 @@ export const contactLinks = [
   {
     name: 'Email',
     href: 'mailto:hello@bukitt.com',
-    icon: <IoMailOutline className="w-6 h-6 " aria-hidden="true" />,
+    icon: (
+      <IoMailOutline
+        aria-hidden="true"
+        className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"
+      />
+    ),
   },
   {
     name: 'Phone',
     href: 'tel:3059986034',
-    icon: <IoCallOutline className="w-6 h-6" aria-hidden="true" />,
+    icon: (
+      <IoCallOutline
+        aria-hidden="true"
+        className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"
+      />
+    ),
   },
 ];
 

@@ -60,7 +60,9 @@ export default function Footer() {
                         className="text-neutral-400 hover:text-neutral-300 tw-transition "
                       >
                         <span className="sr-only">{social.name}</span>
-                        <span className="w-12 h-12">{social.icon}</span>
+                        <span className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10">
+                          {social.icon}
+                        </span>
                       </a>
                     </li>
                   ))}
@@ -81,7 +83,9 @@ export default function Footer() {
                         className="text-neutral-400 hover:text-neutral-300 tw-transition"
                       >
                         <span className="sr-only">{contact.name}</span>
-                        {contact.icon}
+                        <span className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10">
+                          {contact.icon}
+                        </span>
                       </a>
                     </li>
                   ))}
