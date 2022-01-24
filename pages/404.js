@@ -34,7 +34,7 @@ export default function ErrorPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Contact support
+                    Contact us!
                   </a>
                 </button>
               </div>
