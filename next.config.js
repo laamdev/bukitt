@@ -10,7 +10,7 @@ module.exports = {
   rewrites: () => [STUDIO_REWRITE],
   reactStrictMode: true,
   images: {
-    domains: ['assets.vercel.com', 'cdn.sanity.io'],
+    domains: ['assets.vercel.com', 'cdn.sanity.io', 'www.facebook.com'],
   },
   async headers() {
     return [

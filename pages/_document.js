@@ -135,7 +135,7 @@ export default class MyDocument extends Document {
               height={1}
               width={1}
               alt="fpixel"
-              classNAme="hidden"
+              className="hidden"
               layout="intrinsic"
               src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`}
             />

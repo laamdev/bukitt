@@ -7,8 +7,8 @@ export default function BtnDownload({
   secondary,
 }) {
   return (
-    <button
-      type="button"
+    <a
+      href={`${btnURL}?dl=`}
       className={classNames(
         primary &&
           'border-brand text-brand bg-transparent hover:bg-brand hover:text-white',
@@ -17,7 +17,7 @@ export default function BtnDownload({
         'tw-btn'
       )}
     >
-      <a href={`${btnURL}?dl=`}>{btnLinkText}</a>
-    </button>
+      {btnLinkText}
+    </a>
   );
 }

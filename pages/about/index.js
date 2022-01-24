@@ -9,7 +9,10 @@ import TeamQuote from '@/components/about/TeamQuote';
 
 export default function AboutPage({ aboutData }) {
   return (
-    <Layout title={''} description={''}>
+    <Layout
+      title={aboutData?.hero?.heading}
+      description={aboutData?.hero?.body}
+    >
       <Hero hero={aboutData?.hero} page="about" />
       <AboutSection
         heading={aboutData?.aboutUsSection?.heading}
