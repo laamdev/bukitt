@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function ErrorPage() {
+export default function Custom404() {
   return (
     <>
       <div className="min-h-screen px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8">
