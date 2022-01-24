@@ -1,4 +1,6 @@
+import Image from 'next/image';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { FB_PIXEL_ID } from '@/lib/fpixel';
 
 export default class MyDocument extends Document {
   render() {
@@ -81,14 +83,14 @@ export default class MyDocument extends Document {
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
-          />{' '}
+          />
           <link
             rel="preload"
             href="/fonts/fuji/fuji-medium.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
-          />{' '}
+          />
           <link
             rel="preload"
             href="/fonts/fuji/fuji-bold.woff2"
@@ -128,6 +130,16 @@ export default class MyDocument extends Document {
           <link rel="manifest" href="/favicons/site.webmanifest" />
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta name="theme-color" content="#ffffff" />
+          <noscript>
+            <Image
+              height={1}
+              width={1}
+              alt="fpixel"
+              classNAme="hidden"
+              layout="intrinsic"
+              src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`}
+            />
+          </noscript>
         </Head>
 
         <body className="bg-white text-dark text-base sm:text-lg lg:text-xl mt-16 sm:mt-20">
