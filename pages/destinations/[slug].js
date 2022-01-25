@@ -31,7 +31,10 @@ export default function DestinationPage({ data = {}, preview }) {
   }
 
   return (
-    <Layout title="" description="">
+    <Layout
+      title={destination?.seo?.title}
+      description={destination?.seo?.description}
+    >
       <Hero
         hero={destination?.hero}
         location={destination?.location}
