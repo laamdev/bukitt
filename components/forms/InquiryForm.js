@@ -405,6 +405,7 @@ export default function InquiryForm({ destinations, experiences }) {
               <BtnInquiryForm
                 disabled={submitting || agreed === false}
                 btnLinkText="Let's Talk"
+                primary
               />
 
               <div className="flex justify-center">

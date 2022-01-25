@@ -19,7 +19,6 @@ export default function Hero({ hero, guideURL, location, category, page }) {
               layout="fill"
               objectFit="cover"
               objectPosition="center"
-              quality={100}
               priority
               className="grayscale rounded-2xl"
             />

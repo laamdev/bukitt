@@ -161,54 +161,7 @@
     @apply focus:ring-neutral-100 h-6 w-6 text-brand border-neutral-300 cursor-pointer hover:border-brand tw-transition;
   }
 
-  .embla {
-    @apply relative rounded-2xl shadow-md py-16 sm:py-20 lg:py-24 bg-neutral-50;
-  }
-
-  .embla__viewport {
-    @apply overflow-hidden w-full;
-  }
-
-  .embla__viewport.is-draggable {
-    @apply cursor-grab;
-  }
-
-  .embla__viewport.is-dragging {
-    @apply cursor-grabbing;
-  }
-
-  .embla__container {
-    -webkit-touch-callout: none;
-    -khtml-user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    @apply flex select-none;
-  }
-
-  .embla__slide {
-    @apply relative px-6 sm:px-12 lg:px-24 min-w-full;
-  }
-
-  .embla__slide__inner {
-    @apply relative overflow-hidden;
-  }
-
-  .embla__button {
-    @apply absolute z-10 top-1/2 -translate-y-1/2 justify-center items-center w-4 h-4 sm:w-6 sm:h-6 lg:w-12 lg:h-12 p-0 text-brand-500 hover:text-brand-400 hover:scale-90 border-none outline-none cursor-pointer touch-manipulation tw-transition;
-  }
-
-  .embla__button:disabled {
-    @apply hover:text-brand-500 cursor-default opacity-30 hover:scale-100;
-  }
-
-  .embla__button__svg {
-    @apply w-full h-full;
-  }
-
-  .embla__button--prev {
-    @apply left-6;
-  }
-
-  .embla__button--next {
-    @apply right-6;
+  .tw-slider-btn {
+    @apply absolute z-10 top-1/2 -translate-y-1/2 justify-center items-center w-10 h-10 md:w-12 md:h-12 lg:w-24 lg:h-24 p-0 text-brand-500 hover:text-brand-400 hover:scale-90 border-none outline-none cursor-pointer touch-manipulation tw-transition disabled:hover:text-brand-500 disabled:hover:scale-100 disabled:cursor-default disabled:opacity-30;
   }
 }

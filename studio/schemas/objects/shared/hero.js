@@ -14,12 +14,20 @@ export default {
       type: 'string',
       title: 'Tagline',
       description: 'Hero tagline.',
+      validation: (Rule) => [
+        Rule.max(50).error('Tagline should be 50 characters max.'),
+      ],
     },
     {
       name: 'body',
       type: 'text',
       title: 'Body',
       description: 'Hero body.',
+      validation: (Rule) => [
+        Rule.max(250).warning(
+          'A shorter body text (less than 250 characters) is usually better.'
+        ),
+      ],
     },
     {
       name: 'coverImage',

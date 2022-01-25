@@ -1,21 +1,21 @@
-import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
+import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 
 export const PrevButton = ({ enabled, onClick }) => (
   <button
-    className="embla__button embla__button--prev"
+    className="tw-slider-btn left-0"
     onClick={onClick}
     disabled={!enabled}
   >
-    <HiChevronLeft className="embla__button__svg" />
+    <BsChevronCompactLeft className="w-full h-full" />
   </button>
 );
 
 export const NextButton = ({ enabled, onClick }) => (
   <button
-    className="embla__button embla__button--next"
+    className="tw-slider-btn right-0"
     onClick={onClick}
     disabled={!enabled}
   >
-    <HiChevronRight className="embla__button__svg" />
+    <BsChevronCompactRight className="w-full h-full" />
   </button>
 );
