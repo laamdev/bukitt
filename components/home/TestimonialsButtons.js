@@ -1,4 +1,4 @@
-import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/hi';
+import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 
 export const PrevButton = ({ enabled, onClick }) => (
   <button
