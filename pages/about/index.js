@@ -15,9 +15,9 @@ export default function AboutPage({ aboutData }) {
     >
       <Hero hero={aboutData?.hero} page="about" />
       <AboutSection
-        heading={aboutData?.aboutUsSection?.heading}
-        body={aboutData?.aboutUsSection?.body}
-        image={aboutData?.aboutUsSection?.image}
+        heading={aboutData?.aboutSection?.heading}
+        body={aboutData?.aboutSection?.body}
+        image={aboutData?.aboutSection?.image}
       />
       <TeamSection
         heading={aboutData?.teamSection?.heading}

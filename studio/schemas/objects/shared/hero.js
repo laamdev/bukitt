@@ -5,24 +5,26 @@ export default {
   fields: [
     {
       name: 'heading',
-      type: 'string',
       title: 'Heading',
-      description: 'Hero heading.',
+      type: 'string',
     },
     {
       name: 'tagline',
-      type: 'string',
       title: 'Tagline',
-      description: 'Hero tagline.',
+      type: 'string',
+      hidden: ({ document }) =>
+        document?._type === 'destination' ||
+        document?._type === 'aboutPage' ||
+        document?._type === 'destinationsPage' ||
+        document?._type === 'experiencesPage',
       validation: (Rule) => [
-        Rule.max(50).error('Tagline should be 50 characters max.'),
+        Rule.max(50).warning('Tagline should be 50 characters max.'),
       ],
     },
     {
       name: 'body',
-      type: 'text',
       title: 'Body',
-      description: 'Hero body.',
+      type: 'text',
       validation: (Rule) => [
         Rule.max(250).warning(
           'A shorter body text (less than 250 characters) is usually better.'
@@ -33,7 +35,6 @@ export default {
       name: 'coverImage',
       title: 'Cover Image',
       type: 'imageCustom',
-      description: 'JPG format and 16:9 aspect ratio.',
     },
   ],
   options: { collapsible: true, collapsed: true },

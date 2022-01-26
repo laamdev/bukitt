@@ -44,8 +44,6 @@ export default function InquiryForm({ destinations, experiences }) {
     setSubmitting(true);
     setServerError('');
 
-    console.log(errors);
-
     const res = await fetch('/api/mail', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

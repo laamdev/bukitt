@@ -4,22 +4,19 @@ export default {
   type: 'object',
   fields: [
     {
-      name: 'heading',
-      title: 'Heading',
+      name: 'sectionHeading',
+      title: 'Section Heading',
       type: 'string',
-      description: 'Services section heading.',
     },
     {
       name: 'experiencesCard',
-      type: 'homeServicesCard',
+      type: 'section',
       title: 'Experiences Card',
-      description: 'Card links to our list of experiences.',
     },
     {
-      name: 'tailoredCard',
-      type: 'homeServicesCard',
-      title: 'Tailored Card',
-      description: 'Card links to our list of destinations.',
+      name: 'destinationsCard',
+      type: 'section',
+      title: 'Destinations Card',
     },
   ],
   options: { collapsible: true, collapsed: true, columns: 1 },

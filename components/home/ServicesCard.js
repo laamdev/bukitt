@@ -7,9 +7,9 @@ import Overlay from '@/components/shared/image/Overlay';
 import BtnNav from '@/components/shared/buttons/BtnNav';
 
 export default function ServicesCard({
-  title,
-  description,
-  imageUrl,
+  heading,
+  body,
+  image,
   btnLinkText,
   btnURL,
 }) {
@@ -18,8 +18,8 @@ export default function ServicesCard({
       <Link href={`/${btnURL}`}>
         <a>
           <Image
-            src={urlForImage(imageUrl).width(1080).height(1350).url()}
-            alt={imageUrl?.alt}
+            src={urlForImage(image).width(1080).height(1350).url()}
+            alt={image?.alt}
             layout="responsive"
             width={4}
             height={5}
@@ -31,11 +31,9 @@ export default function ServicesCard({
 
           <div className="absolute tw-center w-full px-3 sm:px-4 lg:px-6 py-3 sm:py-6 text-center">
             <h4 className="text-4xl sm:text-5xl lg:text-7xl font-mono text-white font-medium uppercase">
-              {title}
+              {heading}
             </h4>
-            <p className="text-neutral-100 text-lg lg:text-2xl">
-              {description}
-            </p>
+            <p className="text-neutral-100 text-lg lg:text-2xl">{body}</p>
             <div className="mt-6 flex justify-center">
               <BtnNav btnLinkText={btnLinkText} btnURL={btnURL} secondary />
             </div>

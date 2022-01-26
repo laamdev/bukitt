@@ -13,7 +13,6 @@ export default {
       name: 'title',
       type: 'string',
       title: 'Title',
-      description: 'Home page title.',
       validation: (Rule) => [
         Rule.required()
           .min(2)
@@ -27,7 +26,6 @@ export default {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
-      description: 'Home page slug.',
       options: {
         source: 'title',
         maxLength: 30,
@@ -40,49 +38,41 @@ export default {
       name: 'hero',
       type: 'hero',
       title: 'Hero',
-      description: 'Home page hero.',
     },
     {
       name: 'servicesSection',
       type: 'homeServicesSection',
       title: 'Services Section',
-      description: 'Home page services section.',
     },
     {
       name: 'featuredDestinationsSection',
-      type: 'section',
+      type: 'homeFeaturedDestinationsSection',
       title: 'Featured Destinations Section',
-      description: 'Home page featured destinations section.',
     },
     {
       name: 'featuredExperienceSection',
       type: 'homeFeaturedExperienceSection',
       title: 'Featured Experience Section',
-      description: 'Home page featured experience section.',
     },
     {
       name: 'featuresSection',
       type: 'homeFeaturesSection',
       title: 'Features Section',
-      description: 'Home page features section.',
     },
     {
       name: 'testimonialsSection',
       type: 'homeTestimonialsSection',
       title: 'Testimonials Section',
-      description: 'Home page testimonials section.',
     },
     {
       name: 'partnersSection',
       type: 'section',
       title: 'Partners Section',
-      description: 'Home page partners section.',
     },
     {
       name: 'seo',
       type: 'seo',
       title: 'SEO',
-      description: 'Page meta info for SEO.',
     },
   ],
 };

@@ -7,9 +7,6 @@ export default {
   type: 'document',
   title: 'Destination',
   icon: IoMapOutline,
-  initialValue: () => ({
-    featured: false,
-  }),
   fields: [
     {
       name: 'name',
@@ -37,12 +34,6 @@ export default {
       validation: (Rule) => [
         Rule.required().error('A slug is required and must be generated.'),
       ],
-    },
-    {
-      name: 'featured',
-      type: 'boolean',
-      title: 'Featured',
-      description: 'Destination featured in the homepage.',
     },
     {
       name: 'category',

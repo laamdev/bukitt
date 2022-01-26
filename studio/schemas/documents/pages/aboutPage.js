@@ -42,8 +42,8 @@ export default {
       type: 'hero',
     },
     {
-      name: 'aboutUsSection',
-      title: 'About Us Section',
+      name: 'aboutSection',
+      title: 'About Section',
       type: 'section',
     },
     {

@@ -4,25 +4,25 @@ import SectionHeading from '@/components/shared/SectionHeading';
 export default function ServicesSection({
   heading,
   experiencesCard,
-  tailoredCard,
+  destinationsCard,
 }) {
   return (
     <section className="tw-section max-w-7xl mx-auto">
       <SectionHeading passedClassName="text-center">{heading}</SectionHeading>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-y-0 md:gap-x-6 lg:gap-x-12">
         <ServicesCard
-          title={experiencesCard?.title}
-          description={experiencesCard?.description}
-          imageUrl={experiencesCard?.image}
+          heading={experiencesCard?.heading}
+          body={experiencesCard?.body}
+          image={experiencesCard?.image}
           btnLinkText={experiencesCard?.callToAction?.linkText}
           btnURL={experiencesCard?.callToAction?.url}
         />
         <ServicesCard
-          title={tailoredCard?.title}
-          description={tailoredCard?.description}
-          imageUrl={tailoredCard?.image}
-          btnLinkText={tailoredCard?.callToAction?.linkText}
-          btnURL={tailoredCard?.callToAction?.url}
+          heading={destinationsCard?.heading}
+          body={destinationsCard?.body}
+          image={destinationsCard?.image}
+          btnLinkText={destinationsCard?.callToAction?.linkText}
+          btnURL={destinationsCard?.callToAction?.url}
         />
       </div>
     </section>

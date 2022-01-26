@@ -5,9 +5,6 @@ export default {
   type: 'document',
   title: 'Experience',
   icon: IoPinOutline,
-  initialValue: () => ({
-    featured: false,
-  }),
   fields: [
     {
       name: 'name',
@@ -59,6 +56,11 @@ export default {
       title: 'Details',
     },
     {
+      name: 'mapSection',
+      type: 'section',
+      title: 'Map Section',
+    },
+    {
       name: 'featuresSection',
       type: 'experienceFeaturesSection',
       title: 'Features Section',
@@ -67,12 +69,6 @@ export default {
       name: 'itinerarySection',
       type: 'experienceItinerarySection',
       title: 'Itinerary Section',
-    },
-    {
-      name: 'mapSection',
-      type: 'section',
-      title: 'Map Section',
-      description: 'Map section of the experience page.',
     },
     {
       name: 'accommodationSection',

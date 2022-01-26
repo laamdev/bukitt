@@ -19,9 +19,15 @@ export default {
       title: 'Image',
     },
     {
+      name: 'toggleCTA',
+      type: 'boolean',
+      title: 'With CTA?',
+    },
+    {
       name: 'callToAction',
       type: 'callToAction',
       title: 'Call To Action',
+      hidden: ({ parent }) => !parent?.toggleCTA,
     },
   ],
   options: { collapsible: true, collapsed: true, columns: 1 },
