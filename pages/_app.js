@@ -14,7 +14,9 @@ import '@/styles/tailwind.css';
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
-  const url = `https://bukitt.com${router.route}`;
+  console.log(router.asPath);
+
+  const url = `https://bukitt.com${router.asPath}`;
 
   useEffect(() => {
     fbq.pageview();
