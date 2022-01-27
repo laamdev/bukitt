@@ -1,5 +1,5 @@
 import { inquiryFormPageQuery } from '@/lib/queries';
-import { getClient } from '@/lib/sanity.server';
+import { sanityClient } from '@/lib/sanity.server';
 
 import Layout from '@/components/navigation/Layout';
 import Hero from '@/components/shared/Hero';
@@ -26,7 +26,7 @@ export default function InquiryFormPage({ inquiryFormPageData }) {
 }
 
 export async function getStaticProps() {
-  const inquiryFormPageData = await getClient().fetch(inquiryFormPageQuery);
+  const inquiryFormPageData = await sanityClient.fetch(inquiryFormPageQuery);
 
   return {
     props: { inquiryFormPageData },

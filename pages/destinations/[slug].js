@@ -1,35 +1,15 @@
-import { useRouter } from 'next/router';
-import ErrorPage from 'next/error';
-
+import { sanityClient } from '@/lib/sanity.server';
 import {
   individualDestinationQuery,
   destinationsPathsQuery,
 } from '@/lib/queries';
-import { usePreviewSubscription } from '@/lib/sanity';
-import { sanityClient, getClient } from '@/lib/sanity.server';
 
 import Layout from '@/components/navigation/Layout';
 import HighlightsSection from '@/components/destination/highlight/HighlightSection';
 import MapSection from '@/components/shared/MapSection';
 import Hero from '@/components/shared/Hero';
 
-export default function DestinationPage({ data = {}, preview }) {
-  const router = useRouter();
-
-  const slug = data?.destination?.slug;
-
-  const {
-    data: { destination },
-  } = usePreviewSubscription(individualDestinationQuery, {
-    params: { slug },
-    initialData: data,
-    enabled: preview && slug,
-  });
-
-  if (!router.isFallback && !slug) {
-    return <ErrorPage statusCode={404} />;
-  }
-
+export default function DestinationPage({ destination }) {
   return (
     <Layout
       title={destination?.seo?.title}
@@ -65,24 +45,18 @@ export async function getStaticPaths() {
 
   return {
     paths: paths.map((slug) => ({ params: { slug } })),
-    fallback: true,
+    fallback: 'blocking',
   };
 }
 
-export async function getStaticProps({ params, preview = false }) {
-  const { destination } = await getClient(preview).fetch(
-    individualDestinationQuery,
-    {
-      slug: params.slug,
-    }
-  );
+export async function getStaticProps({ params }) {
+  const { destination } = await sanityClient.fetch(individualDestinationQuery, {
+    slug: params.slug,
+  });
 
   return {
     props: {
-      preview,
-      data: {
-        destination,
-      },
+      destination,
     },
   };
 }

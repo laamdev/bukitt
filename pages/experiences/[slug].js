@@ -1,12 +1,8 @@
-import { useRouter } from 'next/router';
-import ErrorPage from 'next/error';
-
+import { sanityClient } from '@/lib/sanity.server';
 import {
   individualExperienceQuery,
   experiencesPathsQuery,
 } from '@/lib/queries';
-import { usePreviewSubscription } from '@/lib/sanity';
-import { sanityClient, getClient } from '@/lib/sanity.server';
 
 import Layout from '@/components/navigation/Layout';
 import MapSection from '@/components/shared/MapSection';
@@ -17,23 +13,7 @@ import FeaturesSection from '@/components/shared/features/FeaturesSection';
 import ItinerarySection from '@/components/experience/itinerary/ItinerarySection';
 import Hero from '@/components/shared/Hero';
 
-export default function ExperiencePage({ data = {}, preview }) {
-  const router = useRouter();
-
-  const slug = data?.experience?.slug;
-
-  const {
-    data: { experience },
-  } = usePreviewSubscription(individualExperienceQuery, {
-    params: { slug },
-    initialData: data,
-    enabled: preview && slug,
-  });
-
-  if (!router.isFallback && !slug) {
-    return <ErrorPage statusCode={404} />;
-  }
-
+export default function ExperiencePage({ experience }) {
   return (
     <Layout
       title={experience?.seo?.title ? experience?.seo?.title : ''}
@@ -95,24 +75,18 @@ export async function getStaticPaths() {
 
   return {
     paths: paths.map((slug) => ({ params: { slug } })),
-    fallback: true,
+    fallback: 'blocking',
   };
 }
 
-export async function getStaticProps({ params, preview = false }) {
-  const { experience } = await getClient(preview).fetch(
-    individualExperienceQuery,
-    {
-      slug: params.slug,
-    }
-  );
+export async function getStaticProps({ params }) {
+  const { experience } = await sanityClient.fetch(individualExperienceQuery, {
+    slug: params.slug,
+  });
 
   return {
     props: {
-      preview,
-      data: {
-        experience,
-      },
+      experience,
     },
   };
 }

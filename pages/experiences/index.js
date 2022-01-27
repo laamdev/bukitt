@@ -1,5 +1,5 @@
 import { experiencesPageQuery } from '@/lib/queries';
-import { getClient } from '@/lib/sanity.server';
+import { sanityClient } from '@/lib/sanity.server';
 
 import Layout from '@/components/navigation/Layout';
 import Hero from '@/components/shared/Hero';
@@ -46,7 +46,7 @@ export default function ExperiencesPage({ experiencesPageData }) {
 }
 
 export async function getStaticProps() {
-  const experiencesPageData = await getClient().fetch(experiencesPageQuery);
+  const experiencesPageData = await sanityClient.fetch(experiencesPageQuery);
   return {
     props: { experiencesPageData },
   };

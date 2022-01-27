@@ -1,31 +1,11 @@
-import { useRouter } from 'next/router';
-import ErrorPage from 'next/error';
-
+import { sanityClient } from '@/lib/sanity.server';
 import { blogPostPathsQuery, individualBlogPostQuery } from '@/lib/queries';
-import { usePreviewSubscription } from '@/lib/sanity';
-import { sanityClient, getClient } from '@/lib/sanity.server';
 
 import Layout from '@/components/navigation/Layout';
 import TextBody from '@/components/shared/TextBody';
 import Hero from '@/components/blog/Hero';
 
-export default function PostPage({ data = {}, preview }) {
-  const router = useRouter();
-
-  const slug = data?.blogPost?.slug;
-
-  const {
-    data: { blogPost },
-  } = usePreviewSubscription(individualBlogPostQuery, {
-    params: { slug },
-    initialData: data,
-    enabled: preview && slug,
-  });
-
-  if (!router.isFallback && !slug) {
-    return <ErrorPage statusCode={404} />;
-  }
-
+export default function BlogPostPage({ blogPost }) {
   return (
     <Layout title="" description="">
       <Hero
@@ -49,21 +29,18 @@ export async function getStaticPaths() {
 
   return {
     paths: paths.map((slug) => ({ params: { slug } })),
-    fallback: true,
+    fallback: 'blocking',
   };
 }
 
-export async function getStaticProps({ params, preview = false }) {
-  const { blogPost } = await getClient(preview).fetch(individualBlogPostQuery, {
+export async function getStaticProps({ params }) {
+  const { blogPost } = await sanityClient.fetch(individualBlogPostQuery, {
     slug: params.slug,
   });
 
   return {
     props: {
-      preview,
-      data: {
-        blogPost,
-      },
+      blogPost,
     },
   };
 }

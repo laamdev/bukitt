@@ -1,5 +1,5 @@
 import { homePageQuery } from '@/lib/queries';
-import { getClient } from '@/lib/sanity.server';
+import { sanityClient } from '@/lib/sanity.server';
 
 import Hero from '@/components/shared/Hero';
 import FeaturesSection from '@/components/shared/features/FeaturesSection';
@@ -52,7 +52,7 @@ export default function HomePage({ homeData }) {
 }
 
 export async function getStaticProps({ preview = false }) {
-  const homeData = await getClient(preview).fetch(homePageQuery);
+  const homeData = await sanityClient.fetch(homePageQuery);
 
   return {
     props: { homeData, preview },

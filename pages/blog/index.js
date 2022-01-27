@@ -1,5 +1,5 @@
 import { blogPageQuery } from '@/lib/queries';
-import { getClient } from '@/lib/sanity.server';
+import { sanityClient } from '@/lib/sanity.server';
 
 import Layout from '@/components/navigation/Layout';
 import Hero from '@/components/shared/Hero';
@@ -25,7 +25,7 @@ export default function BlogPage({ blogPageData }) {
 }
 
 export async function getStaticProps({ preview = false }) {
-  const blogPageData = await getClient(preview).fetch(blogPageQuery);
+  const blogPageData = await sanityClient.fetch(blogPageQuery);
   return {
     props: { blogPageData, preview },
   };

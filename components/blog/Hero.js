@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import dayjs from 'dayjs';
 
-import { usePreviewSubscription, urlForImage } from '@/lib/sanity';
+import { urlForImage } from '@/lib/sanity';
 
 export default function Hero({
   title,

@@ -1,5 +1,5 @@
 import { aboutPageQuery } from '@/lib/queries';
-import { getClient } from '@/lib/sanity.server';
+import { sanityClient } from '@/lib/sanity.server';
 
 import Layout from '@/components/navigation/Layout';
 import Hero from '@/components/shared/Hero';
@@ -30,7 +30,7 @@ export default function AboutPage({ aboutData }) {
 }
 
 export async function getStaticProps({ preview = false }) {
-  const aboutData = await getClient(preview).fetch(aboutPageQuery);
+  const aboutData = await sanityClient.fetch(aboutPageQuery);
 
   return {
     props: { aboutData, preview },
