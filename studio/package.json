@@ -23,11 +23,11 @@
     "@sanity/default-login": "^2.24.1",
     "@sanity/desk-tool": "^2.25.3",
     "@sanity/vision": "^2.25.1",
-    "prop-types": "^15.7.2",
+    "prop-types": "^15.8.1",
     "react": "^17.0",
     "react-dom": "^17.0",
     "sanity-plugin-media": "^1.4.4",
-    "sanity-plugin-vercel-deploy": "^2.1.5",
+    "sanity-plugin-vercel-deploy": "^2.1.6",
     "styled-components": "^5.3.3"
   },
   "repository": {
