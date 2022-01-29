@@ -124,4 +124,14 @@ module.exports = {
       },
     ];
   },
+  async redirects() {
+    return [
+      //! INDEX
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+  },
 };

@@ -26,7 +26,7 @@ export default function Hero({
             height={4}
             objectFit="cover"
             objectPosition="center"
-            className="sm:rounded-2xl"
+            className="rounded-2xl"
           />
         )}
       </div>

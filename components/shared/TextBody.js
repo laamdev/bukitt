@@ -12,18 +12,20 @@ const serializers = {
       }
 
       return (
-        <div className="text-center">
+        <div className="text-center py-3 md:py-6 lg:py-12">
           <Image
-            src={urlForImage(node).width(1080).height(1080).url()}
+            src={urlForImage(node).width(1024).height(768).url()}
             alt={node.alt}
             layout="responsive"
-            width={1}
-            height={1}
+            width={4}
+            height={3}
             objectFit="cover"
             objectPosition="center"
             className="rounded-2xl"
           />
-          <small className="text-neutral-500 text-xs">{node.caption}</small>
+          <small className="text-neutral-500 text-xs md:text-sm">
+            {node.caption}
+          </small>
         </div>
       );
     },
@@ -38,14 +40,23 @@ const serializers = {
         </Link>
       );
     },
+    // link: ({ mark, children }) => {
+    //   const { blank, href } = mark;
+    //   return blank ? (
+    //     <a href={href} target="_blank" rel="noopener noreferrer">
+    //       {children}
+    //     </a>
+    //   ) : (
+    //     <a href={href}>{children}</a>
+    //   );
+    // },
     link: ({ mark, children }) => {
-      const { blank, href } = mark;
-      return blank ? (
-        <a href={href} target="_blank" rel="noopener noreferrer">
+      const { url } = mark;
+      console.log(url);
+      return (
+        <a href={url} target="_blank" rel="noopener noreferrer">
           {children}
         </a>
-      ) : (
-        <a href={href}>{children}</a>
       );
     },
   },
