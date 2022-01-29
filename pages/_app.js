@@ -14,8 +14,6 @@ import '@/styles/tailwind.css';
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
-  console.log(router.asPath);
-
   const url = `https://bukitt.com${router.asPath}`;
 
   useEffect(() => {

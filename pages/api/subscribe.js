@@ -28,7 +28,6 @@ export default async function handler(req, res) {
     // for create
     if (response.status >= 400) {
       const message = await response.json();
-      console.log(message.error.email[0]);
       return res.status(400).json({ error: message.error.email[0] });
     }
     // Send a JSON response

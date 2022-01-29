@@ -1,12 +1,55 @@
 import { useState } from 'react';
 import { Switch } from '@headlessui/react';
 import { useForm } from 'react-hook-form';
+import * as yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
+
+import { classNames } from '@/utils/helpers';
+import { phoneRegExp } from '@/utils/regex';
 
 import BtnInquiryForm from '@/components/shared/buttons/BtnInquiryForm';
+import FormError from '@/components/forms/FormError';
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
+const schema = yup
+  .object()
+  .shape({
+    firstName: yup.string().required('Please enter a first name.'),
+    lastName: yup.string().required('Please enter a last name.'),
+    email: yup
+      .string()
+      .email('Please enter a valid email.')
+      .required('Please enter an email.'),
+    phone: yup
+      .string()
+      .required('Please enter a phone number.')
+      .matches(phoneRegExp, 'Please enter a valid phone number.')
+      .min(5, 'The phone number is too short.')
+      .max(15, 'The phone number is too long.'),
+    group: yup
+      .number()
+      .typeError('Please enter a group size.')
+      .required()
+      .positive()
+      .integer(),
+    startDate: yup
+      .date()
+      .min(
+        new Date(Date.now() - 86400000),
+        'The trip start date cannot be in the past'
+      )
+      .required()
+      .typeError('Please enter a trip start date.'),
+    endDate: yup
+      .date()
+      .min(
+        new Date(Date.now() - 86400000),
+        'The trip end date cannot be in the past'
+      )
+      .required()
+      .typeError('Please enter a trip end date.'),
+    message: yup.string().required('Please enter an inquiry message.'),
+  })
+  .required();
 
 export default function InquiryForm({ destinations, experiences }) {
   const [agreed, setAgreed] = useState(false);
@@ -19,15 +62,16 @@ export default function InquiryForm({ destinations, experiences }) {
   });
 
   const {
+    register,
     handleSubmit,
     watch,
-    register,
     formState: { errors },
     reset,
   } = useForm({
     defaultValues: {
       category: 'Experience',
     },
+    resolver: yupResolver(schema),
   });
 
   const watchCategory = watch('category'); // you can supply default value as second argument
@@ -99,12 +143,14 @@ export default function InquiryForm({ destinations, experiences }) {
                   name="firstName"
                   id="firstName"
                   autoComplete="given-name"
-                  {...register('firstName', { required: true, maxLength: 80 })}
+                  {...register('firstName')}
                   className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md"
                 />
-                {errors.firstName && (
-                  <span role="alert">{errors.firstName.message}</span>
-                )}
+                <div className="h-3">
+                  {errors?.firstName?.message && (
+                    <FormError>{errors?.firstName?.message}</FormError>
+                  )}
+                </div>
               </div>
             </div>
 
@@ -121,12 +167,14 @@ export default function InquiryForm({ destinations, experiences }) {
                   name="lastName"
                   id="lastName"
                   autoComplete="family-name"
-                  {...register('lastName', { required: true, maxLength: 80 })}
+                  {...register('lastName')}
                   className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md"
                 />
-                {errors.name && (
-                  <span role="alert">{errors.lastName.message}</span>
-                )}
+                <div className="h-3">
+                  {errors?.lastName?.message && (
+                    <FormError>{errors?.lastName?.message}</FormError>
+                  )}
+                </div>
               </div>
             </div>
 
@@ -143,15 +191,14 @@ export default function InquiryForm({ destinations, experiences }) {
                   name="email"
                   type="email"
                   autoComplete="email"
-                  {...register('email', {
-                    required: true,
-                    pattern: /^\S+@\S+$/i,
-                  })}
+                  {...register('email')}
                   className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md"
                 />
-                {errors.email && (
-                  <span role="alert">{errors.email.message}</span>
-                )}
+                <div className="h-3">
+                  {errors?.email?.message && (
+                    <FormError>{errors?.email?.message}</FormError>
+                  )}
+                </div>
               </div>
             </div>
 
@@ -168,15 +215,14 @@ export default function InquiryForm({ destinations, experiences }) {
                   name="phone"
                   type="tel"
                   autoComplete="phone"
-                  {...register('phone', {
-                    required: true,
-                    pattern: /^\d{10}$/,
-                  })}
+                  {...register('phone')}
                   className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md"
                 />
-                {errors.phone && (
-                  <span role="alert">{errors.phone.message}</span>
-                )}
+                <div className="h-3">
+                  {errors?.phone?.message && (
+                    <FormError>{errors?.phone?.message}</FormError>
+                  )}
+                </div>
               </div>
             </div>
 
@@ -286,11 +332,11 @@ export default function InquiryForm({ destinations, experiences }) {
                   })}
                   className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md"
                 />
-                {errors.group && (
-                  <span role="alert" className="text-red-500 text-2xl">
-                    {errors.group.message}
-                  </span>
-                )}
+                <div className="h-3">
+                  {errors?.group?.message && (
+                    <FormError>{errors?.group?.message}</FormError>
+                  )}
+                </div>
               </div>
             </div>
 
@@ -309,9 +355,11 @@ export default function InquiryForm({ destinations, experiences }) {
                   {...register('startDate', { required: true })}
                   className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md cursor-pointer"
                 />
-                {errors.startDate && (
-                  <span role="alert">{errors.startDate.message}</span>
-                )}
+                <div className="h-3">
+                  {errors?.startDate?.message && (
+                    <FormError>{errors?.startDate?.message}</FormError>
+                  )}
+                </div>
               </div>
             </div>
 
@@ -330,9 +378,11 @@ export default function InquiryForm({ destinations, experiences }) {
                   {...register('endDate', { required: true })}
                   className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md cursor-pointer"
                 />
-                {errors.endDate && (
-                  <span role="alert">{errors.endDate.message}</span>
-                )}
+                <div className="h-3">
+                  {errors?.endDate?.message && (
+                    <FormError>{errors?.endDate?.message}</FormError>
+                  )}
+                </div>
               </div>
             </div>
 
@@ -351,9 +401,11 @@ export default function InquiryForm({ destinations, experiences }) {
                   {...register('message', {})}
                   className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border border-neutral-300 rounded-md"
                 />
-                {errors.message && (
-                  <span role="alert">{errors.message.message}</span>
-                )}
+                <div className="h-3">
+                  {errors?.message?.message && (
+                    <FormError>{errors?.message?.message}</FormError>
+                  )}
+                </div>
               </div>
             </div>
 
