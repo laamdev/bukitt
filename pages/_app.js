@@ -11,6 +11,12 @@ import Footer from '@/components/navigation/Footer';
 
 import '@/styles/tailwind.css';
 
+function handleExitComplete() {
+  if (typeof window !== 'undefined') {
+    window.scrollTo({ top: 0 });
+  }
+}
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
@@ -49,6 +55,19 @@ function MyApp({ Component, pageProps }) {
           `,
         }}
       />
+      <Script
+        id="google-analytics-tag"
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
+      <Script id="google-analytics-config" strategy="lazyOnload">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+  `}
+      </Script>
 
       <DefaultSeo
         titleTemplate="%s - Bukitt"
@@ -65,9 +84,9 @@ function MyApp({ Component, pageProps }) {
 
       <Header />
       <AnimatePresence
-        exitBeforeEnter
         initial={false}
-        onExitComplete={() => window.scrollTo(0, 0)}
+        exitBeforeEnter
+        onExitComplete={handleExitComplete}
       >
         <Component {...pageProps} canonical={url} key={url} />
       </AnimatePresence>
