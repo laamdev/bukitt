@@ -36,14 +36,15 @@ export default {
       ],
     },
     {
-      name: 'category',
-      type: 'string',
-      title: 'Category',
-      description: 'Destination category.',
-      options: {
-        list: [...destinationCategories],
-        // // layout: 'radio',
-      },
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [{ type: 'destinationTag' }],
+        },
+      ],
     },
     {
       name: 'season',

@@ -1,13 +1,15 @@
+import { IoPricetagOutline } from 'react-icons/io5';
+
 export default {
-  name: 'destinationCategory',
+  name: 'destinationTag',
   type: 'document',
-  title: 'Destination Category',
+  title: 'Destination Tag',
+  icon: IoPricetagOutline,
   fields: [
     {
       name: 'name',
       type: 'string',
       title: 'Name',
-      description: 'Destination category name.',
     },
   ],
   preview: {

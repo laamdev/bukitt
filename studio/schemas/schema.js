@@ -4,9 +4,12 @@ import createSchema from 'part:@sanity/base/schema-creator';
 // Then import schema types from any plugins that might expose them
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 
-// DOCUMENTS
-// --- products
+//! DOCUMENTS
+//* Destination
 import destination from './documents/destination';
+import destinationTag from './documents/destinationTag';
+
+//* Experience
 import experience from './documents/experience';
 // --- pages
 import homePage from './documents/pages/homePage';
@@ -23,7 +26,7 @@ import partner from './documents/partner';
 // --- blog
 import blogPost from './documents/blogPost';
 
-// objects
+//! OBJECTS
 import hero from './objects/shared/hero';
 import card from './objects/shared/card';
 import cardSimple from './objects/shared/cardSimple';
@@ -62,9 +65,11 @@ import blockContent from './objects/shared/blockContent';
 export default createSchema({
   name: 'content',
   types: schemaTypes.concat([
-    // DOCUMENTS
-    // --- products
+    //! DOCUMENTS
+    //* Destination
     destination,
+    destinationTag,
+    //* Experience
     experience,
     // --- pages
     homePage,
