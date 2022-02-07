@@ -14,6 +14,7 @@
     "@hookform/error-message": "^2.0.0",
     "@hookform/resolvers": "^2.8.8",
     "@sanity/block-content-to-react": "^3.0.0",
+    "@sanity/cli": "^2.26.0",
     "@sanity/image-url": "^1.0.1",
     "@sendgrid/mail": "^7.6.0",
     "classnames": "^2.3.1",
