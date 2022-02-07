@@ -15,8 +15,8 @@ export default function Hero({
   const publishedDate = dayjs(date).format('MMM D, YYYY');
 
   return (
-    <div className="flex flex-col items-center sm:flex-row sm:space-x-12">
-      <div className="w-full rounded-2xl shadow-xl sm:w-3/5">
+    <div className="mx-auto flex flex-col items-center gap-y-6 px-6 md:max-w-2xl lg:max-w-7xl lg:flex-row lg:gap-y-0 lg:gap-x-24">
+      <div className="w-full rounded-2xl shadow-xl lg:w-3/5">
         {coverImage && (
           <Image
             src={urlForImage(coverImage).width(1350).height(1080).url()}
@@ -30,7 +30,7 @@ export default function Hero({
           />
         )}
       </div>
-      <div className="mt-3 w-full px-3 sm:mt-0 sm:w-2/5 sm:pl-0 sm:pr-3">
+      <div className="mt-3 w-full px-3 lg:mt-0 lg:w-2/5 lg:pl-0 lg:pr-3">
         <h2 className="text-sm font-medium uppercase tracking-widest text-brand">
           {category}
         </h2>
