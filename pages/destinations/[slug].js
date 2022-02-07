@@ -6,10 +6,12 @@ import {
 
 import Layout from '@/components/navigation/Layout';
 import HighlightsSection from '@/components/destination/highlight/HighlightSection';
+import ExperienceSection from '@/components/destination/ExperienceSection';
 import MapSection from '@/components/shared/MapSection';
 import Hero from '@/components/shared/Hero';
 
 export default function DestinationPage({ destination }) {
+  console.log(JSON.stringify(destination.experienceSection, null, 2));
   return (
     <Layout
       title={destination?.seo?.title}
@@ -34,6 +36,12 @@ export default function DestinationPage({ destination }) {
         <HighlightsSection
           heading={destination?.highlightsSection?.heading}
           highlights={destination?.highlightsSection?.highlights}
+        />
+      )}
+      {destination?.experienceSection && (
+        <ExperienceSection
+          heading={destination?.experienceSection?.heading}
+          experience={destination?.experienceSection?.experience}
         />
       )}
     </Layout>

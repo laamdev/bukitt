@@ -90,11 +90,10 @@ export default {
       description: 'Highlight section of the destination page.',
     },
     {
-      name: 'experience',
-      type: 'reference',
-      title: 'Experience',
+      name: 'experienceSection',
+      type: 'destinationExperienceSection',
+      title: 'Experience Section',
       description: 'Experience that includes the destination.',
-      to: [{ type: 'experience' }],
     },
     {
       name: 'seo',

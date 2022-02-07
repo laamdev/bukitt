@@ -46,6 +46,7 @@ import homeNewsletterSection from './objects/pages/home/homeNewsletterSection';
 import homeTestimonialsSection from './objects/pages/home/homeTestimonialsSection';
 import homeFeaturedExperienceSection from './objects/pages/home/homeFeaturedExperienceSection';
 import homeFeaturedDestinationsSection from './objects/pages/home/homeFeaturedDestinationsSection';
+import destinationExperienceSection from './objects/destination/destinationExperienceSection';
 
 import feature from './objects/shared/feature';
 import experienceFeaturesSection from './objects/experience/experienceFeaturesSection';
@@ -114,6 +115,7 @@ export default createSchema({
     experienceItinerarySection,
     experienceItineraryItem,
     experienceDestinationsSection,
+    destinationExperienceSection,
 
     testimonial,
     seo,
