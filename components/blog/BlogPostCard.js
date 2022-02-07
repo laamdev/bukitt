@@ -8,12 +8,12 @@ export default function BlogPostCard({ blogPost }) {
   const publishedDate = dayjs(blogPost?.date).format('MMM D, YYYY');
 
   return (
-    <li className="flex flex-col rounded-2xl shadow-xl overflow-hidden group">
+    <li className="group flex flex-col overflow-hidden rounded-2xl shadow-xl">
       <Link href={`blog/${blogPost?.slug}`}>
-        <a className="flex flex-col bg-neutral-400 h-full">
+        <a className="flex h-full flex-col bg-slate-400">
           <div className="shrink-0">
             <Image
-              className="h-48 w-full object-cover group-hover:scale-105 tw-transition "
+              className="tw-transition h-48 w-full object-cover group-hover:scale-105 "
               src={urlForImage(blogPost?.coverImage)
                 .width(1080)
                 .height(1080)
@@ -24,18 +24,18 @@ export default function BlogPostCard({ blogPost }) {
               height={1}
             />
           </div>
-          <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+          <div className="flex flex-1 flex-col justify-between bg-white p-6">
             <div className="flex-1">
               <p className="text-sm font-medium text-indigo-600">
                 {/* <a href={post.category.href} className="hover:underline"> */}
                 {blogPost?.category?.name}
                 {/* </a> */}
               </p>
-              <div className="block mt-2">
-                <p className="text-xl font-semibold text-neutral-900">
+              <div className="mt-2 block">
+                <p className="text-xl font-semibold text-slate-900">
                   {blogPost?.title}
                 </p>
-                <p className="mt-3 text-base text-neutral-500 line-clamp-5">
+                <p className="mt-3 text-base text-slate-500 line-clamp-5">
                   {blogPost?.excerpt}
                 </p>
               </div>
@@ -60,12 +60,12 @@ export default function BlogPostCard({ blogPost }) {
                 </a>
               </div>
               <div className="ml-3">
-                <p className="text-sm font-medium text-neutral-900">
+                <p className="text-sm font-medium text-slate-900">
                   {/* <a href={post.author.href} className="hover:underline"> */}
                   {blogPost?.author?.name}
                   {/* </a> */}
                 </p>
-                <div className="flex space-x-1 text-sm text-neutral-500">
+                <div className="flex space-x-1 text-sm text-slate-500">
                   {/* <time dateTime={post.datetime}>{post.date}</time> */}
                   <time>{publishedDate}</time>
                   <span aria-hidden="true">&middot;</span>

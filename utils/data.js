@@ -18,30 +18,21 @@ export const socialLinksFooter = [
     name: 'Instagram',
     href: 'https://www.instagram.com/bukitttravel/?hl=en',
     icon: (
-      <IoLogoInstagram
-        aria-hidden="true"
-        className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"
-      />
+      <IoLogoInstagram aria-hidden="true" className="h-6 w-6 lg:h-8 lg:w-8" />
     ),
   },
   {
     name: 'Facebook',
     href: 'https://www.facebook.com/bukitttravel/',
     icon: (
-      <IoLogoFacebook
-        aria-hidden="true"
-        className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"
-      />
+      <IoLogoFacebook aria-hidden="true" className="h-6 w-6 lg:h-8 lg:w-8" />
     ),
   },
   {
     name: 'Twitter',
     href: 'https://twitter.com/bukitttravel',
     icon: (
-      <IoLogoTwitter
-        aria-hidden="true"
-        className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"
-      />
+      <IoLogoTwitter aria-hidden="true" className="h-6 w-6 lg:h-8 lg:w-8" />
     ),
   },
 ];
@@ -51,21 +42,21 @@ export const socialLinkMobileMenu = [
     name: 'Instagram',
     href: 'https://www.instagram.com/bukitttravel/?hl=en',
     icon: (
-      <IoLogoInstagram className="w-6 h-6 md:w-12 md:h-12" aria-hidden="true" />
+      <IoLogoInstagram className="h-6 w-6 lg:h-8 lg:w-8" aria-hidden="true" />
     ),
   },
   {
     name: 'Facebook',
     href: 'https://www.facebook.com/bukitttravel/',
     icon: (
-      <IoLogoFacebook className="w-6 h-6 md:w-12 md:h-12" aria-hidden="true" />
+      <IoLogoFacebook className="h-6 w-6 lg:h-8 lg:w-8" aria-hidden="true" />
     ),
   },
   {
     name: 'Twitter',
     href: 'https://twitter.com/bukitttravel',
     icon: (
-      <IoLogoTwitter className="w-6 h-6 md:w-12 md:h-12" aria-hidden="true" />
+      <IoLogoTwitter className="h-6 w-6 lg:h-8 lg:w-8" aria-hidden="true" />
     ),
   },
 ];
@@ -75,20 +66,14 @@ export const contactLinks = [
     name: 'Email',
     href: 'mailto:hello@bukitt.com',
     icon: (
-      <IoMailOutline
-        aria-hidden="true"
-        className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"
-      />
+      <IoMailOutline aria-hidden="true" className="h-6 w-6 lg:h-8 lg:w-8" />
     ),
   },
   {
     name: 'Phone',
     href: 'tel:3059986034',
     icon: (
-      <IoCallOutline
-        aria-hidden="true"
-        className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"
-      />
+      <IoCallOutline aria-hidden="true" className="h-6 w-6 lg:h-8 lg:w-8" />
     ),
   },
 ];

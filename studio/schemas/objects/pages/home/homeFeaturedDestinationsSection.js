@@ -4,7 +4,7 @@ export default {
   title: 'Featured Experience Section',
   fields: [
     {
-      name: 'sectionHeading',
+      name: 'heading',
       title: 'Section Heading',
       type: 'string',
     },

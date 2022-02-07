@@ -114,7 +114,7 @@
   }
 
   .tw-card-title {
-    @apply text-xl sm:text-2xl font-bold;
+    @apply text-xl font-bold sm:text-2xl;
   }
 
   .tw-details-label {
@@ -126,7 +126,7 @@
   }
 
   .tw-section {
-    @apply py-16 sm:py-20 lg:py-24;
+    @apply py-16 px-3 sm:py-20 lg:py-24;
   }
 
   .tw-section-px {
@@ -134,19 +134,19 @@
   }
 
   .tw-section-heading {
-    @apply text-3xl sm:text-5xl lg:text-6xl font-bold;
+    @apply text-3xl font-bold sm:text-5xl lg:text-6xl;
   }
 
   .tw-btn {
-    @apply inline-flex items-center px-2.5 py-1.5 md:px-4 md:py-2 lg:px-6 lg:py-3 border-2 text-xs md:text-sm lg:text-base font-medium rounded-full shadow-sm uppercase tracking-widest  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 tw-transition;
+    @apply tw-transition inline-flex items-center rounded-full border-2 px-2.5 py-1.5 text-xs font-medium uppercase tracking-widest shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 md:px-4  md:py-2 md:text-sm lg:px-6 lg:py-3 lg:text-base;
   }
 
   .tw-container {
-    @apply max-w-screen-2xl mx-auto space-y-12 lg:space-y-24 mt-12 lg:mt-24 px-6 sm:px-12 lg:px-24;
+    @apply mx-auto mt-12 max-w-screen-2xl space-y-12 px-6 sm:px-12 lg:mt-24 lg:space-y-24 lg:px-24;
   }
 
   .tw-btn-solid {
-    @apply bg-brand-400 hover:bg-white border-white hover:border-brand hover:text-brand;
+    @apply border-white bg-brand-400 hover:border-brand hover:bg-white hover:text-brand;
   }
 
   .tw-transition {
@@ -154,19 +154,19 @@
   }
 
   .tw-details-icon {
-    @apply w-6 sm:w-8 h-6 sm:h-8 text-brand;
+    @apply h-6 w-6 text-brand sm:h-8 sm:w-8;
   }
 
   .tw-radio-btn {
-    @apply focus:ring-neutral-100 h-6 w-6 text-brand border-neutral-300 cursor-pointer hover:border-brand tw-transition;
+    @apply tw-transition h-6 w-6 cursor-pointer border-slate-300 text-brand hover:border-brand focus:ring-slate-100;
   }
 
   .embla {
-    @apply relative rounded-2xl shadow-md py-16 sm:py-20 lg:py-24 bg-neutral-50;
+    @apply relative rounded-2xl bg-slate-50 py-16 shadow-md sm:py-20 lg:py-24;
   }
 
   .embla__viewport {
-    @apply overflow-hidden w-full;
+    @apply w-full overflow-hidden;
   }
 
   .embla__viewport.is-draggable {
@@ -185,7 +185,7 @@
   }
 
   .embla__slide {
-    @apply relative px-6 sm:px-12 lg:px-24 min-w-full;
+    @apply relative min-w-full px-6 sm:px-12 lg:px-24;
   }
 
   .embla__slide__inner {
@@ -193,15 +193,15 @@
   }
 
   .embla__button {
-    @apply absolute z-10 top-1/2 -translate-y-1/2 w-8 h-8 md:w-12 md:h-12 lg:w-16 lg:h-16 text-brand-500 hover:text-brand-400 hover:scale-90 border-none outline-none cursor-pointer touch-manipulation tw-transition;
+    @apply tw-transition absolute top-1/2 z-10 h-8 w-8 -translate-y-1/2 cursor-pointer touch-manipulation border-none text-brand-500 outline-none hover:scale-90 hover:text-brand-400 md:h-12 md:w-12 lg:h-16 lg:w-16;
   }
 
   .embla__button:disabled {
-    @apply hover:text-brand-500 cursor-default opacity-30 hover:scale-100;
+    @apply cursor-default opacity-30 hover:scale-100 hover:text-brand-500;
   }
 
   .embla__button__svg {
-    @apply w-full h-full;
+    @apply h-full w-full;
   }
 
   .embla__button--prev {

@@ -7,14 +7,14 @@ import SectionHeading from '@/components/shared/SectionHeading';
 export default function AccommodationSection({ heading, body, image }) {
   return (
     <section className="tw-section">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col space-y-12 sm:flex-row sm:space-y-0 sm:space-x-24 items-center text-center lg:text-left">
-          <div className="w-full sm:w-1/2 space-y-3">
+      <div className="mx-auto max-w-6xl">
+        <div className="flex flex-col items-center space-y-12 text-center sm:flex-row sm:space-y-0 sm:space-x-24 lg:text-left">
+          <div className="w-full space-y-3 sm:w-1/2">
             <SectionHeading>{heading}</SectionHeading>
             <p className="">{body}</p>
           </div>
 
-          <div className="w-full sm:w-1/2 bg-neutral-100 rounded-2xl shadow-xl">
+          <div className="w-full rounded-2xl bg-slate-100 shadow-xl sm:w-1/2">
             {image && (
               <Image
                 src={urlForImage(image).width(1080).height(1080).url()}

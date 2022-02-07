@@ -14,27 +14,27 @@ export default function DetailsSection({
 }) {
   return (
     <DetailsContainer>
-      <DetailsWrapper passedClassName="border-b sm:border-0 sm:border-r">
+      <DetailsWrapper className="border-b sm:border-0 sm:border-r">
         <DetailsLabel>Price</DetailsLabel>
         <DetailsValue>
           ${price}
           <DetailsUnit> pp</DetailsUnit>
         </DetailsValue>
       </DetailsWrapper>
-      <DetailsWrapper passedClassName="border-t border-b sm:border-0 sm:border-l sm:border-r">
+      <DetailsWrapper className="border-t border-b sm:border-0 sm:border-l sm:border-r">
         <DetailsLabel>Season</DetailsLabel>
         <DetailsValue>
           {dateFrom} - {dateTo}
         </DetailsValue>
       </DetailsWrapper>
-      <DetailsWrapper passedClassName="border-t border-b sm:border-0 sm:border-l sm:border-r">
+      <DetailsWrapper className="border-t border-b sm:border-0 sm:border-l sm:border-r">
         <DetailsLabel>Duration</DetailsLabel>
         <DetailsValue>
           {duration}
           <DetailsUnit> days</DetailsUnit>
         </DetailsValue>
       </DetailsWrapper>
-      <DetailsWrapper passedClassName="border-t sm:border-0 sm:border-l">
+      <DetailsWrapper className="border-t sm:border-0 sm:border-l">
         <DetailsLabel>Group</DetailsLabel>
         <DetailsValue>
           {groupSizeMin}

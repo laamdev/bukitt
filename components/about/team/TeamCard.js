@@ -11,7 +11,7 @@ export default function TeamCard({ teamMember }) {
     <li className="text-center">
       <div>
         <Image
-          className="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
+          className="mx-auto h-40 w-40 rounded-full xl:h-56 xl:w-56"
           src={urlForImage(teamMember?.profilePicture)
             .width(1080)
             .height(1080)
@@ -29,24 +29,24 @@ export default function TeamCard({ teamMember }) {
 
       <div className="mt-3">
         <div className="pb-3">
-          <h4 className="font-bold text-2xl text-dark font-mono uppercase">
+          <h4 className="font-mono text-2xl font-bold uppercase text-dark">
             {teamMember?.name}
           </h4>
-          <p className="text-brand font-medium text-lg">{teamMember?.role}</p>
+          <p className="text-lg font-medium text-brand">{teamMember?.role}</p>
         </div>
 
-        <div className="mx-auto w-full border-t border-neutral-300" />
+        <div className="mx-auto w-full border-t border-slate-300" />
 
-        <div className="flex justify-around mt-6">
-          <div className="w-1/2 flex flex-col items-center">
-            <PlaneArrivalIcon passedClassName="w-6 h-6 fill-brand" />
-            <span className="text-sm uppercase font-mono">
+        <div className="mt-6 flex justify-around">
+          <div className="flex w-1/2 flex-col items-center">
+            <PlaneArrivalIcon className="h-6 w-6 fill-brand" />
+            <span className="font-mono text-sm uppercase">
               {teamMember?.recentTrip}
             </span>
           </div>
-          <div className="w-1/2 flex flex-col items-center">
-            <PlaneDepartureIcon passedClassName="w-6 h-6 fill-brand" />
-            <span className="text-sm uppercase font-mono">
+          <div className="flex w-1/2 flex-col items-center">
+            <PlaneDepartureIcon className="h-6 w-6 fill-brand" />
+            <span className="font-mono text-sm uppercase">
               {teamMember?.futureTrip}
             </span>
           </div>

@@ -1,9 +1,6 @@
 export default {
   widgets: [
     {
-      name: 'sanity-tutorials',
-    },
-    {
       name: 'project-info',
       layout: {
         width: 'large',

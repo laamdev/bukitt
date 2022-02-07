@@ -16,11 +16,11 @@ function classNames(...classes) {
 
 export default function Header() {
   return (
-    <Popover className="fixed z-20 top-0 inset-x-0">
+    <Popover className="fixed inset-x-0 top-0 z-20">
       {({ open }) => (
         <>
           <div className="relative z-10 bg-white shadow">
-            <div className="max-w-7xl mx-auto flex justify-between items-center h-16 lg:h-20 px-3 lg:px-0">
+            <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-3 lg:h-20 lg:px-0">
               <div>
                 <Logo />
               </div>
@@ -35,8 +35,8 @@ export default function Header() {
 
               <Popover.Button
                 className={classNames(
-                  open ? 'text-neutral-900' : 'text-neutral-500',
-                  'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 lg:hidden'
+                  open ? 'text-slate-900' : 'text-slate-500',
+                  'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 lg:hidden'
                 )}
               >
                 <span className="sr-only">Open main menu</span>
@@ -47,13 +47,13 @@ export default function Header() {
                 )}{' '}
                 {/* <ChevronDownIcon
                   className={classNames(
-                    open ? 'text-neutral-600' : 'text-neutral-400',
-                    'ml-2 h-5 w-5 group-hover:text-neutral-500'
+                    open ? 'text-slate-600' : 'text-slate-400',
+                    'ml-2 h-5 w-5 group-hover:text-slate-500'
                   )}
                   aria-hidden="true"
                 /> */}
               </Popover.Button>
-              <Popover.Overlay className="z-30 fixed inset-0 bg-black bg-opacity-75 mt-24" />
+              <Popover.Overlay className="fixed inset-0 z-30 mt-24 bg-black bg-opacity-75" />
             </div>
           </div>
 
@@ -66,15 +66,15 @@ export default function Header() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 -translate-y-1"
           >
-            <Popover.Panel className="absolute z-10 inset-x-0 transform shadow-lg">
+            <Popover.Panel className="absolute inset-x-0 z-10 transform shadow-lg">
               <div className="bg-white">
-                <div className="max-w-7xl mx-auto px-4 py-12 md:py-24 text-center">
+                <div className="mx-auto max-w-7xl px-4 py-12 text-center md:py-24">
                   <ul className="space-y-6 md:space-y-12">
                     {navLinks.map((item) => (
                       <li key={item.name}>
                         <Link href={item.href}>
                           <a>
-                            <Popover.Button className="text-3xl md:text-6xl font-mono font-medium uppercase">
+                            <Popover.Button className="font-mono text-3xl font-medium uppercase md:text-6xl">
                               {item.name}
                             </Popover.Button>
                           </a>
@@ -85,8 +85,8 @@ export default function Header() {
                 </div>
               </div>
 
-              <div className="bg-neutral-50">
-                <div className="max-w-7xl mx-auto space-y-12 px-4 py-5">
+              <div className="bg-slate-50">
+                <div className="mx-auto max-w-7xl space-y-12 px-4 py-5">
                   <div className="flex justify-center">
                     <Popover.Button>
                       <BtnNav
@@ -103,9 +103,9 @@ export default function Header() {
                           href={social.href}
                           target="_blank"
                           rel="noreferrer"
-                          className="text-neutral-700 hover:text-neutral-500 tw-transition"
+                          className="tw-transition text-slate-700 hover:text-slate-500"
                         >
-                          <Popover.Button className="w-6 h-6 md:w-12 md:h-12">
+                          <Popover.Button className="h-6 w-6 md:h-12 md:w-12">
                             <span className="sr-only">{social.name}</span>
                             {social.icon}
                           </Popover.Button>

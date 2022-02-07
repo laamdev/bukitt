@@ -123,8 +123,8 @@ export default function InquiryForm({ destinations, experiences }) {
   };
 
   return (
-    <div className="bg-neutral-50 rounded-2xl shadow-md py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-12">
-      <div className="relative max-w-3xl mx-auto">
+    <div className="overflow-hidden rounded-2xl bg-slate-50 py-16 px-4 shadow-md sm:px-6 lg:px-8 lg:py-12">
+      <div className="relative mx-auto max-w-3xl">
         <div>
           <form
             onSubmit={handleSubmit(onSubmit)}
@@ -133,7 +133,7 @@ export default function InquiryForm({ destinations, experiences }) {
             <div>
               <label
                 htmlFor="firstName"
-                className="block text-xl font-medium font-mono uppercase text-neutral-700"
+                className="block font-mono text-xl font-medium uppercase text-slate-700"
               >
                 First name
               </label>
@@ -144,7 +144,7 @@ export default function InquiryForm({ destinations, experiences }) {
                   id="firstName"
                   autoComplete="given-name"
                   {...register('firstName')}
-                  className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md"
+                  className="block w-full rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
                 />
                 <div className="h-3">
                   {errors?.firstName?.message && (
@@ -157,7 +157,7 @@ export default function InquiryForm({ destinations, experiences }) {
             <div>
               <label
                 htmlFor="lastName"
-                className="block text-xl font-mono uppercase font-medium text-neutral-700"
+                className="block font-mono text-xl font-medium uppercase text-slate-700"
               >
                 Last name
               </label>
@@ -168,7 +168,7 @@ export default function InquiryForm({ destinations, experiences }) {
                   id="lastName"
                   autoComplete="family-name"
                   {...register('lastName')}
-                  className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md"
+                  className="block w-full rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
                 />
                 <div className="h-3">
                   {errors?.lastName?.message && (
@@ -181,7 +181,7 @@ export default function InquiryForm({ destinations, experiences }) {
             <div className="sm:col-span-2">
               <label
                 htmlFor="email"
-                className="block text-xl font-mono uppercase font-medium text-neutral-700"
+                className="block font-mono text-xl font-medium uppercase text-slate-700"
               >
                 Email
               </label>
@@ -192,7 +192,7 @@ export default function InquiryForm({ destinations, experiences }) {
                   type="email"
                   autoComplete="email"
                   {...register('email')}
-                  className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md"
+                  className="block w-full rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
                 />
                 <div className="h-3">
                   {errors?.email?.message && (
@@ -205,7 +205,7 @@ export default function InquiryForm({ destinations, experiences }) {
             <div className="sm:col-span-2">
               <label
                 htmlFor="phone"
-                className="block text-xl font-mono uppercase font-medium text-neutral-700"
+                className="block font-mono text-xl font-medium uppercase text-slate-700"
               >
                 Phone
               </label>
@@ -216,7 +216,7 @@ export default function InquiryForm({ destinations, experiences }) {
                   type="tel"
                   autoComplete="phone"
                   {...register('phone')}
-                  className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md"
+                  className="block w-full rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
                 />
                 <div className="h-3">
                   {errors?.phone?.message && (
@@ -227,10 +227,10 @@ export default function InquiryForm({ destinations, experiences }) {
             </div>
 
             <fieldset className="sm:col-span-2">
-              <legend className="block text-xl font-mono uppercase font-medium text-neutral-700">
+              <legend className="block font-mono text-xl font-medium uppercase text-slate-700">
                 Category
               </legend>
-              {/* <p className="text-sm text-neutral-500">
+              {/* <p className="text-sm text-slate-500">
                 These are delivered via SMS to your mobile phone.
               </p> */}
               <div className="mt-3 flex space-x-12">
@@ -244,7 +244,7 @@ export default function InquiryForm({ destinations, experiences }) {
                     className="tw-radio-btn"
                   />
                   <label htmlFor="category-experience" className="ml-3">
-                    <span className="block text-sm font-medium text-neutral-700">
+                    <span className="block text-sm font-medium text-slate-700">
                       Experience
                     </span>
                   </label>
@@ -260,7 +260,7 @@ export default function InquiryForm({ destinations, experiences }) {
                     className="tw-radio-btn"
                   />
                   <label htmlFor="category-destination" className="ml-3">
-                    <span className="block text-sm font-medium text-neutral-700">
+                    <span className="block text-sm font-medium text-slate-700">
                       Destination
                     </span>
                   </label>
@@ -272,12 +272,12 @@ export default function InquiryForm({ destinations, experiences }) {
               <fieldset className="sm:col-span-2">
                 <label htmlFor="product">
                   {watchCategory === 'Experience' && (
-                    <span className="block text-xl font-mono uppercase font-medium text-neutral-700">
+                    <span className="block font-mono text-xl font-medium uppercase text-slate-700">
                       Experience
                     </span>
                   )}
                   {watchCategory === 'Destination' && (
-                    <span className="block text-xl font-mono uppercase font-medium text-neutral-700">
+                    <span className="block font-mono text-xl font-medium uppercase text-slate-700">
                       Destination
                     </span>
                   )}
@@ -287,7 +287,7 @@ export default function InquiryForm({ destinations, experiences }) {
                   id="product"
                   name="product"
                   {...register('product')}
-                  className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md cursor-pointer"
+                  className="block w-full cursor-pointer rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
                 >
                   {watchCategory === 'Experience' && (
                     <>
@@ -314,7 +314,7 @@ export default function InquiryForm({ destinations, experiences }) {
             <div className="sm:col-span-2">
               <label
                 htmlFor="group"
-                className="block text-xl font-mono uppercase font-medium text-neutral-700"
+                className="block font-mono text-xl font-medium uppercase text-slate-700"
               >
                 Group Size
               </label>
@@ -330,7 +330,7 @@ export default function InquiryForm({ destinations, experiences }) {
                     min: 1,
                     max: 20,
                   })}
-                  className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md"
+                  className="block w-full rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
                 />
                 <div className="h-3">
                   {errors?.group?.message && (
@@ -343,7 +343,7 @@ export default function InquiryForm({ destinations, experiences }) {
             <div>
               <label
                 htmlFor="startDate"
-                className="block text-xl font-medium font-mono uppercase text-neutral-700"
+                className="block font-mono text-xl font-medium uppercase text-slate-700"
               >
                 Travel Start Date
               </label>
@@ -353,7 +353,7 @@ export default function InquiryForm({ destinations, experiences }) {
                   name="startDate"
                   id="startDate"
                   {...register('startDate', { required: true })}
-                  className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md cursor-pointer"
+                  className="block w-full cursor-pointer rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
                 />
                 <div className="h-3">
                   {errors?.startDate?.message && (
@@ -366,7 +366,7 @@ export default function InquiryForm({ destinations, experiences }) {
             <div>
               <label
                 htmlFor="endDate"
-                className="block text-xl font-mono uppercase font-medium text-neutral-700"
+                className="block font-mono text-xl font-medium uppercase text-slate-700"
               >
                 Travel End Date
               </label>
@@ -376,7 +376,7 @@ export default function InquiryForm({ destinations, experiences }) {
                   name="endDate"
                   id="endDate"
                   {...register('endDate', { required: true })}
-                  className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border-neutral-300 rounded-md cursor-pointer"
+                  className="block w-full cursor-pointer rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
                 />
                 <div className="h-3">
                   {errors?.endDate?.message && (
@@ -389,7 +389,7 @@ export default function InquiryForm({ destinations, experiences }) {
             <div className="sm:col-span-2">
               <label
                 htmlFor="message"
-                className="block text-xl font-mono uppercase font-medium text-neutral-700"
+                className="block font-mono text-xl font-medium uppercase text-slate-700"
               >
                 Message
               </label>
@@ -399,7 +399,7 @@ export default function InquiryForm({ destinations, experiences }) {
                   name="message"
                   rows={4}
                   {...register('message', {})}
-                  className="py-3 px-4 block w-full shadow-sm focus:ring-brand-500 focus:border-brand-500 border border-neutral-300 rounded-md"
+                  className="block w-full rounded-md border border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
                 />
                 <div className="h-3">
                   {errors?.message?.message && (
@@ -416,8 +416,8 @@ export default function InquiryForm({ destinations, experiences }) {
                     checked={agreed}
                     onChange={setAgreed}
                     className={classNames(
-                      agreed ? 'bg-brand-600' : 'bg-neutral-200',
-                      'relative inline-flex shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500'
+                      agreed ? 'bg-brand-600' : 'bg-slate-200',
+                      'relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2'
                     )}
                   >
                     <span className="sr-only">Agree to policies</span>
@@ -425,24 +425,24 @@ export default function InquiryForm({ destinations, experiences }) {
                       aria-hidden="true"
                       className={classNames(
                         agreed ? 'translate-x-5' : 'translate-x-0',
-                        'inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200'
+                        'inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out'
                       )}
                     />
                   </Switch>
                 </div>
                 <div className="ml-3">
-                  <p className="text-base text-neutral-500">
+                  <p className="text-base text-slate-500">
                     By selecting this, you agree to the{' '}
                     <a
                       href="#"
-                      className="font-medium text-neutral-700 underline"
+                      className="font-medium text-slate-700 underline"
                     >
                       Privacy Policy
                     </a>{' '}
                     and{' '}
                     <a
                       href="#"
-                      className="font-medium text-neutral-700 underline"
+                      className="font-medium text-slate-700 underline"
                     >
                       Cookie Policy
                     </a>
@@ -451,7 +451,7 @@ export default function InquiryForm({ destinations, experiences }) {
                 </div>
               </div>
             </div>
-            <div className="sm:col-span-2 mx-auto">
+            <div className="mx-auto sm:col-span-2">
               <BtnInquiryForm
                 disabled={submitting || agreed === false}
                 btnLinkText="Let's Talk"

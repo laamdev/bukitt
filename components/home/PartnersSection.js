@@ -3,8 +3,8 @@ import SectionHeading from '@/components/shared/SectionHeading';
 
 export default function PartnersSection({ heading, partners }) {
   return (
-    <section className="tw-section max-w-7xl mx-auto">
-      <SectionHeading passedClassName="text-center">{heading}</SectionHeading>
+    <section className="tw-section mx-auto max-w-7xl">
+      <SectionHeading className="text-center">{heading}</SectionHeading>
       <PartnersSlider partners={partners} />
     </section>
   );

@@ -8,7 +8,7 @@ export default function TestimonialCard({ testimonial }) {
   return (
     <div className="relative min-w-full space-y-3 bg-white p-6 sm:p-12">
       <div className="flex items-center justify-center space-x-1.5 sm:space-x-3">
-        <h4 className="text-xl sm:text-2xl lg:text-3xl text-center font-bold">
+        <h4 className="text-center text-xl font-bold sm:text-2xl lg:text-3xl">
           {testimonial?.destination}
         </h4>
       </div>
@@ -16,7 +16,7 @@ export default function TestimonialCard({ testimonial }) {
       <blockquote>
         <Body>&quot;{testimonial?.quote}&quot;</Body>
         <footer className="mt-8">
-          <div className="flex flex-col items-center md:flex-row justify-center">
+          <div className="flex flex-col items-center justify-center md:flex-row">
             <div className="md:shrink-0">
               <Image
                 src={urlForImage(testimonial.thumbnail)
@@ -41,7 +41,7 @@ export default function TestimonialCard({ testimonial }) {
                 <span className="">{testimonial.origin}</span>
               </div>
 
-              <div className="text-base text-neutral-500"></div>
+              <div className="text-base text-slate-500"></div>
             </div>
           </div>
         </footer>

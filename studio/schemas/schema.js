@@ -11,7 +11,7 @@ import destinationTag from './documents/destinationTag';
 
 //* Experience
 import experience from './documents/experience';
-// --- pages
+//? pages
 import homePage from './documents/pages/homePage';
 import aboutPage from './documents/pages/aboutPage';
 import experiencesPage from './documents/pages/experiencesPage';
@@ -28,7 +28,6 @@ import blogPost from './documents/blogPost';
 
 //! OBJECTS
 import hero from './objects/shared/hero';
-import card from './objects/shared/card';
 import cardSimple from './objects/shared/cardSimple';
 import form from './objects/shared/form';
 import section from './objects/shared/section';
@@ -39,13 +38,16 @@ import video from './objects/shared/video';
 import quote from './objects/shared/quote';
 import seo from './objects/shared/seo';
 
-//home
-import homeServicesSection from './objects/pages/home/services/homeServicesSection';
-import homeServicesCard from './objects/pages/home/services/homeServicesCard';
+//* home
+import homeServicesSection from './objects/pages/home/homeServicesSection';
+import homeServicesCard from './objects/pages/home/homeServicesCard';
 import homeFeaturesSection from './objects/pages/home/homeFeaturesSection';
+import homeNewsletterSection from './objects/pages/home/homeNewsletterSection';
+import homeTestimonialsSection from './objects/pages/home/homeTestimonialsSection';
+import homeFeaturedExperienceSection from './objects/pages/home/homeFeaturedExperienceSection';
+import homeFeaturedDestinationsSection from './objects/pages/home/homeFeaturedDestinationsSection';
 
 import feature from './objects/shared/feature';
-//individual experience
 import experienceFeaturesSection from './objects/experience/experienceFeaturesSection';
 import experienceDestinationsSection from './objects/experience/experienceDestinationsSection';
 import highlightsSection from './objects/destination/highlightsSection';
@@ -54,9 +56,7 @@ import experienceDetails from './objects/experience/experienceDetails';
 import highlight from './objects/destination/highlight';
 import teamSection from './objects/pages/about/teamSection';
 import experienceItineraryItem from './objects/experience/experienceItineraryItem';
-import homeTestimonialsSection from './objects/pages/home/homeTestimonialsSection';
-import homeFeaturedExperienceSection from './objects/pages/home/homeFeaturedExperienceSection';
-import homeFeaturedDestinationsSection from './objects/pages/home/homeFeaturedDestinationsSection';
+
 import testimonial from './objects/shared/testimonial';
 
 // abstracts
@@ -66,26 +66,28 @@ export default createSchema({
   name: 'content',
   types: schemaTypes.concat([
     //! DOCUMENTS
-    //* Destination
-    destination,
-    destinationTag,
-    //* Experience
-    experience,
-    // --- pages
+    //* pages
     homePage,
     aboutPage,
     experiencesPage,
     destinationsPage,
     inquiryFormPage,
+
+    //* Destination
+    destination,
+    destinationTag,
+
+    //* Experience
+    experience,
+
     // --- misc
     teamMember,
     socials,
     contact,
     partner,
 
-    // OBJECTS
+    //! OBJECTS
     hero,
-    card,
     cardSimple,
     form,
     section,
@@ -104,6 +106,7 @@ export default createSchema({
     homeServicesCard,
     homeTestimonialsSection,
     homeFeaturesSection,
+    homeNewsletterSection,
     //experience
     experienceDetails,
     feature,

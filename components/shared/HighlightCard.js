@@ -6,7 +6,7 @@ export default function HighlightCard({ title, body, image }) {
   return (
     <li className="col-span-1">
       {image && (
-        <div className="bg-neutral-100 mx-auto w-full rounded-2xl shadow-xl">
+        <div className="mx-auto w-full rounded-2xl bg-slate-100 shadow-xl">
           <Image
             src={urlForImage(image).width(1080).height(1080).url()}
             alt={image?.alt}
@@ -20,7 +20,7 @@ export default function HighlightCard({ title, body, image }) {
         </div>
       )}
 
-      <h4 className="mt-6 text-xl sm:text-2xl font-medium font-mono uppercase">
+      <h4 className="mt-6 font-mono text-xl font-medium uppercase sm:text-2xl">
         {title}
       </h4>
 

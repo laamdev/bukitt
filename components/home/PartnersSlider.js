@@ -40,7 +40,7 @@ export default function PartnerSlider({ partners }) {
   return (
     <div
       ref={sliderRef}
-      className="keen-slider w-full bg-neutral-50 rounded-2xl shadow-md"
+      className="keen-slider w-full rounded-2xl bg-slate-50 shadow-md"
     >
       {partners.map((partner) => (
         <div key={partner.name} className="keen-slider__slide">

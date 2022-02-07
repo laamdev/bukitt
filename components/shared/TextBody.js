@@ -12,7 +12,7 @@ const serializers = {
       }
 
       return (
-        <div className="text-center py-3 md:py-6 lg:py-12">
+        <div className="py-3 text-center md:py-6 lg:py-12">
           <Image
             src={urlForImage(node).width(1024).height(768).url()}
             alt={node.alt}
@@ -23,7 +23,7 @@ const serializers = {
             objectPosition="center"
             className="rounded-2xl"
           />
-          <small className="text-neutral-500 text-xs md:text-sm">
+          <small className="text-xs text-slate-500 md:text-sm">
             {node.caption}
           </small>
         </div>
@@ -40,19 +40,8 @@ const serializers = {
         </Link>
       );
     },
-    // link: ({ mark, children }) => {
-    //   const { blank, href } = mark;
-    //   return blank ? (
-    //     <a href={href} target="_blank" rel="noopener noreferrer">
-    //       {children}
-    //     </a>
-    //   ) : (
-    //     <a href={href}>{children}</a>
-    //   );
-    // },
     link: ({ mark, children }) => {
       const { url } = mark;
-      console.log(url);
       return (
         <a href={url} target="_blank" rel="noopener noreferrer">
           {children}
@@ -65,7 +54,7 @@ const serializers = {
 export default function TextBody({ content, modClass }) {
   return (
     <div
-      className={`prose prose-neutral prose-a:font-medium prose-a:text-brand hover:prose-a:text-brand-400 prose-img:rounded-2xl prose-img:shadow-xl prose-img:mx-auto tw-transition ${
+      className={`tw-transition prose prose-neutral prose-a:font-medium prose-a:text-brand hover:prose-a:text-brand-400 prose-img:mx-auto prose-img:rounded-2xl prose-img:shadow-xl ${
         modClass ? modClass : ''
       }`}
     >

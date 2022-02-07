@@ -4,8 +4,8 @@ import SectionHeading from '@/components/shared/SectionHeading';
 export default function TestimonialsSection({ heading, testimonials }) {
   return (
     <section className="tw-section">
-      <div className="max-w-6xl mx-auto">
-        <SectionHeading passedClassName="text-center">{heading}</SectionHeading>
+      <div className="mx-auto max-w-6xl">
+        <SectionHeading className="text-center">{heading}</SectionHeading>
 
         <TestimonialsSlider testimonials={testimonials} />
       </div>

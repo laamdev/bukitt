@@ -14,7 +14,7 @@ export default function ServicesCard({
   btnURL,
 }) {
   return (
-    <div className="col-span-1 shadow-xl rounded-2xl relative group">
+    <div className="group relative col-span-1 rounded-2xl shadow-xl">
       <Link href={`/${btnURL}`}>
         <a>
           <Image
@@ -29,11 +29,11 @@ export default function ServicesCard({
           />
           <Overlay />
 
-          <div className="absolute tw-center w-full px-3 sm:px-4 lg:px-6 py-3 sm:py-6 text-center">
-            <h4 className="text-4xl sm:text-5xl lg:text-7xl font-mono text-white font-medium uppercase">
+          <div className="tw-center absolute w-full px-3 py-3 text-center sm:px-4 sm:py-6 lg:px-6">
+            <h4 className="font-mono text-4xl font-medium uppercase text-white sm:text-5xl lg:text-7xl">
               {heading}
             </h4>
-            <p className="text-neutral-100 text-lg lg:text-2xl">{body}</p>
+            <p className="text-lg text-slate-100 lg:text-2xl">{body}</p>
             <div className="mt-6 flex justify-center">
               <BtnNav btnLinkText={btnLinkText} btnURL={btnURL} secondary />
             </div>

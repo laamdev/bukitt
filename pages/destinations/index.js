@@ -18,7 +18,7 @@ export default function DestinationsPage({ destinationsPageData }) {
   const [filteredDestinations, setFilteredDestinations] =
     useState(destinations);
 
-  const [destinationNames, setDestinationNames] = useState(
+  const [destinationNames] = useState(
     destinations.map((destination) => destination.name.toLowerCase())
   );
 
@@ -30,6 +30,7 @@ export default function DestinationsPage({ destinationsPageData }) {
 
   //! DYNAMIC DATA
   useEffect(() => {
+    // go trough the array of destination names and return
     const filteredDestinationsNames = [...destinationNames].filter(
       (name) => name.indexOf(searchString.trim().toLowerCase()) !== -1
     );
@@ -64,20 +65,20 @@ export default function DestinationsPage({ destinationsPageData }) {
     >
       <Hero hero={destinationsPageData?.hero} />
 
-      <section className="tw-section space-y-12 items-center flex flex-col">
-        <div className="max-w-2xl w-full">
+      <section className="tw-section mx-auto max-w-5xl">
+        <div className="mx-auto w-full max-w-2xl">
           <SearchBar
             searchString={searchString}
             setSearchString={setSearchString}
           />
         </div>
 
-        <div className="max-w-7xl inline-flex flex-wrap items-center justify-center gap-3 lg:gap-6">
+        <div className="mt-12 inline-flex max-w-7xl flex-wrap items-center justify-center gap-3 lg:gap-6">
           <button
             type="button"
             className={classNames(
               isAllTag ? 'bg-brand-400' : 'bg-brand-100',
-              'px-2.5 py-0.5 rounded-2xl text-xs lg:text-sm font-medium bg-brand-100 text-brand-800'
+              'rounded-2xl bg-brand-100 px-2.5 py-0.5 text-xs font-medium text-brand-800 lg:text-sm'
             )}
             onClick={() => {
               setTags([]);
@@ -93,7 +94,7 @@ export default function DestinationsPage({ destinationsPageData }) {
               type="button"
               className={classNames(
                 tags.includes(tag) ? 'bg-brand-400' : 'bg-brand-100',
-                'px-2.5 py-0.5 rounded-2xl text-xs lg:text-sm font-medium bg-brand-100 text-brand-800'
+                'rounded-2xl bg-brand-100 px-2.5 py-0.5 text-xs font-medium text-brand-800 lg:text-sm'
               )}
               onClick={() => {
                 if (!tags.includes(tag)) {
@@ -112,7 +113,7 @@ export default function DestinationsPage({ destinationsPageData }) {
         </div>
       </section>
 
-      <div>
+      <section className="tw-section mx-auto max-w-7xl">
         <List>
           {filteredDestinations.map((destination) => {
             const destinationTags = destination.tags.map((tag) => tag.name);
@@ -127,7 +128,10 @@ export default function DestinationsPage({ destinationsPageData }) {
             }
           })}
         </List>
-      </div>
+        {filteredDestinations.length === 0 && (
+          <div className="mx-auto text-center">No results!</div>
+        )}
+      </section>
     </Layout>
   );
 }

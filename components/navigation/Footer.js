@@ -9,93 +9,60 @@ import {
   currentYear,
 } from '@/utils/data';
 
-import Newsletter from '@/components/forms/Newsletter';
+import FooterHeading from '@/components/navigation/FooterHeading';
+import FooterList from '@/components/navigation/FooterList';
+import FooterGroup from '@/components/navigation/FooterGroup';
+import Divider from '@/components/shared/Divider';
 
 export default function Footer() {
   return (
-    <footer
-      className="bg-dark-500 py-10 lg:py-12"
-      aria-labelledby="footer-heading"
-    >
+    <footer className="bg-dark-500 py-12" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-0">
-        <div className="flex flex-col space-y-12 sm:space-y-0 sm:flex-row">
-          <div className="w-full sm:w-1/4">
-            <Newsletter />
-          </div>
+      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-12 lg:grid-cols-3">
+        <FooterGroup className="col-span-1 lg:col-span-1">
+          <FooterHeading>Socials</FooterHeading>
+          <FooterList>
+            {socialLinksFooter.map((social) => (
+              <li key={social.name}>
+                <a
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="tw-transition text-slate-400 hover:text-slate-300 "
+                >
+                  <span className="sr-only">{social.name}</span>
+                  <span className="h-6 w-6 lg:h-8 lg:w-8">{social.icon}</span>
+                </a>
+              </li>
+            ))}
+          </FooterList>
+        </FooterGroup>
 
-          <div className="w-full sm:w-2/4 flex justify-between sm:justify-evenly">
-            <div>
-              <h4 className="text-neutral-200 text-2xl font-medium font-mono uppercase">
-                Quick Links
-              </h4>
-              <ul role="list" className="mt-4 space-y-4">
-                {navLinks.map((link) => (
-                  <li key={link.name}>
-                    <Link href={link.href}>
-                      <a className="text-base text-neutral-300 hover:text-white tw-transition">
-                        {link.name}
-                      </a>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <FooterGroup className="col-span-1 lg:col-span-1">
+          <FooterHeading>Contacts</FooterHeading>
+          <FooterList>
+            {contactLinks.map((contact) => (
+              <li key={contact.name}>
+                <a
+                  href={contact.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="tw-transition text-slate-400 hover:text-slate-300"
+                >
+                  <span className="sr-only">{contact.name}</span>
+                  <span className="h-6 w-6 lg:h-8 lg:w-8">{contact.icon}</span>
+                </a>
+              </li>
+            ))}
+          </FooterList>
+        </FooterGroup>
 
-            <div className="space-y-12">
-              <div>
-                <h4 className="text-neutral-200 text-2xl font-medium font-mono uppercase">
-                  Socials
-                </h4>
-                <ul role="list" className="mt-4 space-y-4">
-                  {socialLinksFooter.map((social) => (
-                    <li key={social.name}>
-                      <a
-                        href={social.href}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-neutral-400 hover:text-neutral-300 tw-transition "
-                      >
-                        <span className="sr-only">{social.name}</span>
-                        <span className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10">
-                          {social.icon}
-                        </span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="text-neutral-200 text-2xl font-medium font-mono uppercase">
-                  Contacts
-                </h4>
-                <ul role="list" className="mt-4 space-y-4">
-                  {contactLinks.map((contact) => (
-                    <li key={contact.name}>
-                      <a
-                        href={contact.href}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-neutral-400 hover:text-neutral-300 tw-transition"
-                      >
-                        <span className="sr-only">{contact.name}</span>
-                        <span className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10">
-                          {contact.icon}
-                        </span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-full sm:w-1/4 flex justify-center items-center">
-            <div className="w-24">
+        <FooterGroup className="col-span-2 lg:col-span-1">
+          <div className="w-20 lg:w-24">
+            <a target="_blank" rel="noreferrer" href="https://www.iata.org/">
               <Image
                 src="/static/images/iata-logo.png"
                 alt="IATA logo"
@@ -103,17 +70,15 @@ export default function Footer() {
                 width={1}
                 height={1}
               />
-            </div>
+            </a>
           </div>
-        </div>
+        </FooterGroup>
+      </div>
 
-        <div className="flex justify-center mt-12 pt-12 border-t border-neutral-700">
-          <div>
-            <p className="sm:mt-8 text-xs sm:text-sm text-neutral-400 md:mt-0 md:order-1">
-              © {currentYear}, {copyright}
-            </p>
-          </div>
-        </div>
+      <div className="mt-12 border-t-2 border-slate-700 pt-12">
+        <p className="text-center text-xs text-slate-400">
+          © {currentYear}, {copyright}
+        </p>
       </div>
     </footer>
   );

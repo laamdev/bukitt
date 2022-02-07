@@ -7,15 +7,15 @@ export default function TeamQuote({ quoteSection }) {
     <section className="tw-section">
       {/* <h3 className="tw-section-heading">{quoteSection?.heading}</h3> */}
 
-      <div className="pb-16 bg-brand-600 lg:pb-0 lg:z-10 lg:relative shadow-xl rounded-2xl">
-        <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8">
+      <div className="mx-auto max-w-6xl rounded-2xl bg-brand-600 pb-16 shadow-xl lg:relative lg:z-10 lg:pb-0">
+        <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
           <div className="relative lg:-my-8">
             <div
               aria-hidden="true"
-              className="absolute inset-x-0 top-0 h-1/2 lg:hidden bg-white"
+              className="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"
             />
-            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full">
-              <div className="bg-neutral-500 rounded-2xl shadow-xl overflow-hidden">
+            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:h-full lg:p-0">
+              <div className="overflow-hidden rounded-2xl bg-slate-500 shadow-xl">
                 <Image
                   src={urlForImage(quoteSection?.profilePicture)
                     .width(1080)
@@ -32,8 +32,8 @@ export default function TeamQuote({ quoteSection }) {
               </div>
             </div>
           </div>
-          <div className="mt-12 lg:m-0 lg:col-span-2 lg:pl-8">
-            <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:px-0 lg:py-20 lg:max-w-none">
+          <div className="mt-12 lg:col-span-2 lg:m-0 lg:pl-8">
+            <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
               <blockquote>
                 <div>
                   <svg

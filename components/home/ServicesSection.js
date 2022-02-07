@@ -7,9 +7,9 @@ export default function ServicesSection({
   destinationsCard,
 }) {
   return (
-    <section className="tw-section max-w-7xl mx-auto">
-      <SectionHeading passedClassName="text-center">{heading}</SectionHeading>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-y-0 md:gap-x-6 lg:gap-x-12">
+    <section className="tw-section mx-auto max-w-7xl">
+      <SectionHeading className="text-center">{heading}</SectionHeading>
+      <div className="grid grid-cols-1 gap-y-6 md:grid-cols-2 md:gap-y-0 md:gap-x-6 lg:gap-x-12">
         <ServicesCard
           heading={experiencesCard?.heading}
           body={experiencesCard?.body}

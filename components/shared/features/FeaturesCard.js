@@ -4,10 +4,10 @@ import { urlForImage } from '@/lib/sanity';
 
 export default function FeaturesCard({ feature }) {
   return (
-    <li className="flow-root bg-neutral-50 rounded-lg shadow-md px-6 pb-8">
+    <li className="flow-root rounded-lg bg-slate-50 px-6 pb-8 shadow-md">
       <div className="-mt-6">
         <div>
-          <div className="bg-brand-500 rounded-md shadow-lg w-12 h-12 mx-auto p-2">
+          <div className="mx-auto h-12 w-12 rounded-md bg-brand-500 p-2 shadow-lg">
             {feature?.icon && (
               <Image
                 src={urlForImage(feature?.icon).width(1080).height(1080).url()}
@@ -22,10 +22,10 @@ export default function FeaturesCard({ feature }) {
             )}
           </div>
         </div>
-        <h3 className="mt-8 text-2xl lg:text-3xl font-mono uppercase font-medium text-neutral-900 tracking-tight">
+        <h3 className="mt-8 font-mono text-2xl font-medium uppercase tracking-tight text-slate-900 lg:text-3xl">
           {feature?.title}
         </h3>
-        <p className="mt-5 text-base lg:text-lg text-neutral-500">
+        <p className="mt-5 text-base text-slate-500 lg:text-lg">
           {feature?.description}
         </p>
       </div>

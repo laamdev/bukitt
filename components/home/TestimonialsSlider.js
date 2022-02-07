@@ -34,9 +34,9 @@ export default function TestimonialsSlider({ testimonials }) {
           {testimonials.map((index) => (
             <div className="embla__slide" key={index}>
               <div className="embla__slide__inner">
-                <div className="relative max-w-7xl mx-auto pt-20 pb-12 px-4 sm:px-6 lg:px-8 lg:py-20">
+                <div className="relative mx-auto max-w-7xl px-4 pt-20 pb-12 sm:px-6 lg:px-8 lg:py-20">
                   <svg
-                    className="absolute top-full left-0 transform translate-x-80 -translate-y-24 lg:hidden"
+                    className="absolute top-full left-0 translate-x-80 -translate-y-24 transform lg:hidden"
                     width={784}
                     height={404}
                     fill="none"
@@ -57,7 +57,7 @@ export default function TestimonialsSlider({ testimonials }) {
                           y={0}
                           width={4}
                           height={4}
-                          className="text-neutral-200"
+                          className="text-slate-200"
                           fill="currentColor"
                         />
                       </pattern>
@@ -70,7 +70,7 @@ export default function TestimonialsSlider({ testimonials }) {
                   </svg>
 
                   <svg
-                    className="hidden lg:block absolute right-full top-1/2 transform translate-x-1/2 -translate-y-1/2"
+                    className="absolute right-full top-1/2 hidden translate-x-1/2 -translate-y-1/2 transform lg:block"
                     width={404}
                     height={784}
                     fill="none"
@@ -91,7 +91,7 @@ export default function TestimonialsSlider({ testimonials }) {
                           y={0}
                           width={4}
                           height={4}
-                          className="text-neutral-200"
+                          className="text-slate-200"
                           fill="currentColor"
                         />
                       </pattern>
@@ -104,7 +104,7 @@ export default function TestimonialsSlider({ testimonials }) {
                   </svg>
 
                   <div className="relative lg:flex lg:items-center">
-                    <div className="hidden lg:block lg:shrink-0 relative h-64 lg:h-80 w-64 lg:w-80 rounded-full">
+                    <div className="relative hidden h-64 w-64 rounded-full lg:block lg:h-80 lg:w-80 lg:shrink-0">
                       <Image
                         src={urlForImage(index.thumbnail)
                           .width(1080)
@@ -120,7 +120,7 @@ export default function TestimonialsSlider({ testimonials }) {
 
                     <div className="relative lg:ml-10">
                       <svg
-                        className="absolute top-0 left-0 transform -translate-x-8 -translate-y-24 h-36 w-36 text-brand-200 opacity-50"
+                        className="absolute top-0 left-0 h-36 w-36 -translate-x-8 -translate-y-24 transform text-brand-200 opacity-50"
                         stroke="currentColor"
                         fill="none"
                         viewBox="0 0 144 144"
@@ -133,16 +133,16 @@ export default function TestimonialsSlider({ testimonials }) {
                       </svg>
                       <blockquote className="relative">
                         <div>
-                          <h4 className="text-3xl md:text-5xl lg:text-5xl font-mono uppercase text-brand">
+                          <h4 className="font-mono text-3xl uppercase text-brand md:text-5xl lg:text-5xl">
                             {index.destination}
                           </h4>
                         </div>
-                        <div className="mt-4 text-xl md:text-2xl lg:text-2xl leading-7 font-medium text-neutral-900">
+                        <div className="mt-4 text-xl font-medium leading-7 text-slate-900 md:text-2xl lg:text-2xl">
                           <p>{index.quote}</p>
                         </div>
                         <footer className="mt-8">
                           <div className="flex items-center">
-                            <div className="shrink-0 lg:hidden w-16 h-16 md:w-24 md:h-24">
+                            <div className="h-16 w-16 shrink-0 md:h-24 md:w-24 lg:hidden">
                               <Image
                                 src={urlForImage(index.thumbnail)
                                   .width(1080)
@@ -158,10 +158,10 @@ export default function TestimonialsSlider({ testimonials }) {
                               />
                             </div>
                             <div className="ml-4 md:ml-6 lg:ml-0">
-                              <div className="text-base md:text-xl lg:text-lg font-medium text-neutral-900">
+                              <div className="text-base font-medium text-slate-900 md:text-xl lg:text-lg">
                                 {index.name}
                               </div>
-                              <div className="text-sm md:text-lg lg:text-base font-ligth text-brand-600">
+                              <div className="font-ligth text-sm text-brand-600 md:text-lg lg:text-base">
                                 {index.origin}, {index.age}
                               </div>
                             </div>

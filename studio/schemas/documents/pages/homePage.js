@@ -65,6 +65,11 @@ export default {
       title: 'Testimonials Section',
     },
     {
+      name: 'newsletterSection',
+      type: 'homeNewsletterSection',
+      title: 'Newsletter Section',
+    },
+    {
       name: 'partnersSection',
       type: 'section',
       title: 'Partners Section',

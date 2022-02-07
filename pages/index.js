@@ -7,6 +7,7 @@ import Layout from '@/components/navigation/Layout';
 import FeaturedDestinationsSection from '@/components/home/FeaturedDestinationsSection';
 import FeaturedExperienceSection from '@/components/home/FeaturedExperienceSection';
 import ServicesSection from '@/components/home/ServicesSection';
+import NewsletterSection from '@/components/home/NewsletterSection';
 import PartnersSection from '@/components/home/PartnersSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 
@@ -27,25 +28,28 @@ export default function HomePage({ homeData }) {
         features={homeData?.featuresSection?.features}
       />
       <FeaturedDestinationsSection
-        sectionHeading={homeData?.featuredDestinationsSection?.sectionHeading}
+        heading={homeData?.featuredDestinationsSection?.heading}
         featuredDestinations={
           homeData?.featuredDestinationsSection?.featuredDestinations
+        }
+      />
+      <FeaturedExperienceSection
+        heading={homeData?.featuredExperienceSection?.heading}
+        featuredExperience={
+          homeData?.featuredExperienceSection?.featuredExperience
         }
       />
       <TestimonialsSection
         heading={homeData?.testimonialsSection?.heading}
         testimonials={homeData?.testimonialsSection?.testimonials}
       />
+      <NewsletterSection
+        heading={homeData?.newsletterSection?.heading}
+        body={homeData?.newsletterSection?.body}
+      />
       <PartnersSection
         heading={homeData?.partnersSection?.heading}
         partners={homeData?.partnersSection?.partners}
-      />
-      <FeaturedExperienceSection
-        heading={homeData?.featuredExperienceSection?.heading}
-        body={homeData?.featuredExperienceSection?.body}
-        featuredExperience={
-          homeData?.featuredExperienceSection?.featuredExperience
-        }
       />
     </Layout>
   );

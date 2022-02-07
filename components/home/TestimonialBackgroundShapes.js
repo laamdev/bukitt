@@ -2,7 +2,7 @@ export default function TestimonialBackgroundShapes() {
   return (
     <div>
       <svg
-        className="absolute top-full left-0 transform translate-x-80 -translate-y-24 lg:hidden"
+        className="absolute top-full left-0 translate-x-80 -translate-y-24 transform lg:hidden"
         width={784}
         height={404}
         fill="none"
@@ -23,7 +23,7 @@ export default function TestimonialBackgroundShapes() {
               y={0}
               width={4}
               height={4}
-              className="text-neutral-200"
+              className="text-slate-200"
               fill="currentColor"
             />
           </pattern>
@@ -36,7 +36,7 @@ export default function TestimonialBackgroundShapes() {
       </svg>
 
       <svg
-        className="hidden lg:block absolute right-full top-1/2 transform translate-x-1/2 -translate-y-1/2"
+        className="absolute right-full top-1/2 hidden translate-x-1/2 -translate-y-1/2 transform lg:block"
         width={404}
         height={784}
         fill="none"
@@ -57,7 +57,7 @@ export default function TestimonialBackgroundShapes() {
               y={0}
               width={4}
               height={4}
-              className="text-neutral-200"
+              className="text-slate-200"
               fill="currentColor"
             />
           </pattern>

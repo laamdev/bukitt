@@ -1,8 +1,22 @@
 {
+  "root": true,
+  "project": {
+    "name": "bukitt",
+    "basePath": "/studio"
+  },
   "api": {
     "projectId": "lgwru533",
     "dataset": "production"
   },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "@sanity/dashboard",
+    "media",
+    "vercel-deploy"
+  ],
   "env": {
     "development": {
       "plugins": ["@sanity/vision"]
@@ -29,20 +43,5 @@
       "implements": "part:@sanity/form-builder/input/file/asset-sources",
       "path": "./parts/assetSources.js"
     }
-  ],
-  "plugins": [
-    "@sanity/base",
-    "@sanity/components",
-    "@sanity/default-layout",
-    "@sanity/default-login",
-    "@sanity/desk-tool",
-    "@sanity/dashboard",
-    "media",
-    "vercel-deploy"
-  ],
-  "project": {
-    "name": "bukitt",
-    "basePath": "/studio"
-  },
-  "root": true
+  ]
 }
