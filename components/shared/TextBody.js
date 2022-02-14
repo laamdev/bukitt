@@ -14,7 +14,7 @@ const serializers = {
       return (
         <div className="py-3 text-center md:py-6 lg:py-12">
           <Image
-            src={urlForImage(node).width(1024).height(768).url()}
+            src={urlForImage(node).width(1920).height(1440).url()}
             alt={node.alt}
             layout="responsive"
             width={4}

@@ -6,7 +6,11 @@ const STUDIO_REWRITE = {
       : '/studio/index.html',
 };
 
-module.exports = {
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+
+module.exports = withBundleAnalyzer({
   rewrites: () => [STUDIO_REWRITE],
   reactStrictMode: true,
   images: {
@@ -134,4 +138,4 @@ module.exports = {
       },
     ];
   },
-};
+});
