@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "postbuild": "next-sitemap",
-    "postinstall": "lerna bootstrap && husky install",
+    "postinstall": "husky install && lerna bootstrap",
     "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
