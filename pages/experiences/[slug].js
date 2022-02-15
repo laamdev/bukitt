@@ -29,8 +29,7 @@ export default function ExperiencePage({ experience }) {
           dateFrom={experience?.details?.dateFrom}
           dateTo={experience?.details?.dateTo}
           duration={experience?.details?.duration}
-          groupSizeMin={experience?.details?.groupSizeMin}
-          groupSizeMax={experience?.details?.groupSizeMax}
+          groupSize={experience?.details?.groupSize}
         />
       )}
 

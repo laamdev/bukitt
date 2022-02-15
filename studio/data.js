@@ -19,8 +19,8 @@ export const seasons = [
   { title: 'Summer', value: 'summer' },
   { title: 'Fall', value: 'fall' },
   { title: 'Winter', value: 'winter' },
-  { title: 'All Year', value: 'all year' },
 ];
+
 export const months = [
   { title: 'January', value: 'Jan' },
   { title: 'February', value: 'Feb' },

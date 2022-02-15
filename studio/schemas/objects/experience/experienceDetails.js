@@ -7,14 +7,14 @@ export default {
   fields: [
     {
       name: 'price',
-      type: 'number',
       title: 'Price',
+      type: 'number',
       description: 'Experience price.',
     },
     {
       name: 'dateFrom',
-      type: 'string',
       title: 'Date From',
+      type: 'string',
       description: 'Experience date from.',
       options: {
         list: [...months],
@@ -22,8 +22,8 @@ export default {
     },
     {
       name: 'dateTo',
-      type: 'string',
       title: 'Date To',
+      type: 'string',
       description: 'Experience date to.',
       options: {
         list: [...months],
@@ -31,21 +31,15 @@ export default {
     },
     {
       name: 'duration',
-      type: 'number',
       title: 'Duration',
+      type: 'number',
       description: 'Experience duration in days.',
     },
     {
-      name: 'groupSizeMin',
+      name: 'groupSize',
+      title: 'Group Size',
       type: 'number',
-      title: 'Group Size Min',
       description: 'Mininum number of people per group.',
-    },
-    {
-      name: 'groupSizeMax',
-      type: 'number',
-      title: 'Group Size Max',
-      description: 'Maximum number of people per group.',
     },
   ],
   options: { collapsible: true, collapsed: true },

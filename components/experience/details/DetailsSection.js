@@ -9,38 +9,33 @@ export default function DetailsSection({
   dateFrom,
   dateTo,
   duration,
-  groupSizeMin,
-  groupSizeMax,
+  groupSize,
 }) {
   return (
     <DetailsContainer>
       <DetailsWrapper className="border-b sm:border-0 sm:border-r">
-        <DetailsLabel>Price</DetailsLabel>
+        <DetailsLabel>From price</DetailsLabel>
         <DetailsValue>
           ${price}
           <DetailsUnit> pp</DetailsUnit>
         </DetailsValue>
       </DetailsWrapper>
       <DetailsWrapper className="border-t border-b sm:border-0 sm:border-l sm:border-r">
-        <DetailsLabel>Season</DetailsLabel>
+        <DetailsLabel>When to go</DetailsLabel>
         <DetailsValue>
           {dateFrom} - {dateTo}
         </DetailsValue>
       </DetailsWrapper>
       <DetailsWrapper className="border-t border-b sm:border-0 sm:border-l sm:border-r">
-        <DetailsLabel>Duration</DetailsLabel>
+        <DetailsLabel>Ideal length</DetailsLabel>
         <DetailsValue>
           {duration}
           <DetailsUnit> days</DetailsUnit>
         </DetailsValue>
       </DetailsWrapper>
       <DetailsWrapper className="border-t sm:border-0 sm:border-l">
-        <DetailsLabel>Group</DetailsLabel>
-        <DetailsValue>
-          {groupSizeMin}
-          <DetailsUnit> min</DetailsUnit> - {groupSizeMax}
-          <DetailsUnit> max</DetailsUnit>
-        </DetailsValue>
+        <DetailsLabel>Best group size</DetailsLabel>
+        <DetailsValue>{groupSize}+</DetailsValue>
       </DetailsWrapper>
     </DetailsContainer>
   );

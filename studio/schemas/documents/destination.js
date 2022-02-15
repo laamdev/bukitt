@@ -84,6 +84,12 @@ export default {
       description: 'Map section of the destination page.',
     },
     {
+      name: 'weatherSection',
+      type: 'destinationWeatherSection',
+      title: 'Weather Section',
+      description: 'Weather section of the destination page.',
+    },
+    {
       name: 'highlightsSection',
       type: 'highlightsSection',
       title: 'Highlights Section',
