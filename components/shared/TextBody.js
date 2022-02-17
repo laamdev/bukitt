@@ -32,8 +32,12 @@ const serializers = {
   },
   marks: {
     internalLink: ({ mark, children }) => {
-      const { slug = {} } = mark;
-      const href = `/${slug.current}`;
+      const { slug = {}, type = {} } = mark;
+
+      const prepend =
+        type === 'experience' || type === 'destination' ? `${type}s` : '';
+
+      const href = `/${prepend}/${slug.current}`;
       return (
         <Link href={href}>
           <a>{children}</a>
