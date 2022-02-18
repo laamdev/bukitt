@@ -1,3 +1,5 @@
+// // import CookieConsent from 'react-cookie-consent';
+
 import { homePageQuery } from '@/lib/queries';
 import { sanityClient } from '@/lib/sanity.server';
 
@@ -17,6 +19,24 @@ export default function HomePage({ homeData }) {
       title={homeData?.seo?.title}
       description={homeData?.seo?.description}
     >
+      {/* <CookieConsent
+        location="bottom"
+        buttonText="Sure man!!"
+        cookieName="myAwesomeCookieName2"
+        style={{ background: '#2B373B' }}
+        buttonStyle={{
+          color: '#4e503b',
+          fontSize: '13px',
+          borderRadius: '20px',
+          background: '#0d0d0d',
+        }}
+        expires={150}
+        className="bg-brand"
+      >
+        > This website uses cookies to enhance the user experience.{' '}
+        <span style={{ fontSize: '10px' }}>This bit of text is smaller :O</span>
+      </CookieConsent> */}
+
       <Hero hero={homeData?.hero} page="home" />
 
       <ServicesSection
