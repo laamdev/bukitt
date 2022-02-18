@@ -1,21 +1,26 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { PortableText } from '@portabletext/react';
 import markdownStyles from './markdown-styles.module.css';
-import BlockContent from '@sanity/block-content-to-react';
-import { urlForImage } from '@/lib/sanity';
 
-const serializers = {
+import { urlForImage } from '@/lib/sanity';
+// // import urlBuilder from '@sanity/image-url';
+// // import { getImageDimensions } from '@sanity/asset-utils';
+
+const components = {
   types: {
-    image: ({ node }) => {
-      if (!node || !node.asset || !node.asset._ref) {
+    image: ({ value }) => {
+      // // const { width, height } = getImageDimensions(value);
+
+      if (!value || !value.asset || !value.asset._ref) {
         return null;
       }
 
       return (
         <div className="py-3 text-center md:py-6 lg:py-12">
           <Image
-            src={urlForImage(node).width(1920).height(1440).url()}
-            alt={node.alt}
+            src={urlForImage(value).width(1600).height(1200).url()}
+            alt={value.alt}
             layout="responsive"
             width={4}
             height={3}
@@ -24,15 +29,15 @@ const serializers = {
             className="rounded-2xl"
           />
           <small className="text-xs text-slate-500 md:text-sm">
-            {node.caption}
+            {value.caption}
           </small>
         </div>
       );
     },
   },
   marks: {
-    internalLink: ({ mark, children }) => {
-      const { slug = {}, type = {} } = mark;
+    internalLink: ({ value, children }) => {
+      const { slug = {}, type = {} } = value;
 
       const prepend =
         type === 'experience' || type === 'destination' ? `${type}s` : '';
@@ -44,8 +49,8 @@ const serializers = {
         </Link>
       );
     },
-    link: ({ mark, children }) => {
-      const { url } = mark;
+    link: ({ value, children }) => {
+      const { url } = value;
       return (
         <a href={url} target="_blank" rel="noopener noreferrer">
           {children}
@@ -62,9 +67,9 @@ export default function TextBody({ content, modClass }) {
         modClass ? modClass : ''
       }`}
     >
-      <BlockContent
-        blocks={content}
-        serializers={serializers}
+      <PortableText
+        value={content}
+        components={components}
         projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
         dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
         className={markdownStyles.markdown}

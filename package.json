@@ -12,12 +12,13 @@
     "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
-    "@headlessui/react": "^1.4.3",
+    "@headlessui/react": "^1.5.0",
     "@heroicons/react": "^1.0.5",
     "@hookform/error-message": "^2.0.0",
     "@hookform/resolvers": "^2.8.8",
-    "@next/bundle-analyzer": "^12.0.10",
-    "@sanity/block-content-to-react": "^3.0.0",
+    "@next/bundle-analyzer": "^12.1.0",
+    "@portabletext/react": "^1.0.3",
+    "@sanity/asset-utils": "^1.2.3",
     "@sanity/cli": "^2.27.0",
     "@sanity/image-url": "^1.0.1",
     "@sendgrid/mail": "^7.6.1",
@@ -26,11 +27,11 @@
     "embla-carousel-react": "^6.2.0",
     "framer-motion": "^6.2.6",
     "keen-slider": "^6.6.3",
-    "next": "12.0.10",
-    "next-sanity": "^0.4.0",
+    "next": "12.1.0",
+    "next-sanity": "^0.5.0",
     "next-sanity-image": "^3.2.1",
     "next-seo": "^5.1.0",
-    "next-sitemap": "^2.1.14",
+    "next-sitemap": "^2.4.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-hook-form": "^7.27.0",
@@ -45,7 +46,7 @@
     "autoprefixer": "^10.4.2",
     "concurrently": "^7.0.0",
     "eslint": "8.9.0",
-    "eslint-config-next": "12.0.10",
+    "eslint-config-next": "12.1.0",
     "eslint-config-prettier": "^8.3.0",
     "husky": "^7.0.4",
     "lerna": "^4.0.0",
@@ -53,6 +54,6 @@
     "postcss": "^8.4.6",
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.7",
-    "tailwindcss": "^3.0.22"
+    "tailwindcss": "^3.0.23"
   }
 }
