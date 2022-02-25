@@ -1,40 +1,36 @@
 export default async function handler(req, res) {
-  const { email } = req.body;
-
   // 1. Get the email from the payload and
+  // validate if it is empty.
+  const { email } = req.body;
 
   if (!email) {
     return res.status(400).json({ error: 'Please enter your email.' });
   }
 
-  // 2. Use the Sendgrid API Key and create a subscriber
-
+  // 2. Use the Revue API Key and create a subscriber using
+  // the email we pass to the API. Please note, we pass the
+  // API Key in the 'Authorization' header.
   try {
-    const API_KEY = process.env.SENDGRID_API_KEY;
-
-    const API_URL = 'https://api.sendgrid.com/v3/marketing/contacts';
-
-    const API_OPTIONS = {
-      method: 'PUT',
-      body: JSON.stringify({
-        contacts: [{ email: email }],
-        list_ids: [process.env.SENDGRID_MAILING_ID],
-      }),
+    const API_KEY = process.env.REVUE_API_KEY;
+    const response = await fetch(`https://www.getrevue.co/api/v2/subscribers`, {
+      method: 'POST',
+      // TODO: Change double_opt_in to true in production
+      body: JSON.stringify({ email: email }),
       headers: {
-        Authorization: `Bearer ${API_KEY}`,
-        'content-type': 'application/json',
+        Authorization: `Token ${API_KEY}`,
+        'Content-Type': 'application/json',
         'User-Agent': '*',
       },
-    };
+    });
 
-    const response = await fetch(API_URL, API_OPTIONS);
-
-    console.log(JSON.stringify(response, null, 2));
-
+    // 3. We check in the response if the status is 400
+    // If so, consider it as error and return. Otherwise a 201
+    // for create
     if (response.status >= 400) {
       const message = await response.json();
       return res.status(400).json({ error: message.error.email[0] });
     }
+    // Send a JSON response
     res.status(201).json({
       message: `Hey, ${email}, Please check your email and verify it. Can't wait to get you boarded.`,
       error: '',

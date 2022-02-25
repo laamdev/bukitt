@@ -9,7 +9,7 @@ const variants = {
 
 export default function Layout({ children, title, description }) {
   return (
-    <div className="overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden">
       <NextSeo
         title={title}
         description={description}
