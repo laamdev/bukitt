@@ -1,5 +1,5 @@
 import SectionHeading from '@/components/shared/SectionHeading';
-import Newsletter from '@/components/home/Newsletter';
+import Newsletter from '@/components/forms/Newsletter';
 
 export default function NewsletterSection({ heading, body }) {
   return (

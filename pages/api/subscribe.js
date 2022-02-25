@@ -36,7 +36,7 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: message.error.email[0] });
     }
     res.status(201).json({
-      message: `Hey, ${email}, Please check your email and verify it. Can't wait to get you boarded.`,
+      message: `Welcome ${email}. Thanks for subscribing!`,
       error: '',
     });
   } catch (err) {
