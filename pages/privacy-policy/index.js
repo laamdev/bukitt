@@ -1,148 +1,197 @@
 export default function PrivacyPolicyPage() {
   return (
-    <div>
-      <h1>Privacy Policy of Bukitt</h1>
+    <div className="tw-section mx-auto max-w-3xl space-y-12">
+      <div className="space-y-3">
+        <h1 className="text-4xl font-bold">
+          Privacy Policy for Bukitt Enterprise LLC
+        </h1>
 
-      <p>Bukitt operates the bukitt.com website, which provides the SERVICE.</p>
+        <p>
+          At Bukitt, accessible from bukitt.com, one of our main priorities is
+          the privacy of our visitors. This Privacy Policy document contains
+          types of information that is collected and recorded by Bukitt and how
+          we use it.
+        </p>
 
-      <p>
-        This page is used to inform website visitors regarding our policies with
-        the collection, use, and disclosure of Personal Information if anyone
-        decided to use our Service, the Bukitt website.
-      </p>
+        <p>
+          If you have additional questions or require more information about our
+          Privacy Policy, do not hesitate to contact us. Our Privacy Policy was
+          generated with the help of{' '}
+          <a href="https://www.gdprprivacynotice.com/">
+            GDPR Privacy Policy Generator from GDPRPrivacyNotice.com
+          </a>
+        </p>
+      </div>
 
-      <p>
-        If you choose to use our Service, then you agree to the collection and
-        use of information in relation with this policy. The Personal
-        Information that we collect are used for providing and improving the
-        Service. We will not use or share your information with anyone except as
-        described in this Privacy Policy. Our Privacy Policy was created with
-        the help of the{' '}
-        <a href="https://www.privacypolicytemplate.net">
-          Privacy Policy Template Generator
-        </a>
-        .
-      </p>
+      <div className="space-y-3">
+        <h2 className="text-2xl font-medium">
+          General Data Protection Regulation (GDPR)
+        </h2>
+        <p>We are a Data Controller of your information.</p>
 
-      <p>
-        The terms used in this Privacy Policy have the same meanings as in our
-        Terms and Conditions, which is accessible at bukitt.com, unless
-        otherwise defined in this Privacy Policy.
-      </p>
+        <p>
+          Bukitt Enterprise LLC legal basis for collecting and using the
+          personal information described in this Privacy Policy depends on the
+          Personal Information we collect and the specific context in which we
+          collect the information:
+        </p>
+        <ul className="ml-12 list-disc">
+          <li>Bukitt Enterprise LLC needs to perform a contract with you</li>
+          <li>You have given Bukitt Enterprise LLC permission to do so</li>
+          <li>
+            Processing your personal information is in Bukitt Enterprise LLC
+            legitimate interests
+          </li>
+          <li>Bukitt Enterprise LLC needs to comply with the law</li>
+        </ul>
 
-      <h2>Information Collection and Use</h2>
+        <p>
+          Bukitt Enterprise LLC will retain your personal information only for
+          as long as is necessary for the purposes set out in this Privacy
+          Policy. We will retain and use your information to the extent
+          necessary to comply with our legal obligations, resolve disputes, and
+          enforce our policies.
+        </p>
 
-      <p>
-        For a better experience while using our Service, we may require you to
-        provide us with certain personally identifiable information, including
-        but not limited to your name, phone number, and postal address. The
-        information that we collect will be used to contact or identify you.
-      </p>
+        <p>
+          If you are a resident of the European Economic Area (EEA), you have
+          certain data protection rights. If you wish to be informed what
+          Personal Information we hold about you and if you want it to be
+          removed from our systems, please contact us.
+        </p>
+        <p>
+          In certain circumstances, you have the following data protection
+          rights:
+        </p>
+        <ul className="ml-12 list-disc">
+          <li>
+            The right to access, update or to delete the information we have on
+            you.
+          </li>
+          <li>The right of rectification.</li>
+          <li>The right to object.</li>
+          <li>The right of restriction.</li>
+          <li>The right to data portability</li>
+          <li>The right to withdraw consent</li>
+        </ul>
+      </div>
 
-      <h2>Log Data</h2>
+      <div className="space-y-3">
+        <h2 className="text-2xl font-medium">Log Files</h2>
 
-      <p>
-        We want to inform you that whenever you visit our Service, we collect
-        information that your browser sends to us that is called Log Data. This
-        Log Data may include information such as your computer’s Internet
-        Protocol (`&quot;`IP`&quot;`) address, browser version, pages of our
-        Service that you visit, the time and date of your visit, the time spent
-        on those pages, and other statistics.
-      </p>
+        <p>
+          Bukitt follows a standard procedure of using log files. These files
+          log visitors when they visit websites. All hosting companies do this
+          and a part of hosting services&apos; analytics. The information
+          collected by log files include internet protocol (IP) addresses,
+          browser type, Internet Service Provider (ISP), date and time stamp,
+          referring/exit pages, and possibly the number of clicks. These are not
+          linked to any information that is personally identifiable. The purpose
+          of the information is for analyzing trends, administering the site,
+          tracking users&apos; movement on the website, and gathering
+          demographic information.
+        </p>
+      </div>
 
-      <h2>Cookies</h2>
+      <div className="space-y-3">
+        <h2 className="text-2xl font-medium">Cookies and Web Beacons</h2>
 
-      <p>
-        Cookies are files with small amount of data that is commonly used an
-        anonymous unique identifier. These are sent to your browser from the
-        website that you visit and are stored on your computer’s hard drive.
-      </p>
+        <p>
+          Like any other website, Bukitt uses &lsquo;cookies&lsquo;. These
+          cookies are used to store information including visitors&apos;
+          preferences, and the pages on the website that the visitor accessed or
+          visited. The information is used to optimize the users&apos;
+          experience by customizing our web page content based on visitors&apos;
+          browser type and/or other information.
+        </p>
 
-      <p>
-        Our website uses these `&quot;`cookies`&quot;` to collection information
-        and to improve our Service. You have the option to either accept or
-        refuse these cookies, and know when a cookie is being sent to your
-        computer. If you choose to refuse our cookies, you may not be able to
-        use some portions of our Service.
-      </p>
+        <p>
+          For more general information on cookies, please read{' '}
+          <a href="https://www.generateprivacypolicy.com/#cookies">
+            &quot;Cookies&quot; article from the Privacy Policy Generator
+          </a>
+          .
+        </p>
+      </div>
 
-      <p>
-        For more general information on cookies, please read{' '}
-        <a href="https://www.generateprivacypolicy.com/#cookies">
-          `&quot;`Cookies`&quot;` article from the Privacy Policy Generator
-        </a>
-        .
-      </p>
+      <div className="space-y-3">
+        <h2 className="text-2xl font-medium">Privacy Policies</h2>
 
-      <h2>Service Providers</h2>
+        <p>
+          You may consult this list to find the Privacy Policy for each of the
+          advertising partners of Bukitt.
+        </p>
 
-      <p>
-        We may employ third-party companies and individuals due to the following
-        reasons:
-      </p>
+        <p>
+          Third-party ad servers or ad networks uses technologies like cookies,
+          JavaScript, or Web Beacons that are used in their respective
+          advertisements and links that appear on Bukitt, which are sent
+          directly to users&apos; browser. They automatically receive your IP
+          address when this occurs. These technologies are used to measure the
+          effectiveness of their advertising campaigns and/or to personalize the
+          advertising content that you see on websites that you visit.
+        </p>
 
-      <ul>
-        <li>To facilitate our Service;</li>
-        <li>To provide the Service on our behalf;</li>
-        <li>To perform Service-related services; or</li>
-        <li>To assist us in analyzing how our Service is used.</li>
-      </ul>
+        <p>
+          Note that Bukitt has no access to or control over these cookies that
+          are used by third-party advertisers.
+        </p>
+      </div>
 
-      <p>
-        We want to inform our Service users that these third parties have access
-        to your Personal Information. The reason is to perform the tasks
-        assigned to them on our behalf. However, they are obligated not to
-        disclose or use the information for any other purpose.
-      </p>
+      <div className="space-y-3">
+        <h2 className="text-2xl font-medium">Third Party Privacy Policies</h2>
 
-      <h2>Security</h2>
+        <p>
+          Bukitt&apos;s Privacy Policy does not apply to other advertisers or
+          websites. Thus, we are advising you to consult the respective Privacy
+          Policies of these third-party ad servers for more detailed
+          information. It may include their practices and instructions about how
+          to opt-out of certain options.
+        </p>
 
-      <p>
-        We value your trust in providing us your Personal Information, thus we
-        are striving to use commercially acceptable means of protecting it. But
-        remember that no method of transmission over the internet, or method of
-        electronic storage is 100% secure and reliable, and we cannot guarantee
-        its absolute security.
-      </p>
+        <p>
+          You can choose to disable cookies through your individual browser
+          options. To know more detailed information about cookie management
+          with specific web browsers, it can be found at the browsers&apos;
+          respective websites.
+        </p>
+      </div>
 
-      <h2>Links to Other Sites</h2>
+      <div className="space-y-3">
+        <h2 className="text-2xl font-medium">Children&apos;s Information</h2>
 
-      <p>
-        Our Service may contain links to other sites. If you click on a
-        third-party link, you will be directed to that site. Note that these
-        external sites are not operated by us. Therefore, we strongly advise you
-        to review the Privacy Policy of these websites. We have no control over,
-        and assume no responsibility for the content, privacy policies, or
-        practices of any third-party sites or services.
-      </p>
+        <p>
+          Another part of our priority is adding protection for children while
+          using the internet. We encourage parents and guardians to observe,
+          participate in, and/or monitor and guide their online activity.
+        </p>
 
-      <p>Children`&apos;`s Privacy</p>
+        <p>
+          Bukitt does not knowingly collect any Personal Identifiable
+          Information from children under the age of 13. If you think that your
+          child provided this kind of information on our website, we strongly
+          encourage you to contact us immediately and we will do our best
+          efforts to promptly remove such information from our records.
+        </p>
+      </div>
 
-      <p>
-        Our Services do not address anyone under the age of 13. We do not
-        knowingly collect personal identifiable information from children under
-        13. In the case we discover that a child under 13 has provided us with
-        personal information, we immediately delete this from our servers. If
-        you are a parent or guardian and you are aware that your child has
-        provided us with personal information, please contact us so that we will
-        be able to do necessary actions.
-      </p>
+      <div className="space-y-3">
+        <h2 className="text-2xl font-medium">Online Privacy Policy Only</h2>
+        <p>
+          Our Privacy Policy applies only to our online activities and is valid
+          for visitors to our website with regards to the information that they
+          shared and/or collect in Bukitt. This policy is not applicable to any
+          information collected offline or via channels other than this website.
+        </p>
+      </div>
 
-      <h2>Changes to This Privacy Policy</h2>
-
-      <p>
-        We may update our Privacy Policy from time to time. Thus, we advise you
-        to review this page periodically for any changes. We will notify you of
-        any changes by posting the new Privacy Policy on this page. These
-        changes are effective immediately, after they are posted on this page.
-      </p>
-
-      <h2>Contact Us</h2>
-
-      <p>
-        If you have any questions or suggestions about our Privacy Policy, do
-        not hesitate to contact us.
-      </p>
+      <div className="space-y-3">
+        <h2 className="text-2xl font-medium">Consent</h2>
+        <p>
+          By using our website, you hereby consent to our Privacy Policy and
+          agree to its terms.
+        </p>
+      </div>
     </div>
   );
 }

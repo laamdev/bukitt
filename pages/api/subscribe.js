@@ -1,13 +1,17 @@
 export default async function handler(req, res) {
-  const { email } = req.body;
+  const { firstName, lastName, email } = req.body;
 
-  // 1. Get the email from the payload and
-
-  if (!email) {
-    return res.status(400).json({ error: 'Please enter your email.' });
+  if (!firstName) {
+    return res.status(400).json({ error: 'A first name is required!' });
   }
 
-  // 2. Use the Sendgrid API Key and create a subscriber
+  if (!lastName) {
+    return res.status(400).json({ error: 'A last name is required!' });
+  }
+
+  if (!email) {
+    return res.status(400).json({ error: 'An email is required!' });
+  }
 
   try {
     const API_KEY = process.env.SENDGRID_API_KEY;
@@ -17,7 +21,13 @@ export default async function handler(req, res) {
     const API_OPTIONS = {
       method: 'PUT',
       body: JSON.stringify({
-        contacts: [{ email: email }],
+        contacts: [
+          {
+            email: email,
+            first_name: firstName,
+            last_name: lastName,
+          },
+        ],
         list_ids: [process.env.SENDGRID_MAILING_ID],
       }),
       headers: {
@@ -29,19 +39,15 @@ export default async function handler(req, res) {
 
     const response = await fetch(API_URL, API_OPTIONS);
 
-    console.log(JSON.stringify(response, null, 2));
-
     if (response.status >= 400) {
       const message = await response.json();
       return res.status(400).json({ error: message.error.email[0] });
     }
     res.status(201).json({
-      message: `Welcome ${email}. Thanks for subscribing!`,
+      message: `Welcome to Bukitt ${firstName} ${lastName}! Thanks for subscribing.`,
       error: '',
     });
   } catch (err) {
-    // 4. If the control goes inside the catch block
-    // let us consider it as a server error(500)
     return res.status(500).json({ error: err.message || error.toString() });
   }
 }
