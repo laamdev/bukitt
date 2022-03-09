@@ -18,7 +18,7 @@ export default function Header() {
   }, [isOpen]);
 
   return (
-    <nav className="sticky top-0 left-0 right-0 z-30 flex h-16 items-center justify-between bg-white px-3 lg:h-24">
+    <nav className="sticky top-0 left-0 right-0 z-30 flex h-16 items-center justify-between bg-white px-3 lg:h-24 lg:px-6">
       <div
         onClick={isOpen ? toggleIsOpen : undefined}
         className="z-50 block lg:hidden"
