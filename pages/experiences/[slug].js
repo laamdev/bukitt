@@ -16,7 +16,7 @@ import Hero from '@/components/shared/Hero';
 export default function ExperiencePage({ experience }) {
   return (
     <Layout
-      metaTitle={experience?.title}
+      metaTitle={experience?.name}
       metaDescription={experience?.hero?.body}
     >
       <Hero hero={experience?.hero} guideURL={experience?.guideURL} />

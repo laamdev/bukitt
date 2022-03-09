@@ -14,7 +14,7 @@ export default function DestinationPage({ destination }) {
   console.log(destination.title);
   return (
     <Layout
-      metaTitle={destination?.title}
+      metaTitle={destination?.name}
       metaDescription={destination?.hero?.body}
     >
       <Hero
