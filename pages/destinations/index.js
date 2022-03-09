@@ -51,18 +51,7 @@ export default function DestinationsPage({ destinationsPageData }) {
   }, [tags]);
 
   return (
-    <Layout
-      title={`${
-        destinationsPageData?.seo?.title
-          ? destinationsPageData?.seo?.title
-          : 'Destinations'
-      }`}
-      description={`${
-        destinationsPageData?.seo?.description
-          ? destinationsPageData?.seo?.description
-          : 'A unique selection of unforgettable destinations hand-picked by our expert travel concierge for a unique blend of outdoorsy adventure and luxurious comfort.'
-      }`}
-    >
+    <Layout>
       <Hero hero={destinationsPageData?.hero} />
 
       <section className="tw-section mx-auto max-w-5xl">

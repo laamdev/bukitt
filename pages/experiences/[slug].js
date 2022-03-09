@@ -15,12 +15,7 @@ import Hero from '@/components/shared/Hero';
 
 export default function ExperiencePage({ experience }) {
   return (
-    <Layout
-      title={experience?.seo?.title ? experience?.seo?.title : ''}
-      description={
-        experience?.seo?.description ? experience?.seo?.description : ''
-      }
-    >
+    <Layout>
       <Hero hero={experience?.hero} guideURL={experience?.guideURL} />
 
       {experience?.details && (

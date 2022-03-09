@@ -44,7 +44,7 @@ const components = {
 
       const href = `/${prepend}/${slug.current}`;
       return (
-        <Link href={href}>
+        <Link href={href} scroll={false}>
           <a>{children}</a>
         </Link>
       );

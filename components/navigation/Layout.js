@@ -1,29 +1,27 @@
 import { NextSeo } from 'next-seo';
 import { motion } from 'framer-motion';
 
-const variants = {
-  hidden: { opacity: 0, x: 0, y: 0 },
-  enter: { opacity: 1, x: 0, y: 0 },
-  exit: { opacity: 0, x: 0, y: 0 },
-};
+import { pageVariants } from '@/utils/framer';
 
-export default function Layout({ children, title, description }) {
+export default function Layout({ children, metaTitle, metaDesription }) {
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <>
       <NextSeo
-        title={title}
-        description={description}
-        openGraph={{ title, description }}
+        title={metaTitle}
+        description={metaDesription}
+        openGraph={{ metaTitle, metaDesription }}
       />
+
       <motion.main
         initial="hidden"
         animate="enter"
         exit="exit"
-        variants={variants}
-        transition={{ duration: 0.7, type: 'easeInOut' }}
+        variants={pageVariants}
+        transition={{ type: 'easeInOut' }}
+        className="overflow-hidden"
       >
         {children}
       </motion.main>
-    </div>
+    </>
   );
 }

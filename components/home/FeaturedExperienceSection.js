@@ -15,7 +15,7 @@ export default function FeaturedExperienceSection({
       <SectionHeading className="text-center">{heading}</SectionHeading>
 
       <div className="mx-auto max-w-4xl">
-        <Link href={`/experiences/${featuredExperience?.slug}`}>
+        <Link href={`/experiences/${featuredExperience?.slug}`} scroll={false}>
           <a>
             <div className="group relative overflow-hidden rounded-full bg-slate-100 focus-within:ring-2 focus-within:ring-brand focus-within:ring-offset-2 focus-within:ring-offset-slate-100">
               {featuredExperience?.card?.image && (

@@ -7,6 +7,8 @@ import classNames from 'classnames';
 import BtnNewsletter from '@/components/shared/buttons/BtnNewsletter';
 import FormSuccess from '@/components/forms/FormSuccess';
 import FormError from '@/components/forms/FormError';
+import InputBox from '@/components/forms/InputBox';
+import InputLabel from '@/components/forms/InputLabel';
 
 const schema = yup
   .object()
@@ -74,73 +76,66 @@ export default function Newsletter() {
           className="mx-auto mt-12 grid max-w-3xl grid-cols-2 gap-x-12 gap-y-10"
         >
           <div className="col-span-2 lg:col-span-1">
-            <label
-              htmlFor="firstName"
-              className="block font-mono text-xl font-medium uppercase text-slate-700"
-            >
-              First name
-            </label>
-            <div className="mt-1">
-              <input
-                type="text"
-                name="firstName"
+            <div className="relative">
+              <InputBox
                 id="firstName"
+                name="firstName"
+                type="text"
+                placeholder="First Name"
                 autoComplete="given-name"
-                {...register('firstName')}
-                className="block w-full rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
+                register={register}
+                registerValue="firstName"
               />
-              <div className="h-3">
+
+              <InputLabel htmlFor="firstName">First Name</InputLabel>
+
+              {/* <div className="h-3">
                 {errors?.firstName?.message && (
                   <FormError>{errors?.firstName?.message}</FormError>
                 )}
-              </div>
+              </div> */}
             </div>
           </div>
 
           <div className="col-span-2 lg:col-span-1">
-            <label
-              htmlFor="lastName"
-              className="block font-mono text-xl font-medium uppercase text-slate-700"
-            >
-              Last name
-            </label>
-            <div className="mt-1">
-              <input
-                type="text"
-                name="lastName"
+            <div className="relative">
+              <InputBox
                 id="lastName"
+                name="lastName"
+                type="text"
+                placeholder="Last Name"
                 autoComplete="family-name"
-                {...register('lastName')}
-                className="block w-full rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
+                register={register}
+                registerValue="lastName"
               />
-              <div className="h-3">
+              <InputLabel htmlFor="lastName">Last Name</InputLabel>
+            </div>
+
+            {/* <div className="h-3">
                 {errors?.lastName?.message && (
                   <FormError>{errors?.lastName?.message}</FormError>
                 )}
-              </div>
-            </div>
+              </div> */}
           </div>
 
           <div className="col-span-2 lg:col-span-1">
-            <label
-              htmlFor="email"
-              className="block font-mono text-xl font-medium uppercase text-slate-700"
-            >
-              Email
-            </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              autoComplete="email"
-              {...register('email')}
-              className="mt-1 block w-full rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
-            />
-            <div className="h-3">
+            <div className="relative">
+              <InputBox
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Email"
+                autoComplete="email"
+                register={register}
+                registerValue="email"
+              />
+              <InputLabel htmlFor="email">Email</InputLabel>
+            </div>
+            {/* <div className="h-3">
               {errors?.email?.message && (
                 <FormError>{errors?.email?.message}</FormError>
               )}
-            </div>
+            </div> */}
           </div>
 
           <div className="col-span-2 flex items-center justify-center space-x-3 lg:col-span-1">

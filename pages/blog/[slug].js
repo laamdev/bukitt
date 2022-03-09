@@ -7,7 +7,7 @@ import Hero from '@/components/blog/Hero';
 
 export default function BlogPostPage({ blogPost }) {
   return (
-    <Layout title="" description="">
+    <Layout>
       <Hero
         title={blogPost?.title}
         author={blogPost?.author}

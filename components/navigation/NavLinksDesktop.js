@@ -1,19 +1,19 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-export default function NavLinks({ navLinks }) {
+export default function NavLinksDesktop({ navLinks }) {
   const router = useRouter();
 
   return (
     <nav>
-      <ul className="flex space-x-12 items-baseline">
+      <ul className="flex items-baseline space-x-12">
         {navLinks.map((link) => (
-          <li key={link.name}>
+          <li key={link.id}>
             <Link href={link.href} className="relative">
               <a
-                className={`cursor-pointer text-lg tw-transition font-sans underline-offset-4 ${
+                className={`tw-transition cursor-pointer font-sans text-lg underline-offset-4 ${
                   router.asPath.includes(link.href)
-                    ? 'text-brand underline font-medium'
+                    ? 'font-medium text-brand underline'
                     : 'hover:text-brand'
                 }`}
                 aria-current={link.current ? 'page' : undefined}

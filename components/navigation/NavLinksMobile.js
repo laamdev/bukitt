@@ -1,30 +1,39 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Popover } from '@headlessui/react';
+import { motion } from 'framer-motion';
 
-export default function NavLinksMobile({ navLinks }) {
+import { mobileMenuVariants } from '@/utils/framer';
+import BtnInquiry from '@/components/shared/buttons/BtnInquiry';
+
+export default function NavLinksMobile({ navLinks, toggleIsOpen }) {
   const router = useRouter();
 
   return (
-    <div className="mt-6">
-      <ul className="flex flex-col space-y-6 text-4xl pb-6">
+    <motion.nav
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      custom={toggleIsOpen}
+      variants={mobileMenuVariants}
+      className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-slate-50"
+    >
+      <ul className="flex flex-col items-center justify-center space-y-6 ">
         {navLinks.map((link) => (
-          <li key={link.name}>
-            <Link href={link.href}>
+          <li key={link.id} onClick={toggleIsOpen}>
+            <Link href={link.href} className="relative">
               <a
-                className={`cursor-pointer ${
-                  router.asPath === link.href
-                    ? 'text-brand font-bold '
-                    : 'text-dark hover:text-brand tw-transition'
-                } 
-            `}
+                className="font-mono text-4xl uppercase"
+                aria-current={link.current ? 'page' : undefined}
               >
-                <Popover.Button>{link.name}</Popover.Button>
+                {link.name}
               </a>
             </Link>
           </li>
         ))}
       </ul>
-    </div>
+      <div className="mt-12">
+        <BtnInquiry label="Inquire" to="inquiry-form" />
+      </div>
+    </motion.nav>
   );
 }

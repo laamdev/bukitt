@@ -16,7 +16,7 @@ import {
 
 export default function CaminodeSantiagoItineraryPage() {
   return (
-    <Layout>
+    <>
       <section className="tw-section">
         <div className="mx-auto max-w-5xl">
           <h3 className="flex items-center gap-x-3 text-2xl font-bold">
@@ -198,6 +198,6 @@ export default function CaminodeSantiagoItineraryPage() {
         </p>
         <ElevationChart data={stage7} className="mt-12" />
       </section>
-    </Layout>
+    </>
   );
 }

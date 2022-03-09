@@ -11,12 +11,8 @@ import MapSection from '@/components/shared/MapSection';
 import Hero from '@/components/shared/Hero';
 
 export default function DestinationPage({ destination }) {
-  console.log(JSON.stringify(destination.experienceSection, null, 2));
   return (
-    <Layout
-      title={destination?.seo?.title}
-      description={destination?.seo?.description}
-    >
+    <Layout>
       <Hero
         hero={destination?.hero}
         location={destination?.location}

@@ -6,7 +6,7 @@ import Overlay from '@/components/shared/image/Overlay';
 export default function FeaturedExperienceCard({ experience }) {
   return (
     <div className="mx-auto max-w-5xl">
-      <Link href={`experiences/${experience.slug}`}>
+      <Link href={`experiences/${experience.slug}`} scroll={false}>
         <a>
           <div className="group overflow-hidden rounded-2xl bg-slate-100 shadow-md focus-within:ring-2 focus-within:ring-brand focus-within:ring-offset-2 focus-within:ring-offset-slate-100">
             <Image

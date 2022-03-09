@@ -66,6 +66,11 @@ export default {
       },
     },
     {
+      name: 'coordinates',
+      type: 'destinationCoordinates',
+      title: 'Coordinates',
+    },
+    {
       name: 'card',
       type: 'cardSimple',
       title: 'Card',

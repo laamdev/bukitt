@@ -7,14 +7,11 @@ import InquiryForm from '@/components/forms/InquiryForm';
 
 export default function InquiryFormPage({ inquiryFormPageData }) {
   return (
-    <Layout
-      title={inquiryFormPageData?.seo?.title}
-      description={inquiryFormPageData?.seo?.description}
-    >
+    <Layout>
       <Hero hero={inquiryFormPageData?.hero} page="inquiry" />
 
       <section className="tw-section">
-        <div className="max-w-4xl mx-auto">
+        <div className="mx-auto max-w-4xl">
           <InquiryForm
             destinations={inquiryFormPageData?.destinations}
             experiences={inquiryFormPageData?.experiences}

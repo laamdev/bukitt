@@ -8,7 +8,7 @@ import Overlay from '@/components/shared/image/Overlay';
 export default function DestinationCard({ destination }) {
   return (
     <li className="col-span-1 rounded-2xl shadow-xl">
-      <Link href={`/destinations/${destination?.slug}`}>
+      <Link href={`/destinations/${destination?.slug}`} scroll={false}>
         <a>
           <div className="group relative overflow-hidden rounded-2xl bg-slate-100 focus-within:ring-2 focus-within:ring-brand focus-within:ring-offset-2 focus-within:ring-offset-slate-100">
             {destination?.card?.image && (

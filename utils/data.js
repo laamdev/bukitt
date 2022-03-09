@@ -7,10 +7,10 @@ import {
 } from 'react-icons/io5';
 
 export const navLinks = [
-  { name: 'Experiences', href: '/experiences' },
-  { name: 'Destinations', href: '/destinations' },
-  { name: 'About', href: '/about' },
-  { name: 'Blog', href: '/blog' },
+  { id: 1, name: 'Experiences', href: '/experiences' },
+  { id: 2, name: 'Destinations', href: '/destinations' },
+  { id: 3, name: 'About', href: '/about' },
+  { id: 4, name: 'Blog', href: '/blog' },
 ];
 
 export const socialLinksFooter = [

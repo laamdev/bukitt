@@ -15,10 +15,7 @@ import TestimonialsSection from '@/components/home/TestimonialsSection';
 
 export default function HomePage({ homeData }) {
   return (
-    <Layout
-      title={homeData?.seo?.title}
-      description={homeData?.seo?.description}
-    >
+    <Layout>
       <Hero hero={homeData?.hero} page="home" />
 
       <ServicesSection
@@ -64,10 +61,10 @@ export default function HomePage({ homeData }) {
   );
 }
 
-export async function getStaticProps({ preview = false }) {
+export async function getStaticProps() {
   const homeData = await sanityClient.fetch(homePageQuery);
 
   return {
-    props: { homeData, preview },
+    props: { homeData },
   };
 }

@@ -100,7 +100,7 @@
   }
 
   body {
-    @apply h-full;
+    @apply h-full overflow-x-hidden;
   }
 }
 
@@ -138,7 +138,7 @@
   }
 
   .tw-btn {
-    @apply tw-transition inline-flex items-center rounded-full border-2 px-2.5 py-1.5 text-xs font-medium uppercase tracking-widest shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 md:px-4  md:py-2 md:text-sm lg:px-6 lg:py-3 lg:text-base;
+    @apply tw-transition inline-flex items-center rounded-full border-2 px-2.5 py-1.5 text-xs font-medium uppercase tracking-widest shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 md:px-4 md:py-2 md:text-sm lg:px-6 lg:py-3 lg:text-base;
   }
 
   .tw-container {
@@ -159,6 +159,14 @@
 
   .tw-radio-btn {
     @apply tw-transition h-6 w-6 cursor-pointer border-slate-300 text-brand hover:border-brand focus:ring-slate-100;
+  }
+
+  .tw-full-page-mobile {
+    min-height: calc(100vh - 64px);
+  }
+
+  .tw-full-page-desktop {
+    min-height: calc(100vh - 96px);
   }
 
   .embla {
@@ -210,5 +218,21 @@
 
   .embla__button--next {
     @apply right-1;
+  }
+
+  .hover-underline-animation {
+    @apply relative inline-block text-brand-300;
+  }
+
+  .hover-underline-animation:after {
+    content: '';
+    transform: scaleX(0);
+    transition: transform 0.25s ease-out;
+    @apply absolute bottom-0 left-0 h-0.5 w-full origin-bottom-right bg-brand-300;
+  }
+
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    @apply origin-bottom-left;
   }
 }

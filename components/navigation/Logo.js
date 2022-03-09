@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Logo() {
+export default function Logo({ toggleIsOpen }) {
   return (
-    <Link href="/">
+    <Link href="/" scroll={false} onClick={toggleIsOpen} className="z-50">
       <a>
         <span className="sr-only">Bukitt</span>
         <div className="relative w-24">

@@ -11,16 +11,10 @@ import Footer from '@/components/navigation/Footer';
 
 import '@/styles/tailwind.css';
 
-function handleExitComplete() {
-  if (typeof window !== 'undefined') {
-    window.scrollTo({ top: 0 });
-  }
-}
-
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
-  const url = `https://bukitt.com${router.asPath}`;
+  const url = `https://bukitt.com${router.route}`;
 
   useEffect(() => {
     fbq.pageview();
@@ -86,7 +80,7 @@ function MyApp({ Component, pageProps }) {
       <AnimatePresence
         initial={false}
         exitBeforeEnter
-        onExitComplete={handleExitComplete}
+        onExitComplete={() => window.scrollTo(0, 0)}
       >
         <Component {...pageProps} canonical={url} key={url} />
       </AnimatePresence>

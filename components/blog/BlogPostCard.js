@@ -9,7 +9,7 @@ export default function BlogPostCard({ blogPost }) {
 
   return (
     <li className="group flex flex-col overflow-hidden rounded-2xl shadow-xl">
-      <Link href={`blog/${blogPost?.slug}`}>
+      <Link href={`blog/${blogPost?.slug}`} scroll={false}>
         <a className="flex h-full flex-col bg-slate-400">
           <div className="shrink-0">
             <Image

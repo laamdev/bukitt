@@ -8,12 +8,9 @@ import PostCard from '@/components/blog/BlogPostCard';
 
 export default function BlogPage({ blogPageData }) {
   return (
-    <Layout
-      title={blogPageData?.seo?.title}
-      description={blogPageData?.seo?.description}
-    >
+    <Layout>
       <Hero hero={blogPageData?.hero} page="blog" />
-      <section className="tw-section max-w-7xl mx-auto">
+      <section className="tw-section mx-auto max-w-7xl">
         <PostsList>
           {blogPageData?.blogPosts.map((blogPost) => (
             <PostCard key={blogPost?._id} blogPost={blogPost} />

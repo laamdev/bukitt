@@ -8,7 +8,7 @@ import Overlay from '@/components/shared/image/Overlay';
 export default function Card({ content, linkURL }) {
   return (
     <li className="rounded-2xl shadow-xl">
-      <Link href={linkURL}>
+      <Link href={linkURL} scroll={false}>
         <a>
           <div className="group overflow-hidden rounded-2xl bg-slate-100 focus-within:ring-2 focus-within:ring-brand focus-within:ring-offset-2 focus-within:ring-offset-slate-100">
             {content?.image && (

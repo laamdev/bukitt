@@ -142,7 +142,7 @@ export default class MyDocument extends Document {
           </noscript>
         </Head>
 
-        <body className="bg-white text-dark text-base sm:text-lg lg:text-xl mt-16 sm:mt-20">
+        <body>
           <Main />
           <NextScript />
         </body>

@@ -15,7 +15,7 @@ export default function ServicesCard({
 }) {
   return (
     <div className="group relative col-span-1 rounded-2xl shadow-xl">
-      <Link href={`/${btnURL}`}>
+      <Link href={`/${btnURL}`} scroll={false}>
         <a>
           <Image
             src={urlForImage(image).width(1080).height(1350).url()}

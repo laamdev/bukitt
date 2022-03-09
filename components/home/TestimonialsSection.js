@@ -7,7 +7,7 @@ export default function TestimonialsSection({ heading, testimonials }) {
       <div className="mx-auto max-w-6xl">
         <SectionHeading className="text-center">{heading}</SectionHeading>
 
-        <TestimonialsSlider testimonials={testimonials} />
+        {/* <TestimonialsSlider testimonials={testimonials} /> */}
       </div>
     </section>
   );

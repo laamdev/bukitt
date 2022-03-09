@@ -4,11 +4,11 @@ export default function ButtonLinkHeader({ btnLinkText, btnURL, modClass }) {
   return (
     <button
       type="button"
-      className={`tw-btn bg-brand hover:bg-white border-white hover:border-brand hover:text-brand ${
+      className={`tw-btn border-white bg-brand hover:border-brand hover:bg-white hover:text-brand ${
         modClass ? modClass : ''
       }`}
     >
-      <Link href={`/${btnURL}`}>
+      <Link href={`/${btnURL}`} scroll={false}>
         <a>{btnLinkText}</a>
       </Link>
     </button>

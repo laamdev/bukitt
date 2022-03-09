@@ -50,6 +50,7 @@ import homeFeaturedDestinationsSection from './objects/pages/home/homeFeaturedDe
 //* destination
 import destinationExperienceSection from './objects/destination/destinationExperienceSection';
 import destinationWeatherSection from './objects/destination/destinationWeatherSection';
+import destinationCoordinates from './objects/destination/destinationCoordinates';
 import season from './objects/destination/season';
 
 import feature from './objects/shared/feature';
@@ -119,9 +120,10 @@ export default createSchema({
     experienceItinerarySection,
     experienceItineraryItem,
     experienceDestinationsSection,
-    destinationExperienceSection,
     // destination
+    destinationExperienceSection,
     destinationWeatherSection,
+    destinationCoordinates,
     season,
 
     testimonial,
