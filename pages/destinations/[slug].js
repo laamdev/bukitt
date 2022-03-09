@@ -12,13 +12,15 @@ import Hero from '@/components/shared/Hero';
 
 export default function DestinationPage({ destination }) {
   return (
-    <Layout>
+    <Layout
+      metaTitle={destination?.title}
+      metaDescription={destination?.hero?.body}
+    >
       <Hero
         hero={destination?.hero}
         location={destination?.location}
         category={destination?.category}
       />
-
       {destination?.mapSection && (
         <>
           <MapSection

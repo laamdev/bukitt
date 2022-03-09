@@ -8,7 +8,10 @@ import PostCard from '@/components/blog/BlogPostCard';
 
 export default function BlogPage({ blogPageData }) {
   return (
-    <Layout>
+    <Layout
+      metaTitle={blogPageData?.title}
+      metaDescription={blogPageData?.hero?.body}
+    >
       <Hero hero={blogPageData?.hero} page="blog" />
       <section className="tw-section mx-auto max-w-7xl">
         <PostsList>

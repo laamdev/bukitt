@@ -15,7 +15,10 @@ export default function ExperiencesPage({ experiencesPageData }) {
   });
 
   return (
-    <Layout>
+    <Layout
+      metaTitle={experiencesPageData?.title}
+      metaDescription={experiencesPageData?.hero?.body}
+    >
       <Hero hero={experiencesPageData?.hero} />
       <section className="tw-section">
         <div className="mx-auto max-w-7xl">

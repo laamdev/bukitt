@@ -7,7 +7,10 @@ import InquiryForm from '@/components/forms/InquiryForm';
 
 export default function InquiryFormPage({ inquiryFormPageData }) {
   return (
-    <Layout>
+    <Layout
+      metaTitle={inquiryFormPageData?.title}
+      metaDescription={inquiryFormPageData?.hero?.body}
+    >
       <Hero hero={inquiryFormPageData?.hero} page="inquiry" />
 
       <section className="tw-section">

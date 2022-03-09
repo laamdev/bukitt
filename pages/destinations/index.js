@@ -51,7 +51,10 @@ export default function DestinationsPage({ destinationsPageData }) {
   }, [tags]);
 
   return (
-    <Layout>
+    <Layout
+      metaTitle={destinationsPageData?.title}
+      metaDescription={destinationsPageData?.hero?.body}
+    >
       <Hero hero={destinationsPageData?.hero} />
 
       <section className="tw-section mx-auto max-w-5xl">

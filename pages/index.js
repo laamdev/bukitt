@@ -15,7 +15,7 @@ import TestimonialsSection from '@/components/home/TestimonialsSection';
 
 export default function HomePage({ homeData }) {
   return (
-    <Layout>
+    <Layout metaTitle={homeData?.title} metaDescription={homeData?.hero?.body}>
       <Hero hero={homeData?.hero} page="home" />
 
       <ServicesSection

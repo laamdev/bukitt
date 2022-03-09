@@ -3,7 +3,7 @@ import ButtonInternalLink from '@/components/shared/ButtonInternalLink';
 
 export default function Custom404() {
   return (
-    <Layout>
+    <Layout metaTitle="404" metaDescription="Page Not Found">
       <div className="tw-full-page-mobile lg:tw-full-page-desktop m-auto flex max-w-xl flex-col items-center justify-center text-center">
         <div>
           <h2 className="text-2xl font-medium">Page not found</h2>
