@@ -19,11 +19,11 @@ const components = {
       return (
         <div className="py-3 text-center md:py-6 lg:py-12">
           <Image
-            src={urlForImage(value).width(1600).height(1200).url()}
+            src={urlForImage(value).width(1920).height(1536).url()}
             alt={value.alt}
             layout="responsive"
-            width={4}
-            height={3}
+            width={5}
+            height={4}
             objectFit="cover"
             objectPosition="center"
             className="rounded-2xl"

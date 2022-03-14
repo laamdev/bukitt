@@ -19,7 +19,7 @@ export default function Hero({
       <div className="w-full rounded-2xl shadow-xl lg:w-3/5">
         {coverImage && (
           <Image
-            src={urlForImage(coverImage).width(1350).height(1080).url()}
+            src={urlForImage(coverImage).width(1920).height(1536).url()}
             alt={coverImage?.alt ? coverImage?.alt : ''}
             layout="responsive"
             width={5}
