@@ -3,12 +3,12 @@ import Script from 'next/script';
 import { useRouter } from 'next/router';
 import { DefaultSeo } from 'next-seo';
 import { AnimatePresence } from 'framer-motion';
-import CookieConsent from 'react-cookie-consent';
 
 import * as fbq from '@/lib/fpixel';
 
 import Header from '@/components/navigation/Header';
 import Footer from '@/components/navigation/Footer';
+import CookieBanner from '@/components/shared/CookieBanner';
 
 import '@/styles/tailwind.css';
 
@@ -50,7 +50,7 @@ function MyApp({ Component, pageProps }) {
           `,
         }}
       />
-      <Script
+      {/* <Script
         id="google-analytics-tag"
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
@@ -62,7 +62,7 @@ function MyApp({ Component, pageProps }) {
           gtag('js', new Date());
           gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
   `}
-      </Script>
+      </Script> */}
 
       <DefaultSeo
         titleTemplate="%s - Bukitt"
@@ -77,10 +77,10 @@ function MyApp({ Component, pageProps }) {
         canonical={url}
       />
 
-      <CookieConsent debug={true}>
+      {/* <CookieConsent debug={true}>
         We use cookies to analyse and measure activity across the website.
         Cookie Policy. Accept
-      </CookieConsent>
+      </CookieConsent> */}
 
       <Header />
       <AnimatePresence
@@ -91,6 +91,10 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} canonical={url} key={url} />
       </AnimatePresence>
       <Footer />
+
+      <AnimatePresence>
+        <CookieBanner />
+      </AnimatePresence>
     </>
   );
 }

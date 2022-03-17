@@ -19,8 +19,8 @@ export default function Hero({ hero, guideURL, location, category, page }) {
             objectFit="cover"
             objectPosition="center"
             priority
-            placeholder="blur"
-            blurDataURL="/images/image-placeholder.png"
+            // // placeholder="blur"
+            // // blurDataURL="/images/image-placeholder.png"
             className="tw-transition bg-slate-300 grayscale"
           />
         )}

@@ -1,13 +1,10 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 
 import { mobileMenuVariants } from '@/utils/framer';
 import BtnInquiry from '@/components/shared/buttons/BtnInquiry';
 
 export default function NavLinksMobile({ navLinks, toggleIsOpen }) {
-  const router = useRouter();
-
   return (
     <motion.nav
       initial="initial"

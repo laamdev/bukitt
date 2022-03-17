@@ -15,9 +15,9 @@ export default function HighlightCard({ title, body, image }) {
             height={1}
             objectFit="cover"
             objectPosition="center"
-            placeholder="blur"
-            blurDataURL="/images/image-placeholder.png"
-            className="tw-transition rounded-2xl bg-slate-300"
+            // // placeholder="blur"
+            // // blurDataURL="/images/image-placeholder.png"
+            className="rounded-2xl bg-slate-300"
           />
         </div>
       )}
