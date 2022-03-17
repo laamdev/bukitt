@@ -59,7 +59,9 @@ export default function Newsletter() {
       setServerError(data.error);
       setSuccess('');
     } else {
-      setSuccess('Thanks for subscribing!');
+      setSuccess(
+        "Thanks for subscribing! 🥳 We've sent a welcome email to your inbox. If you can't find it, please check your spam folder and add us to your favorites so you won't miss any of our travel treats!"
+      );
       setServerError('');
     }
 
@@ -183,7 +185,7 @@ export default function Newsletter() {
           </div>
         </form>
       ) : (
-        <div className="mx-auto mt-12 max-w-3xl text-center text-3xl font-bold uppercase text-brand">
+        <div className="mx-auto mt-12 max-w-3xl text-center text-lg font-medium text-brand">
           {success}
         </div>
       )}
