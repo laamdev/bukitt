@@ -34,9 +34,9 @@ export default function ServicesCard({
               {heading}
             </h4>
             <p className="text-lg text-slate-100 lg:text-2xl">{body}</p>
-            <div className="mt-6 flex justify-center">
+            {/* <div className="mt-6 flex justify-center">
               <BtnNav btnLinkText={btnLinkText} btnURL={btnURL} secondary />
-            </div>
+            </div> */}
           </div>
         </a>
       </Link>

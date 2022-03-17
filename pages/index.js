@@ -15,12 +15,12 @@ export default function HomePage({ homeData }) {
   return (
     <Layout metaTitle={homeData?.title} metaDescription={homeData?.hero?.body}>
       <Hero hero={homeData?.hero} page="home" />
-      {/* 
+
       <ServicesSection
         heading={homeData?.servicesSection?.heading}
         experiencesCard={homeData?.servicesSection?.experiencesCard}
         destinationsCard={homeData?.servicesSection?.destinationsCard}
-      /> */}
+      />
 
       <FeaturesSection
         heading={homeData?.featuresSection?.heading}
@@ -34,10 +34,10 @@ export default function HomePage({ homeData }) {
         }
       />
 
-      {/* <TestimonialsSection
+      <TestimonialsSection
         heading={homeData?.testimonialsSection?.heading}
         testimonials={homeData?.testimonialsSection?.testimonials}
-      /> */}
+      />
 
       <FeaturedExperienceSection
         heading={homeData?.featuredExperienceSection?.heading}

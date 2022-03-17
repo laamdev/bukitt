@@ -32,7 +32,7 @@ export default function TestimonialsSlider({ testimonials }) {
       <div className="embla__viewport" ref={viewportRef}>
         <div className="embla__container">
           {testimonials.map((index) => (
-            <div className="embla__slide" key={index}>
+            <div className="embla__slide" key={index._key}>
               <div className="embla__slide__inner">
                 <div className="relative mx-auto max-w-7xl px-4 pt-20 pb-12 sm:px-6 lg:px-8 lg:py-20">
                   <svg

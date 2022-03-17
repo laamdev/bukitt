@@ -9,7 +9,7 @@ export default function BlogPostCard({ blogPost }) {
 
   return (
     <li className="group flex flex-col overflow-hidden rounded-2xl shadow-xl">
-      <Link href={`blog/${blogPost?.slug}`} scroll={false}>
+      <Link href={`/blog/${blogPost?.slug}`} scroll={false}>
         <a className="flex h-full flex-col bg-slate-400">
           <div className="shrink-0">
             <Image
@@ -42,22 +42,20 @@ export default function BlogPostCard({ blogPost }) {
             </div>
             <div className="mt-6 flex items-center">
               <div className="shrink-0">
-                <a href={blogPost?.author?.href}>
-                  <span className="sr-only">{blogPost?.author?.name}</span>
-                  <div className="h-10 w-10">
-                    <Image
-                      className="rounded-full"
-                      src={urlForImage(blogPost?.author?.picture)
-                        .width(1080)
-                        .height(1080)
-                        .url()}
-                      alt={blogPost?.author?.alt}
-                      layout="responsive"
-                      width={1}
-                      height={1}
-                    />
-                  </div>
-                </a>
+                <span className="sr-only">{blogPost?.author?.name}</span>
+                <div className="h-10 w-10">
+                  <Image
+                    className="rounded-full"
+                    src={urlForImage(blogPost?.author?.picture)
+                      .width(1080)
+                      .height(1080)
+                      .url()}
+                    alt={blogPost?.author?.alt}
+                    layout="responsive"
+                    width={1}
+                    height={1}
+                  />
+                </div>
               </div>
               <div className="ml-3">
                 <p className="text-sm font-medium text-slate-900">
