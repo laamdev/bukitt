@@ -6,16 +6,18 @@ export default function HighlightCard({ title, body, image }) {
   return (
     <li className="col-span-1">
       {image && (
-        <div className="mx-auto w-full rounded-2xl bg-slate-100 shadow-xl">
+        <div className="mx-auto w-full rounded-2xl shadow-xl">
           <Image
             src={urlForImage(image).width(1080).height(1080).url()}
-            alt={image?.alt}
+            alt={image?.alt ?? 'highlight'}
             layout="responsive"
             width={1}
             height={1}
             objectFit="cover"
             objectPosition="center"
-            className="rounded-2xl"
+            placeholder="blur"
+            blurDataURL="/images/image-placeholder.png"
+            className="tw-transition rounded-2xl bg-slate-300"
           />
         </div>
       )}

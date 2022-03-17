@@ -4,20 +4,16 @@ import { PortableText } from '@portabletext/react';
 import markdownStyles from './markdown-styles.module.css';
 
 import { urlForImage } from '@/lib/sanity';
-// // import urlBuilder from '@sanity/image-url';
-// // import { getImageDimensions } from '@sanity/asset-utils';
 
 const components = {
   types: {
     image: ({ value }) => {
-      // // const { width, height } = getImageDimensions(value);
-
       if (!value || !value.asset || !value.asset._ref) {
         return null;
       }
 
       return (
-        <div className="py-3 text-center md:py-6 lg:py-12">
+        <div>
           <Image
             src={urlForImage(value).width(1920).height(1536).url()}
             alt={value.alt}
@@ -26,7 +22,7 @@ const components = {
             height={4}
             objectFit="cover"
             objectPosition="center"
-            className="rounded-2xl"
+            className="rounded-2xl bg-slate-300"
           />
           <small className="text-xs text-slate-500 md:text-sm">
             {value.caption}
@@ -60,12 +56,10 @@ const components = {
   },
 };
 
-export default function TextBody({ content, modClass }) {
+export default function TextBody({ content }) {
   return (
     <div
-      className={`tw-transition prose prose-neutral prose-a:font-medium prose-a:text-brand hover:prose-a:text-brand-400 prose-img:mx-auto prose-img:rounded-2xl prose-img:shadow-xl ${
-        modClass ? modClass : ''
-      }`}
+      className={`tw-transition prose prose-lg prose-img:mx-auto prose-img:rounded-2xl prose-img:shadow-xl`}
     >
       <PortableText
         value={content}

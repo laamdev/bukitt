@@ -46,7 +46,6 @@ export default function ElevationChart({ data, className }) {
   const dataSize = data.length;
   const bandValues = data.map((elm) => elm.x);
   const linearValues = data.map((elm) => elm.y);
-  console.log(linearValues);
   return (
     <div className={`relative mx-auto h-[480px] w-[1440px]${className}`}>
       <ParentSize>

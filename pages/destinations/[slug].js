@@ -11,7 +11,6 @@ import MapSection from '@/components/shared/MapSection';
 import Hero from '@/components/shared/Hero';
 
 export default function DestinationPage({ destination }) {
-  console.log(destination.title);
   return (
     <Layout
       metaTitle={destination?.name}

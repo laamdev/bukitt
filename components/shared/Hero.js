@@ -14,12 +14,14 @@ export default function Hero({ hero, guideURL, location, category, page }) {
         {hero?.coverImage && (
           <Image
             src={urlForImage(hero?.coverImage).width(1920).height(1080).url()}
-            alt={hero?.coverImage.alt ? hero?.coverImage.alt : ''}
+            alt={hero?.coverImage?.alt ?? 'hero'}
             layout="fill"
             objectFit="cover"
             objectPosition="center"
             priority
-            className="grayscale"
+            placeholder="blur"
+            blurDataURL="/images/image-placeholder.png"
+            className="tw-transition bg-slate-300 grayscale"
           />
         )}
         <HeroOverlay />

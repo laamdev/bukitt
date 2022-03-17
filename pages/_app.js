@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { useRouter } from 'next/router';
 import { DefaultSeo } from 'next-seo';
 import { AnimatePresence } from 'framer-motion';
+import CookieConsent from 'react-cookie-consent';
 
 import * as fbq from '@/lib/fpixel';
 
@@ -75,6 +76,11 @@ function MyApp({ Component, pageProps }) {
         }}
         canonical={url}
       />
+
+      <CookieConsent debug={true}>
+        We use cookies to analyse and measure activity across the website.
+        Cookie Policy. Accept
+      </CookieConsent>
 
       <Header />
       <AnimatePresence

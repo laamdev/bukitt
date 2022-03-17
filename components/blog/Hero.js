@@ -15,7 +15,7 @@ export default function Hero({
   const publishedDate = dayjs(date).format('MMM D, YYYY');
 
   return (
-    <div className="mx-auto flex flex-col items-center gap-y-6 px-6 md:max-w-2xl lg:max-w-7xl lg:flex-row lg:gap-y-0 lg:gap-x-24">
+    <div className="mx-auto flex flex-col items-center gap-y-6 px-6 lg:max-w-7xl lg:flex-row lg:gap-y-0 lg:gap-x-12">
       <div className="w-full rounded-2xl shadow-xl lg:w-3/5">
         {coverImage && (
           <Image

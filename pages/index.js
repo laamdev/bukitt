@@ -1,5 +1,3 @@
-// // import CookieConsent from 'react-cookie-consent';
-
 import { homePageQuery } from '@/lib/queries';
 import { sanityClient } from '@/lib/sanity.server';
 

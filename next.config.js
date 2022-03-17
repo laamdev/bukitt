@@ -1,3 +1,8 @@
+const withPlugins = require('next-compose-plugins');
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+
 const STUDIO_REWRITE = {
   source: '/studio/:path*',
   destination:
@@ -6,11 +11,7 @@ const STUDIO_REWRITE = {
       : '/studio/index.html',
 };
 
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-});
-
-module.exports = withBundleAnalyzer({
+const nextConfig = {
   rewrites: () => [STUDIO_REWRITE],
   reactStrictMode: true,
   images: {
@@ -18,7 +19,6 @@ module.exports = withBundleAnalyzer({
   },
   async redirects() {
     return [
-      //! INDEX
       {
         source: '/home',
         destination: '/',
@@ -31,4 +31,6 @@ module.exports = withBundleAnalyzer({
       },
     ];
   },
-});
+};
+
+module.exports = withPlugins([[withBundleAnalyzer], nextConfig]);
