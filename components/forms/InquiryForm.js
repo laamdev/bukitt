@@ -441,7 +441,7 @@ export default function InquiryForm({ destinations, experiences }) {
                       Privacy Policy
                     </a>{' '}
                     and{' '}
-                    <Link href="/cookie-policy">
+                    <Link href="/policies/cookies">
                       <a className="font-medium text-slate-700 underline">
                         Cookie Policy
                       </a>

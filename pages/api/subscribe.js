@@ -18,6 +18,8 @@ export default async function handler(req, res) {
 
     const API_URL = 'https://api.sendgrid.com/v3/marketing/contacts';
 
+    const API_LIST = process.env.SENDGRID_MAILING_ID;
+
     const API_OPTIONS = {
       method: 'PUT',
       body: JSON.stringify({
@@ -28,7 +30,7 @@ export default async function handler(req, res) {
             last_name: lastName,
           },
         ],
-        list_ids: [process.env.SENDGRID_MAILING_ID],
+        list_ids: [API_LIST],
       }),
       headers: {
         Authorization: `Bearer ${API_KEY}`,

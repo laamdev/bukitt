@@ -97,7 +97,7 @@ const CookieBanner = () => {
                       We use cookies to give you the best online experience. By
                       agreeing you accept the use of cookies in accordance with
                       our
-                      <Link href="/cookie-policy">
+                      <Link href="/policies/cookies">
                         <a className="tw-transition underline hover:text-brand-100">
                           {' '}
                           cookie policy.
