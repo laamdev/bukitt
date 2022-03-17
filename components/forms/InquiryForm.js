@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from 'next/link';
 import { Switch } from '@headlessui/react';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
@@ -440,12 +441,11 @@ export default function InquiryForm({ destinations, experiences }) {
                       Privacy Policy
                     </a>{' '}
                     and{' '}
-                    <a
-                      href="#"
-                      className="font-medium text-slate-700 underline"
-                    >
-                      Cookie Policy
-                    </a>
+                    <Link href="/cookie-policy">
+                      <a className="font-medium text-slate-700 underline">
+                        Cookie Policy
+                      </a>
+                    </Link>
                     .
                   </p>
                 </div>
