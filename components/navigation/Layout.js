@@ -18,7 +18,7 @@ export default function Layout({ children, metaTitle, metaDesription }) {
         exit="exit"
         variants={pageVariants}
         transition={{ type: 'easeInOut' }}
-        className="overflow-hidden"
+        className="min-h-screen overflow-hidden"
       >
         {children}
       </motion.main>
