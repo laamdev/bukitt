@@ -89,11 +89,8 @@ const CookieBanner = () => {
                       aria-hidden="true"
                     />
                   </span>
-                  <p className="ml-3 truncate font-medium text-white">
-                    <span className="md:hidden">
-                      We announced a new product!
-                    </span>
-                    <span className="hidden max-w-xs md:inline">
+                  <p className="ml-3 text-white">
+                    <span className="inline max-w-xs">
                       We use cookies to give you the best online experience. By
                       agreeing you accept the use of cookies in accordance with
                       our

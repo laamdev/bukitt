@@ -161,6 +161,14 @@
     @apply tw-transition h-6 w-6 cursor-pointer border-slate-300 text-brand hover:border-brand focus:ring-slate-100;
   }
 
+  .tw-inquiry-form-label {
+    @apply block text-xl font-bold uppercase text-slate-700;
+  }
+
+  .tw-inquiry-form-checkbox {
+    @apply block text-lg font-medium text-slate-700;
+  }
+
   .tw-full-page-mobile {
     min-height: calc(100vh - 64px);
   }

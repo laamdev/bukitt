@@ -77,11 +77,6 @@ function MyApp({ Component, pageProps }) {
         canonical={url}
       />
 
-      {/* <CookieConsent debug={true}>
-        We use cookies to analyse and measure activity across the website.
-        Cookie Policy. Accept
-      </CookieConsent> */}
-
       <Header />
       <AnimatePresence
         initial={false}

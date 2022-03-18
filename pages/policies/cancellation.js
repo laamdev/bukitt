@@ -5,148 +5,75 @@ export default function CancellationPolicyPage() {
     <Layout>
       <div className="tw-section prose prose-lg mx-auto">
         <h1 className="font-mono font-bold uppercase">
-          Cookie Policy for Bukitt
+          Changes and Cancellation Policy
         </h1>
 
-        <p>This is the Cookie Policy for Bukitt, accessible from bukitt.com</p>
-
         <p>
-          <strong>What Are Cookies</strong>
+          By making a Trip Reservation with Bukitt, you accept and agree to the
+          relevant change, cancellation and no-show policy of the Trip supplier,
+          and to any additional terms and conditions.
         </p>
 
         <p>
-          As is common practice with almost all professional websites this site
-          uses cookies, which are tiny files that are downloaded to your
-          computer, to improve your experience. This page describes what
-          information they gather, how we use it and why we sometimes need to
-          store these cookies. We will also share how you can prevent these
-          cookies from being stored however this may downgrade or
-          &apos;break&apos; certain elements of the sites functionality.
+          The general cancellation and no-show policy of each Trip supplier is
+          made available during the reservation procedure and in the
+          confirmation email or ticket (if applicable).
         </p>
 
         <p>
-          <strong>How We Use Cookies</strong>
+          You can make a request for change or cancel your booking by email to:{' '}
+          <a href="mailto:hello@bukitt.com">hello@bukitt.com</a>
         </p>
 
         <p>
-          We use cookies for a variety of reasons detailed below. Unfortunately
-          in most cases there are no industry standard options for disabling
-          cookies without completely disabling the functionality and features
-          they add to this site. It is recommended that you leave on all cookies
-          if you are not sure whether you need them or not in case they are used
-          to provide a service that you use.
+          Note that certain rates, fees, or special offers are not eligible for
+          cancellation, refund, or change. Applicable city/tourist tax may still
+          be charged by the Trip Provider in the event of a no-show or charged
+          cancellation.
         </p>
+
+        <h2>General conditions</h2>
 
         <p>
-          <strong>Disabling Cookies</strong>
-        </p>
-
-        <p>
-          You can prevent the setting of cookies by adjusting the settings on
-          your browser (see your browser Help for how to do this). Be aware that
-          disabling cookies will affect the functionality of this and many other
-          websites that you visit. Disabling cookies will usually result in also
-          disabling certain functionality and features of the this site.
-          Therefore it is recommended that you do not disable cookies. This
-          Cookies Policy was created with the help of the{' '}
-          <a href="https://www.cookiepolicygenerator.com/cookie-policy-generator/">
-            Cookies Policy Generator from CookiePolicyGenerator.com
-          </a>
-          .
+          <strong>Changes:</strong> You can change your guest’s name, bed type,
+          smoking preference, special requests, accessibility options, room
+          type, and number of guests by Bukitt. Trip suppliers may impose other
+          changes and/or cancellation fees. Charges vary by reservation.
         </p>
         <p>
-          <strong>The Cookies We Set</strong>
+          You agree to pay any supplier required cancellation or change fees
+          that you incur. In limited cases, some properties do not permit
+          changes to or cancellations of reservations after they are made. You
+          agree to abide by the terms and conditions imposed with respect to
+          your prepaid property reservations.
         </p>
-
-        <ul>
-          <li>
-            <p>Email newsletters related cookies</p>
-            <p>
-              This site offers newsletter or email subscription services and
-              cookies may be used to remember if you are already registered and
-              whether to show certain notifications which might only be valid to
-              subscribed/unsubscribed users.
-            </p>
-          </li>
-
-          <li>
-            <p>Site preferences cookies</p>
-            <p>
-              In order to provide you with a great experience on this site we
-              provide the functionality to set your preferences for how this
-              site runs when you use it. In order to remember your preferences
-              we need to set cookies so that this information can be called
-              whenever you interact with a page is affected by your preferences.
-            </p>
-          </li>
-        </ul>
-
         <p>
-          <strong>Third Party Cookies</strong>
+          <strong>No-Show:</strong> If you do not show for the first night of
+          your reservation but plan to check-in for subsequent nights in the
+          reservation, you must confirm the reservation with Bukitt no later
+          than the original date of check-in to prevent cancellation of the
+          whole booking. If you do not confirm the booking changes with Bukitt
+          the whole booking may be canceled and refunds will only be due to you
+          in line with the Rules and Restrictions of each particular trip
+          supplier
         </p>
-
         <p>
-          In some special cases we also use cookies provided by trusted third
-          parties. The following section details which third party cookies you
-          might encounter through this site.
+          <strong>Refunds:</strong> In some cases, Bukitt could be unable to
+          refund the initial reservation fee when a tour operator charges the
+          above-mentioned fee and Bukitt is unable to find a new guest for a
+          specific spot.
         </p>
-
-        <ul>
-          <li>
-            <p>
-              This site uses Google Analytics which is one of the most
-              widespread and trusted analytics solution on the web for helping
-              us to understand how you use the site and ways that we can improve
-              your experience. These cookies may track things such as how long
-              you spend on the site and the pages that you visit so we can
-              continue to produce engaging content.
-            </p>
-            <p>
-              For more information on Google Analytics cookies, see the official
-              Google Analytics page.
-            </p>
-          </li>
-
-          <li>
-            <p>
-              We also use social media buttons and/or plugins on this site that
-              allow you to connect with your social network in various ways. For
-              these to work the following social media sites including;
-              Facebook, Instagram, will set cookies through our site which may
-              be used to enhance your profile on their site or contribute to the
-              data they hold for various purposes outlined in their respective
-              privacy policies.
-            </p>
-          </li>
-        </ul>
-
         <p>
-          <strong>More Information</strong>
+          Bukitt will do the best efforts for our guest to refund the total
+          amount received. Note that certain rates, fees, or special offers are
+          not eligible for cancellation, refund, or change. In the event that a
+          supplier or specific location is unable to honor your booking, Bukitt
+          will not be liable for any cost incurred due to relocation.
         </p>
-
         <p>
-          Hopefully that has clarified things for you and as was previously
-          mentioned if there is something that you aren&apos;t sure whether you
-          need or not it&apos;s usually safer to leave cookies enabled in case
-          it does interact with one of the features you use on our site.
+          For more information or guidance, please email:{' '}
+          <a href="mailto:hello@bukitt.com">hello@bukitt.com</a>
         </p>
-
-        <p>
-          For more general information on cookies, please read{' '}
-          <a href="https://www.generateprivacypolicy.com/#cookies">
-            &apos;Cookies&apos; article from the Privacy Policy Generator
-          </a>
-          .
-        </p>
-
-        <p>
-          However if you are still looking for more information then you can
-          contact us through one of our preferred contact methods:
-        </p>
-
-        <ul>
-          <li>Email: support@bukitt.com</li>
-        </ul>
       </div>
     </Layout>
   );

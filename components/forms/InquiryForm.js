@@ -124,7 +124,7 @@ export default function InquiryForm({ destinations, experiences }) {
   };
 
   return (
-    <div className="overflow-hidden rounded-2xl bg-slate-50 py-16 px-4 shadow-md sm:px-6 lg:px-8 lg:py-12">
+    <div className="mt-6 overflow-hidden  rounded-2xl bg-slate-50 py-16 px-4 shadow-md sm:px-6 lg:mt-12 lg:px-8 lg:py-12">
       <div className="relative mx-auto max-w-3xl">
         <div>
           <form
@@ -132,10 +132,7 @@ export default function InquiryForm({ destinations, experiences }) {
             className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-8"
           >
             <div>
-              <label
-                htmlFor="firstName"
-                className="block font-mono text-xl font-medium uppercase text-slate-700"
-              >
+              <label htmlFor="firstName" className="tw-inquiry-form-label">
                 First name
               </label>
               <div className="mt-1">
@@ -156,10 +153,7 @@ export default function InquiryForm({ destinations, experiences }) {
             </div>
 
             <div>
-              <label
-                htmlFor="lastName"
-                className="block font-mono text-xl font-medium uppercase text-slate-700"
-              >
+              <label htmlFor="lastName" className="tw-inquiry-form-label">
                 Last name
               </label>
               <div className="mt-1">
@@ -180,10 +174,7 @@ export default function InquiryForm({ destinations, experiences }) {
             </div>
 
             <div className="sm:col-span-2">
-              <label
-                htmlFor="email"
-                className="block font-mono text-xl font-medium uppercase text-slate-700"
-              >
+              <label htmlFor="email" className="tw-inquiry-form-label">
                 Email
               </label>
               <div className="mt-1">
@@ -204,10 +195,7 @@ export default function InquiryForm({ destinations, experiences }) {
             </div>
 
             <div className="sm:col-span-2">
-              <label
-                htmlFor="phone"
-                className="block font-mono text-xl font-medium uppercase text-slate-700"
-              >
+              <label htmlFor="phone" className="tw-inquiry-form-label">
                 Phone
               </label>
               <div className="mt-1">
@@ -228,9 +216,7 @@ export default function InquiryForm({ destinations, experiences }) {
             </div>
 
             <fieldset className="sm:col-span-2">
-              <legend className="block font-mono text-xl font-medium uppercase text-slate-700">
-                Category
-              </legend>
+              <legend className="tw-inquiry-form-label">Category</legend>
               {/* <p className="text-sm text-slate-500">
                 These are delivered via SMS to your mobile phone.
               </p> */}
@@ -245,9 +231,7 @@ export default function InquiryForm({ destinations, experiences }) {
                     className="tw-radio-btn"
                   />
                   <label htmlFor="category-experience" className="ml-3">
-                    <span className="block text-sm font-medium text-slate-700">
-                      Experience
-                    </span>
+                    <span className="tw-inquiry-form-checkbox">Experience</span>
                   </label>
                 </div>
 
@@ -261,7 +245,7 @@ export default function InquiryForm({ destinations, experiences }) {
                     className="tw-radio-btn"
                   />
                   <label htmlFor="category-destination" className="ml-3">
-                    <span className="block text-sm font-medium text-slate-700">
+                    <span className="tw-inquiry-form-checkbox">
                       Destination
                     </span>
                   </label>
@@ -273,14 +257,10 @@ export default function InquiryForm({ destinations, experiences }) {
               <fieldset className="sm:col-span-2">
                 <label htmlFor="product">
                   {watchCategory === 'Experience' && (
-                    <span className="block font-mono text-xl font-medium uppercase text-slate-700">
-                      Experience
-                    </span>
+                    <span className="tw-inquiry-form-label">Experience</span>
                   )}
                   {watchCategory === 'Destination' && (
-                    <span className="block font-mono text-xl font-medium uppercase text-slate-700">
-                      Destination
-                    </span>
+                    <span className="tw-inquiry-form-label">Destination</span>
                   )}
                 </label>
 
@@ -313,10 +293,7 @@ export default function InquiryForm({ destinations, experiences }) {
             )}
 
             <div className="sm:col-span-2">
-              <label
-                htmlFor="group"
-                className="block font-mono text-xl font-medium uppercase text-slate-700"
-              >
+              <label htmlFor="group" className="tw-inquiry-form-label">
                 Group Size
               </label>
               <div className="mt-1">
@@ -342,10 +319,7 @@ export default function InquiryForm({ destinations, experiences }) {
             </div>
 
             <div>
-              <label
-                htmlFor="startDate"
-                className="block font-mono text-xl font-medium uppercase text-slate-700"
-              >
+              <label htmlFor="startDate" className="tw-inquiry-form-label">
                 Travel Start Date
               </label>
               <div className="mt-1">
@@ -365,10 +339,7 @@ export default function InquiryForm({ destinations, experiences }) {
             </div>
 
             <div>
-              <label
-                htmlFor="endDate"
-                className="block font-mono text-xl font-medium uppercase text-slate-700"
-              >
+              <label htmlFor="endDate" className="tw-inquiry-form-label">
                 Travel End Date
               </label>
               <div className="mt-1">
@@ -388,10 +359,7 @@ export default function InquiryForm({ destinations, experiences }) {
             </div>
 
             <div className="sm:col-span-2">
-              <label
-                htmlFor="message"
-                className="block font-mono text-xl font-medium uppercase text-slate-700"
-              >
+              <label htmlFor="message" className="tw-inquiry-form-label">
                 Message
               </label>
               <div className="mt-1">
@@ -434,19 +402,18 @@ export default function InquiryForm({ destinations, experiences }) {
                 <div className="ml-3">
                   <p className="text-base text-slate-500">
                     By selecting this, you agree to the{' '}
-                    <a
-                      href="#"
-                      className="font-medium text-slate-700 underline"
-                    >
-                      Privacy Policy
-                    </a>{' '}
-                    and{' '}
                     <Link href="/policies/cookies">
                       <a className="font-medium text-slate-700 underline">
-                        Cookie Policy
+                        privacy
                       </a>
                     </Link>
-                    .
+                    <span> and </span>
+                    <Link href="/policies/cookies">
+                      <a className="font-medium text-slate-700 underline">
+                        cookie
+                      </a>
+                    </Link>
+                    <span> policies.</span>
                   </p>
                 </div>
               </div>
