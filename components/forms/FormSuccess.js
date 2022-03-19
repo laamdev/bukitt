@@ -1,6 +1,6 @@
 export default function FormSuccess({ children }) {
   return (
-    <span role="alert" className="text-green-500 text-xs leading-3">
+    <span role="alert" className="text-xs leading-3 text-green-500">
       ✅ {children}
     </span>
   );

@@ -1,3 +1,5 @@
+import { format } from 'date-fns';
+
 const mail = require('@sendgrid/mail');
 
 mail.setApiKey(process.env.SENDGRID_API_KEY);
@@ -56,6 +58,9 @@ export default async (req, res) => {
     return res.status(400).json({ error: 'A message is required!' });
   }
 
+  const formattedStartDate = format(new Date(startDate), 'MM-dd-yyyy');
+  const formattedEndDate = format(new Date(endDate), 'MM-dd-yyyy');
+
   const formattedMessage = `
     Name: ${firstName} ${lastName}\r\n
     Email: ${email}\r\n
@@ -63,8 +68,8 @@ export default async (req, res) => {
     Category: ${category}\r\n
     Product: ${product}\r\n
     Group Size: ${group}\r\n
-    Travel Start Date: ${startDate}\r\n
-    Travel End Date: ${endDate}\r\n
+    Travel Start Date: ${formattedStartDate}\r\n
+    Travel End Date: ${formattedEndDate}\r\n
     Message: ${message}
   `;
 

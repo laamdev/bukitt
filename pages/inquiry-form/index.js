@@ -11,8 +11,6 @@ export default function InquiryFormPage({ inquiryFormPageData }) {
       metaTitle={inquiryFormPageData?.title}
       metaDescription={inquiryFormPageData?.hero?.body}
     >
-      {/* <Hero hero={inquiryFormPageData?.hero} page="inquiry" /> */}
-
       <section className="tw-section">
         <div className="mx-auto max-w-4xl">
           <div className="text-center">

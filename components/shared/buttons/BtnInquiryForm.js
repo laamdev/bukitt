@@ -1,29 +1,27 @@
-import * as fbq from '@/lib/fpixel';
-import { classNames } from '@/utils/helpers';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+import { IoSendOutline } from 'react-icons/io5';
 
-export default function BtnInquiryForm({
-  disabled,
-  btnLinkText,
-  primary,
-  secondary,
-}) {
+import * as fbq from '@/lib/fpixel';
+
+export default function BtnInquiryForm({ children, isSubmitting, disabled }) {
   const handleClick = () => {
     fbq.event('trackCustom', 'Inquire');
   };
   return (
-    <button
-      type="submit"
-      disabled={disabled}
-      onClick={handleClick}
-      className={classNames(
-        primary &&
-          'border-brand text-brand bg-transparent hover:bg-brand hover:text-white',
-        secondary &&
-          'border-white text-white bg-transparent hover:bg-brand hover:text-white',
-        'tw-btn disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:text-brand disabled:cursor-not-allowed'
-      )}
-    >
-      {btnLinkText}
-    </button>
+    <div>
+      <button
+        type="submit"
+        disabled={disabled}
+        onClick={handleClick}
+        className={`tw-btn gap-x-3 border-brand text-brand hover:bg-brand hover:text-white disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:text-brand`}
+      >
+        <span>{children}</span>
+        {isSubmitting ? (
+          <AiOutlineLoading3Quarters className="h-6 w-6 animate-spin" />
+        ) : (
+          <IoSendOutline className="h-6 w-6" />
+        )}
+      </button>
+    </div>
   );
 }

@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Switch } from '@headlessui/react';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { IoCheckmarkOutline } from 'react-icons/io5';
 
 import { classNames } from '@/utils/helpers';
 import { phoneRegExp } from '@/utils/regex';
@@ -66,7 +68,7 @@ export default function InquiryForm({ destinations, experiences }) {
     register,
     handleSubmit,
     watch,
-    formState: { errors },
+    formState: { errors, isSubmitting },
     reset,
   } = useForm({
     defaultValues: {
@@ -113,7 +115,7 @@ export default function InquiryForm({ destinations, experiences }) {
       setSuccess('');
     } else {
       setSuccess(
-        'Your message has been successfully submitted. We will contact you at your email shortly.'
+        'Your inquiry message has been successfully submitted. Our travel concierge will contact you shortly!'
       );
       setServerError('');
     }
@@ -126,312 +128,339 @@ export default function InquiryForm({ destinations, experiences }) {
   return (
     <div className="mt-6 overflow-hidden  rounded-2xl bg-slate-50 py-16 px-4 shadow-md sm:px-6 lg:mt-12 lg:px-8 lg:py-12">
       <div className="relative mx-auto max-w-3xl">
-        <div>
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-8"
-          >
-            <div>
-              <label htmlFor="firstName" className="tw-inquiry-form-label">
-                First name
-              </label>
-              <div className="mt-1">
-                <input
-                  type="text"
-                  name="firstName"
-                  id="firstName"
-                  autoComplete="given-name"
-                  {...register('firstName')}
-                  className="block w-full rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
-                />
-                <div className="h-3">
-                  {errors?.firstName?.message && (
-                    <FormError>{errors?.firstName?.message}</FormError>
-                  )}
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <AnimatePresence>
+            {!success ? (
+              <motion.div
+                className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-8"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                <div>
+                  <label htmlFor="firstName" className="tw-inquiry-form-label">
+                    First name
+                  </label>
+                  <div className="mt-1">
+                    <input
+                      type="text"
+                      name="firstName"
+                      id="firstName"
+                      autoComplete="given-name"
+                      {...register('firstName')}
+                      className="block w-full rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
+                    />
+                    <div className="h-3">
+                      {errors?.firstName?.message && (
+                        <FormError>{errors?.firstName?.message}</FormError>
+                      )}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
 
-            <div>
-              <label htmlFor="lastName" className="tw-inquiry-form-label">
-                Last name
-              </label>
-              <div className="mt-1">
-                <input
-                  type="text"
-                  name="lastName"
-                  id="lastName"
-                  autoComplete="family-name"
-                  {...register('lastName')}
-                  className="block w-full rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
-                />
-                <div className="h-3">
-                  {errors?.lastName?.message && (
-                    <FormError>{errors?.lastName?.message}</FormError>
-                  )}
+                <div>
+                  <label htmlFor="lastName" className="tw-inquiry-form-label">
+                    Last name
+                  </label>
+                  <div className="mt-1">
+                    <input
+                      type="text"
+                      name="lastName"
+                      id="lastName"
+                      autoComplete="family-name"
+                      {...register('lastName')}
+                      className="block w-full rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
+                    />
+                    <div className="h-3">
+                      {errors?.lastName?.message && (
+                        <FormError>{errors?.lastName?.message}</FormError>
+                      )}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
 
-            <div className="sm:col-span-2">
-              <label htmlFor="email" className="tw-inquiry-form-label">
-                Email
-              </label>
-              <div className="mt-1">
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  {...register('email')}
-                  className="block w-full rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
-                />
-                <div className="h-3">
-                  {errors?.email?.message && (
-                    <FormError>{errors?.email?.message}</FormError>
-                  )}
+                <div className="sm:col-span-2">
+                  <label htmlFor="email" className="tw-inquiry-form-label">
+                    Email
+                  </label>
+                  <div className="mt-1">
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      autoComplete="email"
+                      {...register('email')}
+                      className="block w-full rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
+                    />
+                    <div className="h-3">
+                      {errors?.email?.message && (
+                        <FormError>{errors?.email?.message}</FormError>
+                      )}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
 
-            <div className="sm:col-span-2">
-              <label htmlFor="phone" className="tw-inquiry-form-label">
-                Phone
-              </label>
-              <div className="mt-1">
-                <input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  autoComplete="phone"
-                  {...register('phone')}
-                  className="block w-full rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
-                />
-                <div className="h-3">
-                  {errors?.phone?.message && (
-                    <FormError>{errors?.phone?.message}</FormError>
-                  )}
+                <div className="sm:col-span-2">
+                  <label htmlFor="phone" className="tw-inquiry-form-label">
+                    Phone
+                  </label>
+                  <div className="mt-1">
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      autoComplete="phone"
+                      {...register('phone')}
+                      className="block w-full rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
+                    />
+                    <div className="h-3">
+                      {errors?.phone?.message && (
+                        <FormError>{errors?.phone?.message}</FormError>
+                      )}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
 
-            <fieldset className="sm:col-span-2">
-              <legend className="tw-inquiry-form-label">Category</legend>
-              {/* <p className="text-sm text-slate-500">
+                <fieldset className="sm:col-span-2">
+                  <legend className="tw-inquiry-form-label">Category</legend>
+                  {/* <p className="text-sm text-slate-500">
                 These are delivered via SMS to your mobile phone.
               </p> */}
-              <div className="mt-3 flex space-x-12">
-                <div className="flex items-center">
-                  <input
-                    id="category-experience"
-                    name="category"
-                    type="radio"
-                    value="Experience"
-                    {...register('category')}
-                    className="tw-radio-btn"
-                  />
-                  <label htmlFor="category-experience" className="ml-3">
-                    <span className="tw-inquiry-form-checkbox">Experience</span>
-                  </label>
-                </div>
+                  <div className="mt-3 flex space-x-12">
+                    <div className="flex items-center">
+                      <input
+                        id="category-experience"
+                        name="category"
+                        type="radio"
+                        value="Experience"
+                        {...register('category')}
+                        className="tw-radio-btn"
+                      />
+                      <label htmlFor="category-experience" className="ml-3">
+                        <span className="tw-inquiry-form-checkbox">
+                          Experience
+                        </span>
+                      </label>
+                    </div>
 
-                <div className="flex items-center">
-                  <input
-                    id="category-destination"
-                    name="category"
-                    type="radio"
-                    value="Destination"
-                    {...register('category')}
-                    className="tw-radio-btn"
-                  />
-                  <label htmlFor="category-destination" className="ml-3">
-                    <span className="tw-inquiry-form-checkbox">
-                      Destination
-                    </span>
-                  </label>
-                </div>
-              </div>
-            </fieldset>
+                    <div className="flex items-center">
+                      <input
+                        id="category-destination"
+                        name="category"
+                        type="radio"
+                        value="Destination"
+                        {...register('category')}
+                        className="tw-radio-btn"
+                      />
+                      <label htmlFor="category-destination" className="ml-3">
+                        <span className="tw-inquiry-form-checkbox">
+                          Destination
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
 
-            {watchCategory && (
-              <fieldset className="sm:col-span-2">
-                <label htmlFor="product">
-                  {watchCategory === 'Experience' && (
-                    <span className="tw-inquiry-form-label">Experience</span>
-                  )}
-                  {watchCategory === 'Destination' && (
-                    <span className="tw-inquiry-form-label">Destination</span>
-                  )}
-                </label>
-
-                <select
-                  id="product"
-                  name="product"
-                  {...register('product')}
-                  className="block w-full cursor-pointer rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
-                >
-                  {watchCategory === 'Experience' && (
-                    <>
-                      {sortedExperiences.map((experience) => (
-                        <option key={experience.name} value={experience.name}>
-                          {experience.name}
-                        </option>
-                      ))}
-                    </>
-                  )}
-                  {watchCategory === 'Destination' && (
-                    <>
-                      {sortedDestinations.map((destination) => (
-                        <option key={destination.name} value={destination.name}>
-                          {destination.name}
-                        </option>
-                      ))}
-                    </>
-                  )}
-                </select>
-              </fieldset>
-            )}
-
-            <div className="sm:col-span-2">
-              <label htmlFor="group" className="tw-inquiry-form-label">
-                Group Size
-              </label>
-              <div className="mt-1">
-                <input
-                  id="group"
-                  name="group"
-                  type="number"
-                  min={1}
-                  max={20}
-                  {...register('group', {
-                    required: true,
-                    min: 1,
-                    max: 20,
-                  })}
-                  className="block w-full rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
-                />
-                <div className="h-3">
-                  {errors?.group?.message && (
-                    <FormError>{errors?.group?.message}</FormError>
-                  )}
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <label htmlFor="startDate" className="tw-inquiry-form-label">
-                Travel Start Date
-              </label>
-              <div className="mt-1">
-                <input
-                  type="date"
-                  name="startDate"
-                  id="startDate"
-                  {...register('startDate', { required: true })}
-                  className="block w-full cursor-pointer rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
-                />
-                <div className="h-3">
-                  {errors?.startDate?.message && (
-                    <FormError>{errors?.startDate?.message}</FormError>
-                  )}
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <label htmlFor="endDate" className="tw-inquiry-form-label">
-                Travel End Date
-              </label>
-              <div className="mt-1">
-                <input
-                  type="date"
-                  name="endDate"
-                  id="endDate"
-                  {...register('endDate', { required: true })}
-                  className="block w-full cursor-pointer rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
-                />
-                <div className="h-3">
-                  {errors?.endDate?.message && (
-                    <FormError>{errors?.endDate?.message}</FormError>
-                  )}
-                </div>
-              </div>
-            </div>
-
-            <div className="sm:col-span-2">
-              <label htmlFor="message" className="tw-inquiry-form-label">
-                Message
-              </label>
-              <div className="mt-1">
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  {...register('message', {})}
-                  className="block w-full rounded-md border border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
-                />
-                <div className="h-3">
-                  {errors?.message?.message && (
-                    <FormError>{errors?.message?.message}</FormError>
-                  )}
-                </div>
-              </div>
-            </div>
-
-            <div className="sm:col-span-2">
-              <div className="flex items-start">
-                <div className="shrink-0">
-                  <Switch
-                    checked={agreed}
-                    onChange={setAgreed}
-                    className={classNames(
-                      agreed ? 'bg-brand-600' : 'bg-slate-200',
-                      'relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2'
-                    )}
-                  >
-                    <span className="sr-only">Agree to policies</span>
-                    <span
-                      aria-hidden="true"
-                      className={classNames(
-                        agreed ? 'translate-x-5' : 'translate-x-0',
-                        'inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out'
+                {watchCategory && (
+                  <fieldset className="sm:col-span-2">
+                    <label htmlFor="product">
+                      {watchCategory === 'Experience' && (
+                        <span className="tw-inquiry-form-label">
+                          Experience
+                        </span>
                       )}
-                    />
-                  </Switch>
-                </div>
-                <div className="ml-3">
-                  <p className="text-base text-slate-500">
-                    By selecting this, you agree to the{' '}
-                    <Link href="/policies/cookies">
-                      <a className="font-medium text-slate-700 underline">
-                        privacy
-                      </a>
-                    </Link>
-                    <span> and </span>
-                    <Link href="/policies/cookies">
-                      <a className="font-medium text-slate-700 underline">
-                        cookie
-                      </a>
-                    </Link>
-                    <span> policies.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="mx-auto sm:col-span-2">
-              <BtnInquiryForm
-                disabled={submitting || agreed === false}
-                btnLinkText="Let's Talk"
-                primary
-              />
+                      {watchCategory === 'Destination' && (
+                        <span className="tw-inquiry-form-label">
+                          Destination
+                        </span>
+                      )}
+                    </label>
 
-              <div className="flex justify-center">
-                {serverError && <span className="mt-6">{serverError}</span>}
-                {success && <span className="mt-6 text-sm ">👌 {success}</span>}
-              </div>
-            </div>
-          </form>
-        </div>
+                    <select
+                      id="product"
+                      name="product"
+                      {...register('product')}
+                      className="block w-full cursor-pointer rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
+                    >
+                      {watchCategory === 'Experience' && (
+                        <>
+                          {sortedExperiences.map((experience) => (
+                            <option
+                              key={experience.name}
+                              value={experience.name}
+                            >
+                              {experience.name}
+                            </option>
+                          ))}
+                        </>
+                      )}
+                      {watchCategory === 'Destination' && (
+                        <>
+                          {sortedDestinations.map((destination) => (
+                            <option
+                              key={destination.name}
+                              value={destination.name}
+                            >
+                              {destination.name}
+                            </option>
+                          ))}
+                        </>
+                      )}
+                    </select>
+                  </fieldset>
+                )}
+
+                <div className="sm:col-span-2">
+                  <label htmlFor="group" className="tw-inquiry-form-label">
+                    Group Size
+                  </label>
+                  <div className="mt-1">
+                    <input
+                      id="group"
+                      name="group"
+                      type="number"
+                      min={1}
+                      max={20}
+                      {...register('group', {
+                        required: true,
+                        min: 1,
+                        max: 20,
+                      })}
+                      className="block w-full rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
+                    />
+                    <div className="h-3">
+                      {errors?.group?.message && (
+                        <FormError>{errors?.group?.message}</FormError>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="startDate" className="tw-inquiry-form-label">
+                    Travel Start Date
+                  </label>
+                  <div className="mt-1">
+                    <input
+                      type="date"
+                      name="startDate"
+                      id="startDate"
+                      {...register('startDate', { required: true })}
+                      className="block w-full cursor-pointer rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
+                    />
+                    <div className="h-3">
+                      {errors?.startDate?.message && (
+                        <FormError>{errors?.startDate?.message}</FormError>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="endDate" className="tw-inquiry-form-label">
+                    Travel End Date
+                  </label>
+                  <div className="mt-1">
+                    <input
+                      type="date"
+                      name="endDate"
+                      id="endDate"
+                      {...register('endDate', { required: true })}
+                      className="block w-full cursor-pointer rounded-md border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
+                    />
+                    <div className="h-3">
+                      {errors?.endDate?.message && (
+                        <FormError>{errors?.endDate?.message}</FormError>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="sm:col-span-2">
+                  <label htmlFor="message" className="tw-inquiry-form-label">
+                    Message
+                  </label>
+                  <div className="mt-1">
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={4}
+                      {...register('message', {})}
+                      className="block w-full rounded-md border border-slate-300 py-3 px-4 shadow-sm focus:border-brand-500 focus:ring-brand-500"
+                    />
+                    <div className="h-3">
+                      {errors?.message?.message && (
+                        <FormError>{errors?.message?.message}</FormError>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="sm:col-span-2">
+                  <div className="flex items-start">
+                    <div className="shrink-0">
+                      <Switch
+                        checked={agreed}
+                        onChange={setAgreed}
+                        className={classNames(
+                          agreed ? 'bg-brand-600' : 'bg-slate-200',
+                          'relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2'
+                        )}
+                      >
+                        <span className="sr-only">Agree to policies</span>
+                        <span
+                          aria-hidden="true"
+                          className={classNames(
+                            agreed ? 'translate-x-5' : 'translate-x-0',
+                            'inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out'
+                          )}
+                        />
+                      </Switch>
+                    </div>
+                    <div className="ml-3">
+                      <p className="text-base text-slate-500">
+                        By selecting this, you agree to the{' '}
+                        <Link href="/policies/cookies">
+                          <a className="font-medium text-slate-700 underline">
+                            privacy
+                          </a>
+                        </Link>
+                        <span> and </span>
+                        <Link href="/policies/cookies">
+                          <a className="font-medium text-slate-700 underline">
+                            cookie
+                          </a>
+                        </Link>
+                        <span> policies.</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mx-auto mt-12 flex flex-col items-center justify-center sm:col-span-2">
+                    <BtnInquiryForm
+                      isSubmitting={isSubmitting}
+                      disabled={isSubmitting || agreed === false}
+                      primary
+                    >
+                      {isSubmitting ? 'Submitting' : "Let's Talk"}
+                    </BtnInquiryForm>
+                    {serverError && <span>{serverError}</span>}
+                  </div>
+                </div>
+              </motion.div>
+            ) : (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="col-span-2 mx-auto flex max-w-sm flex-col items-center gap-y-3 text-center text-xl font-medium lg:gap-y-6"
+              >
+                <IoCheckmarkOutline className="h-12 w-12 rounded-full bg-green-700 px-1 text-white lg:h-16 lg:w-16" />
+                <span className="text-green-700">{success}</span>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </form>
       </div>
     </div>
   );
