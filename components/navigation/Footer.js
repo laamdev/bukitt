@@ -76,15 +76,15 @@ export default function Footer() {
       <div className="mt-12 border-t-2 border-slate-700 pt-12">
         <p className="text-center text-xs text-slate-400">
           © {currentYear}, {copyright}. Policies:{' '}
-          <Link href="/policies/cancellation">
+          <Link href="/policies/cancellation-policy">
             <a>Cancellation</a>
           </Link>{' '}
           /{' '}
-          <Link href="/policies/privacy">
+          <Link href="/policies/privacy-policy">
             <a>Privacy</a>
           </Link>{' '}
           /{' '}
-          <Link href="/policies/cookies">
+          <Link href="/policies/cookie-policy">
             <a>Cookies</a>
           </Link>
         </p>

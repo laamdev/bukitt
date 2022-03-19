@@ -1,4 +1,4 @@
-export const destinationCategories = [
+export const destinationTags = [
   { title: 'Beach', value: 'beach' },
   { title: 'City', value: 'city' },
   { title: 'Countryside', value: 'countryside' },

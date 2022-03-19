@@ -420,13 +420,13 @@ export default function InquiryForm({ destinations, experiences }) {
                     <div className="ml-3">
                       <p className="text-base text-slate-500">
                         By selecting this, you agree to the{' '}
-                        <Link href="/policies/cookies">
+                        <Link href="/policies/privacy-policy">
                           <a className="font-medium text-slate-700 underline">
                             privacy
                           </a>
                         </Link>
                         <span> and </span>
-                        <Link href="/policies/cookies">
+                        <Link href="/policies/cookie-policy">
                           <a className="font-medium text-slate-700 underline">
                             cookie
                           </a>

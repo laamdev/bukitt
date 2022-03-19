@@ -3,10 +3,8 @@ import Layout from '@/components/navigation/Layout';
 export default function CancellationPolicyPage() {
   return (
     <Layout>
-      <div className="tw-section prose prose-lg mx-auto">
-        <h1 className="font-mono font-bold uppercase">
-          Changes and Cancellation Policy
-        </h1>
+      <div className="tw-section prose prose-xl mx-auto">
+        <h1 className="font-mono uppercase">Cancellation Policy</h1>
 
         <p>
           By making a Trip Reservation with Bukitt, you accept and agree to the

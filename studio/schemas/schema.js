@@ -7,7 +7,6 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 //! DOCUMENTS
 //* Destination
 import destination from './documents/destination';
-import destinationTag from './documents/destinationTag';
 
 //* Experience
 import experience from './documents/experience';
@@ -81,7 +80,6 @@ export default createSchema({
 
     //* Destination
     destination,
-    destinationTag,
 
     //* Experience
     experience,

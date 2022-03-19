@@ -1,18 +1,21 @@
+import Link from 'next/link';
+
 import Layout from '@/components/navigation/Layout';
 
-export default function PrivacyPolicyPage() {
+export default function CookiePolicyPage() {
   return (
     <Layout>
       <div className="tw-section prose prose-lg mx-auto">
-        <h1 className="font-mono font-bold uppercase">
-          Cookie Policy for Bukitt
-        </h1>
-
-        <p>This is the Cookie Policy for Bukitt, accessible from bukitt.com</p>
+        <h1 className="font-mono uppercase">Cookie Policy</h1>
 
         <p>
-          <strong>What Are Cookies</strong>
+          This is the Cookie Policy for Bukitt, accessible from{' '}
+          <Link href="/">
+            <a>bukitt.com</a>
+          </Link>
         </p>
+
+        <h2>What Are Cookies</h2>
 
         <p>
           As is common practice with almost all professional websites this site
@@ -24,9 +27,7 @@ export default function PrivacyPolicyPage() {
           &apos;break&apos; certain elements of the sites functionality.
         </p>
 
-        <p>
-          <strong>How We Use Cookies</strong>
-        </p>
+        <h2>How We Use Cookies</h2>
 
         <p>
           We use cookies for a variety of reasons detailed below. Unfortunately
@@ -37,9 +38,7 @@ export default function PrivacyPolicyPage() {
           to provide a service that you use.
         </p>
 
-        <p>
-          <strong>Disabling Cookies</strong>
-        </p>
+        <h2>Disabling Cookies</h2>
 
         <p>
           You can prevent the setting of cookies by adjusting the settings on
@@ -54,13 +53,14 @@ export default function PrivacyPolicyPage() {
           </a>
           .
         </p>
-        <p>
-          <strong>The Cookies We Set</strong>
-        </p>
+
+        <h2>The Cookies We Set</h2>
 
         <ul>
           <li>
-            <p>Email newsletters related cookies</p>
+            <p>
+              <strong>Email newsletters related cookies</strong>
+            </p>
             <p>
               This site offers newsletter or email subscription services and
               cookies may be used to remember if you are already registered and
@@ -70,7 +70,9 @@ export default function PrivacyPolicyPage() {
           </li>
 
           <li>
-            <p>Site preferences cookies</p>
+            <p>
+              <strong>Site preferences cookies</strong>
+            </p>
             <p>
               In order to provide you with a great experience on this site we
               provide the functionality to set your preferences for how this
@@ -81,9 +83,7 @@ export default function PrivacyPolicyPage() {
           </li>
         </ul>
 
-        <p>
-          <strong>Third Party Cookies</strong>
-        </p>
+        <h2>Third Party Cookies</h2>
 
         <p>
           In some special cases we also use cookies provided by trusted third
@@ -120,9 +120,7 @@ export default function PrivacyPolicyPage() {
           </li>
         </ul>
 
-        <p>
-          <strong>More Information</strong>
-        </p>
+        <h2>More Information</h2>
 
         <p>
           Hopefully that has clarified things for you and as was previously
@@ -145,7 +143,9 @@ export default function PrivacyPolicyPage() {
         </p>
 
         <ul>
-          <li>Email: support@bukitt.com</li>
+          <li>
+            <a href="mailto:support@bukitt.com">Email: support@bukitt.com</a>
+          </li>
         </ul>
       </div>
     </Layout>

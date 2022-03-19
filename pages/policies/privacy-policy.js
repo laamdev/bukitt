@@ -1,21 +1,12 @@
-import Link from 'next/link';
-
 import Layout from '@/components/navigation/Layout';
 
-export default function CookiePolicyPage() {
+export default function PrivacyPolicyPage() {
   return (
     <Layout>
-      <div className="tw-section prose prose-lg mx-auto">
-        <h1 className="font-mono font-bold uppercase">
-          Cookie Policy for Bukitt
-        </h1>
+      <div className="tw-section prose prose-xl mx-auto">
+        <h1 className="font-mono font-bold uppercase">Privacy Policy</h1>
 
-        <p>
-          This is the Cookie Policy for Bukitt, accessible from{' '}
-          <Link href="/">
-            <a>bukitt.com</a>
-          </Link>
-        </p>
+        <p>This is the Cookie Policy for Bukitt, accessible from bukitt.com</p>
 
         <h2>What Are Cookies</h2>
 
@@ -60,9 +51,7 @@ export default function CookiePolicyPage() {
 
         <ul>
           <li>
-            <p>
-              <strong>Email newsletters related cookies</strong>
-            </p>
+            <h4>Email newsletters related cookies</h4>
             <p>
               This site offers newsletter or email subscription services and
               cookies may be used to remember if you are already registered and
@@ -72,9 +61,7 @@ export default function CookiePolicyPage() {
           </li>
 
           <li>
-            <p>
-              <strong>Site preferences cookies</strong>
-            </p>
+            <h4>Site preferences cookies</h4>
             <p>
               In order to provide you with a great experience on this site we
               provide the functionality to set your preferences for how this
@@ -145,9 +132,7 @@ export default function CookiePolicyPage() {
         </p>
 
         <ul>
-          <li>
-            <a href="mailto:support@bukitt.com">Email: support@bukitt.com</a>
-          </li>
+          <li>Email: support@bukitt.com</li>
         </ul>
       </div>
     </Layout>

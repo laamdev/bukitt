@@ -1,6 +1,6 @@
 import { IoMapOutline } from 'react-icons/io5';
 
-import { locations, destinationCategories, seasons } from '../../data';
+import { locations, destinationTags, seasons } from '../../data';
 
 export default {
   name: 'destination',
@@ -39,12 +39,10 @@ export default {
       name: 'tags',
       title: 'Tags',
       type: 'array',
-      of: [
-        {
-          type: 'reference',
-          to: [{ type: 'destinationTag' }],
-        },
-      ],
+      of: [{ type: 'string' }],
+      options: {
+        list: [...destinationTags],
+      },
     },
     {
       name: 'season',
@@ -53,7 +51,6 @@ export default {
       description: 'Destination season.',
       options: {
         list: [...seasons],
-        // // layout: 'radio',
       },
     },
     {
