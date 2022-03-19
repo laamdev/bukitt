@@ -2,7 +2,10 @@ import Layout from '@/components/navigation/Layout';
 
 export default function CancellationPolicyPage() {
   return (
-    <Layout>
+    <Layout
+      metaTitle="Cancellation Policy"
+      metaDescription="Cancellation and change policy for Bukitt's trips."
+    >
       <div className="tw-section prose prose-xl mx-auto">
         <h1 className="font-mono uppercase">Cancellation Policy</h1>
 

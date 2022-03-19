@@ -2,7 +2,10 @@ import Layout from '@/components/navigation/Layout';
 
 export default function PrivacyPolicyPage() {
   return (
-    <Layout>
+    <Layout
+      metaTitle="Privacy Policy"
+      metaDescription="Privacy policy for Bukitt's website and email marketing."
+    >
       <div className="tw-section prose prose-xl mx-auto">
         <h1 className="font-mono font-bold uppercase">Privacy Policy</h1>
 

@@ -4,7 +4,10 @@ import Layout from '@/components/navigation/Layout';
 
 export default function CookiePolicyPage() {
   return (
-    <Layout>
+    <Layout
+      metaTitle="Cookie Policy"
+      metaDescription="Cookie policy for Bukitt's website."
+    >
       <div className="tw-section prose prose-lg mx-auto">
         <h1 className="font-mono uppercase">Cookie Policy</h1>
 
