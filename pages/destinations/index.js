@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { AnimatePresence } from 'framer-motion';
 
 import { sanityClient } from '@/lib/sanity.server';
 import { destinationsPageQuery } from '@/lib/queries';
@@ -8,7 +9,7 @@ import Layout from '@/components/navigation/Layout';
 import Hero from '@/components/shared/Hero';
 import List from '@/components/destination/DestinationsList';
 import Card from '@/components/destination/DestinationCard';
-import SearchBar from '@/components/destination/DestinationSearchBar';
+// // import SearchBar from '@/components/destination/DestinationSearchBar';
 import Filters from '@/components/destination/DestinationsFilters';
 
 export default function DestinationsPage({ destinationsPageData }) {
@@ -39,9 +40,11 @@ export default function DestinationsPage({ destinationsPageData }) {
       />
 
       <List>
-        {filteredDestinations.map((destination) => {
-          return <Card key={destination._id} destination={destination} />;
-        })}
+        <AnimatePresence>
+          {filteredDestinations.map((destination) => {
+            return <Card key={destination._id} destination={destination} />;
+          })}
+        </AnimatePresence>
       </List>
     </Layout>
   );
