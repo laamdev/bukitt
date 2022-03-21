@@ -23,7 +23,7 @@ const schema = yup
   })
   .required();
 
-export default function Newsletter() {
+export default function NewsletterForm() {
   const [agreed, setAgreed] = useState(false);
   const [serverError, setServerError] = useState('');
   const [success, setSuccess] = useState('');

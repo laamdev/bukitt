@@ -1,5 +1,5 @@
 import SectionHeading from '@/components/shared/SectionHeading';
-import Newsletter from '@/components/forms/Newsletter';
+import NewsletterForm from '@/components/forms/NewsletterForm';
 
 export default function NewsletterSection({ heading, body }) {
   return (
@@ -7,7 +7,7 @@ export default function NewsletterSection({ heading, body }) {
       <SectionHeading className="text-center">{heading}</SectionHeading>
       <p className="text-center text-lg lg:text-2xl">{body}</p>
 
-      <Newsletter />
+      <NewsletterForm />
     </section>
   );
 }

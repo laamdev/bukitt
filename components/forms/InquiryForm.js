@@ -55,7 +55,8 @@ const schema = yup
   .required();
 
 export default function InquiryForm({ destinations, experiences }) {
-  const [agreed, setAgreed] = useState(false);
+  const [agreedContact, setAgreedContact] = useState(false);
+  const [agreedMailingList, setAgreedMailingList] = useState(false);
   const [serverError, setServerError] = useState('');
   const [success, setSuccess] = useState('');
   const [submitting, setSubmitting] = useState(false);
@@ -77,7 +78,7 @@ export default function InquiryForm({ destinations, experiences }) {
     resolver: yupResolver(schema),
   });
 
-  const watchCategory = watch('category'); // you can supply default value as second argument
+  const watchCategory = watch('category');
 
   const sortedExperiences = experiences.sort(function (a, b) {
     return a.name.localeCompare(b.name);
@@ -118,6 +119,30 @@ export default function InquiryForm({ destinations, experiences }) {
         'Your inquiry message has been successfully submitted. Our travel concierge will contact you shortly!'
       );
       setServerError('');
+    }
+
+    if (agreedMailingList) {
+      const res = await fetch('/api/subscribe', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: formData.email,
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (data.error) {
+        setServerError(data.error);
+        setSuccess('');
+      } else {
+        setSuccess(
+          "Thanks for subscribing! 🥳 We've sent a welcome email to your inbox. If you can't find it, please check your spam folder and add us to your favorites so you won't miss any of our travel treats!"
+        );
+        setServerError('');
+      }
     }
 
     setSubmitting(false);
@@ -396,29 +421,64 @@ export default function InquiryForm({ destinations, experiences }) {
                   </div>
                 </div>
 
-                <div className="sm:col-span-2">
+                <div className="col-span-1">
                   <div className="flex items-start">
                     <div className="shrink-0">
                       <Switch
-                        checked={agreed}
-                        onChange={setAgreed}
+                        checked={agreedContact}
+                        onChange={setAgreedContact}
                         className={classNames(
-                          agreed ? 'bg-brand-600' : 'bg-slate-200',
+                          agreedContact ? 'bg-brand-600' : 'bg-slate-200',
                           'relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2'
                         )}
                       >
-                        <span className="sr-only">Agree to policies</span>
+                        <span className="sr-only">Agree to contact.</span>
                         <span
                           aria-hidden="true"
                           className={classNames(
-                            agreed ? 'translate-x-5' : 'translate-x-0',
+                            agreedContact ? 'translate-x-5' : 'translate-x-0',
                             'inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out'
                           )}
                         />
                       </Switch>
                     </div>
                     <div className="ml-3">
-                      <p className="text-base text-slate-500">
+                      <p>Can we contact and use your info to plan the trip?*</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-span-1">
+                  <div className="flex items-start">
+                    <div className="shrink-0">
+                      <Switch
+                        checked={agreedMailingList}
+                        onChange={setAgreedMailingList}
+                        className={classNames(
+                          agreedMailingList ? 'bg-brand-600' : 'bg-slate-200',
+                          'relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2'
+                        )}
+                      >
+                        <span className="sr-only">
+                          Agree to mailing list subscription.
+                        </span>
+                        <span
+                          aria-hidden="true"
+                          className={classNames(
+                            agreedMailingList
+                              ? 'translate-x-5'
+                              : 'translate-x-0',
+                            'inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out'
+                          )}
+                        />
+                      </Switch>
+                    </div>
+                    <div className="ml-3">
+                      <p>
+                        Subscribe to our inspirational luxury travel mailing
+                        list.
+                      </p>
+                      {/* <p className="text-base text-slate-500">
                         By selecting this, you agree to the{' '}
                         <Link href="/policies/privacy-policy">
                           <a className="font-medium text-slate-700 underline">
@@ -432,20 +492,20 @@ export default function InquiryForm({ destinations, experiences }) {
                           </a>
                         </Link>
                         <span> policies.</span>
-                      </p>
+                      </p> */}
                     </div>
                   </div>
+                </div>
 
-                  <div className="mx-auto mt-12 flex flex-col items-center justify-center sm:col-span-2">
-                    <BtnInquiryForm
-                      isSubmitting={isSubmitting}
-                      disabled={isSubmitting || agreed === false}
-                      primary
-                    >
-                      {isSubmitting ? 'Submitting' : "Let's Talk"}
-                    </BtnInquiryForm>
-                    {serverError && <span>{serverError}</span>}
-                  </div>
+                <div className="mx-auto mt-12 flex flex-col items-center justify-center sm:col-span-2">
+                  <BtnInquiryForm
+                    isSubmitting={isSubmitting}
+                    disabled={isSubmitting || agreedContact === false}
+                    primary
+                  >
+                    {isSubmitting ? 'Submitting' : "Let's Talk"}
+                  </BtnInquiryForm>
+                  {serverError && <span>{serverError}</span>}
                 </div>
               </motion.div>
             ) : (

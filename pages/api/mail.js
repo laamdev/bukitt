@@ -1,8 +1,9 @@
 import { format } from 'date-fns';
 
 const mail = require('@sendgrid/mail');
+const API_KEY = process.env.SENDGRID_API_KEY;
 
-mail.setApiKey(process.env.SENDGRID_API_KEY);
+mail.setApiKey(API_KEY);
 
 export default async (req, res) => {
   const {
@@ -61,7 +62,12 @@ export default async (req, res) => {
   const formattedStartDate = format(new Date(startDate), 'MM-dd-yyyy');
   const formattedEndDate = format(new Date(endDate), 'MM-dd-yyyy');
 
+  const today = new Date();
+  const todayDate =
+    today.getMonth() + '-' + today.getDate() + '-' + today.getFullYear();
+
   const formattedMessage = `
+    Date of Inquiry: ${todayDate}\r\n
     Name: ${firstName} ${lastName}\r\n
     Email: ${email}\r\n
     Phone: ${phone}\r\n
