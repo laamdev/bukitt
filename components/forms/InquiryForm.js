@@ -139,7 +139,7 @@ export default function InquiryForm({ destinations, experiences }) {
         setSuccess('');
       } else {
         setSuccess(
-          "Thanks for subscribing! 🥳 We've sent a welcome email to your inbox. If you can't find it, please check your spam folder and add us to your favorites so you won't miss any of our travel treats!"
+          "Thanks for subscribing! 🥳 We've sent a welcome email to your inbox. If you can't find it, please check your promotions and spam folders and add us to your favorites so you won't miss any of our travel treats!"
         );
         setServerError('');
       }

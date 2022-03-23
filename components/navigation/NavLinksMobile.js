@@ -29,7 +29,7 @@ export default function NavLinksMobile({ navLinks, toggleIsOpen }) {
         ))}
       </ul>
       <div className="mt-12">
-        <BtnInquiry label="Inquire" to="inquiry-form" />
+        <BtnInquiry label="Inquire" to="inquiry-form" toggle={toggleIsOpen} />
       </div>
     </motion.nav>
   );
