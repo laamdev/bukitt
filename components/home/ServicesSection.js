@@ -5,11 +5,12 @@ export default function ServicesSection({
   heading,
   experiencesCard,
   destinationsCard,
+  tailoredTripsCard,
 }) {
   return (
     <section className="tw-section mx-auto max-w-7xl">
       <SectionHeading className="text-center">{heading}</SectionHeading>
-      <div className="grid grid-cols-1 gap-y-6 md:grid-cols-2 md:gap-y-0 md:gap-x-6 lg:gap-x-12">
+      <div className="grid grid-cols-1 gap-y-6 md:grid-cols-3 md:gap-y-0 md:gap-x-6 lg:gap-x-12">
         <ServicesCard
           heading={experiencesCard?.heading}
           body={experiencesCard?.body}
@@ -23,6 +24,13 @@ export default function ServicesSection({
           image={destinationsCard?.image}
           btnLinkText={destinationsCard?.callToAction?.linkText}
           btnURL={destinationsCard?.callToAction?.url}
+        />
+        <ServicesCard
+          heading={tailoredTripsCard?.heading}
+          body={tailoredTripsCard?.body}
+          image={tailoredTripsCard?.image}
+          btnLinkText={tailoredTripsCard?.callToAction?.linkText}
+          btnURL={tailoredTripsCard?.callToAction?.url}
         />
       </div>
     </section>

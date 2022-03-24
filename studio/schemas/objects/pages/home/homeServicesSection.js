@@ -18,6 +18,11 @@ export default {
       type: 'section',
       title: 'Destinations Card',
     },
+    {
+      name: 'tailoredTripsCard',
+      type: 'section',
+      title: 'Tailored Trips Card',
+    },
   ],
   options: { collapsible: true, collapsed: true, columns: 1 },
 };

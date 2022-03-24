@@ -20,6 +20,7 @@ export default function HomePage({ homeData }) {
         heading={homeData?.servicesSection?.heading}
         experiencesCard={homeData?.servicesSection?.experiencesCard}
         destinationsCard={homeData?.servicesSection?.destinationsCard}
+        tailoredTripsCard={homeData?.servicesSection?.tailoredTripsCard}
       />
 
       <FeaturesSection

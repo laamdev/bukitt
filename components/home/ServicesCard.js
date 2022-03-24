@@ -17,23 +17,25 @@ export default function ServicesCard({
     <div className="group relative col-span-1 rounded-2xl shadow-xl">
       <Link href={`/${btnURL}`} scroll={false}>
         <a>
-          <Image
-            src={urlForImage(image).width(1080).height(1350).url()}
-            alt={image?.alt}
-            layout="responsive"
-            width={4}
-            height={5}
-            objectPosition="center"
-            objectFit="cover"
-            className="rounded-2xl"
-          />
+          {image && (
+            <Image
+              src={urlForImage(image).width(1080).height(1350).url()}
+              alt={image?.alt ?? 'Bukitt service'}
+              layout="responsive"
+              width={4}
+              height={5}
+              objectPosition="center"
+              objectFit="cover"
+              className="rounded-2xl"
+            />
+          )}
           <Overlay />
 
           <div className="tw-center absolute w-full px-3 py-3 text-center sm:px-4 sm:py-6 lg:px-6">
-            <h4 className="font-mono text-4xl font-medium uppercase text-white sm:text-5xl lg:text-7xl">
+            <h4 className="font-mono text-4xl font-medium uppercase text-white sm:text-5xl lg:text-5xl">
               {heading}
             </h4>
-            <p className="text-lg text-slate-100 lg:text-2xl">{body}</p>
+            <p className="text-lg text-slate-100 lg:text-xl">{body}</p>
             {/* <div className="mt-6 flex justify-center">
               <BtnNav btnLinkText={btnLinkText} btnURL={btnURL} secondary />
             </div> */}
