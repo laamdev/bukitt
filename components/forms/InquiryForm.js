@@ -283,6 +283,22 @@ export default function InquiryForm({ destinations, experiences }) {
                         </span>
                       </label>
                     </div>
+
+                    <div className="flex items-center">
+                      <input
+                        id="category-tailored"
+                        name="category"
+                        type="radio"
+                        value="Tailored"
+                        {...register('category')}
+                        className="tw-radio-btn"
+                      />
+                      <label htmlFor="category-tailored" className="ml-3">
+                        <span className="tw-inquiry-form-checkbox">
+                          Tailored
+                        </span>
+                      </label>
+                    </div>
                   </div>
                 </fieldset>
 
@@ -298,6 +314,9 @@ export default function InquiryForm({ destinations, experiences }) {
                         <span className="tw-inquiry-form-label">
                           Destination
                         </span>
+                      )}
+                      {watchCategory === 'Tailored' && (
+                        <span className="tw-inquiry-form-label">Tailored</span>
                       )}
                     </label>
 
@@ -329,6 +348,16 @@ export default function InquiryForm({ destinations, experiences }) {
                               {destination.name}
                             </option>
                           ))}
+                        </>
+                      )}
+                      {watchCategory === 'Tailored' && (
+                        <>
+                          <option value="Single Destination">
+                            Single Destination
+                          </option>
+                          <option value="Multiple Destinations">
+                            Multiple Destinations
+                          </option>
                         </>
                       )}
                     </select>
