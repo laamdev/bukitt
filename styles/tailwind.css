@@ -162,11 +162,11 @@
   }
 
   .tw-inquiry-form-label {
-    @apply block text-xl font-bold uppercase text-slate-700;
+    @apply block text-base font-bold uppercase text-slate-700 lg:text-xl;
   }
 
   .tw-inquiry-form-checkbox {
-    @apply block text-lg font-medium text-slate-700;
+    @apply block text-sm font-medium text-slate-700 lg:text-lg;
   }
 
   .tw-full-page-mobile {

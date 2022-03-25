@@ -251,7 +251,7 @@ export default function InquiryForm({ destinations, experiences }) {
                   {/* <p className="text-sm text-slate-500">
                 These are delivered via SMS to your mobile phone.
               </p> */}
-                  <div className="mt-3 flex space-x-12">
+                  <div className="mt-3 flex flex-col gap-y-6 lg:flex-row lg:gap-x-12">
                     <div className="flex items-center">
                       <input
                         id="category-experience"
