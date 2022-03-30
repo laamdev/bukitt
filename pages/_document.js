@@ -98,6 +98,7 @@ export default class MyDocument extends Document {
             type="font/woff2"
             crossOrigin="anonymous"
           />
+          <link rel="icon" href="/favicons/favicon.ico" />
           <link
             rel="icon"
             type="image/png"
