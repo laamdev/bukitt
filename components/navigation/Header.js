@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { AnimatePresence, useCycle } from 'framer-motion';
 
 import Logo from '@/components/navigation/Logo';
@@ -8,14 +7,9 @@ import BtnNav from '@/components/shared/buttons/BtnNav';
 
 import { navLinks } from '@/utils/data';
 import BurgerMenuButton from '@/components/navigation/BurgerMenuButton';
-import { state } from '@/utils/store';
 
 export default function Header() {
   const [isOpen, toggleIsOpen] = useCycle(false, true);
-
-  useEffect(() => {
-    state.isMobileMenuOpen = !isOpen;
-  }, [isOpen]);
 
   return (
     <nav className="sticky top-0 left-0 right-0 z-30 flex h-16 items-center justify-between bg-white px-3 lg:h-24 lg:px-6">
