@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "bukitt-inquiries",
+  "private_key_id": "dd43b6334f73c04557c2d114adabc10a7bc40921",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCzci6eTz4y2QWk\nF2oYb26fykNPgIVt6D37S6gSMWEJV/DZGFFAGSW9DtRh1b+lo+vMoOGSyphcAmQ0\nuWfHlSzc1chSmN7OdKABRSHWcamQ1sXgwimAkwc1gst4C0ImpW/WEPF3eyBiaGHI\nuzQekdFe3AXvkxVxlxZJCl7pM6sEw8kaQ7V9KU1riMXvfZ6qECAO+XCh2cjEE/0s\nW2KJNT/tVQf2ixNwOB6uBn6odTFJFOmgEtRuIeNDb3leWaqmn03tKLyrPnSm0JSK\nfYlc6lrHMATZe2VahXvIQpxZELE/Z6tMEuT2/N7RKTjLHdmdwS7gR3Fz5QKeDSm5\njDD9+Za9AgMBAAECggEAHMPzWH9Syis4mJsERTx/sEUSezPFWolTKO3HgyW/7L6D\nJlnxPw7eRNXpZ8ba/OjaYNLIC5RHI4timC0XHMr7W784Ez2G4fOXaVIKtZSXiQH/\ndc3KLLPlAPKhk/HCE0M2j/Xmr1o2e8VIf46628z7kh2VJK11pOAtELJaj+mEwwjW\nSO7NjWMGGK3ja/gFUa2gN/Gx6uIFAN0G7G9wZNcGiba6R6mSKbl3V3gA1pk/mCkw\naEoblhbnpTS16XdW+KcjUqS2Dl4LMoFwPBjYC25t95CLNHv/XHyObDZjjuj6T0pb\nN8Nd4CEdiLxCgIZzVm6BThK6oXAKL8KebYGCby3ypQKBgQDzokyXDegX59KCB7di\nyELvYI/aPgwL8+KvddGOaJZTNtueVseSFmIem3A/IibwQ3NtZBOQ4I4HwfqzdkX/\nAwPn/EWKfiSTLSQLqkXPkDjV3VLzUobFUTNSa9bRkfFRsPjw9GwTuoJjOJ3mRGzj\ntcrUlmcy0i/Cz2G9j5QUiwdyqwKBgQC8jdhvpdlTUMBLURChQmm/Z+b6uwJqVtcX\nTgIH8VyFdN6i99+IUi9z71nM5msVoyhdDFRLVnpmSSZUixEiOJr34pMbOli8ZgKI\n88AoW5MdXeP8hX0ShVKT+c0Q2jKWAwpkrbRXlpUqZdspaBpKKBYBN+Ixc+eR3d8q\nwfoggn/cNwKBgQC2J2dKHNylWu75xxkmYwIghTqoenF5Ukvu0ZDu/2U9LCvBU7J8\nl/2eUqr2mOsyAcxAQm2aiTnHtRFishAdXLzD6sp3hF6GJ17m1dTCHltQEtzdDZuz\n1UUg333KTGp3oHBPfv97NJwd4Qu1SP18tsPCc/0OczXAWlsCZmHZhiT4ZwKBgQCc\nJlQx0gVyrBMzzISbJ6bvrppo1mqfqh8i26Vu8oGOvESMbf6epIFL39JckA3qs14A\nAO/mHE3tW3L03N5pmrsrwmXVTLKkA07iIAro4T2qOlFOlTYJGoRSq7MZ27m85fO7\ngOczCi+qFwQy/FWZSC1BAQi/r578++OPQ2ljdu9wbQKBgQCh9kojsoTUnvMXMBFt\nJM5uCvTVdk6wKh1mXB5deiPAFWFsQgj9bzy8JRrpRl6/zikscO1vJn/VNJhk++GA\nY4ljKdVqlhGP80YPhwzFozX8FzlWCaEVIAC50ijP2SplunAinFoYHcSXebTmvoBG\nK4P58UsZJ5nZvZE/4k2JgnXX6A==\n-----END PRIVATE KEY-----\n",
+  "client_email": "inquiries-spreadsheet@bukitt-inquiries.iam.gserviceaccount.com",
+  "client_id": "113499970674149456410",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/inquiries-spreadsheet%40bukitt-inquiries.iam.gserviceaccount.com"
+}

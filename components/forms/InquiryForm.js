@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Switch } from '@headlessui/react';
 import { useForm } from 'react-hook-form';
@@ -28,6 +27,7 @@ const schema = yup
       .matches(phoneRegExp, 'Please enter a valid phone number.')
       .min(5, 'The phone number is too short.')
       .max(15, 'The phone number is too long.'),
+    category: yup.string().required().typeError('Please pick an option.'),
     group: yup
       .number()
       .typeError('Please enter a group size.')
@@ -72,9 +72,7 @@ export default function InquiryForm({ destinations, experiences }) {
     formState: { errors, isSubmitting },
     reset,
   } = useForm({
-    defaultValues: {
-      category: 'Experience',
-    },
+    mode: 'onChange',
     resolver: yupResolver(schema),
   });
 
@@ -94,7 +92,10 @@ export default function InquiryForm({ destinations, experiences }) {
 
     const res = await fetch('/api/mail', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify({
         firstName: formData.firstName,
         lastName: formData.lastName,
@@ -248,9 +249,6 @@ export default function InquiryForm({ destinations, experiences }) {
 
                 <fieldset className="sm:col-span-2">
                   <legend className="tw-inquiry-form-label">Category</legend>
-                  {/* <p className="text-sm text-slate-500">
-                These are delivered via SMS to your mobile phone.
-              </p> */}
                   <div className="mt-3 flex flex-col gap-y-6 lg:flex-row lg:gap-x-12">
                     <div className="flex items-center">
                       <input
@@ -258,7 +256,7 @@ export default function InquiryForm({ destinations, experiences }) {
                         name="category"
                         type="radio"
                         value="Experience"
-                        {...register('category')}
+                        {...register('category', { required: true })}
                         className="tw-radio-btn"
                       />
                       <label htmlFor="category-experience" className="ml-3">
@@ -274,7 +272,7 @@ export default function InquiryForm({ destinations, experiences }) {
                         name="category"
                         type="radio"
                         value="Destination"
-                        {...register('category')}
+                        {...register('category', { required: true })}
                         className="tw-radio-btn"
                       />
                       <label htmlFor="category-destination" className="ml-3">
@@ -290,7 +288,7 @@ export default function InquiryForm({ destinations, experiences }) {
                         name="category"
                         type="radio"
                         value="Tailored"
-                        {...register('category')}
+                        {...register('category', { required: true })}
                         className="tw-radio-btn"
                       />
                       <label htmlFor="category-tailored" className="ml-3">
@@ -299,6 +297,11 @@ export default function InquiryForm({ destinations, experiences }) {
                         </span>
                       </label>
                     </div>
+                  </div>
+                  <div className="h-3">
+                    {errors?.category?.message && (
+                      <FormError>{errors?.category?.message}</FormError>
+                    )}
                   </div>
                 </fieldset>
 
@@ -507,21 +510,6 @@ export default function InquiryForm({ destinations, experiences }) {
                         Subscribe to our inspirational luxury travel mailing
                         list.
                       </p>
-                      {/* <p className="text-base text-slate-500">
-                        By selecting this, you agree to the{' '}
-                        <Link href="/policies/privacy-policy">
-                          <a className="font-medium text-slate-700 underline">
-                            privacy
-                          </a>
-                        </Link>
-                        <span> and </span>
-                        <Link href="/policies/cookie-policy">
-                          <a className="font-medium text-slate-700 underline">
-                            cookie
-                          </a>
-                        </Link>
-                        <span> policies.</span>
-                      </p> */}
                     </div>
                   </div>
                 </div>

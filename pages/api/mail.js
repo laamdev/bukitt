@@ -1,4 +1,5 @@
 import { format } from 'date-fns';
+import { google } from 'googleapis';
 
 const mail = require('@sendgrid/mail');
 const API_KEY = process.env.SENDGRID_API_KEY;
@@ -63,8 +64,7 @@ export default async (req, res) => {
   const formattedEndDate = format(new Date(endDate), 'MM-dd-yyyy');
 
   const today = new Date();
-  const todayDate =
-    today.getMonth() + '-' + today.getDate() + '-' + today.getFullYear();
+  const todayDate = `${today.getHours()}hr ${today.getMinutes()}min, ${today.getMonth()}-${today.getDate()}-${today.getFullYear()}`;
 
   const formattedMessage = `
     Date of Inquiry: ${todayDate}\r\n
@@ -79,13 +79,63 @@ export default async (req, res) => {
     Message: ${message}
   `;
 
-  await mail.send({
-    to: 'hello@bukitt.com',
-    from: 'hello@bukitt.com',
-    subject: `New inquiry from ${firstName} ${lastName}: ${category} - ${product}`,
-    text: formattedMessage,
-    html: formattedMessage.replace(/\r\n/g, '<br>'),
-  });
+  try {
+    // send email
+    await mail.send({
+      to: 'hello@bukitt.com',
+      from: 'hello@bukitt.com',
+      subject: `New inquiry from ${firstName} ${lastName}: ${category} - ${product}`,
+      text: formattedMessage,
+      html: formattedMessage.replace(/\r\n/g, '<br>'),
+    });
+    // prepare auth
+    const auth = new google.auth.GoogleAuth({
+      credentials: {
+        client_email: process.env.GOOGLE_CLIENT_EMAIL,
+        private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+      },
+      scopes: [
+        'https://www.googleapis.com/auth/drive',
+        'https://www.googleapis.com/auth/drive.file',
+        'https://www.googleapis.com/auth/spreadsheets',
+      ],
+    });
 
-  res.status(200).json({ status: 'Ok' });
+    const sheets = google.sheets({
+      auth,
+      version: 'v4',
+    });
+
+    const response = await sheets.spreadsheets.values.append({
+      spreadsheetId: process.env.GOOGLE_SHEET_ID,
+      range: 'A1:K1',
+      valueInputOption: 'USER_ENTERED',
+      requestBody: {
+        values: [
+          [
+            firstName,
+            lastName,
+            email,
+            phone,
+            category,
+            product,
+            group,
+            formattedStartDate,
+            formattedEndDate,
+            message,
+            todayDate,
+          ],
+        ],
+      },
+    });
+
+    return res.status(200).json({
+      data: response.data,
+      status: 'ok',
+    });
+  } catch (error) {
+    return res
+      .status(500)
+      .send({ message: error.message ?? 'Something went wrong' });
+  }
 };
