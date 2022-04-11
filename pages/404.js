@@ -9,7 +9,7 @@ export default function Custom404() {
           <h2 className="text-2xl font-medium">Page not found</h2>
           <h1 className="font-mono text-9xl font-bold ">404</h1>
           <p className="mt-3">
-            It appears the page you&apos;re looking for does not exist. Please
+            It appears the page you&apos;re looking for does not exist! Please
             click the link below to return to the homepage.
           </p>
         </div>
