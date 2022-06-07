@@ -23,20 +23,20 @@ export default function DetailsSection({
         </DetailsWrapper>
       )}
       <DetailsWrapper className="border-t border-b sm:border-0 sm:border-l sm:border-r">
-        <DetailsLabel>When to go</DetailsLabel>
+        <DetailsLabel>Date</DetailsLabel>
         <DetailsValue>
           {dateFrom} - {dateTo}
         </DetailsValue>
       </DetailsWrapper>
       <DetailsWrapper className="border-t border-b sm:border-0 sm:border-l sm:border-r">
-        <DetailsLabel>Ideal length</DetailsLabel>
+        <DetailsLabel>Duration</DetailsLabel>
         <DetailsValue>
           {duration}
           <DetailsUnit> days</DetailsUnit>
         </DetailsValue>
       </DetailsWrapper>
       <DetailsWrapper className="border-t sm:border-0 sm:border-l">
-        <DetailsLabel>Best group size</DetailsLabel>
+        <DetailsLabel>Group size</DetailsLabel>
         <DetailsValue>{groupSize}+</DetailsValue>
       </DetailsWrapper>
     </DetailsContainer>
