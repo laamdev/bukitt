@@ -3,22 +3,18 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 
-const STUDIO_REWRITE = {
-  source: '/studio/:path*',
-  destination:
-    process.env.NODE_ENV === 'development'
-      ? 'http://localhost:3333/studio/:path*'
-      : '/studio/index.html',
-};
-
 const nextConfig = {
-  rewrites: () => [STUDIO_REWRITE],
   reactStrictMode: true,
   images: {
     domains: ['assets.vercel.com', 'cdn.sanity.io', 'www.facebook.com'],
   },
   async redirects() {
     return [
+      {
+        source: '/admin/:path*',
+        destination: 'https://bukitt.sanity.studio',
+        permanent: true,
+      },
       {
         source: '/home',
         destination: '/',

@@ -1,17 +1,23 @@
 {
   "name": "bukitt",
-  "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "./*"
+  ],
   "scripts": {
-    "dev": "concurrently \"next --port $PORT\" \"cd studio && sanity start\"",
-    "build": "echo 'Building Sanity to public/studio' && cd studio && sanity build ../public/studio -y && cd .. && next build",
+    "dev": "concurrently \"next dev\" \"cd studio && npm run start\"",
+    "dev-next": "next dev",
+    "build": "next build",
     "start": "next start",
+    "sanity-deploy": "cd studio && npm run deploy",
     "lint": "next lint",
     "postbuild": "next-sitemap",
-    "postinstall": "husky install && lerna bootstrap",
+    "postinstall": "husky install",
     "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
+    "config": "^3.3.7",
+    "studio": "^0.13.5",
     "@headlessui/react": "^1.6.4",
     "@heroicons/react": "^1.0.6",
     "@hookform/error-message": "^2.0.0",
@@ -64,7 +70,6 @@
     "graphql": "^16.5.0",
     "graphql-request": "^4.3.0",
     "husky": "^8.0.1",
-    "lerna": "^5.0.0",
     "lint-staged": "^13.0.0",
     "postcss": "^8.4.14",
     "prettier": "^2.6.2",

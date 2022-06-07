@@ -1,15 +1,15 @@
 {
-  "name": "bukitt",
+  "name": "bukitt-studio",
   "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "LUIS ANAYA <brothersailorwebdev@gmail.com>",
+  "author": "Luis Anaya <brothersailorwebdev@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
-    "build": "sanity build",
-    "test": "sanity check"
+    "build": "sanity build ../public/studio -y",
+    "deploy": "sanity deploy"
   },
   "keywords": [
     "sanity"
@@ -23,18 +23,15 @@
     "@sanity/eslint-config-studio": "^2.0.0",
     "@sanity/vision": "^2.30.1",
     "eslint": "^8.17.0",
-    "prop-types": "^15.8.1",
+    "prop-types": "^15.8",
     "react": "^18.1",
     "react-dom": "^18.1",
+    "studio": "^0.13.5",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@sanity/dashboard": "^2.30.1",
     "sanity-plugin-media": "^1.4.10",
     "sanity-plugin-vercel-deploy": "^2.1.6"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/laanayam333/bukitt.git"
   }
 }

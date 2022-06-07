@@ -1,12 +1,7 @@
 {
   "root": true,
   "project": {
-    "name": "bukitt",
-    "basePath": "/studio"
-  },
-  "api": {
-    "projectId": "lgwru533",
-    "dataset": "production"
+    "name": "bukitt-studio"
   },
   "plugins": [
     "@sanity/base",
@@ -14,8 +9,8 @@
     "@sanity/default-login",
     "@sanity/desk-tool",
     "@sanity/dashboard",
-    "media",
-    "vercel-deploy"
+    "vercel-deploy",
+    "media"
   ],
   "env": {
     "development": {
