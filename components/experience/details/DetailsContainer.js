@@ -3,7 +3,7 @@ export default function DetailsContainer({ children }) {
     <section className="tw-section">
       <div className="mx-auto max-w-7xl">
         <div className="relative">
-          <dl className="rounded-lg bg-slate-50 shadow-lg sm:grid sm:grid-cols-4">
+          <dl className="rounded-lg bg-slate-50 shadow-lg sm:grid sm:grid-cols-3">
             {children}
           </dl>
         </div>

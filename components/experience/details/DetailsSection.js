@@ -13,13 +13,15 @@ export default function DetailsSection({
 }) {
   return (
     <DetailsContainer>
-      <DetailsWrapper className="border-b sm:border-0 sm:border-r">
-        <DetailsLabel>From price</DetailsLabel>
-        <DetailsValue>
-          ${price}
-          <DetailsUnit> pp</DetailsUnit>
-        </DetailsValue>
-      </DetailsWrapper>
+      {price && (
+        <DetailsWrapper className="border-b sm:border-0 sm:border-r">
+          <DetailsLabel>Price</DetailsLabel>
+          <DetailsValue>
+            ${price}
+            <DetailsUnit> pp</DetailsUnit>
+          </DetailsValue>
+        </DetailsWrapper>
+      )}
       <DetailsWrapper className="border-t border-b sm:border-0 sm:border-l sm:border-r">
         <DetailsLabel>When to go</DetailsLabel>
         <DetailsValue>
